@@ -1,0 +1,13 @@
+# Environment variables
+.env
+
+# PDF Cache and parsed data
+downloads/
+extracted_texts/
+
+# Dependency directories
+node_modules/
+package-lock.json
+
+# Local logs
+*.log
