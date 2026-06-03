@@ -1,0 +1,3955 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>護理師國考與歷屆甄選 - AI 智能測驗與錯題學習系統</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Marked JS for Markdown Rendering -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+    <!-- Embedded Vanilla CSS -->
+    <style>
+        :root {
+            --bg-color: #0a1219;
+            --sidebar-bg: rgba(13, 27, 38, 0.95);
+            --card-bg: rgba(20, 39, 54, 0.7);
+            --card-border: rgba(255, 255, 255, 0.06);
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --accent-gradient: linear-gradient(135deg, #0d9488 0%, #0284c7 100%);
+            --accent-color: #0d9488;
+            --accent-hover: #0f766e;
+            --success-color: #10b981;
+            --warning-color: #f59e0b;
+            --error-color: #ef4444;
+            --transition-speed: 0.3s;
+            --font-family: 'Inter', 'Noto Sans TC', sans-serif;
+            --sidebar-width: 320px;
+            --card-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        [data-theme="light"] {
+            --bg-color: #f0f7f4;
+            --sidebar-bg: #ffffff;
+            --card-bg: #ffffff;
+            --card-border: #cbdbe5;
+            --text-primary: #0f2922;
+            --text-secondary: #47655f;
+            --accent-gradient: linear-gradient(135deg, #0f766e 0%, #0369a1 100%);
+            --accent-color: #0f766e;
+            --accent-hover: #115e59;
+            --card-shadow: 0 4px 12px rgba(15, 23, 42, 0.05);
+        }
+
+        /* Light Theme Overrides */
+        [data-theme="light"] .top-bar {
+            background: rgba(255, 255, 255, 0.85);
+        }
+
+        [data-theme="light"] .mode-selector {
+            background: #f1f5f9;
+            border: 1px solid #cbd5e1;
+        }
+
+        [data-theme="light"] .mode-btn {
+            color: #475569;
+        }
+
+        [data-theme="light"] .mode-btn:hover {
+            color: #4f46e5;
+            background: rgba(99, 102, 241, 0.05);
+        }
+
+        [data-theme="light"] .mode-btn.active {
+            color: #ffffff !important;
+            background: var(--accent-gradient) !important;
+        }
+
+        [data-theme="light"] .api-settings-panel,
+        [data-theme="light"] .import-panel {
+            background: #f1f5f9;
+            border-color: #e2e8f0;
+        }
+
+        [data-theme="light"] .policy-panel {
+            background: #f0f9ff;
+            border-color: #bae6fd;
+        }
+
+        [data-theme="light"] .api-key-input,
+        [data-theme="light"] .api-select {
+            background: #ffffff;
+            border-color: #cbd5e1;
+            color: #0f172a;
+        }
+
+        [data-theme="light"] .question-card {
+            background: #ffffff !important;
+            border-color: #cbd5e1 !important;
+            color: #0f172a !important;
+            box-shadow: 0 4px 12px rgba(15, 23, 42, 0.03) !important;
+        }
+
+        [data-theme="light"] .question-card .question-body {
+            color: #0f172a !important;
+        }
+
+        [data-theme="light"] .question-card-right span,
+        [data-theme="light"] .question-meta span {
+            color: #475569 !important;
+        }
+
+        [data-theme="light"] .tag-year {
+            background: #e0e7ff !important;
+            color: #4338ca !important;
+        }
+
+        [data-theme="light"] .tag-level {
+            background: #f3e8ff !important;
+            color: #6b21a8 !important;
+        }
+
+        [data-theme="light"] .tag-has-answer {
+            background: #d1fae5 !important;
+            color: #065f46 !important;
+        }
+
+        [data-theme="light"] .tag-notes {
+            background: #fef3c7 !important;
+            color: #92400e !important;
+        }
+
+        [data-theme="light"] .badge-topic {
+            background: rgba(0, 0, 0, 0.06) !important;
+            color: #475569 !important;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-family);
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            min-height: 100vh;
+            display: flex;
+            overflow: hidden;
+            transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease;
+        }
+
+        /* Layout Container */
+        .app-container {
+            display: flex;
+            width: 100vw;
+            height: 100vh;
+            position: relative;
+        }
+
+        /* Sidebar Styling */
+        .sidebar {
+            width: var(--sidebar-width);
+            background: var(--sidebar-bg);
+            border-right: 1px solid var(--card-border);
+            display: flex;
+            flex-direction: column;
+            padding: 1.5rem 1rem;
+            z-index: 20;
+            backdrop-filter: blur(20px);
+            transition: width var(--transition-speed) cubic-bezier(0.4, 0, 0.2, 1), padding var(--transition-speed);
+            position: relative;
+            flex-shrink: 0;
+            overflow: hidden;
+        }
+
+        /* Collapsed Sidebar State */
+        .sidebar.collapsed {
+            width: 70px;
+            padding: 1.5rem 0.5rem;
+        }
+
+        .sidebar.collapsed .logo-text,
+        .sidebar.collapsed .nav-section-title,
+        .sidebar.collapsed .subject-text,
+        .sidebar.collapsed .badge,
+        .sidebar.collapsed .settings-btn-text {
+            display: none !important;
+        }
+
+        .sidebar.collapsed .subject-btn {
+            justify-content: center;
+            padding: 0.75rem 0;
+        }
+
+        .sidebar.collapsed .subject-btn i {
+            margin-right: 0;
+            font-size: 1.25rem;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 1.25rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--card-border);
+            overflow: hidden;
+            white-space: nowrap;
+            flex-shrink: 0;
+        }
+
+        .sidebar-collapse-btn {
+            margin-left: auto;
+            background: transparent;
+            border: 1px solid var(--card-border);
+            color: var(--text-secondary);
+            border-radius: 0.4rem;
+            width: 26px;
+            height: 26px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            flex-shrink: 0;
+            font-size: 0.75rem;
+            transition: all var(--transition-speed);
+        }
+        .sidebar-collapse-btn:hover {
+            background: rgba(99,102,241,0.1);
+            border-color: var(--accent-color);
+            color: var(--text-primary);
+        }
+        .sidebar.collapsed .sidebar-collapse-btn i {
+            transform: rotate(180deg);
+        }
+
+        .logo-icon {
+            font-size: 1.8rem;
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            flex-shrink: 0;
+        }
+
+        .logo-text {
+            font-weight: 700;
+            font-size: 1.15rem;
+            letter-spacing: 0.5px;
+            transition: opacity var(--transition-speed);
+        }
+
+        .nav-section-title {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-secondary);
+            margin: 1.5rem 0 0.5rem 0;
+            font-weight: 700;
+            white-space: nowrap;
+        }
+
+        .subject-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            flex: 1;
+            min-height: 0;
+            overflow-y: auto;
+            padding-right: 2px;
+            margin-bottom: 0.75rem;
+        }
+
+        .subject-btn {
+            display: flex;
+            align-items: center;
+            padding: 0.8rem 0.9rem;
+            border-radius: 0.75rem;
+            border: none;
+            background: transparent;
+            color: var(--text-secondary);
+            cursor: pointer;
+            text-align: left;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: all var(--transition-speed) ease;
+            width: 100%;
+            overflow: hidden;
+            gap: 0.75rem;
+        }
+
+        .subject-icon-wrapper {
+            display: flex;
+            align-items: center;
+            flex-shrink: 0;
+        }
+
+        .subject-text {
+            flex: 1;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .subject-btn:hover, .subject-btn.active {
+            color: var(--text-primary);
+            background: rgba(99, 102, 241, 0.1);
+        }
+
+        .subject-btn.active {
+            border-left: 4px solid var(--accent-color);
+            background: rgba(99, 102, 241, 0.15);
+            font-weight: 700;
+        }
+
+        .subject-btn i {
+            font-size: 1.1rem;
+            width: 20px;
+            text-align: center;
+        }
+
+        .badge {
+            background: var(--accent-gradient);
+            color: white;
+            font-size: 0.7rem;
+            padding: 0.15rem 0.4rem;
+            border-radius: 999px;
+            font-weight: 600;
+            flex-shrink: 0;
+        }
+
+        /* API Settings Panel in Sidebar */
+        .api-settings-panel {
+            background: rgba(0, 0, 0, 0.2);
+            border: 1px solid var(--card-border);
+            border-radius: 0.75rem;
+            padding: 0.85rem;
+            font-size: 0.8rem;
+            flex-shrink: 0;
+        }
+
+        .api-title {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            color: var(--text-primary);
+        }
+
+        .api-input-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.4rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .api-input-wrapper {
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        .api-key-input {
+            width: 100%;
+            background: rgba(0, 0, 0, 0.4);
+            border: 1px solid var(--card-border);
+            border-radius: 0.4rem;
+            color: var(--text-primary);
+            padding: 0.35rem 1.8rem 0.35rem 0.5rem;
+            font-size: 0.75rem;
+            outline: none;
+        }
+
+        .api-key-input:focus {
+            border-color: var(--accent-color);
+        }
+
+        .toggle-key-visibility {
+            position: absolute;
+            right: 0.5rem;
+            background: transparent;
+            border: none;
+            color: var(--text-secondary);
+            cursor: pointer;
+            font-size: 0.75rem;
+        }
+
+        .api-select {
+            background: rgba(0, 0, 0, 0.4);
+            border: 1px solid var(--card-border);
+            border-radius: 0.4rem;
+            color: var(--text-primary);
+            padding: 0.35rem;
+            font-size: 0.75rem;
+            outline: none;
+            cursor: pointer;
+        }
+
+        .btn-save-api {
+            background: var(--accent-gradient);
+            color: white;
+            border: none;
+            border-radius: 0.4rem;
+            padding: 0.35rem;
+            font-weight: 600;
+            cursor: pointer;
+            font-size: 0.75rem;
+            transition: opacity 0.2s;
+        }
+
+        .btn-save-api:hover {
+            opacity: 0.9;
+        }
+
+        /* Public-Safety Policy Panel */
+        .policy-panel {
+            background: rgba(0, 0, 0, 0.15);
+            border: 1px solid var(--card-border);
+            border-radius: 0.75rem;
+            padding: 0.75rem;
+            margin-top: 0.5rem;
+            font-size: 0.7rem;
+            color: var(--text-secondary);
+            line-height: 1.4;
+            flex-shrink: 0;
+        }
+
+        .policy-title {
+            font-weight: 600;
+            margin-bottom: 0.35rem;
+            display: flex;
+            align-items: center;
+            gap: 0.35rem;
+            color: var(--text-primary);
+        }
+        
+        .policy-list {
+            padding-left: 0.85rem;
+            margin: 0.25rem 0;
+            list-style-type: disc;
+        }
+        
+        .policy-list li {
+            margin-bottom: 0.15rem;
+        }
+
+        /* Import Custom Database Panel */
+        .import-panel {
+            background: rgba(0, 0, 0, 0.2);
+            border: 1px solid var(--card-border);
+            border-radius: 0.75rem;
+            padding: 0.85rem;
+            font-size: 0.8rem;
+            margin-top: 0.5rem;
+            flex-shrink: 0;
+        }
+
+        /* Sidebar bottom settings button */
+        .sidebar-settings-btn {
+            display: flex;
+            align-items: center;
+            gap: 0.65rem;
+            padding: 0.75rem 0.85rem;
+            margin-top: 0.75rem;
+            border-radius: 0.75rem;
+            border: 1px solid var(--card-border);
+            background: transparent;
+            color: var(--text-secondary);
+            cursor: pointer;
+            width: 100%;
+            font-size: 0.88rem;
+            font-weight: 600;
+            transition: all var(--transition-speed);
+            flex-shrink: 0;
+        }
+        .sidebar-settings-btn:hover {
+            background: rgba(99,102,241,0.08);
+            border-color: var(--accent-color);
+            color: var(--text-primary);
+        }
+        .sidebar.collapsed .sidebar-settings-btn .settings-btn-text {
+            display: none !important;
+        }
+        .sidebar.collapsed .sidebar-settings-btn {
+            justify-content: center;
+            padding: 0.75rem 0;
+        }
+        [data-theme="light"] .sidebar-settings-btn {
+            border-color: #e2e8f0;
+        }
+        [data-theme="light"] .sidebar-settings-btn:hover {
+            background: rgba(79,70,229,0.06);
+            border-color: #4f46e5;
+            color: #4f46e5;
+        }
+
+        #btn-open-emergency:hover {
+            background: rgba(239, 68, 68, 0.12) !important;
+            border-color: #ef4444 !important;
+            color: #ef4444 !important;
+        }
+        [data-theme="light"] #btn-open-emergency {
+            border-color: rgba(239, 68, 68, 0.3) !important;
+            color: #dc2626 !important;
+        }
+        [data-theme="light"] #btn-open-emergency:hover {
+            background: rgba(239, 68, 68, 0.06) !important;
+            border-color: #ef4444 !important;
+        }
+
+        /* Settings Modal */
+        .settings-modal-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.65);
+            z-index: 50000;
+            align-items: center;
+            justify-content: center;
+            backdrop-filter: blur(4px);
+        }
+        .settings-modal-overlay.open {
+            display: flex;
+        }
+        .settings-modal {
+            background: var(--sidebar-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 1.25rem;
+            width: 520px;
+            max-width: 95vw;
+            max-height: 85vh;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+            animation: modalSlideIn 0.25s cubic-bezier(0.4,0,0.2,1);
+        }
+        @keyframes modalSlideIn {
+            from { opacity: 0; transform: translateY(-20px) scale(0.97); }
+            to { opacity: 1; transform: translateY(0) scale(1); }
+        }
+        .settings-modal-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1.25rem 1.5rem;
+            border-bottom: 1px solid var(--card-border);
+            flex-shrink: 0;
+        }
+        .settings-modal-title {
+            font-size: 1.05rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-primary);
+        }
+        .settings-modal-close {
+            background: transparent;
+            border: 1px solid var(--card-border);
+            color: var(--text-secondary);
+            border-radius: 0.5rem;
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: all var(--transition-speed);
+        }
+        .settings-modal-close:hover {
+            background: rgba(239,68,68,0.1);
+            border-color: rgba(239,68,68,0.3);
+            color: #f87171;
+        }
+        .settings-modal-tabs {
+            display: flex;
+            gap: 0.25rem;
+            padding: 0.75rem 1.5rem 0;
+            border-bottom: 1px solid var(--card-border);
+            flex-shrink: 0;
+        }
+        .settings-tab-btn {
+            background: transparent;
+            border: none;
+            border-bottom: 2px solid transparent;
+            color: var(--text-secondary);
+            padding: 0.5rem 0.75rem;
+            font-size: 0.85rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all var(--transition-speed);
+            border-radius: 0.4rem 0.4rem 0 0;
+        }
+        .settings-tab-btn.active {
+            color: var(--accent-color);
+            border-bottom-color: var(--accent-color);
+        }
+        .settings-modal-body {
+            flex: 1;
+            overflow-y: auto;
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        .settings-section {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid var(--card-border);
+            border-radius: 0.85rem;
+            padding: 1rem;
+        }
+        .settings-section-title {
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: var(--text-secondary);
+            margin-bottom: 0.85rem;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+        [data-theme="light"] .settings-modal {
+            background: #ffffff;
+        }
+        [data-theme="light"] .settings-section {
+            background: #f8fafc;
+            border-color: #e2e8f0;
+        }
+
+        /* Workspace Grid (Sidebar | Mode Panel / Main Flow | AI Details Panel) */
+        .workspace {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            min-width: 0;
+        }
+
+        /* Top Header Control Area */
+        .top-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 1.5rem;
+            border-bottom: 1px solid var(--card-border);
+            background: rgba(15, 23, 42, 0.4);
+            backdrop-filter: blur(10px);
+            z-index: 10;
+        }
+
+        .mode-selector {
+            display: flex;
+            background: rgba(0, 0, 0, 0.2);
+            border: 1px solid var(--card-border);
+            border-radius: 0.75rem;
+            padding: 0.25rem;
+        }
+
+        .mode-btn {
+            background: transparent;
+            border: none;
+            color: var(--text-secondary);
+            padding: 0.4rem 1rem;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            font-size: 0.85rem;
+            cursor: pointer;
+            transition: all var(--transition-speed);
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .mode-btn.active {
+            color: #ffffff !important;
+            background: var(--accent-gradient) !important;
+            border-color: transparent !important;
+            box-shadow: 0 4px 12px rgba(99, 102, 241, 0.25);
+        }
+
+        .search-container {
+            display: flex;
+            align-items: center;
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 0.75rem;
+            padding: 0.4rem 0.85rem;
+            width: 100%;
+            max-width: 380px;
+            transition: border-color var(--transition-speed);
+        }
+
+        .search-container:focus-within {
+            border-color: var(--accent-color);
+        }
+
+        .search-input {
+            background: transparent;
+            border: none;
+            outline: none;
+            color: var(--text-primary);
+            width: 100%;
+            padding-left: 0.5rem;
+            font-size: 0.85rem;
+        }
+
+        .search-input::placeholder {
+            color: var(--text-secondary);
+        }
+
+        .toolbar-buttons {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .btn-icon {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            color: var(--text-primary);
+            width: 38px;
+            height: 38px;
+            border-radius: 0.6rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all var(--transition-speed);
+        }
+
+        .btn-icon:hover {
+            background: rgba(99, 102, 241, 0.1);
+            border-color: var(--accent-color);
+        }
+
+        /* 3-Column Split Workspace Layout */
+        .workspace-layout {
+            display: flex;
+            flex: 1;
+            min-height: 0;
+            position: relative;
+        }        /* Column 1: Topics Panel */
+        .topics-panel {
+            width: 280px;
+            background: rgba(15, 23, 42, 0.3);
+            border-right: 1px solid var(--card-border);
+            padding: 1.25rem 1rem;
+            overflow-y: auto;
+            flex-shrink: 0;
+            transition: width var(--transition-speed) ease, padding var(--transition-speed) ease, border-color var(--transition-speed) ease;
+            position: relative;
+        }
+
+        [data-theme="light"] .topics-panel {
+            background: #ffffff !important;
+        }
+
+        [data-theme="light"] .topic-item {
+            color: #475569 !important;
+            background: transparent !important;
+        }
+
+        [data-theme="light"] .topic-item:hover {
+            background: rgba(79, 70, 229, 0.06) !important;
+            border-color: rgba(79, 70, 229, 0.2) !important;
+            color: #4f46e5 !important;
+        }
+
+        [data-theme="light"] .topic-item.active {
+            background: var(--accent-gradient) !important;
+            color: #ffffff !important;
+            border-color: transparent !important;
+        }
+
+        .topics-panel.collapsed {
+            width: 0;
+            padding: 1.25rem 0;
+            overflow: visible;
+            border-right-color: transparent;
+        }
+
+        .topics-panel.collapsed .panel-title span,
+        .topics-panel.collapsed .topic-list,
+        .topics-panel.collapsed #cards-ranking-list {
+            display: none !important;
+        }
+
+        .topics-panel.collapsed #topics-toggle-btn,
+        .topics-panel.collapsed #cards-ranking-toggle-btn {
+            position: absolute;
+            right: -15px;
+            top: 15px;
+            z-index: 10;
+            background: var(--accent-gradient);
+            color: #ffffff;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+        .panel-title {
+            font-size: 0.95rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-primary);
+        }
+
+        .topic-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.4rem;
+        }
+
+        .topic-item {
+            padding: 0.65rem 0.85rem;
+            border-radius: 0.6rem;
+            cursor: pointer;
+            font-size: 0.85rem;
+            transition: all var(--transition-speed);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border: 1px solid transparent;
+            background: rgba(255, 255, 255, 0.01);
+            color: var(--text-secondary);
+        }
+
+        .topic-item:hover, .topic-item.active {
+            background: rgba(99, 102, 241, 0.08);
+            border-color: rgba(99, 102, 241, 0.2);
+            color: var(--text-primary);
+        }
+
+        .topic-item.active {
+            background: var(--accent-gradient);
+            color: white;
+            font-weight: 600;
+        }
+
+        .topic-item.active .badge-topic {
+            background: rgba(255, 255, 255, 0.25);
+            color: white;
+        }
+
+        .badge-topic {
+            background: rgba(255, 255, 255, 0.08);
+            color: var(--text-secondary);
+            font-size: 0.7rem;
+            padding: 0.15rem 0.35rem;
+            border-radius: 999px;
+            font-weight: 600;
+        }
+
+        /* Column 2: Question Stream Grid */
+        .question-stream {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            padding: 1.25rem;
+            overflow-y: auto;
+            min-width: 0;
+            transition: margin-right var(--transition-speed) ease;
+        }
+
+        .question-card {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 0.75rem;
+            padding: 1rem 1.25rem;
+            cursor: pointer;
+            transition: all var(--transition-speed);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            align-items: stretch;
+            box-shadow: var(--card-shadow);
+            flex-shrink: 0;
+        }
+
+        .question-card.active {
+            border-color: var(--accent-color);
+            background: rgba(99, 102, 241, 0.05);
+            box-shadow: 0 0 15px rgba(99, 102, 241, 0.15), var(--card-shadow);
+        }
+
+        .question-card-left {
+            width: 100%;
+        }
+
+        .question-card-right {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            border-top: 1px solid var(--card-border);
+            padding-top: 0.5rem;
+            margin-top: 0.25rem;
+        }
+
+        .question-footer {
+            display: none !important;
+        }
+
+        .question-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: var(--accent-gradient);
+            opacity: 0;
+            transition: opacity var(--transition-speed);
+        }
+
+        .question-card:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            border-color: rgba(99, 102, 241, 0.3);
+        }
+
+        .question-card:hover::before, .question-card.active::before {
+            opacity: 1;
+        }
+
+        .question-header-top {
+            display: flex;
+            justify-content: flex-end;
+            gap: 0.4rem;
+        }
+
+        .question-body {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: var(--text-primary);
+            font-weight: 500;
+        }
+
+        .question-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid var(--card-border);
+            padding-top: 0.65rem;
+            margin-top: 0.25rem;
+        }
+
+        .question-meta {
+            display: flex;
+            gap: 0.4rem;
+        }
+
+        .meta-tag {
+            font-size: 0.7rem;
+            padding: 0.2rem 0.5rem;
+            border-radius: 0.4rem;
+            font-weight: 600;
+        }
+
+        .tag-year {
+            background: rgba(99, 102, 241, 0.15);
+            color: #818cf8;
+        }
+
+        .tag-level {
+            background: rgba(168, 85, 247, 0.15);
+            color: #c084fc;
+        }
+
+        .tag-has-answer {
+            background: rgba(16, 185, 129, 0.15);
+            color: #34d399;
+        }
+
+        .tag-notes {
+            background: rgba(245, 158, 11, 0.15);
+            color: #fbbf24;
+        }
+
+        /* Column 3: Split Details Panel / AI Coach Side Panel (Overlay) */
+        :root {
+            --detail-width: 580px;
+        }
+
+        @media (min-width: 1400px) {
+            :root {
+                --detail-width: 650px;
+            }
+        }
+
+        @media (min-width: 1700px) {
+            :root {
+                --detail-width: 720px;
+            }
+        }
+
+        /* If sidebar is collapsed (gaining ~180px), increase detail panel width! */
+        .sidebar.collapsed ~ .workspace {
+            --detail-width: 680px;
+        }
+        @media (min-width: 1400px) {
+            .sidebar.collapsed ~ .workspace {
+                --detail-width: 750px;
+            }
+        }
+        @media (min-width: 1700px) {
+            .sidebar.collapsed ~ .workspace {
+                --detail-width: 820px;
+            }
+        }
+
+        /* If topics panel (or cards ranking panel) is collapsed, increase details panel width! */
+        #questions-workspace-layout:has(.topics-panel.collapsed) ~ #detail-panel,
+        #cards-workspace-layout:has(#cards-ranking-panel.collapsed) ~ #detail-panel {
+            --detail-width: 720px;
+        }
+        @media (min-width: 1400px) {
+            #questions-workspace-layout:has(.topics-panel.collapsed) ~ #detail-panel,
+            #cards-workspace-layout:has(#cards-ranking-panel.collapsed) ~ #detail-panel {
+                --detail-width: 800px;
+            }
+        }
+        @media (min-width: 1700px) {
+            #questions-workspace-layout:has(.topics-panel.collapsed) ~ #detail-panel,
+            #cards-workspace-layout:has(#cards-ranking-panel.collapsed) ~ #detail-panel {
+                --detail-width: 880px;
+            }
+        }
+
+        /* If BOTH sidebar and topics panel are collapsed, details panel gets max extra width! */
+        .sidebar.collapsed ~ .workspace #questions-workspace-layout:has(.topics-panel.collapsed) ~ #detail-panel,
+        .sidebar.collapsed ~ .workspace #cards-workspace-layout:has(#cards-ranking-panel.collapsed) ~ #detail-panel {
+            --detail-width: 820px;
+        }
+        @media (min-width: 1400px) {
+            .sidebar.collapsed ~ .workspace #questions-workspace-layout:has(.topics-panel.collapsed) ~ #detail-panel,
+            .sidebar.collapsed ~ .workspace #cards-workspace-layout:has(#cards-ranking-panel.collapsed) ~ #detail-panel {
+                --detail-width: 900px;
+            }
+        }
+        @media (min-width: 1700px) {
+            .sidebar.collapsed ~ .workspace #questions-workspace-layout:has(.topics-panel.collapsed) ~ #detail-panel,
+            .sidebar.collapsed ~ .workspace #cards-workspace-layout:has(#cards-ranking-panel.collapsed) ~ #detail-panel {
+                --detail-width: 1000px;
+            }
+        }
+
+        .detail-panel {
+            position: absolute;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            height: 100%;
+            width: var(--detail-width);
+            background: var(--sidebar-bg);
+            border-left: 1px solid var(--card-border);
+            display: flex;
+            flex-direction: column;
+            z-index: 9999;
+            overflow: hidden;
+            box-shadow: -8px 0 30px rgba(0, 0, 0, 0.45);
+            transition: transform var(--transition-speed) cubic-bezier(0.4, 0, 0.2, 1), visibility var(--transition-speed), width var(--transition-speed) ease;
+            transform: translateX(100%);
+            visibility: hidden;
+            pointer-events: none;
+        }
+
+        .detail-panel.open {
+            transform: translateX(0);
+            visibility: visible;
+            pointer-events: auto;
+        }
+
+        /* Adjust workspace layout child sizing when detail panel is open (only on wide screens) */
+        .workspace-layout.detail-open #question-stream {
+            margin-right: 0;
+        }
+
+        .workspace-layout.detail-open #cards-workspace-layout {
+            padding-right: 0;
+        }
+
+        @media (min-width: 1400px) {
+            .workspace-layout.detail-open #question-stream {
+                margin-right: var(--detail-width);
+            }
+
+            .workspace-layout.detail-open #cards-workspace-layout {
+                padding-right: var(--detail-width);
+            }
+        }
+
+        @media (max-width: 1024px) {
+            .detail-panel {
+                width: 100% !important;
+                max-width: 100% !important;
+            }
+        }
+
+        /* Detail Empty Placeholder state */
+        .detail-placeholder {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            color: var(--text-secondary);
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .detail-placeholder i {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .detail-header {
+            padding: 1.25rem;
+            border-bottom: 1px solid var(--card-border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.1);
+        }
+
+        .detail-title {
+            font-size: 1rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .detail-content {
+            flex: 1;
+            overflow-y: auto;
+            padding: 1.25rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+        }
+
+        .detail-section {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid var(--card-border);
+            border-radius: 0.85rem;
+            padding: 1rem;
+        }
+
+        .section-label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: var(--text-secondary);
+            margin-bottom: 0.65rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .section-body {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            white-space: pre-wrap;
+        }
+
+        /* Detail Tabs */
+        .tabs {
+            display: flex;
+            gap: 0.4rem;
+            border-bottom: 1px solid var(--card-border);
+            padding-bottom: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .tab-btn {
+            background: transparent;
+            border: none;
+            color: var(--text-secondary);
+            padding: 0.45rem 0.85rem;
+            cursor: pointer;
+            font-weight: 600;
+            border-radius: 0.4rem;
+            font-size: 0.8rem;
+            transition: all var(--transition-speed);
+        }
+
+        .tab-btn.active {
+            color: var(--text-primary);
+            background: rgba(99, 102, 241, 0.15);
+        }
+
+        .tab-panel {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        /* Personal Note text area */
+        .notes-textarea {
+            width: 100%;
+            height: 140px;
+            background: rgba(0, 0, 0, 0.2);
+            border: 1px solid var(--card-border);
+            border-radius: 0.6rem;
+            color: var(--text-primary);
+            padding: 0.65rem;
+            font-family: var(--font-family);
+            font-size: 0.9rem;
+            resize: vertical;
+            outline: none;
+        }
+
+        .notes-textarea:focus {
+            border-color: var(--accent-color);
+        }
+
+        .btn-save-note {
+            margin-top: 0.5rem;
+            background: var(--accent-gradient);
+            border: none;
+            color: white;
+            padding: 0.45rem 1rem;
+            border-radius: 0.4rem;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 0.8rem;
+            align-self: flex-end;
+            transition: opacity var(--transition-speed);
+        }
+
+        .btn-save-note:hover {
+            opacity: 0.9;
+        }
+
+        /* AI Prompt Copy/Interactive Area */
+        .prompt-box {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: rgba(0, 0, 0, 0.15);
+            padding: 0.65rem;
+            border-radius: 0.6rem;
+            border: 1px solid var(--card-border);
+            font-size: 0.8rem;
+            gap: 0.5rem;
+        }
+
+        .prompt-preview-text {
+            color: var(--text-secondary);
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            max-width: 320px;
+        }
+
+        .btn-copy {
+            background: transparent;
+            border: none;
+            color: var(--accent-color);
+            cursor: pointer;
+            font-size: 0.95rem;
+            transition: color var(--transition-speed);
+            flex-shrink: 0;
+        }
+
+        .btn-copy:hover {
+            color: var(--text-primary);
+        }
+
+        /* Live AI Solver Interactive Area */
+        .live-solver-box {
+            background: rgba(99, 102, 241, 0.05);
+            border: 1px dashed rgba(99, 102, 241, 0.3);
+            border-radius: 0.75rem;
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .btn-solve-live {
+            background: var(--accent-gradient);
+            color: white;
+            border: none;
+            border-radius: 0.5rem;
+            padding: 0.55rem 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            font-size: 0.85rem;
+            transition: transform 0.2s;
+        }
+
+        .btn-solve-live:hover {
+            transform: scale(1.02);
+        }
+
+        .live-response-container {
+            border-top: 1px solid var(--card-border);
+            padding-top: 0.85rem;
+            display: none;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        .api-loading-spinner {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--accent-color);
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        /* Markdown rendered outputs styling */
+        .markdown-rendered {
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .markdown-rendered h2, .markdown-rendered h3 {
+            margin-top: 1.25rem;
+            margin-bottom: 0.65rem;
+            color: #818cf8;
+            font-size: 1.05rem;
+        }
+
+        .markdown-rendered ul, .markdown-rendered ol {
+            margin-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .markdown-rendered li {
+            margin-bottom: 0.4rem;
+        }
+
+        .markdown-rendered table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+            font-size: 0.85rem;
+        }
+
+        .markdown-rendered th, .markdown-rendered td {
+            border: 1px solid var(--card-border);
+            padding: 0.5rem;
+            text-align: left;
+        }
+
+        .markdown-rendered th {
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--text-primary);
+        }
+
+        .markdown-rendered blockquote {
+            border-left: 4px solid var(--accent-color);
+            padding-left: 0.75rem;
+            color: var(--text-secondary);
+            margin: 0.85rem 0;
+        }
+
+        /* High-Frequency Study Cards Mode CSS */
+        .study-cards-workspace {
+            display: none; /* Active in Cards View mode */
+            flex: 1;
+            min-width: 0;
+            height: 100%;
+            transition: padding-right var(--transition-speed) ease;
+        }
+
+        .card-content-panel {
+            flex: 1;
+            min-width: 0;
+            height: 100%;
+            overflow-y: auto;
+            padding: 1.5rem;
+            border-right: 1px solid var(--card-border);
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .related-questions-panel {
+            width: 320px;
+            height: 100%;
+            overflow-y: auto;
+            padding: 1.25rem 1rem;
+            background: rgba(0, 0, 0, 0.05);
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            flex-shrink: 0;
+            border-left: 1px solid var(--card-border);
+        }
+
+        .related-questions-panel .panel-title {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .related-questions-list .question-card {
+            background: var(--card-bg) !important;
+            border: 1px solid var(--card-border) !important;
+            border-radius: 0.65rem;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            transition: all var(--transition-speed);
+            flex-shrink: 0 !important;
+        }
+
+        .related-questions-list .question-card .question-body {
+            color: var(--text-primary) !important;
+            font-weight: 500;
+        }
+
+        [data-theme="light"] .related-questions-panel {
+            background: #f8fafc !important;
+            border-left: 1px solid #e2e8f0;
+        }
+
+        [data-theme="light"] .related-questions-list .question-card {
+            background: #ffffff !important;
+            border-color: #cbd5e1 !important;
+            box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04) !important;
+            color: #0f172a !important;
+        }
+
+        [data-theme="light"] .related-questions-list .question-card .question-body {
+            color: #0f172a !important;
+        }
+
+        [data-theme="light"] .related-questions-list .question-card .question-card-right span {
+            color: #475569 !important;
+        }
+
+        [data-theme="light"] .related-questions-list .question-card:hover {
+            border-color: var(--accent-color) !important;
+            background: #ffffff !important;
+        }
+
+        .study-card-content {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 1.25rem;
+            padding: 2rem;
+            backdrop-filter: blur(10px);
+            max-width: 900px;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        /* Topics Panel Collapsible state styling */
+        .topics-panel.collapsed {
+            width: 60px;
+            padding: 1.25rem 0.25rem;
+        }
+
+        .topics-panel.collapsed .title-text-group,
+        .topics-panel.collapsed .topic-item span,
+        .topics-panel.collapsed .badge-topic,
+        .topics-panel.collapsed .topic-item div {
+            display: none !important;
+        }
+
+        .topics-panel.collapsed .panel-title {
+            justify-content: center !important;
+            margin-bottom: 1.5rem;
+        }
+
+        .topics-panel.collapsed .topic-item {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            margin: 0.25rem auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 !important;
+            border: 1px solid var(--card-border);
+        }
+
+        .topics-panel.collapsed .topic-item::before {
+            content: attr(data-index);
+            font-weight: 700;
+            font-size: 0.85rem;
+        }
+
+        .btn-icon-sm {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--card-border);
+            color: var(--text-primary);
+            width: 26px;
+            height: 26px;
+            border-radius: 0.4rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 0.75rem;
+            transition: all var(--transition-speed);
+        }
+
+        .btn-icon-sm:hover {
+            background: rgba(99, 102, 241, 0.15);
+            border-color: var(--accent-color);
+        }
+
+        /* Rank Badges */
+        .rank-badge {
+            font-size: 0.7rem;
+            padding: 0.1rem 0.4rem;
+            border-radius: 0.3rem;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        .rank-gold {
+            background: linear-gradient(135deg, #ffd700 0%, #ffa500 100%);
+            color: #000000;
+        }
+
+        .rank-silver {
+            background: linear-gradient(135deg, #c0c0c0 0%, #808080 100%);
+            color: #ffffff;
+        }
+
+        .rank-bronze {
+            background: linear-gradient(135deg, #cd7f32 0%, #8b4513 100%);
+            color: #ffffff;
+        }
+
+        .rank-normal {
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--text-secondary);
+        }
+
+        /* Custom Scrollbars */
+        ::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 3px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--accent-color);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 1024px) {
+            .detail-panel {
+                position: fixed;
+                right: -100%;
+                top: 0;
+                height: 100vh;
+                z-index: 9999;
+                box-shadow: -10px 0 30px rgba(0, 0, 0, 0.5);
+                width: 480px;
+                max-width: 90%;
+                display: flex; /* Always flex when fixed, let transform/right control visibility */
+                transform: translateX(100%);
+                transition: transform var(--transition-speed) ease;
+            }
+            .detail-panel.open {
+                right: 0;
+                transform: translateX(0);
+            }
+        }
+
+        /* Bento 統計卡片樣式 */
+        .stats-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--card-border);
+            border-radius: 0.75rem;
+            padding: 1rem;
+            margin-bottom: 1.25rem;
+            transition: background-color var(--transition-speed), border-color var(--transition-speed);
+        }
+        [data-theme="light"] .stats-card {
+            background: #ffffff;
+            border-color: #cbdbe5;
+        }
+        .stats-progress-container {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 0.75rem;
+        }
+        .stats-circular-progress {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            flex-shrink: 0;
+            transition: background var(--transition-speed);
+        }
+        .stats-circular-progress::before {
+            content: "";
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            background: var(--bg-color);
+            border-radius: 50%;
+            transition: background var(--transition-speed);
+        }
+        [data-theme="light"] .stats-circular-progress::before {
+            background: #ffffff;
+        }
+        .stats-progress-value {
+            position: relative;
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+        .stats-text-group {
+            display: flex;
+            flex-direction: column;
+        }
+        .stats-main-label {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+        .stats-sub-label {
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+        }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0.5rem;
+            border-top: 1px solid var(--card-border);
+            padding-top: 0.75rem;
+            margin-top: 0.25rem;
+        }
+        .stats-grid-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .stats-grid-num {
+            font-size: 0.95rem;
+            font-weight: 700;
+        }
+        .stats-grid-label {
+            font-size: 0.7rem;
+            color: var(--text-secondary);
+        }
+
+        /* 選擇題選項與互動樣式 */
+        .options-container {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            margin-top: 1rem;
+            margin-bottom: 1.25rem;
+        }
+        .option-btn {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--card-border);
+            border-radius: 0.5rem;
+            padding: 0.85rem 1rem;
+            text-align: left;
+            color: var(--text-primary);
+            cursor: pointer;
+            font-family: var(--font-family);
+            font-size: 0.92rem;
+            transition: all 0.2s ease;
+            width: 100%;
+            outline: none;
+        }
+        [data-theme="light"] .option-btn {
+            background: #ffffff;
+            border-color: #cbd5e1;
+        }
+        .option-btn:hover:not(.success):not(.error):not(.disabled) {
+            border-color: var(--accent-color);
+            background: rgba(13, 148, 136, 0.05);
+        }
+        .option-letter {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.08);
+            font-size: 0.8rem;
+            font-weight: 700;
+            flex-shrink: 0;
+            color: var(--text-primary);
+            transition: all 0.2s ease;
+        }
+        [data-theme="light"] .option-letter {
+            background: #f1f5f9;
+        }
+        .option-btn:hover:not(.success):not(.error):not(.disabled) .option-letter {
+            background: var(--accent-color);
+            color: #ffffff;
+        }
+        .option-text {
+            line-height: 1.4;
+            flex: 1;
+        }
+        .option-btn.success {
+            background: rgba(16, 185, 129, 0.12) !important;
+            border-color: #10b981 !important;
+            color: #10b981 !important;
+        }
+        .option-btn.success .option-letter {
+            background: #10b981 !important;
+            color: #ffffff !important;
+        }
+        .option-btn.error {
+            background: rgba(239, 68, 68, 0.12) !important;
+            border-color: #ef4444 !important;
+            color: #ef4444 !important;
+        }
+        .option-btn.error .option-letter {
+            background: #ef4444 !important;
+            color: #ffffff !important;
+        }
+        .option-btn.disabled {
+            cursor: default;
+            opacity: 0.85;
+        }
+
+        /* 答題結果回饋 */
+        .answer-feedback-box {
+            border-radius: 0.5rem;
+            padding: 1rem;
+            margin-bottom: 1.25rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.35rem;
+            font-size: 0.9rem;
+            animation: slideIn 0.3s ease;
+        }
+        .answer-feedback-box.success {
+            background: rgba(16, 185, 129, 0.08);
+            border: 1px solid rgba(16, 185, 129, 0.2);
+            color: #10b981;
+        }
+        .answer-feedback-box.error {
+            background: rgba(239, 68, 68, 0.08);
+            border: 1px solid rgba(239, 68, 68, 0.2);
+            color: #ef4444;
+        }
+        .answer-feedback-title {
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        /* Switch toggle round */
+        .switch-container input:checked + .slider-round {
+            background-color: var(--error-color) !important;
+        }
+        .slider-round::before {
+            position: absolute;
+            content: "";
+            height: 14px;
+            width: 14px;
+            left: 3px;
+            bottom: 3px;
+            background-color: white;
+            transition: .3s;
+            border-radius: 50%;
+        }
+        .switch-container input:checked + .slider-round::before {
+            transform: translateX(16px);
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="app-container">
+        
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar" id="sidebar">
+            <div class="logo-container">
+                <i class="fa-solid fa-graduation-cap logo-icon"></i>
+                <div class="logo-text">國考智能學習門戶</div>
+                <button class="sidebar-collapse-btn" id="sidebar-collapse-inner" title="收折側邊欄">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+            </div>
+            
+            <div class="nav-section-title">考試科目</div>
+            <ul class="subject-list" id="subject-list">
+                <!-- Subject buttons dynamically populated -->
+            </ul>
+
+            <!-- Settings Button -->
+            <button class="sidebar-settings-btn" id="btn-open-settings">
+                <i class="fa-solid fa-gear"></i>
+                <span class="settings-btn-text">設定 · API 金鑰 · 題庫管理</span>
+            </button>
+
+            <!-- Emergency Reset Button -->
+            <button class="sidebar-settings-btn" id="btn-open-emergency" style="margin-top: 0.4rem; border-color: rgba(239, 68, 68, 0.25); color: #f87171;">
+                <i class="fa-solid fa-triangle-exclamation"></i>
+                <span class="settings-btn-text">緊急數據清除工具</span>
+            </button>
+        </aside>
+
+        <!-- ⚙️ Settings Modal -->
+        <div class="settings-modal-overlay" id="settings-modal-overlay">
+            <div class="settings-modal" id="settings-modal">
+                <div class="settings-modal-header">
+                    <div class="settings-modal-title">
+                        <i class="fa-solid fa-gear" style="color: var(--accent-color);"></i>
+                        系統設定
+                    </div>
+                    <button class="settings-modal-close" id="btn-close-settings" title="關閉設定">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+                <div class="settings-modal-tabs">
+                    <button class="settings-tab-btn active" data-tab="api">
+                        <i class="fa-solid fa-key"></i> AI 解題設定
+                    </button>
+                    <button class="settings-tab-btn" data-tab="db">
+                        <i class="fa-solid fa-database"></i> 題庫管理
+                    </button>
+                    <button class="settings-tab-btn" data-tab="backup">
+                        <i class="fa-solid fa-download"></i> 研讀數據備份
+                    </button>
+                    <button class="settings-tab-btn" data-tab="about">
+                        <i class="fa-solid fa-circle-info"></i> 關於專案
+                    </button>
+                </div>
+                <div class="settings-modal-body">
+
+                    <!-- Tab: API Settings -->
+                    <div id="settings-tab-api" class="settings-tab-panel">
+                        <div class="settings-section">
+                            <div class="settings-section-title">
+                                <i class="fa-solid fa-key" style="color: var(--warning-color);"></i>
+                                Gemini API 金鑰
+                            </div>
+                            <div class="api-input-group">
+                                <div class="api-input-wrapper">
+                                    <input type="password" class="api-key-input" id="api-key-input" placeholder="輸入 Gemini API 金鑰..." style="font-size: 0.9rem; padding: 0.5rem 2rem 0.5rem 0.75rem;">
+                                    <button class="toggle-key-visibility" id="toggle-key-visibility" title="切換顯示">
+                                        <i class="fa-solid fa-eye-slash"></i>
+                                    </button>
+                                </div>
+                                <select class="api-select" id="api-model-select" style="font-size: 0.85rem; padding: 0.5rem;">
+                                    <option value="gemini-2.5-pro">Gemini 2.5 Pro（推薦，最強推理）</option>
+                                    <option value="gemini-2.5-flash">Gemini 2.5 Flash（快速，節省用量）</option>
+                                    <option value="gemini-1.5-pro">Gemini 1.5 Pro</option>
+                                    <option value="gemini-1.5-flash">Gemini 1.5 Flash</option>
+                                </select>
+                                <button class="btn-save-api" id="btn-save-api" style="padding: 0.55rem; font-size: 0.85rem;">
+                                    <i class="fa-solid fa-floppy-disk" style="margin-right: 0.35rem;"></i>儲存至本機
+                                </button>
+                            </div>
+                            <p style="font-size: 0.72rem; color: var(--text-secondary); margin-top: 0.5rem; line-height: 1.5;">
+                                API 金鑰僅儲存於本機瀏覽器 localStorage，不會上傳至任何伺服器。
+                                <a href="https://aistudio.google.com/apikey" target="_blank" style="color: var(--accent-color);">取得免費 API 金鑰 →</a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Tab: Database Management -->
+                    <div id="settings-tab-db" class="settings-tab-panel" style="display: none;">
+                        <div class="settings-section">
+                            <div class="settings-section-title">
+                                <i class="fa-solid fa-file-import" style="color: var(--accent-color);"></i>
+                                自訂題庫匯入
+                            </div>
+                            <p style="font-size: 0.78rem; color: var(--text-secondary); margin-bottom: 0.85rem; line-height: 1.5;">
+                                匯入自行爬取或產出的 <code style="background: rgba(99,102,241,0.1); padding: 0.15rem 0.35rem; border-radius: 0.3rem;">questions_db.js</code> 或 <code style="background: rgba(99,102,241,0.1); padding: 0.15rem 0.35rem; border-radius: 0.3rem;">.json</code> 檔案，支援大型題庫匯入。
+                            </p>
+                            <input type="file" id="db-file-input" accept=".js,.json" style="display: none;">
+                            <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+                                <button class="btn-save-api" id="btn-import-db" style="background: rgba(99,102,241,0.12); border: 1px solid rgba(99,102,241,0.3); color: var(--accent-color); text-align: left; padding: 0.55rem 0.75rem; font-size: 0.85rem;">
+                                    <i class="fa-solid fa-folder-open" style="margin-right: 0.4rem;"></i>選擇題庫檔案 (.js/.json)
+                                </button>
+                                <button class="btn-save-api" id="btn-clear-db" style="background: rgba(239,68,68,0.12); color: #f87171; border: 1px solid rgba(239,68,68,0.3); text-align: left; padding: 0.55rem 0.75rem; font-size: 0.85rem; display: none;">
+                                    <i class="fa-solid fa-trash-can" style="margin-right: 0.4rem;"></i>清除匯入題庫，還原預設
+                                </button>
+                                <div id="db-status-bar" style="font-size: 0.72rem; color: var(--success-color); display: none; align-items: center; gap: 0.35rem; padding: 0.35rem 0;">
+                                    <i class="fa-solid fa-circle-check"></i>
+                                    <span id="db-status-text">已載入自訂題庫</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="settings-section">
+                            <div class="settings-section-title">
+                                <i class="fa-solid fa-triangle-exclamation" style="color: var(--warning-color);"></i>
+                                緊急清除
+                            </div>
+                            <p style="font-size: 0.75rem; color: var(--text-secondary); margin-bottom: 0.75rem; line-height: 1.5;">
+                                若題庫格式錯誤導致頁面卡住，可在網址列加上 <code style="background: rgba(99,102,241,0.1); padding: 0.15rem 0.35rem; border-radius: 0.3rem;">?reset=1</code> 強制清除，或使用下方按鈕。
+                            </p>
+                            <button onclick="if(confirm('確定清除所有設定與題庫？')){localStorage.clear();location.reload();}" style="background: rgba(239,68,68,0.1); border: 1px solid rgba(239,68,68,0.25); color: #f87171; border-radius: 0.5rem; padding: 0.5rem 1rem; font-size: 0.8rem; cursor: pointer; width: 100%;">
+                                <i class="fa-solid fa-rotate" style="margin-right: 0.35rem;"></i>清除所有 localStorage 並重載
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Tab: Data Backup -->
+                    <div id="settings-tab-backup" class="settings-tab-panel" style="display: none;">
+                        <div class="settings-section">
+                            <div class="settings-section-title">
+                                <i class="fa-solid fa-download" style="color: var(--success-color);"></i>
+                                導出研讀數據
+                            </div>
+                            <p style="font-size: 0.78rem; color: var(--text-secondary); margin-bottom: 0.85rem; line-height: 1.5;">
+                                將所有個人學習數據（包括 **AI 即時解答快取**、**自訂合成複習卡**、**個人研讀筆記** 及 **API 設定**）導出為單一 JSON 備份檔。
+                            </p>
+                            <button class="btn-save-api" id="btn-export-backup" style="background: rgba(16,185,129,0.12); border: 1px solid rgba(16,185,129,0.3); color: var(--success-color); font-size: 0.85rem; padding: 0.55rem 0.75rem; width: 100%;">
+                                <i class="fa-solid fa-file-export" style="margin-right: 0.35rem;"></i>立即導出備份 (.json)
+                            </button>
+                        </div>
+                        <div class="settings-section">
+                            <div class="settings-section-title">
+                                <i class="fa-solid fa-upload" style="color: var(--accent-color);"></i>
+                                導入研讀數據
+                            </div>
+                            <p style="font-size: 0.78rem; color: var(--text-secondary); margin-bottom: 0.85rem; line-height: 1.5;">
+                                選擇先前導出的備份檔以還原所有學習數據（會合併或覆蓋目前的本機數據）。
+                            </p>
+                            <input type="file" id="backup-file-input" accept=".json" style="display: none;">
+                            <button class="btn-save-api" id="btn-import-backup" style="background: rgba(99,102,241,0.12); border: 1px solid rgba(99,102,241,0.3); color: var(--accent-color); font-size: 0.85rem; padding: 0.55rem 0.75rem; width: 100%;">
+                                <i class="fa-solid fa-file-import" style="margin-right: 0.35rem;"></i>選擇備份檔案並還原
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Tab: About Project -->
+                    <div id="settings-tab-about" class="settings-tab-panel" style="display: none;">
+                        <div class="settings-section" style="text-align: center; padding: 1.25rem;">
+                            <i class="fa-solid fa-graduation-cap" style="font-size: 2.5rem; color: var(--accent-color); margin-bottom: 0.5rem;"></i>
+                            <h4 style="font-size: 1.1rem; color: var(--text-primary); margin-bottom: 0.25rem;">國考智能學習門戶</h4>
+                            <p style="font-size: 0.72rem; color: var(--text-secondary);">版本 v3.0 · 護理師國考與歷屆甄選專用學習工具</p>
+                            
+                            <div style="margin-top: 1rem; border-top: 1px solid var(--card-border); padding-top: 1rem; text-align: left; font-size: 0.8rem; line-height: 1.6;">
+                                <div style="display: flex; justify-content: space-between; margin-bottom: 0.35rem;">
+                                    <span style="color: var(--text-secondary);">專案作者:</span>
+                                    <span style="color: var(--text-primary); font-weight: 600;">etrnya</span>
+                                </div>
+                                <div style="display: flex; justify-content: space-between; margin-bottom: 0.35rem;">
+                                    <span style="color: var(--text-secondary);">GitHub 專案首頁:</span>
+                                    <a href="https://github.com/etrnya/nurse-exam" target="_blank" style="color: var(--accent-color); text-decoration: underline; font-weight: 500;">
+                                        nurse-exam <i class="fa-solid fa-up-right-from-square" style="font-size: 0.65rem;"></i>
+                                    </a>
+                                </div>
+                                <div style="display: flex; justify-content: space-between;">
+                                    <span style="color: var(--text-secondary);">授權條款:</span>
+                                    <span style="color: var(--text-primary);">MIT License</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="settings-section">
+                            <div class="settings-section-title">
+                                <i class="fa-solid fa-shield-halved" style="color: var(--success-color);"></i>
+                                公共安全與版權合規政策
+                            </div>
+                            <div style="font-size: 0.76rem; color: var(--text-secondary); line-height: 1.6;">
+                                <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+                                    <div style="display: flex; gap: 0.5rem; align-items: flex-start;">
+                                        <i class="fa-solid fa-user-shield" style="color: var(--success-color); margin-top: 0.15rem; flex-shrink: 0;"></i>
+                                        <div><b>隱私保護</b>：本機純靜態執行，不收集、不上傳任何個人隱私或病人醫療資料。</div>
+                                    </div>
+                                    <div style="display: flex; gap: 0.5rem; align-items: flex-start;">
+                                        <i class="fa-solid fa-copyright" style="color: var(--warning-color); margin-top: 0.15rem; flex-shrink: 0;"></i>
+                                        <div><b>版權合規</b>：不公開、不儲存任何未授權 PDF、教科書原文或原始考卷題幹。</div>
+                                    </div>
+                                    <div style="display: flex; gap: 0.5rem; align-items: flex-start;">
+                                        <i class="fa-solid fa-pen-to-square" style="color: var(--accent-color); margin-top: 0.15rem; flex-shrink: 0;"></i>
+                                        <div><b>教育改寫</b>：現有題庫均經原創改寫與學術引用，符合開源教育規範。</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div><!-- /settings-modal-body -->
+            </div><!-- /settings-modal -->
+        </div><!-- /settings-modal-overlay -->
+
+        <!-- 🚨 Emergency Reset Modal -->
+        <div class="settings-modal-overlay" id="emergency-modal-overlay">
+            <div class="settings-modal" style="width: 480px;">
+                <div class="settings-modal-header" style="border-bottom-color: rgba(239, 68, 68, 0.2);">
+                    <div class="settings-modal-title" style="color: #ef4444; font-weight: 700; display: flex; align-items: center; gap: 0.5rem;">
+                        <i class="fa-solid fa-triangle-exclamation"></i>
+                        緊急數據清除工具
+                    </div>
+                    <button class="settings-modal-close" id="btn-close-emergency" title="關閉">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+                <div class="settings-modal-body" style="padding: 1.5rem; display: flex; flex-direction: column; gap: 1rem;">
+                    <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.6; margin: 0;">
+                        當自訂題庫毀損、格式錯誤或網頁運作異常時，可在此執行本機資料清理。此操作將直接修改瀏覽器的 localStorage。
+                    </p>
+                    
+                    <div style="display: flex; flex-direction: column; gap: 0.75rem; width: 100%;">
+                        <button class="btn-save-api" id="btn-emergency-clear-db" style="background: linear-gradient(135deg, #ef4444, #b91c1c); color: white; border: none; padding: 0.65rem; font-size: 0.85rem; width: 100%; border-radius: 0.4rem; cursor: pointer; font-weight: 600;">
+                            <i class="fa-solid fa-trash-can" style="margin-right: 0.4rem;"></i>立即清除自訂題庫 (custom_questions_db)
+                        </button>
+                        <button class="btn-save-api" id="btn-emergency-show-contents" style="background: rgba(255,255,255,0.05); border: 1px solid var(--card-border); color: var(--text-primary); padding: 0.65rem; font-size: 0.85rem; width: 100%; border-radius: 0.4rem; cursor: pointer; font-weight: 600;">
+                            <i class="fa-solid fa-magnifying-glass" style="margin-right: 0.4rem;"></i>查看目前 localStorage 內容
+                        </button>
+                        <button class="btn-save-api" id="btn-emergency-clear-all" style="background: transparent; border: 1px solid rgba(239,68,68,0.3); color: #f87171; padding: 0.65rem; font-size: 0.85rem; width: 100%; border-radius: 0.4rem; cursor: pointer; font-weight: 600;">
+                            <i class="fa-solid fa-circle-exclamation" style="margin-right: 0.4rem;"></i>清除全部 localStorage（含金鑰及個人筆記）
+                        </button>
+                    </div>
+
+                    <div id="emergency-status" style="font-size: 0.8rem; padding: 0.5rem; border-radius: 0.4rem; display: none;"></div>
+                    <pre id="emergency-preview" style="text-align: left; background: rgba(0, 0, 0, 0.3); border: 1px solid var(--card-border); border-radius: 0.5rem; padding: 0.75rem; font-size: 0.72rem; color: var(--text-secondary); overflow-x: auto; max-height: 180px; overflow-y: auto; display: none; width: 100%; font-family: monospace; white-space: pre-wrap; margin: 0;"></pre>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Workspace -->
+        <div class="workspace">
+            
+            <!-- Top Controls -->
+            <header class="top-bar">
+                <div style="display: flex; align-items: center; gap: 1rem;">
+                    <!-- Hamburger / Collapse Sidebar button -->
+                    <button class="btn-icon" id="sidebar-toggle" title="收折/展開側邊欄">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                    
+                    <div class="mode-selector">
+                        <button class="mode-btn active" id="mode-questions-btn">
+                            <i class="fa-solid fa-list-check"></i> 歷屆題庫練習
+                        </button>
+                        <button class="mode-btn" id="mode-cards-btn">
+                            <i class="fa-solid fa-book-open-reader"></i> 核心高頻複習卡
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="search-container" id="search-bar-container">
+                    <i class="fa-solid fa-magnifying-glass" style="color: var(--text-secondary);"></i>
+                    <input type="text" class="search-input" id="search-input" placeholder="搜尋題目關鍵字、年份或法規條文...">
+                </div>
+                
+                <div class="toolbar-buttons">
+                    <button class="btn-icon" id="theme-toggle" title="切換深淺色主題">
+                        <i class="fa-solid fa-moon"></i>
+                    </button>
+                </div>
+            </header>
+
+            <!-- 3-Column Split Workspace Layout -->
+            <div class="workspace-layout">
+                
+                <!-- View Mode 1: Questions Grid -->
+                <div id="questions-workspace-layout" class="workspace-layout-inner" style="display: flex; width: 100%;">
+                    <!-- Column 1: Topics Selector -->
+                    <div class="topics-panel" id="topics-panel">
+                        <div class="panel-title" style="justify-content: space-between; margin-bottom: 1rem;">
+                            <span class="title-text-group">
+                                <i class="fa-solid fa-tags" style="color: var(--accent-color);"></i>
+                                <span id="topics-panel-title">考點標籤分析</span>
+                            </span>
+                            <button class="btn-icon-sm" id="topics-toggle-btn" title="收折/展開主題欄">
+                                <i class="fa-solid fa-angle-left"></i>
+                            </button>
+                        </div>
+                        
+                        <!-- 統計分析儀表板 -->
+                        <div id="stats-dashboard"></div>
+                        
+                        <!-- 僅顯示錯題篩選開關 -->
+                        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.25rem; padding: 0.65rem 0.85rem; background: rgba(239, 68, 68, 0.05); border: 1px dashed rgba(239, 68, 68, 0.2); border-radius: 0.5rem;">
+                            <span style="font-size: 0.8rem; font-weight: 600; color: var(--text-primary); display: flex; align-items: center; gap: 0.35rem;">
+                                <i class="fa-solid fa-triangle-exclamation" style="color: var(--error-color);"></i> 僅複習錯題
+                            </span>
+                            <label class="switch-container" style="position: relative; display: inline-block; width: 36px; height: 20px;">
+                                <input type="checkbox" id="wrong-filter-checkbox" style="opacity: 0; width: 0; height: 0;">
+                                <span class="slider-round" style="position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: var(--card-border); transition: .3s; border-radius: 20px;"></span>
+                            </label>
+                        </div>
+                        
+                        <ul class="topic-list" id="topic-list">
+                            <!-- Dynamic list of topics -->
+                        </ul>
+                    </div>
+
+                    <!-- Column 2: Questions Stream -->
+                    <div class="question-stream" id="question-stream">
+                        <!-- Dynamic list of questions -->
+                    </div>
+                </div>
+
+                <!-- View Mode 2: High-Frequency Study Cards Workspace -->
+                <div id="cards-workspace-layout" class="study-cards-workspace" style="display: none; width: 100%;">
+                    <!-- Column 1: Topics Ranking Panel -->
+                    <div class="topics-panel" id="cards-ranking-panel">
+                        <div class="panel-title" style="justify-content: space-between;">
+                            <span class="title-text-group">
+                                <i class="fa-solid fa-ranking-star" style="color: var(--warning-color);"></i>
+                                <span>高頻考點 TOP 10</span>
+                            </span>
+                            <button class="btn-icon-sm" id="cards-ranking-toggle-btn" title="收折/展開排行榜">
+                                <i class="fa-solid fa-angle-left"></i>
+                            </button>
+                        </div>
+                        <ul class="topic-list" id="cards-ranking-list">
+                            <!-- Dynamic ranking of top topics for active subject -->
+                        </ul>
+                    </div>
+                    
+                    <!-- Column 2: Study Card Content Panel -->
+                    <div class="card-content-panel" id="card-content-panel">
+                        <!-- Study Card Render Area (or empty state with button to generate) -->
+                    </div>
+                    
+                    <!-- Column 3: Related Questions Stream -->
+                    <div class="related-questions-panel" id="related-questions-panel">
+                        <div class="panel-title">
+                            <i class="fa-solid fa-list-check" style="color: var(--accent-color);"></i>
+                            <span>本主題歷屆考題</span>
+                        </div>
+                        <div class="related-questions-list" id="related-questions-list" style="display: flex; flex-direction: column; gap: 0.75rem; flex: 1; overflow-y: auto;">
+                            <!-- Dynamic related questions list -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SHARED Column 3: Split AI Details Panel -->
+                <div class="detail-panel" id="detail-panel">
+                    <div class="detail-placeholder" id="detail-placeholder">
+                        <i class="fa-solid fa-robot"></i>
+                        <h3>請點選考題卡片</h3>
+                        <p>點選考題流，此處將立即呈現該題目的 AI 擬答、個人學習筆記，並提供即時大模型解題對話。</p>
+                    </div>
+                    <div id="detail-active-container" style="display: none; flex-direction: column; height: 100%;">
+                        <div class="detail-header">
+                            <div class="detail-title" id="detail-title">題目詳情</div>
+                            <button class="btn-icon" id="detail-close-btn" style="width: 32px; height: 32px; border-radius: 0.35rem;" title="關閉詳情面板">
+                                <i class="fa-solid fa-xmark"></i>
+                            </button>
+                        </div>
+                        <div class="detail-content" id="detail-content">
+                            <!-- Dynamic Content Loaded Here -->
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Load Local Databases -->
+    <script src="questions_db.js"></script>
+    <script src="answers_db.js"></script>
+    <script src="study_cards_db.js"></script>
+
+    <!-- App JavaScript Logic -->
+    <script>
+        // Fallback for missing libraries
+        window.STUDY_CARDS_DB = window.STUDY_CARDS_DB || {};
+        window.ANSWERS_DB = typeof answers_db !== 'undefined' ? answers_db : {};
+
+        // Convert flat questions_db to hierarchal window.QUESTIONS_DB
+        function buildQuestionsDbHierarchy() {
+            window.QUESTIONS_DB = {};
+            
+            const allSubjects = [
+                "基礎醫學",
+                "基本護理學與護理行政",
+                "內外科護理學",
+                "產兒科護理學",
+                "精神科與社區衛生護理學",
+                "綜合護理與公共衛生"
+            ];
+            
+            allSubjects.forEach(subj => {
+                window.QUESTIONS_DB[subj] = {};
+            });
+            
+            const items = typeof questions_db !== 'undefined' ? questions_db : [];
+            
+            items.forEach(q => {
+                const numberMatch = q.id.match(/-(\d+)$/);
+                const number = numberMatch ? parseInt(numberMatch[1], 10) : 1;
+                
+                const qAdapted = {
+                    id: q.id,
+                    text: q.question, // Adapt to original key
+                    question: q.question,
+                    options: q.options,
+                    year: `${q.year}年`,
+                    level: q.category,
+                    number: number,
+                    subject: q.subject,
+                    tags: q.tags || [q.subject],
+                    weight: q.weight || 1.0
+                };
+                
+                const subj = q.subject || "綜合護理與公共衛生";
+                if (!window.QUESTIONS_DB[subj]) {
+                    window.QUESTIONS_DB[subj] = {};
+                }
+                
+                const tags = qAdapted.tags.length > 0 ? qAdapted.tags : [subj];
+                tags.forEach(tag => {
+                    if (!window.QUESTIONS_DB[subj][tag]) {
+                        window.QUESTIONS_DB[subj][tag] = [];
+                    }
+                    window.QUESTIONS_DB[subj][tag].push(qAdapted);
+                });
+            });
+        }
+
+        buildQuestionsDbHierarchy();
+
+        // Global State Management
+        let currentSubject = "基礎醫學";
+        let currentTopic = ""; 
+        let searchQuery = "";
+        let theme = localStorage.getItem("theme") || "dark";
+        let viewMode = "questions"; // 'questions' or 'cards'
+        let activeQuestion = null; // Currently clicked question object
+        let showOnlyWrong = false; // Filter wrong questions
+
+        // DOM Elements
+        const sidebarEl = document.getElementById("sidebar");
+        const sidebarToggleEl = document.getElementById("sidebar-toggle");
+        const subjectListEl = document.getElementById("subject-list");
+        const topicListEl = document.getElementById("topic-list");
+        const questionStreamEl = document.getElementById("question-stream");
+        const searchInputEl = document.getElementById("search-input");
+        const searchBarContainerEl = document.getElementById("search-bar-container");
+        const themeToggleEl = document.getElementById("theme-toggle");
+        const wrongFilterCheckbox = document.getElementById("wrong-filter-checkbox");
+        
+        // Mode switch elements
+        const modeQuestionsBtn = document.getElementById("mode-questions-btn");
+        const modeCardsBtn = document.getElementById("mode-cards-btn");
+        const questionsWorkspaceLayout = document.getElementById("questions-workspace-layout");
+        const cardsWorkspaceLayout = document.getElementById("cards-workspace-layout");
+        const studyCardRenderArea = document.getElementById("study-card-render-area");
+
+        // Split Details Panel Elements
+        const detailPanelEl = document.getElementById("detail-panel");
+        const detailPlaceholderEl = document.getElementById("detail-placeholder");
+        const detailActiveContainer = document.getElementById("detail-active-container");
+        const detailCloseBtn = document.getElementById("detail-close-btn");
+        const detailContentEl = document.getElementById("detail-content");
+
+        // API Key Settings elements
+        const apiKeyInputEl = document.getElementById("api-key-input");
+        const toggleKeyVisibilityBtn = document.getElementById("toggle-key-visibility");
+        const apiModelSelectEl = document.getElementById("api-model-select");
+        const btnSaveApiEl = document.getElementById("btn-save-api");
+        let activeCardTopic = ""; // Selected topic name in Cards Mode
+
+        function initApp() {
+            // Populate Subjects
+            populateSubjects();
+            
+            // Set Default Topic to first non-empty topic of selected subject
+            const activeTopics = Object.keys(window.QUESTIONS_DB[currentSubject]).filter(t => window.QUESTIONS_DB[currentSubject][t].length > 0);
+            currentTopic = activeTopics[0] || "";
+            
+            // Populate Topics and Questions
+            renderTopics();
+            renderQuestions();
+
+            // Wrong question filter switch listener
+            if (wrongFilterCheckbox) {
+                wrongFilterCheckbox.addEventListener("change", (e) => {
+                    showOnlyWrong = e.target.checked;
+                    renderQuestions();
+                });
+            }
+
+            // Event Listeners
+            searchInputEl.addEventListener("input", (e) => {
+                searchQuery = e.target.value;
+                renderQuestions();
+            });
+
+            // Sidebar Toggle Collapse
+            sidebarToggleEl.addEventListener("click", () => {
+                sidebarEl.classList.toggle("collapsed");
+            });
+
+            // Middle Column Topics Panel Collapse Toggle
+            const topicsPanel = document.getElementById("topics-panel");
+            const topicsToggleBtn = document.getElementById("topics-toggle-btn");
+            topicsToggleBtn.addEventListener("click", () => {
+                topicsPanel.classList.toggle("collapsed");
+                const icon = topicsToggleBtn.querySelector("i");
+                if (topicsPanel.classList.contains("collapsed")) {
+                    icon.className = "fa-solid fa-angle-right";
+                } else {
+                    icon.className = "fa-solid fa-angle-left";
+                }
+            });
+
+            // Cards Mode Ranking Panel Collapse Toggle
+            const cardsRankingPanel = document.getElementById("cards-ranking-panel");
+            const cardsRankingToggleBtn = document.getElementById("cards-ranking-toggle-btn");
+            cardsRankingToggleBtn.addEventListener("click", () => {
+                cardsRankingPanel.classList.toggle("collapsed");
+                const icon = cardsRankingToggleBtn.querySelector("i");
+                if (cardsRankingPanel.classList.contains("collapsed")) {
+                    icon.className = "fa-solid fa-angle-right";
+                } else {
+                    icon.className = "fa-solid fa-angle-left";
+                }
+            });
+
+            themeToggleEl.addEventListener("click", toggleTheme);
+            detailCloseBtn.addEventListener("click", closeDetailsPane);
+
+            // View Mode Toggle
+            modeQuestionsBtn.addEventListener("click", () => switchViewMode("questions"));
+            modeCardsBtn.addEventListener("click", () => switchViewMode("cards"));
+
+            // API Settings buttons
+            btnSaveApiEl.addEventListener("click", saveApiSettings);
+            toggleKeyVisibilityBtn.addEventListener("click", toggleApiKeyVisibility);
+
+            // Close details panel on Esc
+            window.addEventListener("keydown", (e) => {
+                if (e.key === "Escape") closeDetailsPane();
+            });
+        }
+
+        // Switch View Modes (題庫 vs 核心卡)
+        function switchViewMode(mode) {
+            viewMode = mode;
+            if (mode === "questions") {
+                modeQuestionsBtn.classList.add("active");
+                modeCardsBtn.classList.remove("active");
+                questionsWorkspaceLayout.style.display = "flex";
+                cardsWorkspaceLayout.style.display = "none";
+                searchBarContainerEl.style.display = "flex";
+                closeDetailsPane();
+            } else {
+                modeCardsBtn.classList.add("active");
+                modeQuestionsBtn.classList.remove("active");
+                questionsWorkspaceLayout.style.display = "none";
+                cardsWorkspaceLayout.style.display = "flex";
+                searchBarContainerEl.style.display = "none";
+                closeDetailsPane();
+                renderCardsModeRanking();
+            }
+        }
+
+        // Render Ranking list for Cards Mode (Dynamically generated TOP 10 topics for active subject)
+        function renderCardsModeRanking() {
+            const rankingListEl = document.getElementById("cards-ranking-list");
+            rankingListEl.innerHTML = "";
+
+            const topicsObj = window.QUESTIONS_DB[currentSubject] || {};
+            
+            // Get all topics from study cards database for this subject
+            const cardTopics = [];
+            const prefix = `${currentSubject}_`;
+            if (window.STUDY_CARDS_DB) {
+                Object.keys(window.STUDY_CARDS_DB).forEach(key => {
+                    if (key.startsWith(prefix)) {
+                        cardTopics.push(key.substring(prefix.length));
+                    }
+                });
+            }
+
+            // Union of all topics
+            const allTopicsSet = new Set([
+                ...Object.keys(topicsObj),
+                ...cardTopics
+            ]);
+
+            // Map and count questions, filtering out empty topics
+            const sortedTopics = Array.from(allTopicsSet)
+                .map(topicName => {
+                    const count = (topicsObj[topicName] || []).length;
+                    return { name: topicName, count: count };
+                })
+                .filter(item => item.count > 0);
+
+            // Sort by question count descending
+            sortedTopics.sort((a, b) => {
+                if (b.count !== a.count) {
+                    return b.count - a.count;
+                }
+                return a.name.localeCompare(b.name);
+            });
+
+            const top10 = sortedTopics.slice(0, 10);
+            const cardContentPanel = document.getElementById("card-content-panel");
+            
+            if (top10.length === 0) {
+                rankingListEl.innerHTML = `
+                    <div style="text-align: center; color: var(--text-secondary); padding: 2rem 0;">
+                        <i class="fa-solid fa-ranking-star" style="font-size: 1.5rem; margin-bottom: 0.5rem; opacity: 0.5;"></i>
+                        <p style="font-size: 0.8rem;">本科目尚無高頻主題數據</p>
+                    </div>
+                `;
+                cardContentPanel.innerHTML = `
+                    <div class="detail-placeholder">
+                        <i class="fa-solid fa-book-open-reader"></i>
+                        <h3>請選擇其他學科</h3>
+                        <p>此學科目前尚無複習卡或考題資料。</p>
+                    </div>
+                `;
+                return;
+            }
+            
+            // Default to top rank topic
+            activeCardTopic = top10[0].name;
+            
+            top10.forEach((item, index) => {
+                const rank = index + 1;
+                let rankClass = "rank-normal";
+                if (rank === 1) rankClass = "rank-gold";
+                else if (rank === 2) rankClass = "rank-silver";
+                else if (rank === 3) rankClass = "rank-bronze";
+
+                const li = document.createElement("li");
+                li.className = `topic-item ${item.name === activeCardTopic ? 'active' : ''}`;
+                li.setAttribute("data-index", rank);
+                li.innerHTML = `
+                    <div style="display: flex; align-items: center; gap: 0.5rem; min-width: 0; flex: 1;">
+                        <span class="rank-badge ${rankClass}">No.${rank}</span>
+                        <span class="topic-name-text" title="${item.name}">${item.name}</span>
+                    </div>
+                    <span class="badge-topic">${item.count} 題</span>
+                `;
+
+                li.addEventListener("click", () => {
+                    document.querySelectorAll("#cards-ranking-list .topic-item").forEach(el => el.classList.remove("active"));
+                    li.classList.add("active");
+                    activeCardTopic = item.name;
+                    renderStudyCardAndQuestions(item.name);
+                    closeDetailsPane();
+                });
+
+                rankingListEl.appendChild(li);
+            });
+
+            renderStudyCardAndQuestions(activeCardTopic);
+        }
+
+        // Render chosen study card & related questions
+        function renderStudyCardAndQuestions(topicName) {
+            const cardContentPanel = document.getElementById("card-content-panel");
+            const relatedQuestionsList = document.getElementById("related-questions-list");
+            
+            // 1. Related Questions Stream
+            relatedQuestionsList.innerHTML = "";
+            let questions = (window.QUESTIONS_DB[currentSubject] && window.QUESTIONS_DB[currentSubject][topicName]) || [];
+            questions = [...questions].sort((a, b) => getYearNumber(b.year) - getYearNumber(a.year));
+            
+            if (questions.length === 0) {
+                relatedQuestionsList.innerHTML = `
+                    <div style="text-align: center; color: var(--text-secondary); padding: 2rem 0;">
+                        <i class="fa-solid fa-list-check" style="font-size: 1.5rem; margin-bottom: 0.5rem; opacity: 0.5;"></i>
+                        <p style="font-size: 0.8rem;">本主題尚無相關考題</p>
+                    </div>
+                `;
+            } else {
+                questions.forEach(q => {
+                    const hasAnswer = window.ANSWERS_DB && window.ANSWERS_DB[q.text];
+                    const hasCachedAnswer = localStorage.getItem(`ai_answer_${q.year}_${q.level}_${q.number}`);
+                    const localNotes = localStorage.getItem(`notes_${q.year}_${q.level}_${q.number}`) || "";
+                    const isSelected = activeQuestion && activeQuestion.text === q.text;
+                    
+                    const card = document.createElement("div");
+                    card.className = `question-card ${isSelected ? 'active' : ''}`;
+                    card.style.padding = "0.75rem 1rem";
+                    
+                    card.innerHTML = `
+                        <div class="question-body" style="font-size: 0.85rem; -webkit-line-clamp: 3; display: -webkit-box; -webkit-box-orient: vertical; overflow: hidden;" title="${q.text.replace(/"/g, '&quot;')}">${q.text}</div>
+                        <div class="question-card-right" style="border-top: 1px solid var(--card-border); padding-top: 0.5rem; margin-top: 0.2rem; width: 100%;">
+                            <div style="display: flex; gap: 0.3rem;">
+                                ${hasAnswer ? '<span class="meta-tag tag-has-answer" style="font-size: 0.65rem; padding: 0.1rem 0.35rem;" title="包含 AI 精選模擬解析"><i class="fa-solid fa-robot"></i> 預載</span>' : ''}
+                                ${hasCachedAnswer ? '<span class="meta-tag tag-has-answer" style="font-size: 0.65rem; padding: 0.1rem 0.35rem; background: rgba(16, 185, 129, 0.1); color: var(--success-color); border: 1px solid rgba(16, 185, 129, 0.2);" title="包含已保存之 AI 解題結果"><i class="fa-solid fa-robot"></i> 自訂 AI</span>' : ''}
+                                ${localNotes ? '<span class="meta-tag tag-notes" style="font-size: 0.65rem; padding: 0.1rem 0.35rem;" title="已建立個人筆記"><i class="fa-solid fa-pen"></i> 筆記</span>' : ''}
+                            </div>
+                            <div style="display: flex; gap: 0.3rem; align-items: center;">
+                                <span class="meta-tag tag-year" style="font-size: 0.65rem; padding: 0.1rem 0.35rem;">${q.year}</span>
+                                <span class="meta-tag tag-level" style="font-size: 0.65rem; padding: 0.1rem 0.35rem;">${q.level}</span>
+                                <span style="font-size: 0.7rem; color: var(--text-secondary); font-weight: 500;">第 ${q.number} 題</span>
+                            </div>
+                        </div>
+                    `;
+                    
+                    card.addEventListener("click", () => {
+                        document.querySelectorAll(".question-card").forEach(c => c.classList.remove("active"));
+                        card.classList.add("active");
+                        activeQuestion = q;
+                        openQuestionDetails(q);
+                    });
+                    
+                    relatedQuestionsList.appendChild(card);
+                });
+            }
+
+            // 2. Study Card Viewer (Load preloaded or localstorage generated)
+            const preloadKey = `${currentSubject}_${topicName}`;
+            const generatedKey = `generated_card_${currentSubject}_${topicName}`;
+            let mdContent = window.STUDY_CARDS_DB[preloadKey] || localStorage.getItem(generatedKey);
+
+            if (mdContent) {
+                cardContentPanel.innerHTML = `
+                    <div class="study-card-content markdown-rendered">
+                        <div class="study-card-toolbar" style="display: flex; justify-content: flex-end; gap: 0.5rem; margin-bottom: 1.5rem; border-bottom: 1px solid var(--card-border); padding-bottom: 0.85rem;">
+                            <button class="btn-save-note" id="btn-copy-card" style="margin: 0; padding: 0.4rem 0.75rem; font-size: 0.78rem; align-self: auto; cursor: pointer;">
+                                <i class="fa-solid fa-copy" style="margin-right: 0.3rem;"></i>複製 Markdown
+                            </button>
+                            <button class="btn-save-note" id="btn-download-card" style="margin: 0; padding: 0.4rem 0.75rem; font-size: 0.78rem; background: rgba(16, 185, 129, 0.12); color: var(--success-color); border: 1px solid rgba(16, 185, 129, 0.3); align-self: auto; cursor: pointer;">
+                                <i class="fa-solid fa-download" style="margin-right: 0.3rem;"></i>下載為 .md 檔
+                            </button>
+                        </div>
+                        <div class="study-card-body-text">
+                            ${marked.parse(mdContent)}
+                        </div>
+                    </div>
+                `;
+
+                // Add copy listener
+                const btnCopyCard = document.getElementById("btn-copy-card");
+                btnCopyCard.addEventListener("click", () => {
+                    navigator.clipboard.writeText(mdContent).then(() => {
+                        const icon = btnCopyCard.querySelector("i");
+                        icon.className = "fa-solid fa-check";
+                        btnCopyCard.innerText = "已複製！";
+                        btnCopyCard.style.color = "var(--success-color)";
+                        setTimeout(() => {
+                            btnCopyCard.innerHTML = `<i class="fa-solid fa-copy" style="margin-right: 0.3rem;"></i>複製 Markdown`;
+                            btnCopyCard.style.color = "";
+                        }, 1500);
+                    });
+                });
+
+                // Add download listener
+                const btnDownloadCard = document.getElementById("btn-download-card");
+                btnDownloadCard.addEventListener("click", () => {
+                    try {
+                        const blob = new Blob([mdContent], { type: "text/markdown;charset=utf-8" });
+                        const url = URL.createObjectURL(blob);
+                        const a = document.createElement("a");
+                        a.href = url;
+                        a.download = `${currentSubject}_${topicName}_複習卡.md`;
+                        document.body.appendChild(a);
+                        a.click();
+                        document.body.removeChild(a);
+                        URL.revokeObjectURL(url);
+                    } catch (err) {
+                        alert("下載複習卡失敗：" + err.message);
+                    }
+                });
+            } else {
+                cardContentPanel.innerHTML = `
+                    <div class="study-card-content" style="text-align: center; padding: 3rem 2rem; border: 1px dashed var(--card-border);">
+                        <i class="fa-solid fa-wand-magic-sparkles" style="font-size: 3rem; color: var(--accent-color); margin-bottom: 1.25rem;"></i>
+                        <h3 style="font-size: 1.2rem; margin-bottom: 0.5rem; color: var(--text-primary);">AI 智慧現場合成複習卡</h3>
+                        <p style="color: var(--text-secondary); max-width: 480px; margin: 0 auto 1.5rem auto; font-size: 0.85rem; line-height: 1.6;">
+                            此主題（<b>${topicName}</b>）尚無預先載入的複習卡。可點擊下方按鈕呼叫本機設定的 Gemini API，由智能學習教練現場即時合成出一份包含核心公式、學理對比與考點框架的精美複習卡！
+                        </p>
+                        <button class="btn-solve-live" id="btn-generate-card-live" style="margin: 0 auto; padding: 0.6rem 1.25rem;">
+                            <i class="fa-solid fa-bolt"></i> 即時生成主題複習卡
+                        </button>
+                        <div class="api-loading-spinner" id="card-gen-loading" style="display: none; justify-content: center; margin-top: 1.5rem;">
+                            <i class="fa-solid fa-circle-notch fa-spin"></i>
+                            <span>AI 正在深入研究該主題，即時寫作中...</span>
+                        </div>
+                        <div class="live-response-container markdown-rendered" id="card-gen-output" style="text-align: left; margin-top: 2rem; border-top: 1px solid var(--card-border); padding-top: 1.5rem; display: none;"></div>
+                    </div>
+                `;
+
+                const btnGen = document.getElementById("btn-generate-card-live");
+                const loader = document.getElementById("card-gen-loading");
+                const output = document.getElementById("card-gen-output");
+
+                btnGen.addEventListener("click", () => {
+                    const apiKey = localStorage.getItem("gemini_api_key");
+                    const model = localStorage.getItem("gemini_model") || "gemini-2.5-pro";
+
+                    if (!apiKey) {
+                        alert("請先在左下角的金鑰欄位中輸入並儲存 Gemini API 金鑰！");
+                        return;
+                    }
+
+                    btnGen.style.display = "none";
+                    loader.style.display = "flex";
+                    output.style.display = "block";
+                    output.innerHTML = "<p style='color: var(--text-secondary);'>正在連接 Gemini...</p>";
+
+                    callGeminiCardGenerationStream(apiKey, model, currentSubject, topicName, (text, isFinished, error) => {
+                        if (error) {
+                            loader.style.display = "none";
+                            btnGen.style.display = "block";
+                            output.innerHTML = `<p style="color: var(--error-color);"><i class="fa-solid fa-triangle-exclamation"></i> 錯誤: ${error}</p>`;
+                            return;
+                        }
+
+                        output.innerHTML = marked.parse(text);
+
+                        if (isFinished) {
+                            loader.style.display = "none";
+                            localStorage.setItem(generatedKey, text);
+                            // Rerender study card in formatted container
+                            renderStudyCardAndQuestions(topicName);
+                        }
+                    });
+                });
+            }
+        }
+
+        // Dynamic streaming generator helper for Study Cards
+        async function callGeminiCardGenerationStream(apiKey, model, subject, topic, callback) {
+            const url = `https://generativelanguage.googleapis.com/v1beta/models/${model}:streamGenerateContent?key=${apiKey}`;
+            const promptText = `
+此模型為「${subject}」領域專技高考與歷屆甄選之頂尖指導教授與解題教練。請針對學習主題「${topic}」，精心撰寫一份客觀的護理師考試主題複習卡。
+要求內容如下，並請以 Markdown 格式撰寫，字數約 800 - 1200 字：
+
+1. 【主題概述與命題頻率分析】說明此主題在國考中的定位與核心命題趨勢。
+2. 【核心學理機制與關鍵字】詳細說明此主題的核心病生理機制、解剖生理、或臨床護理照護重點，並使用表格進行對比。
+3. 【核心護理措施與照護標準】詳細列出此主題的臨床照護要點、觀察指標、評估工具或照護措施重點。
+4. 【選擇題速記要訣與關鍵口訣】提供考生快速記憶的口訣或核心概念速記。
+5. 【高難度考點陷阱與易錯辨析】列出考生最常混淆或答錯的概念對照。
+`;
+
+            const payload = {
+                contents: [{
+                    parts: [{ text: promptText }]
+                }]
+            };
+
+            try {
+                const response = await fetch(url, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(payload)
+                });
+
+                if (!response.ok) {
+                    const errText = await response.text();
+                    callback(null, false, `API 請求失敗 (${response.status}): ${errText}`);
+                    return;
+                }
+
+                const reader = response.body.getReader();
+                const decoder = new TextDecoder("utf-8");
+                let buffer = "";
+                let accumulatedText = "";
+
+                while (true) {
+                    const { done, value } = await reader.read();
+                    if (done) break;
+
+                    buffer += decoder.decode(value, { stream: true });
+                    
+                    let inString = false;
+                    let escape = false;
+                    let braceCount = 0;
+                    let startIdx = -1;
+
+                    for (let i = 0; i < buffer.length; i++) {
+                        const char = buffer[i];
+                        if (inString) {
+                            if (escape) {
+                                escape = false;
+                            } else if (char === '\\') {
+                                escape = true;
+                            } else if (char === '"') {
+                                inString = false;
+                            }
+                        } else {
+                            if (char === '"') {
+                                inString = true;
+                            } else if (char === '{') {
+                                if (braceCount === 0) startIdx = i;
+                                braceCount++;
+                            } else if (char === '}') {
+                                braceCount--;
+                                if (braceCount === 0 && startIdx !== -1) {
+                                    const jsonStr = buffer.substring(startIdx, i + 1);
+                                    try {
+                                        const parsed = JSON.parse(jsonStr);
+                                        if (parsed.candidates && parsed.candidates[0].content && parsed.candidates[0].content.parts[0].text) {
+                                            accumulatedText += parsed.candidates[0].content.parts[0].text;
+                                            callback(accumulatedText, false, null);
+                                        }
+                                    } catch (e) {
+                                        // Ignore parsing errors for partial or malformed chunks
+                                    }
+                                    buffer = buffer.substring(i + 1);
+                                    i = -1;
+                                    startIdx = -1;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                callback(accumulatedText, true, null);
+
+            } catch (err) {
+                callback(null, false, err.message);
+            }
+        }
+
+        // Close details panel side view
+        function closeDetailsPane() {
+            detailPlaceholderEl.style.display = "flex";
+            detailActiveContainer.style.display = "none";
+            detailPanelEl.classList.remove("open");
+            document.querySelector(".workspace-layout").classList.remove("detail-open");
+            // Deselect all active cards
+            document.querySelectorAll(".question-card").forEach(c => c.classList.remove("active"));
+            activeQuestion = null;
+        }
+
+        function populateSubjects() {
+            subjectListEl.innerHTML = "";
+            const icons = {
+                "基礎醫學": "fa-brain",
+                "基本護理學與護理行政": "fa-user-nurse",
+                "內外科護理學": "fa-heartpulse",
+                "產兒科護理學": "fa-baby",
+                "精神科與社區衛生護理學": "fa-house-chimney-medical",
+                "綜合護理與公共衛生": "fa-notes-medical"
+            };
+
+            Object.keys(window.QUESTIONS_DB).forEach(subj => {
+                const btn = document.createElement("button");
+                btn.className = `subject-btn ${subj === currentSubject ? 'active' : ''}`;
+                
+                // Count total questions for badge (deduplicated by id)
+                const uniqueIds = new Set();
+                Object.values(window.QUESTIONS_DB[subj]).forEach(qList => {
+                    qList.forEach(q => uniqueIds.add(q.id));
+                });
+                const total = uniqueIds.size;
+                
+                const iconClass = icons[subj] || "fa-book-medical";
+                btn.innerHTML = `
+                    <span class="subject-icon-wrapper"><i class="fa-solid ${iconClass}"></i></span>
+                    <span class="subject-text">${subj}</span>
+                    <span class="badge">${total}</span>
+                `;
+                
+                btn.addEventListener("click", () => {
+                    document.querySelectorAll(".subject-btn").forEach(el => el.classList.remove("active"));
+                    btn.classList.add("active");
+                    currentSubject = subj;
+                    
+                    // Reset selected topic to first non-empty topic
+                    const activeTopics = Object.keys(window.QUESTIONS_DB[currentSubject]).filter(t => window.QUESTIONS_DB[currentSubject][t].length > 0);
+                    currentTopic = activeTopics[0] || "";
+                    
+                    renderTopics();
+                    renderQuestions();
+                    closeDetailsPane();
+                    
+                    // If in cards mode, reload the ranking list for the new subject
+                    if (viewMode === "cards") {
+                        renderCardsModeRanking();
+                    }
+                });
+                
+                subjectListEl.appendChild(btn);
+            });
+        }
+
+        function renderTopics() {
+            topicListEl.innerHTML = "";
+            const topicsObj = window.QUESTIONS_DB[currentSubject];
+            
+            // Filter out empty topics and re-order topics so comprehensive is last
+            const topicsKeys = Object.keys(topicsObj)
+                .filter(t => topicsObj[t] && topicsObj[t].length > 0)
+                .sort((a, b) => {
+                    if (a.includes("其他")) return 1;
+                    if (b.includes("其他")) return -1;
+                    return a.localeCompare(b);
+                });
+            
+            topicsKeys.forEach((topic, idx) => {
+                const qList = topicsObj[topic];
+                const item = document.createElement("li");
+                item.className = `topic-item ${topic === currentTopic ? 'active' : ''}`;
+                item.setAttribute("data-index", idx + 1);
+                item.innerHTML = `
+                    <span>${topic}</span>
+                    <span class="badge-topic">${qList.length}</span>
+                `;
+                
+                item.addEventListener("click", () => {
+                    document.querySelectorAll(".topic-item").forEach(el => el.classList.remove("active"));
+                    item.classList.add("active");
+                    currentTopic = topic;
+                    renderQuestions();
+                    closeDetailsPane();
+                });
+                
+                topicListEl.appendChild(item);
+            });
+
+            // 繪製統計儀表板
+            renderStatsDashboard();
+        }
+
+        // 繪製當前科目 Bento 統計分析儀表板
+        function renderStatsDashboard() {
+            const statsContainer = document.getElementById("stats-dashboard");
+            if (!statsContainer) return;
+            
+            // 計算當前 Subject 下所有的不重複題目
+            const questions = [];
+            Object.values(window.QUESTIONS_DB[currentSubject]).forEach(qList => {
+                qList.forEach(q => {
+                    if (!questions.some(item => item.id === q.id)) {
+                        questions.push(q);
+                    }
+                });
+            });
+            
+            const totalCount = questions.length;
+            
+            // 從 localStorage 取得已作答的答對與答錯題目 id 陣列
+            const wrongIds = JSON.parse(localStorage.getItem("wrong_questions") || "[]");
+            const correctIds = JSON.parse(localStorage.getItem("correct_questions") || "[]");
+            
+            // 統計當前科目的正確與錯誤題量
+            const subjectWrongCount = questions.filter(q => wrongIds.includes(q.id)).length;
+            const subjectCorrectCount = questions.filter(q => correctIds.includes(q.id)).length;
+            const answeredCount = subjectWrongCount + subjectCorrectCount;
+            
+            const accuracy = answeredCount > 0 ? Math.round((subjectCorrectCount / answeredCount) * 100) : 0;
+            const progress = totalCount > 0 ? Math.round((answeredCount / totalCount) * 100) : 0;
+            
+            statsContainer.innerHTML = `
+                <div class="stats-card">
+                    <div class="stats-progress-container">
+                        <div class="stats-circular-progress" style="background: conic-gradient(var(--accent-color) ${progress * 3.6}deg, var(--card-border) 0deg);">
+                            <div class="stats-progress-value">${progress}%</div>
+                        </div>
+                        <div class="stats-text-group">
+                            <div class="stats-main-label">學習進度</div>
+                            <div class="stats-sub-label">已答 ${answeredCount} / 總計 ${totalCount} 題</div>
+                        </div>
+                    </div>
+                    <div class="stats-grid">
+                        <div class="stats-grid-item">
+                            <span class="stats-grid-num" style="color: var(--success-color);">${subjectCorrectCount}</span>
+                            <span class="stats-grid-label">答對</span>
+                        </div>
+                        <div class="stats-grid-item">
+                            <span class="stats-grid-num" style="color: var(--error-color);">${subjectWrongCount}</span>
+                            <span class="stats-grid-label">答錯</span>
+                        </div>
+                        <div class="stats-grid-item">
+                            <span class="stats-grid-num" style="color: var(--warning-color);">${accuracy}%</span>
+                            <span class="stats-grid-label">正確率</span>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        // Helper to parse Chinese year strings (e.g. 114年 ➔ 114, 109年 ➔ 109)
+        function getYearNumber(yearStr) {
+            if (!yearStr) return 0;
+            if (typeof yearStr !== "string") {
+                yearStr = String(yearStr);
+            }
+            const num = parseInt(yearStr.replace(/[^0-9]/g, ""));
+            return isNaN(num) ? 0 : num;
+        }
+
+        function renderQuestions() {
+            questionStreamEl.innerHTML = "";
+            
+            // Shallow copy questions to avoid DB mutation
+            let questions = [...(window.QUESTIONS_DB[currentSubject][currentTopic] || [])];
+            
+            // Apply search filter if present
+            if (searchQuery.trim() !== "") {
+                const query = searchQuery.toLowerCase();
+                const matchedSet = new Set();
+                questions = [];
+                // If search query, search across ALL topics in the current subject
+                Object.values(window.QUESTIONS_DB[currentSubject]).forEach(qList => {
+                    qList.forEach(q => {
+                        if (!matchedSet.has(q.id)) {
+                            if (q.question.toLowerCase().includes(query) || q.year.toLowerCase().includes(query) || q.level.toLowerCase().includes(query)) {
+                                matchedSet.add(q.id);
+                                questions.push(q);
+                            }
+                        }
+                    });
+                });
+            }
+
+            // Apply wrong question filter
+            if (showOnlyWrong) {
+                const wrongIds = JSON.parse(localStorage.getItem("wrong_questions") || "[]");
+                questions = questions.filter(q => wrongIds.includes(q.id));
+            }
+            
+            // Deduplicate questions to prevent rendering identical questions (due to topic mapping overlaps)
+            const uniqueQuestions = [];
+            const seenIds = new Set();
+            questions.forEach(q => {
+                if (!seenIds.has(q.id)) {
+                    seenIds.add(q.id);
+                    uniqueQuestions.push(q);
+                }
+            });
+            questions = uniqueQuestions;
+
+            // SORT questions: Newest on Top (Descending)
+            questions.sort((a, b) => getYearNumber(b.year) - getYearNumber(a.year));
+            
+            if (questions.length === 0) {
+                questionStreamEl.innerHTML = `
+                    <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 200px; color: var(--text-secondary);">
+                        <i class="fa-solid fa-magnifying-glass-minus" style="font-size: 2rem; margin-bottom: 1rem;"></i>
+                        <p>未找到符合條件的考點，請更換主題或搜尋詞。</p>
+                    </div>
+                `;
+                return;
+            }
+            
+            questions.forEach(q => {
+                const hasAnswer = window.ANSWERS_DB && window.ANSWERS_DB[q.id];
+                const hasCachedAnswer = localStorage.getItem(`ai_answer_${q.id}`);
+                const localNotes = localStorage.getItem(`notes_${q.id}`) || "";
+                const isSelected = activeQuestion && activeQuestion.id === q.id;
+                
+                // Get answer history status for badge
+                const wrongIds = JSON.parse(localStorage.getItem("wrong_questions") || "[]");
+                const correctIds = JSON.parse(localStorage.getItem("correct_questions") || "[]");
+                
+                let answerStatusBadge = "";
+                if (wrongIds.includes(q.id)) {
+                    answerStatusBadge = '<span class="meta-tag tag-level" style="background: rgba(239, 68, 68, 0.12); color: var(--error-color); border: 1px solid rgba(239,68,68,0.25);" title="此題先前回答錯誤"><i class="fa-solid fa-triangle-exclamation"></i> 錯題</span>';
+                } else if (correctIds.includes(q.id)) {
+                    answerStatusBadge = '<span class="meta-tag tag-has-answer" style="background: rgba(16, 185, 129, 0.12); color: var(--success-color); border: 1px solid rgba(16,185,129,0.25);" title="此題先前回答正確"><i class="fa-solid fa-circle-check"></i> 答對</span>';
+                }
+                
+                const card = document.createElement("div");
+                card.className = `question-card ${isSelected ? 'active' : ''}`;
+                
+                card.innerHTML = `
+                    <div class="question-card-left">
+                        <div class="question-body" title="${q.question.replace(/"/g, '&quot;')}">${q.question}</div>
+                    </div>
+                    <div class="question-card-right">
+                        <div style="display: flex; gap: 0.4rem; align-items: center;">
+                            ${answerStatusBadge}
+                            ${hasAnswer ? '<span class="meta-tag tag-has-answer" title="包含官方標準答案與解析"><i class="fa-solid fa-robot"></i> 預載</span>' : ''}
+                            ${hasCachedAnswer ? '<span class="meta-tag tag-has-answer" style="background: rgba(16, 185, 129, 0.1); color: var(--success-color); border: 1px solid rgba(16, 185, 129, 0.2);" title="包含已保存之 AI 解題結果"><i class="fa-solid fa-robot"></i> 自訂 AI</span>' : ''}
+                            ${localNotes ? '<span class="meta-tag tag-notes" title="包含個人研讀筆記"><i class="fa-solid fa-pen-to-square"></i> 筆記</span>' : ''}
+                        </div>
+                        <div style="display: flex; gap: 0.4rem; align-items: center;">
+                            <span class="meta-tag tag-year">${q.year}</span>
+                            <span class="meta-tag tag-level">${q.level}</span>
+                            <span class="meta-tag tag-number">第 ${q.number} 題</span>
+                        </div>
+                    </div>
+                `;
+                
+                card.addEventListener("click", () => {
+                    document.querySelectorAll(".question-card").forEach(c => c.classList.remove("active"));
+                    card.classList.add("active");
+                    
+                    activeQuestion = q;
+                    openQuestionDetails(q);
+                });
+                
+                questionStreamEl.appendChild(card);
+            });
+        }
+
+                function openQuestionDetails(q) {
+            const correctAnswer = (window.ANSWERS_DB && window.ANSWERS_DB[q.id]) || "";
+            const noteKey = `notes_${q.id}`;
+            const aiAnswerKey = `ai_answer_${q.id}`;
+            const savedNotes = localStorage.getItem(noteKey) || "";
+            const cachedAiAnswer = localStorage.getItem(aiAnswerKey) || "";
+            
+            // Build options buttons HTML
+            let optionsHtml = "";
+            Object.keys(q.options).forEach(key => {
+                optionsHtml += `
+                    <button class="option-btn" data-option="${key}">
+                        <span class="option-letter">${key}</span>
+                        <span class="option-text">${q.options[key]}</span>
+                    </button>
+                `;
+            });
+
+            // Build inner HTML for the details side panel
+            detailContentEl.innerHTML = `
+                <div class="detail-section" style="border-left: 4px solid var(--accent-color); margin-bottom: 1rem;">
+                    <div class="section-label"><i class="fa-solid fa-file-invoice"></i> 考題正文 (${q.level})</div>
+                    <div class="section-body" style="font-size: 1rem; font-weight: 600; color: var(--text-primary); margin-bottom: 0.5rem;">${q.question}</div>
+                    
+                    <div class="options-container" id="details-options-container">
+                        ${optionsHtml}
+                    </div>
+                    
+                    <div id="details-answer-feedback" class="answer-feedback-box" style="display: none;"></div>
+                </div>
+                
+                <div class="tabs">
+                    <button class="tab-btn active" id="tab-btn-notes">個人筆記 & AI 解題</button>
+                    <button class="tab-btn" id="tab-btn-prompt">
+                        <i class="fa-solid fa-robot"></i> 提示詞與中繼資料
+                    </button>
+                </div>
+                
+                <!-- Tab Panel 1: Notes & Live AI -->
+                <div id="panel-notes" class="tab-panel">
+                    <div class="detail-section">
+                        <div class="section-label"><i class="fa-solid fa-pen-to-square"></i> 個人研讀筆記（自動儲存）</div>
+                        <textarea class="notes-textarea" id="notes-input" placeholder="輸入此題的解題重點、關鍵詞或擬答...">${savedNotes}</textarea>
+                        <button class="btn-save-note" id="btn-save-note">儲存筆記</button>
+                    </div>
+                    
+                    <!-- Live AI Solver Box -->
+                    <div class="live-solver-box">
+                        <div class="section-label" style="color: var(--accent-color); margin-bottom: 0.25rem;">
+                            <i class="fa-solid fa-bolt"></i> 智能學習教練即時分析
+                        </div>
+                        <p style="font-size: 0.75rem; color: var(--text-secondary); line-height: 1.4; margin-bottom: 0.75rem;">
+                            呼叫大語言模型 (Gemini-2.5-Flash) 針對此題進行實時解題。
+                        </p>
+                        
+                        <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.75rem;">
+                            <button class="btn-solve-live" id="btn-solve-live" style="margin: 0; flex: 1;">
+                                <i class="fa-solid fa-robot"></i> ${cachedAiAnswer ? '重新呼叫 Gemini AI 解題' : '呼叫 Gemini AI 即時解題'}
+                            </button>
+                            ${cachedAiAnswer ? `
+                                <button class="btn-save-note" id="btn-clear-ai-cache" title="清除此題的 AI 快取" style="background: rgba(239,68,68,0.1); border: 1px solid rgba(239,68,68,0.2); color: #ef4444; padding: 0.55rem 0.75rem; border-radius: 0.5rem; margin: 0; cursor: pointer;">
+                                    <i class="fa-solid fa-trash-can"></i>
+                                </button>
+                            ` : ''}
+                        </div>
+ 
+                        <div id="ai-cache-indicator" style="font-size: 0.72rem; color: var(--success-color); margin-bottom: 0.75rem; display: ${cachedAiAnswer ? 'flex' : 'none'}; align-items: center; gap: 0.35rem;">
+                            <i class="fa-solid fa-circle-check"></i>
+                            <span>✨ 已載入本機快取解答（生成於先前研讀，不消耗 Token）</span>
+                        </div>
+                        
+                        <!-- Streaming Loading Indicator -->
+                        <div class="api-loading-spinner" id="live-ai-loading" style="display: none;">
+                            <i class="fa-solid fa-circle-notch fa-spin"></i>
+                            <span>AI 思考中，即時串流回答中...</span>
+                        </div>
+                        
+                        <!-- Streaming Output Area -->
+                        <div class="live-response-container markdown-rendered" id="live-ai-response-box" style="display: ${cachedAiAnswer ? 'block' : 'none'};">
+                            ${cachedAiAnswer ? `
+                                <div class="ai-answer-actions" style="display: flex; justify-content: flex-end; gap: 0.5rem; margin-bottom: 0.75rem; border-bottom: 1px solid var(--card-border); padding-bottom: 0.5rem;">
+                                    <button class="btn-save-note" id="btn-copy-ai-answer" style="margin: 0; padding: 0.3rem 0.6rem; font-size: 0.72rem; align-self: auto; background: transparent; border: 1px solid var(--card-border); color: var(--text-secondary); cursor: pointer;">
+                                        <i class="fa-solid fa-copy" style="margin-right: 0.25rem;"></i>複製 Markdown
+                                    </button>
+                                    <button class="btn-save-note" id="btn-download-ai-answer" style="margin: 0; padding: 0.3rem 0.6rem; font-size: 0.72rem; align-self: auto; background: transparent; border: 1px solid var(--card-border); color: var(--text-secondary); cursor: pointer;">
+                                        <i class="fa-solid fa-download" style="margin-right: 0.25rem;"></i>下載 .md 檔
+                                    </button>
+                                </div>
+                                <div class="ai-answer-body-content">
+                                    ${marked.parse(cachedAiAnswer)}
+                                </div>
+                            ` : ''}
+                        </div>
+
+                        <!-- AI Hallucination Warning Footer -->
+                        <div id="ai-hallucination-warning" style="display: ${cachedAiAnswer ? 'flex' : 'none'}; align-items: flex-start; gap: 0.4rem; font-size: 0.7rem; color: #f43f5e; background: rgba(244, 63, 94, 0.05); padding: 0.6rem 0.75rem; border-radius: 0.35rem; border: 1px solid rgba(244, 63, 94, 0.15); margin-top: 0.75rem; line-height: 1.4;">
+                            <i class="fa-solid fa-triangle-exclamation" style="margin-top: 0.1rem;"></i>
+                            <span><b>免責聲明與查核提醒</b>：AI 解題（含申論擬答、學理概念及計算公式）僅供學習輔助參考。AI 可能產生錯誤或將公式混淆，請對照標準教科書進行查核。</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Tab Panel 2: Prompts & Meta -->
+                <div id="panel-prompt" class="tab-panel" style="display: none;">
+                    <div class="detail-section">
+                        <div class="section-label" style="color: #a855f7;"><i class="fa-solid fa-star"></i> 題目中繼資料</div>
+                        <div style="display: flex; gap: 0.4rem; flex-wrap: wrap; margin-bottom: 1rem;">
+                            <span class="meta-tag" style="background: rgba(168, 85, 247, 0.1); color: #c084fc; border: 1px solid rgba(168, 85, 247, 0.2);">年份: ${q.year}</span>
+                            <span class="meta-tag" style="background: rgba(168, 85, 247, 0.1); color: #c084fc; border: 1px solid rgba(168, 85, 247, 0.2);">科目: ${q.subject}</span>
+                            <span class="meta-tag" style="background: rgba(168, 85, 247, 0.1); color: #c084fc; border: 1px solid rgba(168, 85, 247, 0.2);">題號: 第 ${q.number} 題</span>
+                            ${q.tags.map(t => `<span class="meta-tag" style="background: rgba(99, 102, 241, 0.1); color: #818cf8; border: 1px solid rgba(99, 102, 241, 0.2);">${t}</span>`).join('')}
+                        </div>
+                        <div class="section-label"><i class="fa-solid fa-copy"></i> 複製外部 AI 提問提示詞</div>
+                        <div class="prompt-box">
+                            <span class="prompt-preview-text">請解答護理師國考 ${q.year} ${q.level} ${q.subject} 第 ${q.number} 題...</span>
+                            <button class="btn-copy" id="btn-copy-prompt" title="複製完整 Prompt 範本"><i class="fa-solid fa-copy"></i></button>
+                        </div>
+                    </div>
+                </div>
+            `;
+
+            // Setup Options Click Interactivity
+            const optButtons = detailContentEl.querySelectorAll(".option-btn");
+            const feedbackBox = document.getElementById("details-answer-feedback");
+
+            optButtons.forEach(btn => {
+                btn.addEventListener("click", () => {
+                    const selectedOpt = btn.getAttribute("data-option");
+                    
+                    // Correct answer matching logic (support single, multiple like 'B,D', and all correct '*')
+                    let isCorrect = false;
+                    const answersArray = correctAnswer.split(",").map(a => a.trim());
+                    
+                    if (correctAnswer === "*") {
+                        isCorrect = true;
+                    } else if (answersArray.includes(selectedOpt)) {
+                        isCorrect = true;
+                    }
+
+                    // Disable all buttons and show colors
+                    optButtons.forEach(b => {
+                        b.classList.add("disabled");
+                        const optVal = b.getAttribute("data-option");
+                        if (correctAnswer === "*") {
+                            b.classList.add("success");
+                        } else if (answersArray.includes(optVal)) {
+                            b.classList.add("success");
+                        } else if (optVal === selectedOpt && !isCorrect) {
+                            b.classList.add("error");
+                        }
+                    });
+
+                    // Update LocalStorage statistics
+                    let wrongQuestions = JSON.parse(localStorage.getItem("wrong_questions") || "[]");
+                    let correctQuestions = JSON.parse(localStorage.getItem("correct_questions") || "[]");
+
+                    if (isCorrect) {
+                        // Mark as correct, remove from wrong list
+                        if (!correctQuestions.includes(q.id)) correctQuestions.push(q.id);
+                        wrongQuestions = wrongQuestions.filter(id => id !== q.id);
+                        
+                        feedbackBox.className = "answer-feedback-box success";
+                        feedbackBox.innerHTML = `
+                            <div class="answer-feedback-title">
+                                <i class="fa-solid fa-circle-check"></i> 答對了！
+                            </div>
+                            <div>標準答案為 <b>${correctAnswer === "*" ? "一律給分" : correctAnswer}</b>。</div>
+                        `;
+                    } else {
+                        // Mark as wrong, remove from correct list
+                        if (!wrongQuestions.includes(q.id)) wrongQuestions.push(q.id);
+                        correctQuestions = correctQuestions.filter(id => id !== q.id);
+
+                        feedbackBox.className = "answer-feedback-box error";
+                        feedbackBox.innerHTML = `
+                            <div class="answer-feedback-title">
+                                <i class="fa-solid fa-circle-xmark"></i> 答錯了！
+                            </div>
+                            <div>此題答案為 <b>${correctAnswer}</b>，選擇了 <b>${selectedOpt}</b>。</div>
+                        `;
+                    }
+
+                    localStorage.setItem("wrong_questions", JSON.stringify(wrongQuestions));
+                    localStorage.setItem("correct_questions", JSON.stringify(correctQuestions));
+                    feedbackBox.style.display = "flex";
+
+                    // Instantly refresh UI statistics
+                    renderStatsDashboard();
+                    renderQuestions();
+                });
+            });
+            
+            // Tab Toggle Listeners
+            const btnNotes = document.getElementById("tab-btn-notes");
+            const btnPrompt = document.getElementById("tab-btn-prompt");
+            const panelNotes = document.getElementById("panel-notes");
+            const panelPrompt = document.getElementById("panel-prompt");
+            
+            btnNotes.addEventListener("click", () => {
+                btnNotes.classList.add("active");
+                btnPrompt.classList.remove("active");
+                panelNotes.style.display = "block";
+                panelPrompt.style.display = "none";
+            });
+            
+            btnPrompt.addEventListener("click", () => {
+                btnPrompt.classList.add("active");
+                btnNotes.classList.remove("active");
+                panelPrompt.style.display = "block";
+                panelNotes.style.display = "none";
+            });
+            
+            // Notes Save Function
+            const notesInput = document.getElementById("notes-input");
+            const btnSave = document.getElementById("btn-save-note");
+            btnSave.addEventListener("click", () => {
+                localStorage.setItem(noteKey, notesInput.value);
+                btnSave.innerText = "已儲存！";
+                btnSave.style.background = "var(--success-color)";
+                setTimeout(() => {
+                    btnSave.innerText = "儲存筆記";
+                    btnSave.style.background = "var(--accent-gradient)";
+                    renderQuestions(); // Update the main list badge for "Has Notes"
+                }, 1000);
+            });
+            
+            // Prompt Copy Function
+            const btnCopy = document.getElementById("btn-copy-prompt");
+            btnCopy.addEventListener("click", () => {
+                let optionsText = "";
+                Object.keys(q.options).forEach(k => {
+                    optionsText += `(${k}) ${q.options[k]}
+`;
+                });
+
+                const promptText = `
+此模型為「${q.subject}」領域專技高考與歷屆甄選之解題專家。請針對以下這道選擇題，提供客觀、條理清晰且切合考點的解答。
+要求如下，並請以 Markdown 格式撰寫，字數約 600 - 800 字：
+1. 【考點剖析】說明此題的核心學理與病生理機轉。
+2. 【選項解析】詳細論述為何正確答案為 (${correctAnswer})，並逐一說明其他干擾選項為何錯誤。
+3. 【關聯知識點】歸納此主題常考的衍生重點、核心機轉與臨床照顧易錯陷阱。
+
+【考題資訊】
+年度與考試：${q.year} ${q.level}
+考科科目：${q.subject}
+題目內容：
+${q.question}
+選項：
+${optionsText}
+正確答案：${correctAnswer}
+`;
+                navigator.clipboard.writeText(promptText.trim()).then(() => {
+                    const icon = btnCopy.querySelector("i");
+                    icon.className = "fa-solid fa-check";
+                    btnCopy.style.color = "var(--success-color)";
+                    setTimeout(() => {
+                        icon.className = "fa-solid fa-copy";
+                        btnCopy.style.color = "var(--accent-color)";
+                    }, 1500);
+                });
+            });
+ 
+            // AI Answer Actions (Copy & Download)
+            if (cachedAiAnswer) {
+                const btnCopyAi = document.getElementById("btn-copy-ai-answer");
+                const btnDownloadAi = document.getElementById("btn-download-ai-answer");
+                
+                if (btnCopyAi) {
+                    btnCopyAi.addEventListener("click", () => {
+                        navigator.clipboard.writeText(cachedAiAnswer).then(() => {
+                            const icon = btnCopyAi.querySelector("i");
+                            icon.className = "fa-solid fa-check";
+                            btnCopyAi.innerText = "已複製！";
+                            btnCopyAi.style.color = "var(--success-color)";
+                            setTimeout(() => {
+                                btnCopyAi.innerHTML = `<i class="fa-solid fa-copy" style="margin-right: 0.25rem;"></i>複製 Markdown`;
+                                btnCopyAi.style.color = "";
+                            }, 1500);
+                        });
+                    });
+                }
+                
+                if (btnDownloadAi) {
+                    btnDownloadAi.addEventListener("click", () => {
+                        try {
+                            const blob = new Blob([cachedAiAnswer], { type: "text/markdown;charset=utf-8" });
+                            const url = URL.createObjectURL(blob);
+                            const a = document.createElement("a");
+                            a.href = url;
+                            a.download = `${q.year}_${q.level}_${q.subject}_第${q.number}題_AI解答.md`;
+                            document.body.appendChild(a);
+                            a.click();
+                            document.body.removeChild(a);
+                            URL.revokeObjectURL(url);
+                        } catch (err) {
+                            alert("下載 AI 解答失敗：" + err.message);
+                        }
+                    });
+                }
+            }
+
+            // Live AI Stream Solver Button
+            const btnSolveLive = document.getElementById("btn-solve-live");
+            const liveAiLoading = document.getElementById("live-ai-loading");
+            const liveAiResponseBox = document.getElementById("live-ai-response-box");
+            const cacheIndicator = document.getElementById("ai-cache-indicator");
+            const btnClearAiCache = document.getElementById("btn-clear-ai-cache");
+
+            if (btnClearAiCache) {
+                btnClearAiCache.addEventListener("click", () => {
+                    if (confirm("是否確定刪除此題的 AI 快取解答？此操作不可復原。")) {
+                        localStorage.removeItem(aiAnswerKey);
+                        alert("快取已清除！");
+                        openQuestionDetails(q); // reload details
+                        renderQuestions(); // reload question stream to update badges
+                    }
+                });
+            }
+
+            btnSolveLive.addEventListener("click", () => {
+                const apiKey = localStorage.getItem("gemini_api_key");
+                const model = localStorage.getItem("gemini_model") || "gemini-2.5-flash";
+
+                if (!apiKey) {
+                    alert("請先在設定視窗中輸入並儲存 Gemini API 金鑰！");
+                    return;
+                }
+
+                liveAiLoading.style.display = "flex";
+                liveAiResponseBox.style.display = "block";
+                const warningBox = document.getElementById("ai-hallucination-warning");
+                if (warningBox) warningBox.style.display = "flex";
+                if (cacheIndicator) cacheIndicator.style.display = "none";
+                liveAiResponseBox.innerHTML = "<p style='color: var(--text-secondary);'>正在建立連線...</p>";
+
+                callGeminiAPIStream(apiKey, model, q, (text, isFinished, error) => {
+                    if (error) {
+                        liveAiLoading.style.display = "none";
+                        liveAiResponseBox.innerHTML = `<p style="color: var(--error-color);"><i class="fa-solid fa-triangle-exclamation"></i> 錯誤: ${error}</p>`;
+                        return;
+                    }
+
+                    // Render markdown on the fly
+                    liveAiResponseBox.innerHTML = marked.parse(text);
+
+                    if (isFinished) {
+                        liveAiLoading.style.display = "none";
+                        localStorage.setItem(aiAnswerKey, text);
+                        
+                        // Show cache indicator
+                        if (cacheIndicator) {
+                            cacheIndicator.style.display = "flex";
+                            cacheIndicator.querySelector("span").innerText = "✨ 解答已自動保存至本機（下次開啟不消耗 Token）";
+                        }
+                        
+                        // Update lists to show badge
+                        renderQuestions();
+                        
+                        // We also add the delete button if not exists
+                        if (!btnClearAiCache) {
+                            openQuestionDetails(q); // simply reload details to render correct DOM state with delete button
+                        }
+                    }
+                });
+            });
+            
+            // Show Panel Details
+            detailPlaceholderEl.style.display = "none";
+            detailActiveContainer.style.display = "flex";
+            detailPanelEl.classList.add("open");
+            document.querySelector(".workspace-layout").classList.add("detail-open");
+        }
+
+        // Live streaming call to Gemini API directly from the browser (CORS enabled)
+        async function callGeminiAPIStream(apiKey, model, q, callback) {
+            const url = `https://generativelanguage.googleapis.com/v1beta/models/${model}:streamGenerateContent?key=${apiKey}`;
+            
+            let optionsText = "";
+            Object.keys(q.options).forEach(k => {
+                optionsText += `(${k}) ${q.options[k]}\n`;
+            });
+            const correctAnswer = (window.ANSWERS_DB && window.ANSWERS_DB[q.id]) || "未知";
+
+            const promptText = `
+此模型為「${q.subject}」領域專技高考與歷屆甄選之解題專家。請針對以下選擇題，提供一份可信度高、條理清晰且切合考點的詳細分析與解答。
+要求如下，並請以 Markdown 格式撰寫，字數約 600 - 800 字：
+1. 【考點剖析】說明此題的核心學理與病生理機轉。
+2. 【選項解析】詳細論述為何正確答案為 (${correctAnswer})，並逐一說明其他干擾選項為何錯誤。
+3. 【關聯知識點】歸納此主題常考的衍生重點、核心機轉與臨床照顧易錯陷阱。
+
+【考題資訊】
+年度與考試：${q.year} ${q.level}
+考科科目：${q.subject}
+題目內容：
+${q.question}
+選項：
+${optionsText}
+正確答案：${correctAnswer}
+`;
+
+            const payload = {
+                contents: [{
+                    parts: [{ text: promptText }]
+                }]
+            };
+
+            try {
+                const response = await fetch(url, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(payload)
+                });
+
+                if (!response.ok) {
+                    const errText = await response.text();
+                    callback(null, false, `API 請求失敗 (${response.status}): ${errText}`);
+                    return;
+                }
+
+                const reader = response.body.getReader();
+                const decoder = new TextDecoder("utf-8");
+                let buffer = "";
+                let accumulatedText = "";
+
+                while (true) {
+                    const { done, value } = await reader.read();
+                    if (done) break;
+
+                    buffer += decoder.decode(value, { stream: true });
+                    
+                    let inString = false;
+                    let escape = false;
+                    let braceCount = 0;
+                    let startIdx = -1;
+
+                    for (let i = 0; i < buffer.length; i++) {
+                        const char = buffer[i];
+                        if (inString) {
+                            if (escape) {
+                                escape = false;
+                            } else if (char === '\\') {
+                                escape = true;
+                            } else if (char === '"') {
+                                inString = false;
+                            }
+                        } else {
+                            if (char === '"') {
+                                inString = true;
+                            } else if (char === '{') {
+                                if (braceCount === 0) startIdx = i;
+                                braceCount++;
+                            } else if (char === '}') {
+                                braceCount--;
+                                if (braceCount === 0 && startIdx !== -1) {
+                                    const jsonStr = buffer.substring(startIdx, i + 1);
+                                    try {
+                                        const parsed = JSON.parse(jsonStr);
+                                        if (parsed.candidates && parsed.candidates[0].content && parsed.candidates[0].content.parts[0].text) {
+                                            accumulatedText += parsed.candidates[0].content.parts[0].text;
+                                            callback(accumulatedText, false, null);
+                                        }
+                                    } catch (e) {
+                                        // Ignore partial parsing errors
+                                    }
+                                    buffer = buffer.substring(i + 1);
+                                    i = -1;
+                                    startIdx = -1;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                callback(accumulatedText, true, null);
+
+            } catch (err) {
+                callback(null, false, err.message);
+            }
+        }
+
+        // API Key Settings Handlers
+        function saveApiSettings() {
+            const key = apiKeyInputEl.value.trim();
+            const model = apiModelSelectEl.value;
+
+            if (key) {
+                localStorage.setItem("gemini_api_key", key);
+            } else {
+                localStorage.removeItem("gemini_api_key");
+            }
+            localStorage.setItem("gemini_model", model);
+
+            btnSaveApiEl.innerText = "已儲存！";
+            btnSaveApiEl.style.background = "var(--success-color)";
+            setTimeout(() => {
+                btnSaveApiEl.innerText = "儲存至本機";
+                btnSaveApiEl.style.background = "var(--accent-gradient)";
+            }, 1200);
+        }
+
+        // Load Saved settings from localStorage
+        function loadApiSettings() {
+            const savedKey = localStorage.getItem("gemini_api_key") || "";
+            const savedModel = localStorage.getItem("gemini_model") || "gemini-2.5-pro";
+
+            apiKeyInputEl.value = savedKey;
+            apiModelSelectEl.value = savedModel;
+        }
+
+        function toggleApiKeyVisibility() {
+            const type = apiKeyInputEl.getAttribute("type") === "password" ? "text" : "password";
+            apiKeyInputEl.setAttribute("type", type);
+            const icon = toggleKeyVisibilityBtn.querySelector("i");
+            if (type === "text") {
+                icon.className = "fa-solid fa-eye";
+            } else {
+                icon.className = "fa-solid fa-eye-slash";
+            }
+        }
+
+        // Theme Toggle Functionality
+        function toggleTheme() {
+            theme = theme === "dark" ? "light" : "dark";
+            document.documentElement.setAttribute("data-theme", theme);
+            localStorage.setItem("theme", theme);
+            updateThemeIcon();
+        }
+
+        function updateThemeIcon() {
+            const icon = themeToggleEl.querySelector("i");
+            if (theme === "dark") {
+                icon.className = "fa-solid fa-sun";
+                themeToggleEl.title = "切換為淺色主題";
+            } else {
+                icon.className = "fa-solid fa-moon";
+                themeToggleEl.title = "切換為深色主題";
+            }
+        }
+
+        // Custom Database Import functionality
+        function initCustomDbImport() {
+            const dbFileInput = document.getElementById("db-file-input");
+            const btnImportDb = document.getElementById("btn-import-db");
+            const btnClearDb = document.getElementById("btn-clear-db");
+            const statusBar = document.getElementById("db-status-bar");
+            const statusText = document.getElementById("db-status-text");
+
+            if (!dbFileInput || !btnImportDb || !btnClearDb) return;
+
+            btnImportDb.addEventListener("click", () => {
+                dbFileInput.click();
+            });
+
+            dbFileInput.addEventListener("change", (e) => {
+                const file = e.target.files[0];
+                if (!file) return;
+
+                const reader = new FileReader();
+                reader.onload = function(evt) {
+                    let content = evt.target.result.trim();
+                    
+                    // If it is a JS file representing window.QUESTIONS_DB = { ... }
+                    if (content.startsWith("window.QUESTIONS_DB") || content.includes("QUESTIONS_DB")) {
+                        // Strip "window.QUESTIONS_DB =" and any trailing semicolon
+                        const equalIdx = content.indexOf("=");
+                        if (equalIdx !== -1) {
+                            content = content.substring(equalIdx + 1).trim();
+                        }
+                        if (content.endsWith(";")) {
+                            content = content.substring(0, content.length - 1).trim();
+                        }
+                    }
+
+                    try {
+                        const parsed = JSON.parse(content);
+                        // Simple validation
+                        if (typeof parsed !== "object" || parsed === null) {
+                            alert("無效的題庫格式！請上傳正確的 JSON 物件。");
+                            return;
+                        }
+                        
+                        localStorage.setItem("custom_questions_db", JSON.stringify(parsed));
+                        window.QUESTIONS_DB = parsed;
+                        
+                        // Reset subjects and topics to first non-empty topic
+                        currentSubject = Object.keys(window.QUESTIONS_DB)[0];
+                        const activeTopics = Object.keys(window.QUESTIONS_DB[currentSubject]).filter(t => window.QUESTIONS_DB[currentSubject][t].length > 0);
+                        currentTopic = activeTopics[0] || "";
+                        
+                        // Refresh UI
+                        populateSubjects();
+                        renderTopics();
+                        renderQuestions();
+                        
+                        // If in Cards mode, re-render rankings
+                        if (viewMode === "cards") {
+                            renderCardsModeRanking();
+                        }
+
+                        updateClearDbButtonVisibility();
+                        if (statusText) statusText.textContent = `已載入：${file.name}`;
+                        alert("自訂題庫匯入成功！已更新介面。");
+                    } catch (err) {
+                        alert("解析題庫檔案失敗，請確保是正確的 JSON 格式或 JS 宣告格式。");
+                        console.error(err);
+                    }
+                };
+                reader.readAsText(file);
+            });
+
+            btnClearDb.addEventListener("click", () => {
+                if (confirm("確定要清除自訂題庫並還原為系統預設題庫嗎？")) {
+                    localStorage.removeItem("custom_questions_db");
+                    window.location.reload();
+                }
+            });
+
+            function updateClearDbButtonVisibility() {
+                const hasCustomDb = !!localStorage.getItem("custom_questions_db");
+                if (hasCustomDb) {
+                    // Force display using both property and removeProperty to override any CSS
+                    btnClearDb.style.setProperty("display", "block", "important");
+                    btnImportDb.innerHTML = `<i class="fa-solid fa-rotate" style="margin-right: 0.3rem;"></i>重新匯入自訂題庫`;
+                    btnImportDb.style.background = "rgba(245, 158, 11, 0.12)";
+                    btnImportDb.style.borderColor = "rgba(245, 158, 11, 0.3)";
+                    btnImportDb.style.color = "var(--warning-color)";
+                    if (statusBar) statusBar.style.setProperty("display", "flex", "important");
+                } else {
+                    btnClearDb.style.display = "none";
+                    btnImportDb.innerHTML = `<i class="fa-solid fa-folder-open" style="margin-right: 0.3rem;"></i>選擇題庫檔案 (.js/.json)`;
+                    btnImportDb.style.background = "rgba(99,102,241,0.12)";
+                    btnImportDb.style.borderColor = "rgba(99,102,241,0.3)";
+                    btnImportDb.style.color = "var(--accent-color)";
+                    if (statusBar) statusBar.style.display = "none";
+                }
+            }
+
+            updateClearDbButtonVisibility();
+        }
+
+
+        // Init Theme
+        document.documentElement.setAttribute("data-theme", theme);
+        updateThemeIcon();
+
+        // === EMERGENCY RESET: ?reset=1 URL parameter clears localStorage and reloads ===
+        if (new URLSearchParams(window.location.search).get("reset") === "1") {
+            localStorage.removeItem("custom_questions_db");
+            alert("✅ 自訂題庫已清除！頁面即將重新載入...");
+            window.location.href = window.location.pathname;
+        }
+
+        // Load custom questions db if exists in localStorage
+        const savedCustomDb = localStorage.getItem("custom_questions_db");
+        if (savedCustomDb) {
+            try {
+                const parsedDb = JSON.parse(savedCustomDb);
+                // Basic validation: must be a non-null object with at least one subject
+                if (parsedDb && typeof parsedDb === "object" && Object.keys(parsedDb).length > 0) {
+                    window.QUESTIONS_DB = parsedDb;
+                } else {
+                    throw new Error("Empty or invalid structure");
+                }
+            } catch (e) {
+                console.error("自訂題庫解析失敗，自動清除損壞的資料:", e);
+                localStorage.removeItem("custom_questions_db");
+                // Show a notification that we cleared it
+                console.warn("❌ custom_questions_db 格式損壞，已自動清除，使用預設題庫。");
+            }
+        }
+
+
+        // Load Saved API Settings
+        loadApiSettings();
+
+        // Load Initial State
+        initApp();
+        
+        // Load custom database handlers
+        initCustomDbImport();
+
+        // =============================================
+        // Settings Modal Logic
+        // =============================================
+        function initSettingsModal() {
+            const overlay = document.getElementById("settings-modal-overlay");
+            const btnOpen = document.getElementById("btn-open-settings");
+            const btnClose = document.getElementById("btn-close-settings");
+            const tabBtns = document.querySelectorAll(".settings-tab-btn");
+            const tabPanels = document.querySelectorAll(".settings-tab-panel");
+
+            if (!overlay || !btnOpen || !btnClose) return;
+
+            // Open modal
+            btnOpen.addEventListener("click", () => {
+                overlay.classList.add("open");
+                document.body.style.overflow = "hidden";
+            });
+
+            // Close modal via X button
+            btnClose.addEventListener("click", closeModal);
+
+            // Close modal when clicking outside
+            overlay.addEventListener("click", (e) => {
+                if (e.target === overlay) closeModal();
+            });
+
+            // Close modal with Escape key
+            document.addEventListener("keydown", (e) => {
+                if (e.key === "Escape" && overlay.classList.contains("open")) closeModal();
+            });
+
+            function closeModal() {
+                overlay.classList.remove("open");
+                document.body.style.overflow = "";
+            }
+
+            // Tab switching
+            tabBtns.forEach(btn => {
+                btn.addEventListener("click", () => {
+                    const targetTab = btn.getAttribute("data-tab");
+                    tabBtns.forEach(b => b.classList.remove("active"));
+                    btn.classList.add("active");
+                    tabPanels.forEach(panel => {
+                        panel.style.display = panel.id === `settings-tab-${targetTab}` ? "block" : "none";
+                    });
+                });
+            });
+        }
+
+        initSettingsModal();
+
+        // =============================================
+        // Data Backup and Restore Logic
+        // =============================================
+        function initDataBackupAndRestore() {
+            const btnExport = document.getElementById("btn-export-backup");
+            const btnImport = document.getElementById("btn-import-backup");
+            const fileInput = document.getElementById("backup-file-input");
+
+            if (!btnExport || !btnImport || !fileInput) return;
+
+            // Export Backup
+            btnExport.addEventListener("click", () => {
+                const backupData = {};
+                for (let i = 0; i < localStorage.length; i++) {
+                    const key = localStorage.key(i);
+                    // Export only relevant study settings/caches, avoiding pollution
+                    if (
+                        key === "gemini_api_key" ||
+                        key === "gemini_model" ||
+                        key === "theme" ||
+                        key === "custom_questions_db" ||
+                        key.startsWith("notes_") ||
+                        key.startsWith("ai_answer_") ||
+                        key.startsWith("generated_card_")
+                    ) {
+                        backupData[key] = localStorage.getItem(key);
+                    }
+                }
+
+                try {
+                    const blob = new Blob([JSON.stringify(backupData, null, 2)], { type: "application/json" });
+                    const url = URL.createObjectURL(blob);
+                    const dateStr = new Date().toISOString().slice(0, 10).replace(/-/g, "");
+                    const a = document.createElement("a");
+                    a.href = url;
+                    a.download = `food_hygiene_exam_backup_${dateStr}.json`;
+                    document.body.appendChild(a);
+                    a.click();
+                    document.body.removeChild(a);
+                    URL.revokeObjectURL(url);
+                } catch (err) {
+                    alert("導出備份失敗：" + err.message);
+                }
+            });
+
+            // Trigger file input
+            btnImport.addEventListener("click", () => {
+                fileInput.click();
+            });
+
+            // Import Backup File Change Event
+            fileInput.addEventListener("change", (e) => {
+                const file = e.target.files[0];
+                if (!file) return;
+
+                const reader = new FileReader();
+                reader.onload = (event) => {
+                    try {
+                        const importedData = JSON.parse(event.target.result);
+                        if (typeof importedData !== "object" || importedData === null) {
+                            alert("無效的備份格式！請上傳正確的備份 JSON 檔案。");
+                            return;
+                        }
+
+                        if (confirm("導入備份將覆蓋現有數據，是否確定導入？")) {
+                            Object.keys(importedData).forEach(key => {
+                                localStorage.setItem(key, importedData[key]);
+                            });
+                            alert("備份數據導入成功！即將重新整理頁面。");
+                            location.reload();
+                        }
+                    } catch (err) {
+                        alert("解析備份檔案失敗，請確保檔案為正確的 JSON 格式。");
+                        console.error(err);
+                    }
+                };
+                reader.readAsText(file);
+            });
+        }
+
+        initDataBackupAndRestore();
+
+        // =============================================
+        // Inner sidebar collapse button (arrow in logo bar)
+        // =============================================
+        const sidebarCollapseInnerBtn = document.getElementById("sidebar-collapse-inner");
+        if (sidebarCollapseInnerBtn) {
+            sidebarCollapseInnerBtn.addEventListener("click", () => {
+                // Reuse same logic as the top-bar hamburger toggle
+                sidebarToggleEl.click();
+            });
+        }
+
+        // =============================================
+        // Emergency Reset Modal Initialization
+        // =============================================
+        function initEmergencyModal() {
+            const overlay = document.getElementById("emergency-modal-overlay");
+            const btnOpen = document.getElementById("btn-open-emergency");
+            const btnClose = document.getElementById("btn-close-emergency");
+            const btnClearDb = document.getElementById("btn-emergency-clear-db");
+            const btnShowContents = document.getElementById("btn-emergency-show-contents");
+            const btnClearAll = document.getElementById("btn-emergency-clear-all");
+            const statusEl = document.getElementById("emergency-status");
+            const previewEl = document.getElementById("emergency-preview");
+
+            if (!overlay || !btnOpen) return;
+
+            btnOpen.addEventListener("click", () => {
+                overlay.classList.add("open");
+                document.body.style.overflow = "hidden";
+                // Auto show status summary
+                const hasCustomDb = !!localStorage.getItem("custom_questions_db");
+                previewEl.textContent = hasCustomDb 
+                  ? `⚠️ 偵測到 custom_questions_db (${(localStorage.getItem("custom_questions_db") || "").length} bytes)\n請點擊上方紅色按鈕清除。` 
+                  : "✅ 目前無自訂題庫，localStorage 狀態正常。";
+                previewEl.style.display = "block";
+                statusEl.style.display = "none";
+            });
+
+            btnClose.addEventListener("click", () => {
+                overlay.classList.remove("open");
+                document.body.style.overflow = "";
+            });
+
+            overlay.addEventListener("click", (e) => {
+                if (e.target === overlay) {
+                    overlay.classList.remove("open");
+                    document.body.style.overflow = "";
+                }
+            });
+
+            btnClearDb.addEventListener("click", () => {
+                if (localStorage.getItem("custom_questions_db")) {
+                    localStorage.removeItem("custom_questions_db");
+                    statusEl.textContent = "✅ 自訂題庫已清除！請重整網頁。";
+                    statusEl.style.background = "rgba(16,185,129,0.15)";
+                    statusEl.style.color = "#34d399";
+                    statusEl.style.border = "1px solid rgba(16,185,129,0.3)";
+                    statusEl.style.display = "block";
+                    previewEl.textContent = "✅ 目前無自訂題庫，localStorage 狀態正常。";
+                } else {
+                    statusEl.textContent = "ℹ️ 本機無自訂題庫，無需清除。";
+                    statusEl.style.background = "rgba(255, 255, 255, 0.05)";
+                    statusEl.style.color = "var(--text-secondary)";
+                    statusEl.style.border = "1px solid var(--card-border)";
+                    statusEl.style.display = "block";
+                }
+            });
+
+            btnClearAll.addEventListener("click", () => {
+                if (confirm("確定要清除所有本機數據嗎？包含 API 金鑰、個人筆記、自訂題庫都會消失。此動作不可逆。")) {
+                    localStorage.clear();
+                    statusEl.textContent = "✅ 所有 localStorage 資料已成功清除！頁面即將重新整理...";
+                    statusEl.style.background = "rgba(16,185,129,0.15)";
+                    statusEl.style.color = "#34d399";
+                    statusEl.style.border = "1px solid rgba(16,185,129,0.3)";
+                    statusEl.style.display = "block";
+                    setTimeout(() => {
+                        window.location.reload();
+                    }, 1200);
+                }
+            });
+
+            btnShowContents.addEventListener("click", () => {
+                const keys = Object.keys(localStorage);
+                if (keys.length === 0) {
+                    previewEl.textContent = "（本機 localStorage 目前是空的）";
+                } else {
+                    let output = "";
+                    keys.forEach(k => {
+                        const val = localStorage.getItem(k);
+                        const previewVal = val && val.length > 120 ? val.substring(0, 120) + "...[截斷]" : val;
+                        output += `[${k}]:\n${previewVal}\n\n`;
+                    });
+                    previewEl.textContent = output;
+                }
+                previewEl.style.display = "block";
+            });
+        }
+
+        initEmergencyModal();
+
+    </script>
+</body>
+</html>
