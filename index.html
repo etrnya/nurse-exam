@@ -1953,6 +1953,249 @@
             border: 1px solid rgba(239, 68, 68, 0.2);
             color: #ef4444;
         }
+
+        /* ===================================================
+           手機響應式設計 (Mobile Responsive - Plan B Tab Bar)
+           僅在 max-width: 768px 時生效，電腦版完全不受影響
+           =================================================== */
+        @media (max-width: 768px) {
+
+            /* --- Body & App Container --- */
+            body {
+                overflow: hidden;
+            }
+            .app-container {
+                flex-direction: column;
+            }
+
+            /* --- 側邊欄改為 Drawer (手機版) --- */
+            .sidebar {
+                position: fixed;
+                top: 0;
+                left: 0;
+                height: 100vh;
+                width: 85vw !important;
+                max-width: 320px;
+                z-index: 9000;
+                transform: translateX(-100%);
+                transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+                padding: 1.25rem 1rem;
+                box-shadow: 4px 0 30px rgba(0, 0, 0, 0.4);
+            }
+            .sidebar.mobile-open {
+                transform: translateX(0);
+            }
+            /* 隱藏 sidebar 內的 collapse 按鈕（手機版不需要收折） */
+            .sidebar .sidebar-collapse-btn {
+                display: none !important;
+            }
+
+            /* --- Overlay 背景（點擊可關閉側邊欄） --- */
+            .mobile-sidebar-overlay {
+                display: none;
+                position: fixed;
+                inset: 0;
+                background: rgba(0, 0, 0, 0.6);
+                z-index: 8999;
+                backdrop-filter: blur(2px);
+            }
+            .mobile-sidebar-overlay.active {
+                display: block;
+            }
+
+            /* --- Workspace 佔滿剩餘空間 --- */
+            .workspace {
+                height: 100vh;
+                width: 100vw;
+            }
+
+            /* --- Top Bar 精簡化 --- */
+            .top-bar {
+                padding: 0.65rem 0.85rem;
+                flex-wrap: nowrap;
+                gap: 0.5rem;
+            }
+            /* 隱藏搜尋列（手機版由 Tab 管理，搜尋列空間不夠） */
+            .top-bar .search-and-filters {
+                display: none !important;
+            }
+            /* Mode selector 文字縮短 */
+            .mode-btn {
+                padding: 0.35rem 0.6rem;
+                font-size: 0.75rem;
+                gap: 0.3rem;
+            }
+            .mode-btn i {
+                font-size: 0.85rem;
+            }
+
+            /* --- workspace-layout 與面板 --- */
+            .workspace-layout {
+                position: relative;
+                flex: 1;
+                overflow: hidden;
+            }
+            /* 兩個 workspace inner 都 100% 寬 */
+            #questions-workspace-layout,
+            #cards-workspace-layout {
+                width: 100% !important;
+                height: 100%;
+                position: relative;
+            }
+
+            /* --- 各面板預設隱藏（由 JS Tab 控制顯示） --- */
+            /* Questions mode panels */
+            .topics-panel {
+                display: none !important;
+            }
+            .topics-panel.mobile-panel-active {
+                display: flex !important;
+                flex-direction: column;
+                position: absolute;
+                inset: 0;
+                width: 100% !important;
+                height: 100%;
+                z-index: 10;
+                overflow-y: auto;
+            }
+            /* 手機版不顯示收折按鈕 */
+            .topics-panel .btn-icon-sm {
+                display: none !important;
+            }
+
+            .question-stream {
+                display: none !important;
+            }
+            .question-stream.mobile-panel-active {
+                display: flex !important;
+                position: absolute;
+                inset: 0;
+                width: 100% !important;
+                height: 100%;
+                overflow-y: auto;
+                z-index: 10;
+                padding: 0.85rem;
+            }
+
+            /* Cards mode panels */
+            .card-content-panel {
+                display: none !important;
+            }
+            .card-content-panel.mobile-panel-active {
+                display: flex !important;
+                flex-direction: column;
+                position: absolute;
+                inset: 0;
+                width: 100% !important;
+                height: 100%;
+                overflow-y: auto;
+                z-index: 10;
+                border-right: none;
+            }
+
+            .related-questions-panel {
+                display: none !important;
+            }
+            .related-questions-panel.mobile-panel-active {
+                display: flex !important;
+                flex-direction: column;
+                position: absolute;
+                inset: 0;
+                width: 100% !important;
+                height: 100%;
+                overflow-y: auto;
+                z-index: 10;
+                border-left: none;
+                padding: 0.85rem;
+            }
+
+            /* --- Detail Panel 手機版 (已有 100% 寬樣式，確保覆蓋) --- */
+            .detail-panel {
+                position: fixed !important;
+                width: 100% !important;
+                max-width: 100% !important;
+                height: 100vh !important;
+                top: 0 !important;
+                right: 0 !important;
+                z-index: 9500 !important;
+            }
+
+            /* --- 底部 Tab Bar --- */
+            .mobile-tab-bar {
+                display: flex !important;
+            }
+
+            /* 為底部 Tab Bar 預留空間 */
+            .workspace-layout {
+                padding-bottom: 0;
+            }
+
+            /* 搜尋列在 Questions Tab 顯示時 inline 提示 */
+            .mobile-search-bar {
+                display: flex !important;
+            }
+        }
+
+        /* --- 底部 Tab Bar 樣式（預設隱藏，手機才顯示）--- */
+        .mobile-tab-bar {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 60px;
+            background: var(--sidebar-bg);
+            border-top: 1px solid var(--card-border);
+            z-index: 8000;
+            backdrop-filter: blur(20px);
+            align-items: stretch;
+            justify-content: stretch;
+            box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.25);
+        }
+        .mobile-tab-btn {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 0.2rem;
+            background: transparent;
+            border: none;
+            color: var(--text-secondary);
+            cursor: pointer;
+            font-size: 0.62rem;
+            font-weight: 600;
+            font-family: var(--font-family);
+            transition: color 0.2s ease;
+            padding: 0.5rem 0.25rem;
+            position: relative;
+        }
+        .mobile-tab-btn i {
+            font-size: 1.15rem;
+            transition: transform 0.2s ease, color 0.2s ease;
+        }
+        .mobile-tab-btn.active {
+            color: var(--accent-color);
+        }
+        .mobile-tab-btn.active i {
+            transform: translateY(-2px);
+        }
+        .mobile-tab-btn.active::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 20%;
+            right: 20%;
+            height: 2px;
+            background: var(--accent-gradient);
+            border-radius: 0 0 2px 2px;
+        }
+        /* 手機版 workspace-layout 需要底部預留 Tab Bar 高度 */
+        @media (max-width: 768px) {
+            .workspace {
+                padding-bottom: 60px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -2350,6 +2593,39 @@
         </div>
 
     </div>
+
+    <!-- Mobile Sidebar Overlay -->
+    <div class="mobile-sidebar-overlay" id="mobile-sidebar-overlay"></div>
+
+    <!-- Mobile Bottom Tab Bar -->
+    <nav class="mobile-tab-bar" id="mobile-tab-bar" role="navigation" aria-label="手機版底部導覽">
+        <!-- Questions Mode Tabs -->
+        <div id="mobile-tabs-questions" style="display: flex; flex: 1; align-items: stretch;">
+            <button class="mobile-tab-btn" id="mobile-tab-topics" aria-label="主題篩選">
+                <i class="fa-solid fa-tags"></i>
+                <span>主題</span>
+            </button>
+            <button class="mobile-tab-btn active" id="mobile-tab-questions" aria-label="練習題目">
+                <i class="fa-solid fa-list-check"></i>
+                <span>練習</span>
+            </button>
+        </div>
+        <!-- Cards Mode Tabs -->
+        <div id="mobile-tabs-cards" style="display: none; flex: 1; align-items: stretch;">
+            <button class="mobile-tab-btn" id="mobile-tab-ranking" aria-label="高頻考點排行">
+                <i class="fa-solid fa-ranking-star"></i>
+                <span>排行</span>
+            </button>
+            <button class="mobile-tab-btn active" id="mobile-tab-card-content" aria-label="複習卡內容">
+                <i class="fa-solid fa-book-open-reader"></i>
+                <span>複習卡</span>
+            </button>
+            <button class="mobile-tab-btn" id="mobile-tab-related" aria-label="本主題歷屆考題">
+                <i class="fa-solid fa-file-circle-check"></i>
+                <span>歷屆考題</span>
+            </button>
+        </div>
+    </nav>
 
     <!-- Load Local Databases -->
     <script src="questions_db.js"></script>
@@ -4409,6 +4685,204 @@ ${optionsText}
         }
 
         initEmergencyModal();
+
+        /* ===================================================
+           手機版響應式 Tab Bar 控制邏輯 (Plan B)
+           =================================================== */
+        function initMobileResponsive() {
+            const MOBILE_BP = 768;
+            const isMobile = () => window.innerWidth <= MOBILE_BP;
+
+            // --- 側邊欄 Drawer 控制 ---
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.getElementById('mobile-sidebar-overlay');
+            const sidebarToggle = document.getElementById('sidebar-toggle');
+
+            function openMobileSidebar() {
+                sidebar.classList.add('mobile-open');
+                overlay.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+            function closeMobileSidebar() {
+                sidebar.classList.remove('mobile-open');
+                overlay.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+
+            // 漢堡 icon：手機版改為開關 drawer
+            if (sidebarToggle) {
+                const origHandler = sidebarToggle.onclick;
+                sidebarToggle.addEventListener('click', (e) => {
+                    if (!isMobile()) return; // 桌機版保持原本行為
+                    e.stopPropagation();
+                    if (sidebar.classList.contains('mobile-open')) {
+                        closeMobileSidebar();
+                    } else {
+                        openMobileSidebar();
+                    }
+                }, true);
+            }
+
+            // 點 overlay 關閉 sidebar
+            if (overlay) {
+                overlay.addEventListener('click', closeMobileSidebar);
+            }
+
+            // Sidebar 內點擊科目後自動關閉
+            if (sidebar) {
+                sidebar.addEventListener('click', (e) => {
+                    if (!isMobile()) return;
+                    const btn = e.target.closest('.subject-btn');
+                    if (btn) {
+                        setTimeout(closeMobileSidebar, 200);
+                    }
+                });
+            }
+
+            // --- Tab Bar 面板切換邏輯 ---
+            // Questions Mode 面板
+            const topicsPanel = document.getElementById('topics-panel');
+            const questionStream = document.getElementById('question-stream');
+
+            // Cards Mode 面板
+            const cardsRankingPanel = document.getElementById('cards-ranking-panel');
+            const cardContentPanel = document.getElementById('card-content-panel');
+            const relatedQuestionsPanel = document.getElementById('related-questions-panel');
+
+            // Tab 按鈕
+            const tabTopics = document.getElementById('mobile-tab-topics');
+            const tabQuestions = document.getElementById('mobile-tab-questions');
+            const tabRanking = document.getElementById('mobile-tab-ranking');
+            const tabCardContent = document.getElementById('mobile-tab-card-content');
+            const tabRelated = document.getElementById('mobile-tab-related');
+
+            const mobileTabsQuestions = document.getElementById('mobile-tabs-questions');
+            const mobileTabsCards = document.getElementById('mobile-tabs-cards');
+
+            // 設定 Questions Mode 的活躍面板
+            function setQuestionsPanel(panelName) {
+                if (!isMobile()) return;
+                // 移除所有 active 樣式
+                [topicsPanel, questionStream].forEach(p => p && p.classList.remove('mobile-panel-active'));
+                [tabTopics, tabQuestions].forEach(b => b && b.classList.remove('active'));
+
+                if (panelName === 'topics') {
+                    topicsPanel && topicsPanel.classList.add('mobile-panel-active');
+                    tabTopics && tabTopics.classList.add('active');
+                } else {
+                    questionStream && questionStream.classList.add('mobile-panel-active');
+                    tabQuestions && tabQuestions.classList.add('active');
+                }
+            }
+
+            // 設定 Cards Mode 的活躍面板
+            function setCardsPanel(panelName) {
+                if (!isMobile()) return;
+                [cardsRankingPanel, cardContentPanel, relatedQuestionsPanel].forEach(p => p && p.classList.remove('mobile-panel-active'));
+                [tabRanking, tabCardContent, tabRelated].forEach(b => b && b.classList.remove('active'));
+
+                if (panelName === 'ranking') {
+                    cardsRankingPanel && cardsRankingPanel.classList.add('mobile-panel-active');
+                    tabRanking && tabRanking.classList.add('active');
+                } else if (panelName === 'related') {
+                    relatedQuestionsPanel && relatedQuestionsPanel.classList.add('mobile-panel-active');
+                    tabRelated && tabRelated.classList.add('active');
+                } else {
+                    cardContentPanel && cardContentPanel.classList.add('mobile-panel-active');
+                    tabCardContent && tabCardContent.classList.add('active');
+                }
+            }
+
+            // Tab 點擊事件 - Questions Mode
+            tabTopics && tabTopics.addEventListener('click', () => setQuestionsPanel('topics'));
+            tabQuestions && tabQuestions.addEventListener('click', () => setQuestionsPanel('questions'));
+
+            // Tab 點擊事件 - Cards Mode
+            tabRanking && tabRanking.addEventListener('click', () => setCardsPanel('ranking'));
+            tabCardContent && tabCardContent.addEventListener('click', () => setCardsPanel('card-content'));
+            tabRelated && tabRelated.addEventListener('click', () => setCardsPanel('related'));
+
+            // --- Mode 切換（歷屆題庫 <-> 核心複習卡）時同步切換 Tab 組 ---
+            function syncMobileTabsToMode() {
+                if (!isMobile()) return;
+                const isQuestionsMode = document.getElementById('questions-workspace-layout').style.display !== 'none';
+                if (isQuestionsMode) {
+                    mobileTabsQuestions.style.display = 'flex';
+                    mobileTabsCards.style.display = 'none';
+                    setQuestionsPanel('questions');
+                } else {
+                    mobileTabsQuestions.style.display = 'none';
+                    mobileTabsCards.style.display = 'flex';
+                    setCardsPanel('card-content');
+                }
+            }
+
+            // 監聽 mode 切換按鈕
+            const modeQuestionsBtn = document.getElementById('mode-questions-btn');
+            const modeCardsBtn = document.getElementById('mode-cards-btn');
+            modeQuestionsBtn && modeQuestionsBtn.addEventListener('click', () => {
+                setTimeout(syncMobileTabsToMode, 100);
+            });
+            modeCardsBtn && modeCardsBtn.addEventListener('click', () => {
+                setTimeout(syncMobileTabsToMode, 100);
+            });
+
+            // 在卡片模式下點選左欄排行後，自動切到複習卡面板
+            const cardsRankingList = document.getElementById('cards-ranking-list');
+            if (cardsRankingList) {
+                cardsRankingList.addEventListener('click', (e) => {
+                    if (!isMobile()) return;
+                    const item = e.target.closest('.topic-item');
+                    if (item) setTimeout(() => setCardsPanel('card-content'), 150);
+                });
+            }
+
+            // 在 Questions 模式下點選主題後，自動切到練習面板
+            const topicList = document.getElementById('topic-list');
+            if (topicList) {
+                topicList.addEventListener('click', (e) => {
+                    if (!isMobile()) return;
+                    const item = e.target.closest('.topic-item');
+                    if (item) setTimeout(() => setQuestionsPanel('questions'), 150);
+                });
+            }
+
+            // --- 初始化時設定正確狀態 ---
+            function initMobileState() {
+                if (!isMobile()) return;
+                syncMobileTabsToMode();
+                // 確保 sidebar 不在 collapsed 狀態（手機版用 drawer 控制）
+                sidebar && sidebar.classList.remove('collapsed');
+            }
+
+            // --- 視窗大小變化時重設（桌機版回到正常） ---
+            let resizeTimer;
+            window.addEventListener('resize', () => {
+                clearTimeout(resizeTimer);
+                resizeTimer = setTimeout(() => {
+                    if (!isMobile()) {
+                        // 桌機版：清除所有手機狀態
+                        [topicsPanel, questionStream, cardsRankingPanel, cardContentPanel, relatedQuestionsPanel]
+                            .forEach(p => p && p.classList.remove('mobile-panel-active'));
+                        closeMobileSidebar();
+                    } else {
+                        initMobileState();
+                    }
+                }, 150);
+            });
+
+            // 初始執行
+            initMobileState();
+        }
+
+        // 等 DOM 完整載入後執行
+        document.addEventListener('DOMContentLoaded', () => {
+            initMobileResponsive();
+        });
+        // 也在 load 後補執行一次（確保動態內容也完整）
+        window.addEventListener('load', () => {
+            initMobileResponsive();
+        });
 
     </script>
 </body>
