@@ -41,13 +41,13 @@ TAGS_KEYWORDS = {
 def parse_remarks_for_rules(text):
     """解析答案 PDF 備註中的給分更正規則"""
     corrections = {}
-    # 匹配「一律給分」
-    for m in re.finditer(r"第\s*(\d+)\s*題[^，。]*?一律給分", text):
+    # 匹配「一律給分」或「其餘均給分」
+    for m in re.finditer(r"第\s*(\d+)\s*題[^，。]*?(?:一律給分|其餘均給分)", text):
         q_num = int(m.group(1))
         corrections[q_num] = "*"
         
-    # 匹配「答Ｘ或Ｙ者均給分」或「答Ｘ、Ｙ或Ｚ者均給分」
-    for m in re.finditer(r"第\s*(\d+)\s*題答\s*([A-ZＢ-ＤＡ-Ｄ\s、或]+)\s*者均給分", text):
+    # 匹配「答Ｘ或Ｙ者均給分」或「答Ｘ、Ｙ或Ｚ者均給分」或「答Ｘ給分」等
+    for m in re.finditer(r"第\s*(\d+)\s*題答\s*([A-ZＢ-ＤＡ-Ｄ\s、或]+)\s*(?:者均)?給分", text):
         q_num = int(m.group(1))
         ans_part = m.group(2)
         ans_part = ans_part.translate(str.maketrans("ＡＢＣＤ", "ABCD"))
@@ -57,14 +57,41 @@ def parse_remarks_for_rules(text):
             
     return corrections
 
+def get_pdf_session(pdf_path):
+    """取得 PDF 考科之考試期別 (如：第一次、第二次、第三次)"""
+    try:
+        reader = pypdf.PdfReader(pdf_path)
+        if not reader.pages:
+            return None
+        text = reader.pages[0].extract_text()
+        if text:
+            match = re.search(r"第[一二三四五六七八九十]次", text)
+            if match:
+                return match.group(0)
+    except Exception as e:
+        print(f"讀取 PDF 期別出錯: {pdf_path} -> {e}")
+    return None
+
 def extract_moex_answers(year, subject_code):
-    """解析考選部答案 PDF (優先採用 corrected，若無才採用 answer)"""
+    """解析考選部答案 PDF (優先採用同考期 corrected，若無或不同期才採用 answer)"""
     answer_file = f"moex-{year}-{subject_code}-answer.pdf"
     corrected_file = f"moex-{year}-{subject_code}-corrected.pdf"
     
-    target_file = corrected_file if os.path.exists(os.path.join(MOEX_DIR, corrected_file)) else answer_file
-    target_path = os.path.join(MOEX_DIR, target_file)
+    answer_path = os.path.join(MOEX_DIR, answer_file)
+    corrected_path = os.path.join(MOEX_DIR, corrected_file)
     
+    target_path = answer_path
+    
+    if os.path.exists(corrected_path) and os.path.exists(answer_path):
+        ans_session = get_pdf_session(answer_path)
+        corr_session = get_pdf_session(corrected_path)
+        if ans_session and corr_session and ans_session == corr_session:
+            target_path = corrected_path
+        else:
+            target_path = answer_path
+    elif os.path.exists(corrected_path):
+        target_path = corrected_path
+        
     if not os.path.exists(target_path):
         return {}
         
@@ -92,6 +119,8 @@ def extract_moex_answers(year, subject_code):
                             continue
                         clean_h = clean_text(str(h))
                         clean_v = clean_text(str(v))
+                        # 轉換全形字元為半形
+                        clean_v = clean_v.translate(str.maketrans("ＡＢＣＤ", "ABCD"))
                         
                         # 匹配「第X題」或直接是數字
                         q_match = re.search(r"第?\s*(\d+)\s*題?", clean_h)
@@ -111,7 +140,7 @@ def extract_moex_answers(year, subject_code):
                 answers[q_num] = "*"
                 
     except Exception as e:
-        print(f"解析考選部答案出錯: {target_file} -> {e}")
+        print(f"解析考選部答案出錯: {target_path} -> {e}")
         
     return answers
 
@@ -226,19 +255,49 @@ def parse_moex_questions(year, subject_code, official_answers):
             filtered_lines.append(line)
         cleaned_text = "\n".join(filtered_lines)
         
-        # 題號切割
-        pattern = r"\n\s*(\d+)\s+([\s\S]*?)(?=\n\s*(?:\d+)\s+|\Z)"
-        matches = re.findall(pattern, "\n" + cleaned_text)
+        # 依據已知的答案題號，進行循序漸進式定位切割，以防止 113/114 年無空格格式及其他小數混淆問題
+        expected_nums = sorted(list(official_answers.keys()))
+        if not expected_nums:
+            expected_nums = list(range(1, 51))
+            
+        positions = []
+        current_pos = 0
+        search_text = "\n" + cleaned_text
+        
+        for q_num in expected_nums:
+            # 標準匹配：題號後接點或空格，且不為其他小數 (如 2.0)
+            pattern = re.compile(r"\n\s*" + str(q_num) + r"(?:\s*[.．]\s*(?!\d)|\s+)")
+            match = pattern.search(search_text, current_pos)
+            if match:
+                positions.append((q_num, match.start(), match.end()))
+                current_pos = match.end()
+            else:
+                # 備用匹配：題號後直接緊鄰中文字元等非數字空格字元
+                fallback_pattern = re.compile(r"\n\s*" + str(q_num) + r"\s*(?=[^\d\s])")
+                match = fallback_pattern.search(search_text, current_pos)
+                if match:
+                    positions.append((q_num, match.start(), match.end()))
+                    current_pos = match.end()
+                else:
+                    pass
+        
+        # 根據定位點重構題目內容
+        matches = []
+        for idx in range(len(positions)):
+            q_num, start_idx, end_idx = positions[idx]
+            next_start = positions[idx+1][1] if idx + 1 < len(positions) else len(search_text)
+            content = search_text[end_idx:next_start]
+            matches.append((str(q_num), content))
         
         subject_name = SUBJECT_NAME_MAP.get(subject_code, "未分類")
         
         for num_str, content in matches:
             q_num = int(num_str)
             flat_content = re.sub(r"\s+", " ", content)
-            opt_match = re.search(r"\(A\)(.*?)\(B\)(.*?)\(C\)(.*?)\(D\)(.*)", flat_content)
+            opt_match = re.search(r"(?:\(A\)|A\.)(.*?)(?:\(B\)|B\.)(.*?)(?:\(C\)|C\.)(.*?)(?:\(D\)|D\.)(.*)", flat_content)
             
             if opt_match:
-                q_text = flat_content.split("(A)")[0].strip()
+                q_text = re.split(r"\(A\)|A\.", flat_content)[0].strip()
                 options = {
                     "A": opt_match.group(1).strip(),
                     "B": opt_match.group(2).strip(),

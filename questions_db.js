@@ -472,8 +472,8 @@ const questions_db = [
     "subject": "基礎醫學",
     "year": 110,
     "tags": [
-      "生理學",
-      "內外科護理學"
+      "內外科護理學",
+      "生理學"
     ],
     "weight": 1.0
   },
@@ -728,8 +728,8 @@ const questions_db = [
     "subject": "基礎醫學",
     "year": 110,
     "tags": [
-      "病理學",
-      "解剖學"
+      "解剖學",
+      "病理學"
     ],
     "weight": 1.0
   },
@@ -764,8 +764,8 @@ const questions_db = [
     "year": 110,
     "tags": [
       "病理學",
-      "生理學",
-      "護理行政"
+      "護理行政",
+      "生理學"
     ],
     "weight": 1.0
   },
@@ -799,8 +799,8 @@ const questions_db = [
     "subject": "基礎醫學",
     "year": 110,
     "tags": [
-      "病理學",
-      "微生物學與免疫學"
+      "微生物學與免疫學",
+      "病理學"
     ],
     "weight": 1.0
   },
@@ -921,9 +921,9 @@ const questions_db = [
     "subject": "基礎醫學",
     "year": 110,
     "tags": [
-      "藥理學",
+      "微生物學與免疫學",
       "解剖學",
-      "微生物學與免疫學"
+      "藥理學"
     ],
     "weight": 1.0
   },
@@ -991,10 +991,10 @@ const questions_db = [
     "subject": "基礎醫學",
     "year": 110,
     "tags": [
-      "病理學",
+      "內外科護理學",
       "解剖學",
-      "藥理學",
-      "內外科護理學"
+      "病理學",
+      "藥理學"
     ],
     "weight": 1.0
   },
@@ -1011,8 +1011,8 @@ const questions_db = [
     "subject": "基礎醫學",
     "year": 110,
     "tags": [
-      "藥理學",
-      "基本護理學"
+      "基本護理學",
+      "藥理學"
     ],
     "weight": 1.0
   },
@@ -1200,8 +1200,8 @@ const questions_db = [
     "subject": "基礎醫學",
     "year": 110,
     "tags": [
-      "護理行政",
-      "微生物學與免疫學"
+      "微生物學與免疫學",
+      "護理行政"
     ],
     "weight": 1.0
   },
@@ -1286,8 +1286,8 @@ const questions_db = [
     "subject": "基礎醫學",
     "year": 110,
     "tags": [
-      "護理行政",
-      "基礎醫學"
+      "基礎醫學",
+      "護理行政"
     ],
     "weight": 1.0
   },
@@ -1695,9 +1695,9 @@ const questions_db = [
     "subject": "基本護理學與護理行政",
     "year": 110,
     "tags": [
-      "藥理學",
+      "基本護理學",
       "微生物學與免疫學",
-      "基本護理學"
+      "藥理學"
     ],
     "weight": 1.0
   },
@@ -1714,8 +1714,8 @@ const questions_db = [
     "subject": "基本護理學與護理行政",
     "year": 110,
     "tags": [
-      "病理學",
       "基本護理學",
+      "病理學",
       "藥理學"
     ],
     "weight": 1.0
@@ -1733,8 +1733,8 @@ const questions_db = [
     "subject": "基本護理學與護理行政",
     "year": 110,
     "tags": [
-      "藥理學",
-      "基本護理學"
+      "基本護理學",
+      "藥理學"
     ],
     "weight": 1.0
   },
@@ -1838,8 +1838,8 @@ const questions_db = [
     "subject": "基本護理學與護理行政",
     "year": 110,
     "tags": [
-      "解剖學",
-      "基本護理學"
+      "基本護理學",
+      "解剖學"
     ],
     "weight": 1.0
   },
@@ -1925,10 +1925,10 @@ const questions_db = [
     "subject": "基本護理學與護理行政",
     "year": 110,
     "tags": [
-      "藥理學",
+      "基本護理學",
       "解剖學",
-      "護理行政",
-      "基本護理學"
+      "藥理學",
+      "護理行政"
     ],
     "weight": 1.0
   },
@@ -1979,8 +1979,8 @@ const questions_db = [
     "subject": "基本護理學與護理行政",
     "year": 110,
     "tags": [
-      "病理學",
-      "基本護理學"
+      "基本護理學",
+      "病理學"
     ],
     "weight": 1.0
   },
@@ -2628,8 +2628,8 @@ const questions_db = [
     "year": 110,
     "tags": [
       "病理學",
-      "護理行政",
-      "內外科護理學"
+      "內外科護理學",
+      "護理行政"
     ],
     "weight": 1.0
   },
@@ -2714,8 +2714,8 @@ const questions_db = [
     "subject": "基本護理學與護理行政",
     "year": 110,
     "tags": [
-      "護理行政",
-      "微生物學與免疫學"
+      "微生物學與免疫學",
+      "護理行政"
     ],
     "weight": 1.0
   },
@@ -3225,8 +3225,8 @@ const questions_db = [
     "subject": "內外科護理學",
     "year": 110,
     "tags": [
-      "解剖學",
-      "基本護理學"
+      "基本護理學",
+      "解剖學"
     ],
     "weight": 1.0
   },
@@ -3243,9 +3243,9 @@ const questions_db = [
     "subject": "內外科護理學",
     "year": 110,
     "tags": [
-      "藥理學",
+      "基本護理學",
       "解剖學",
-      "基本護理學"
+      "藥理學"
     ],
     "weight": 1.0
   },
@@ -3262,8 +3262,8 @@ const questions_db = [
     "subject": "內外科護理學",
     "year": 110,
     "tags": [
-      "護理行政",
-      "解剖學"
+      "解剖學",
+      "護理行政"
     ],
     "weight": 1.0
   },
@@ -3587,8 +3587,8 @@ const questions_db = [
     "subject": "內外科護理學",
     "year": 110,
     "tags": [
-      "病理學",
-      "解剖學"
+      "解剖學",
+      "病理學"
     ],
     "weight": 1.0
   },
@@ -3945,8 +3945,8 @@ const questions_db = [
     "subject": "內外科護理學",
     "year": 110,
     "tags": [
-      "病理學",
       "解剖學",
+      "病理學",
       "內外科護理學"
     ],
     "weight": 1.0
@@ -4102,8 +4102,8 @@ const questions_db = [
     "subject": "內外科護理學",
     "year": 110,
     "tags": [
-      "藥理學",
-      "內外科護理學"
+      "內外科護理學",
+      "藥理學"
     ],
     "weight": 1.0
   },
@@ -4205,8 +4205,8 @@ const questions_db = [
     "subject": "產兒科護理學",
     "year": 110,
     "tags": [
-      "產兒科護理學",
-      "基本護理學"
+      "基本護理學",
+      "產兒科護理學"
     ],
     "weight": 1.0
   },
@@ -4274,8 +4274,8 @@ const questions_db = [
     "subject": "產兒科護理學",
     "year": 110,
     "tags": [
-      "產兒科護理學",
-      "生理學"
+      "生理學",
+      "產兒科護理學"
     ],
     "weight": 1.0
   },
@@ -4377,8 +4377,8 @@ const questions_db = [
     "subject": "產兒科護理學",
     "year": 110,
     "tags": [
-      "生理學",
-      "基本護理學"
+      "基本護理學",
+      "生理學"
     ],
     "weight": 1.0
   },
@@ -4548,8 +4548,8 @@ const questions_db = [
     "subject": "產兒科護理學",
     "year": 110,
     "tags": [
-      "產兒科護理學",
-      "基本護理學"
+      "基本護理學",
+      "產兒科護理學"
     ],
     "weight": 1.0
   },
@@ -4600,8 +4600,8 @@ const questions_db = [
     "subject": "產兒科護理學",
     "year": 110,
     "tags": [
-      "產兒科護理學",
-      "基本護理學"
+      "基本護理學",
+      "產兒科護理學"
     ],
     "weight": 1.0
   },
@@ -4618,8 +4618,8 @@ const questions_db = [
     "subject": "產兒科護理學",
     "year": 110,
     "tags": [
-      "產兒科護理學",
-      "微生物學與免疫學"
+      "微生物學與免疫學",
+      "產兒科護理學"
     ],
     "weight": 1.0
   },
@@ -4653,9 +4653,9 @@ const questions_db = [
     "subject": "產兒科護理學",
     "year": 110,
     "tags": [
+      "內外科護理學",
       "護理行政",
-      "產兒科護理學",
-      "內外科護理學"
+      "產兒科護理學"
     ],
     "weight": 1.0
   },
@@ -4672,10 +4672,10 @@ const questions_db = [
     "subject": "產兒科護理學",
     "year": 110,
     "tags": [
-      "藥理學",
-      "產兒科護理學",
+      "基本護理學",
       "解剖學",
-      "基本護理學"
+      "藥理學",
+      "產兒科護理學"
     ],
     "weight": 1.0
   },
@@ -5253,8 +5253,8 @@ const questions_db = [
     "subject": "產兒科護理學",
     "year": 110,
     "tags": [
-      "產兒科護理學",
-      "解剖學"
+      "解剖學",
+      "產兒科護理學"
     ],
     "weight": 1.0
   },
@@ -5577,9 +5577,9 @@ const questions_db = [
     "subject": "精神科與社區衛生護理學",
     "year": 110,
     "tags": [
-      "精神科與社區衛生護理學",
       "解剖學",
-      "生理學"
+      "生理學",
+      "精神科與社區衛生護理學"
     ],
     "weight": 1.0
   },
@@ -5716,8 +5716,8 @@ const questions_db = [
     "subject": "精神科與社區衛生護理學",
     "year": 110,
     "tags": [
-      "精神科與社區衛生護理學",
-      "基本護理學"
+      "基本護理學",
+      "精神科與社區衛生護理學"
     ],
     "weight": 1.0
   },
@@ -6178,9 +6178,9 @@ const questions_db = [
     "subject": "精神科與社區衛生護理學",
     "year": 110,
     "tags": [
+      "基本護理學",
       "護理行政",
-      "生理學",
-      "基本護理學"
+      "生理學"
     ],
     "weight": 1.0
   },
@@ -6282,8 +6282,8 @@ const questions_db = [
     "subject": "精神科與社區衛生護理學",
     "year": 110,
     "tags": [
-      "精神科與社區衛生護理學",
-      "微生物學與免疫學"
+      "微生物學與免疫學",
+      "精神科與社區衛生護理學"
     ],
     "weight": 1.0
   },
@@ -6470,8 +6470,8 @@ const questions_db = [
     "subject": "精神科與社區衛生護理學",
     "year": 110,
     "tags": [
-      "精神科與社區衛生護理學",
-      "基本護理學"
+      "基本護理學",
+      "精神科與社區衛生護理學"
     ],
     "weight": 1.0
   },
@@ -6930,8 +6930,8 @@ const questions_db = [
     "subject": "基礎醫學",
     "year": 111,
     "tags": [
-      "護理行政",
       "解剖學",
+      "護理行政",
       "生理學"
     ],
     "weight": 1.0
@@ -6983,8 +6983,8 @@ const questions_db = [
     "subject": "基礎醫學",
     "year": 111,
     "tags": [
-      "護理行政",
-      "基礎醫學"
+      "基礎醫學",
+      "護理行政"
     ],
     "weight": 1.0
   },
@@ -7274,8 +7274,8 @@ const questions_db = [
     "subject": "基礎醫學",
     "year": 111,
     "tags": [
-      "護理行政",
-      "解剖學"
+      "解剖學",
+      "護理行政"
     ],
     "weight": 1.0
   },
@@ -7534,8 +7534,8 @@ const questions_db = [
     "subject": "基礎醫學",
     "year": 111,
     "tags": [
-      "病理學",
-      "解剖學"
+      "解剖學",
+      "病理學"
     ],
     "weight": 1.0
   },
@@ -7586,8 +7586,8 @@ const questions_db = [
     "subject": "基礎醫學",
     "year": 111,
     "tags": [
-      "病理學",
-      "解剖學"
+      "解剖學",
+      "病理學"
     ],
     "weight": 1.0
   },
@@ -7638,8 +7638,8 @@ const questions_db = [
     "subject": "基礎醫學",
     "year": 111,
     "tags": [
-      "產兒科護理學",
-      "生理學"
+      "生理學",
+      "產兒科護理學"
     ],
     "weight": 1.0
   },
@@ -7656,8 +7656,8 @@ const questions_db = [
     "subject": "基礎醫學",
     "year": 111,
     "tags": [
-      "產兒科護理學",
-      "基礎醫學"
+      "基礎醫學",
+      "產兒科護理學"
     ],
     "weight": 1.0
   },
@@ -7779,8 +7779,8 @@ const questions_db = [
     "subject": "基礎醫學",
     "year": 111,
     "tags": [
-      "藥理學",
-      "微生物學與免疫學"
+      "微生物學與免疫學",
+      "藥理學"
     ],
     "weight": 1.0
   },
@@ -7866,9 +7866,9 @@ const questions_db = [
     "subject": "基礎醫學",
     "year": 111,
     "tags": [
-      "藥理學",
+      "內外科護理學",
       "解剖學",
-      "內外科護理學"
+      "藥理學"
     ],
     "weight": 1.0
   },
@@ -7885,8 +7885,8 @@ const questions_db = [
     "subject": "基礎醫學",
     "year": 111,
     "tags": [
-      "藥理學",
-      "內外科護理學"
+      "內外科護理學",
+      "藥理學"
     ],
     "weight": 1.0
   },
@@ -7920,8 +7920,8 @@ const questions_db = [
     "subject": "基礎醫學",
     "year": 111,
     "tags": [
-      "藥理學",
-      "內外科護理學"
+      "內外科護理學",
+      "藥理學"
     ],
     "weight": 1.0
   },
@@ -7956,8 +7956,8 @@ const questions_db = [
     "subject": "基礎醫學",
     "year": 111,
     "tags": [
-      "病理學",
       "解剖學",
+      "病理學",
       "生理學"
     ],
     "weight": 1.0
@@ -8214,8 +8214,8 @@ const questions_db = [
     "subject": "基礎醫學",
     "year": 111,
     "tags": [
-      "解剖學",
-      "微生物學與免疫學"
+      "微生物學與免疫學",
+      "解剖學"
     ],
     "weight": 1.0
   },
@@ -8249,8 +8249,8 @@ const questions_db = [
     "subject": "基礎醫學",
     "year": 111,
     "tags": [
-      "藥理學",
-      "微生物學與免疫學"
+      "微生物學與免疫學",
+      "藥理學"
     ],
     "weight": 1.0
   },
@@ -8506,8 +8506,8 @@ const questions_db = [
     "subject": "基本護理學與護理行政",
     "year": 111,
     "tags": [
-      "藥理學",
-      "基本護理學"
+      "基本護理學",
+      "藥理學"
     ],
     "weight": 1.0
   },
@@ -8558,8 +8558,8 @@ const questions_db = [
     "subject": "基本護理學與護理行政",
     "year": 111,
     "tags": [
-      "藥理學",
-      "基本護理學"
+      "基本護理學",
+      "藥理學"
     ],
     "weight": 1.0
   },
@@ -8610,8 +8610,8 @@ const questions_db = [
     "subject": "基本護理學與護理行政",
     "year": 111,
     "tags": [
-      "藥理學",
-      "基本護理學"
+      "基本護理學",
+      "藥理學"
     ],
     "weight": 1.0
   },
@@ -8764,8 +8764,8 @@ const questions_db = [
     "subject": "基本護理學與護理行政",
     "year": 111,
     "tags": [
-      "微生物學與免疫學",
-      "基本護理學"
+      "基本護理學",
+      "微生物學與免疫學"
     ],
     "weight": 1.0
   },
@@ -8833,8 +8833,8 @@ const questions_db = [
     "subject": "基本護理學與護理行政",
     "year": 111,
     "tags": [
-      "病理學",
-      "基本護理學"
+      "基本護理學",
+      "病理學"
     ],
     "weight": 1.0
   },
@@ -9158,8 +9158,8 @@ const questions_db = [
     "subject": "基本護理學與護理行政",
     "year": 111,
     "tags": [
-      "生理學",
-      "內外科護理學"
+      "內外科護理學",
+      "生理學"
     ],
     "weight": 1.0
   },
@@ -9789,8 +9789,8 @@ const questions_db = [
     "subject": "內外科護理學",
     "year": 111,
     "tags": [
-      "藥理學",
-      "內外科護理學"
+      "內外科護理學",
+      "藥理學"
     ],
     "weight": 1.0
   },
@@ -10270,8 +10270,8 @@ const questions_db = [
     "subject": "內外科護理學",
     "year": 111,
     "tags": [
-      "藥理學",
-      "微生物學與免疫學"
+      "微生物學與免疫學",
+      "藥理學"
     ],
     "weight": 1.0
   },
@@ -10611,8 +10611,8 @@ const questions_db = [
     "subject": "內外科護理學",
     "year": 111,
     "tags": [
-      "生理學",
-      "內外科護理學"
+      "內外科護理學",
+      "生理學"
     ],
     "weight": 1.0
   },
@@ -10629,8 +10629,8 @@ const questions_db = [
     "subject": "內外科護理學",
     "year": 111,
     "tags": [
-      "生理學",
-      "內外科護理學"
+      "內外科護理學",
+      "生理學"
     ],
     "weight": 1.0
   },
@@ -10751,8 +10751,8 @@ const questions_db = [
     "subject": "內外科護理學",
     "year": 111,
     "tags": [
-      "護理行政",
-      "解剖學"
+      "解剖學",
+      "護理行政"
     ],
     "weight": 1.0
   },
@@ -10922,8 +10922,8 @@ const questions_db = [
     "subject": "內外科護理學",
     "year": 111,
     "tags": [
-      "藥理學",
-      "內外科護理學"
+      "內外科護理學",
+      "藥理學"
     ],
     "weight": 1.0
   },
@@ -11077,8 +11077,8 @@ const questions_db = [
     "subject": "產兒科護理學",
     "year": 111,
     "tags": [
-      "產兒科護理學",
-      "微生物學與免疫學"
+      "微生物學與免疫學",
+      "產兒科護理學"
     ],
     "weight": 1.0
   },
@@ -11129,8 +11129,8 @@ const questions_db = [
     "subject": "產兒科護理學",
     "year": 111,
     "tags": [
-      "產兒科護理學",
-      "解剖學"
+      "解剖學",
+      "產兒科護理學"
     ],
     "weight": 1.0
   },
@@ -11318,8 +11318,8 @@ const questions_db = [
     "subject": "產兒科護理學",
     "year": 111,
     "tags": [
-      "產兒科護理學",
-      "基本護理學"
+      "基本護理學",
+      "產兒科護理學"
     ],
     "weight": 1.0
   },
@@ -11438,8 +11438,8 @@ const questions_db = [
     "subject": "產兒科護理學",
     "year": 111,
     "tags": [
-      "產兒科護理學",
-      "生理學"
+      "生理學",
+      "產兒科護理學"
     ],
     "weight": 1.0
   },
@@ -11508,8 +11508,8 @@ const questions_db = [
     "subject": "產兒科護理學",
     "year": 111,
     "tags": [
-      "產兒科護理學",
-      "基本護理學"
+      "基本護理學",
+      "產兒科護理學"
     ],
     "weight": 1.0
   },
@@ -11526,9 +11526,9 @@ const questions_db = [
     "subject": "產兒科護理學",
     "year": 111,
     "tags": [
-      "產兒科護理學",
+      "基本護理學",
       "微生物學與免疫學",
-      "基本護理學"
+      "產兒科護理學"
     ],
     "weight": 1.0
   },
@@ -11545,8 +11545,8 @@ const questions_db = [
     "subject": "產兒科護理學",
     "year": 111,
     "tags": [
-      "產兒科護理學",
-      "解剖學"
+      "解剖學",
+      "產兒科護理學"
     ],
     "weight": 1.0
   },
@@ -11768,8 +11768,8 @@ const questions_db = [
     "subject": "產兒科護理學",
     "year": 111,
     "tags": [
-      "產兒科護理學",
-      "內外科護理學"
+      "內外科護理學",
+      "產兒科護理學"
     ],
     "weight": 1.0
   },
@@ -11837,8 +11837,8 @@ const questions_db = [
     "subject": "產兒科護理學",
     "year": 111,
     "tags": [
-      "護理行政",
-      "基本護理學"
+      "基本護理學",
+      "護理行政"
     ],
     "weight": 1.0
   },
@@ -11872,8 +11872,8 @@ const questions_db = [
     "subject": "產兒科護理學",
     "year": 111,
     "tags": [
-      "產兒科護理學",
-      "生理學"
+      "生理學",
+      "產兒科護理學"
     ],
     "weight": 1.0
   },
@@ -12043,8 +12043,8 @@ const questions_db = [
     "subject": "產兒科護理學",
     "year": 111,
     "tags": [
-      "生理學",
-      "內外科護理學"
+      "內外科護理學",
+      "生理學"
     ],
     "weight": 1.0
   },
@@ -12096,8 +12096,8 @@ const questions_db = [
     "subject": "產兒科護理學",
     "year": 111,
     "tags": [
-      "解剖學",
-      "基本護理學"
+      "基本護理學",
+      "解剖學"
     ],
     "weight": 1.0
   },
@@ -12114,9 +12114,9 @@ const questions_db = [
     "subject": "產兒科護理學",
     "year": 111,
     "tags": [
-      "生理學",
       "基本護理學",
-      "內外科護理學"
+      "內外科護理學",
+      "生理學"
     ],
     "weight": 1.0
   },
@@ -13019,8 +13019,8 @@ const questions_db = [
     "year": 111,
     "tags": [
       "藥理學",
-      "精神科與社區衛生護理學",
-      "生理學"
+      "生理學",
+      "精神科與社區衛生護理學"
     ],
     "weight": 1.0
   },
@@ -13174,8 +13174,8 @@ const questions_db = [
     "subject": "精神科與社區衛生護理學",
     "year": 111,
     "tags": [
-      "精神科與社區衛生護理學",
-      "解剖學"
+      "解剖學",
+      "精神科與社區衛生護理學"
     ],
     "weight": 1.0
   },
@@ -13685,8 +13685,8 @@ const questions_db = [
     "subject": "精神科與社區衛生護理學",
     "year": 111,
     "tags": [
-      "精神科與社區衛生護理學",
-      "內外科護理學"
+      "內外科護理學",
+      "精神科與社區衛生護理學"
     ],
     "weight": 1.0
   },
@@ -13738,8 +13738,8 @@ const questions_db = [
     "year": 111,
     "tags": [
       "病理學",
-      "精神科與社區衛生護理學",
-      "內外科護理學"
+      "內外科護理學",
+      "精神科與社區衛生護理學"
     ],
     "weight": 1.0
   },
@@ -14152,8 +14152,8 @@ const questions_db = [
     "subject": "基礎醫學",
     "year": 112,
     "tags": [
-      "病理學",
-      "解剖學"
+      "解剖學",
+      "病理學"
     ],
     "weight": 1.0
   },
@@ -14204,8 +14204,8 @@ const questions_db = [
     "subject": "基礎醫學",
     "year": 112,
     "tags": [
-      "病理學",
-      "微生物學與免疫學"
+      "微生物學與免疫學",
+      "病理學"
     ],
     "weight": 1.0
   },
@@ -14307,8 +14307,8 @@ const questions_db = [
     "subject": "基礎醫學",
     "year": 112,
     "tags": [
-      "藥理學",
-      "微生物學與免疫學"
+      "微生物學與免疫學",
+      "藥理學"
     ],
     "weight": 1.0
   },
@@ -14429,8 +14429,8 @@ const questions_db = [
     "subject": "基礎醫學",
     "year": 112,
     "tags": [
-      "精神科與社區衛生護理學",
-      "生理學"
+      "生理學",
+      "精神科與社區衛生護理學"
     ],
     "weight": 1.0
   },
@@ -14498,8 +14498,8 @@ const questions_db = [
     "subject": "基礎醫學",
     "year": 112,
     "tags": [
-      "生理學",
-      "微生物學與免疫學"
+      "微生物學與免疫學",
+      "生理學"
     ],
     "weight": 1.0
   },
@@ -14567,8 +14567,8 @@ const questions_db = [
     "subject": "基礎醫學",
     "year": 112,
     "tags": [
-      "產兒科護理學",
-      "微生物學與免疫學"
+      "微生物學與免疫學",
+      "產兒科護理學"
     ],
     "weight": 1.0
   },
@@ -14608,7 +14608,7 @@ const questions_db = [
   },
   {
     "id": "moex-112-basic-nursing-01",
-    "question": "王先生，闌尾炎痊癒即將出院，但看起來心情欠佳。依羅氏適應模式（Roy’s adaptation model）生理、 心理與社會的整體評估，下列敘述何者正確？",
+    "question": "1 2年 第 一 次 專 門 職 業 及 技 術 人 員 高 等 考 試 營 養 師 、 護 理 師 、 社 會 工 作 師 考 試 試 題 禁止使用電子計算器。 1 王先生，闌尾炎痊癒即將出院，但看起來心情欠佳。依羅氏適應模式（Roy’s adaptation model）生理、 心理與社會的整體評估，下列敘述何者正確？",
     "options": {
       "A": "王先生因疾病痊癒出院，即達成羅氏適應模式健康之適應狀態",
       "B": "王先生獲得其生理上的健康，即達成以病人為中心的護理照護目標",
@@ -14619,8 +14619,8 @@ const questions_db = [
     "subject": "基本護理學與護理行政",
     "year": 112,
     "tags": [
-      "生理學",
-      "基本護理學"
+      "基本護理學",
+      "生理學"
     ],
     "weight": 1.0
   },
@@ -14688,8 +14688,8 @@ const questions_db = [
     "subject": "基本護理學與護理行政",
     "year": 112,
     "tags": [
-      "微生物學與免疫學",
-      "基本護理學"
+      "基本護理學",
+      "微生物學與免疫學"
     ],
     "weight": 1.0
   },
@@ -14876,8 +14876,8 @@ const questions_db = [
     "subject": "基本護理學與護理行政",
     "year": 112,
     "tags": [
-      "藥理學",
-      "基本護理學"
+      "基本護理學",
+      "藥理學"
     ],
     "weight": 1.0
   },
@@ -14894,8 +14894,8 @@ const questions_db = [
     "subject": "基本護理學與護理行政",
     "year": 112,
     "tags": [
-      "解剖學",
-      "基本護理學"
+      "基本護理學",
+      "解剖學"
     ],
     "weight": 1.0
   },
@@ -14934,8 +14934,8 @@ const questions_db = [
     "weight": 1.0
   },
   {
-    "id": "moex-112-basic-nursing-01",
-    "question": "gm I.V. drip q8h」，下列敘述何者錯誤？",
+    "id": "moex-112-basic-nursing-20",
+    "question": "林先生行闌尾切除手術後返回病房，醫囑「N.P.O.」、「Demerol 1 amp I.M. st & q6h p.r.n.」、「Cefazolin 1 gm I.V. drip q8h」，下列敘述何者錯誤？",
     "options": {
       "A": "須立即肌肉注射 Demerol 1 amp",
       "B": "每 6 小時肌肉注射 Demerol 1 amp",
@@ -14946,7 +14946,7 @@ const questions_db = [
     "subject": "基本護理學與護理行政",
     "year": 112,
     "tags": [
-      "基本護理學與護理行政"
+      "內外科護理學"
     ],
     "weight": 1.0
   },
@@ -14997,8 +14997,8 @@ const questions_db = [
     "subject": "基本護理學與護理行政",
     "year": 112,
     "tags": [
-      "解剖學",
-      "基本護理學"
+      "基本護理學",
+      "解剖學"
     ],
     "weight": 1.0
   },
@@ -15305,8 +15305,8 @@ const questions_db = [
     "subject": "基本護理學與護理行政",
     "year": 112,
     "tags": [
-      "病理學",
       "基本護理學",
+      "病理學",
       "內外科護理學"
     ],
     "weight": 1.0
@@ -15324,8 +15324,8 @@ const questions_db = [
     "subject": "基本護理學與護理行政",
     "year": 112,
     "tags": [
-      "解剖學",
       "基本護理學",
+      "解剖學",
       "內外科護理學"
     ],
     "weight": 1.0
@@ -15979,7 +15979,7 @@ const questions_db = [
   },
   {
     "id": "moex-112-med-surg-01",
-    "question": "罹患腦下垂體腫瘤病人，醫師建議使用伽馬刀療法，下列何者顯示病人已了解本項治療？",
+    "question": "1 2年 第 一 次 專 門 職 業 及 技 術 人 員 高 等 考 試 營 養 師 、 護 理 師 、 社 會 工 作 師 考 試 試 題 禁止使用電子計算器。 1 罹患腦下垂體腫瘤病人，醫師建議使用伽馬刀療法，下列何者顯示病人已了解本項治療？",
     "options": {
       "A": "治療時我的頭部會有一個切開傷口",
       "B": "治療時我不會疼痛也不會流血",
@@ -16503,8 +16503,8 @@ const questions_db = [
     "subject": "內外科護理學",
     "year": 112,
     "tags": [
-      "解剖學",
-      "基本護理學"
+      "基本護理學",
+      "解剖學"
     ],
     "weight": 1.0
   },
@@ -16572,8 +16572,8 @@ const questions_db = [
     "subject": "內外科護理學",
     "year": 112,
     "tags": [
-      "解剖學",
-      "微生物學與免疫學"
+      "微生物學與免疫學",
+      "解剖學"
     ],
     "weight": 1.0
   },
@@ -16947,8 +16947,8 @@ const questions_db = [
     "subject": "內外科護理學",
     "year": 112,
     "tags": [
-      "生理學",
-      "內外科護理學"
+      "內外科護理學",
+      "生理學"
     ],
     "weight": 1.0
   },
@@ -16965,8 +16965,8 @@ const questions_db = [
     "subject": "內外科護理學",
     "year": 112,
     "tags": [
-      "藥理學",
-      "內外科護理學"
+      "內外科護理學",
+      "藥理學"
     ],
     "weight": 1.0
   },
@@ -17034,8 +17034,8 @@ const questions_db = [
     "subject": "內外科護理學",
     "year": 112,
     "tags": [
-      "微生物學與免疫學",
-      "基本護理學"
+      "基本護理學",
+      "微生物學與免疫學"
     ],
     "weight": 1.0
   },
@@ -17139,8 +17139,8 @@ const questions_db = [
     "subject": "內外科護理學",
     "year": 112,
     "tags": [
-      "解剖學",
-      "微生物學與免疫學"
+      "微生物學與免疫學",
+      "解剖學"
     ],
     "weight": 1.0
   },
@@ -17191,12 +17191,12 @@ const questions_db = [
     "subject": "內外科護理學",
     "year": 112,
     "tags": [
-      "生理學",
-      "病理學",
       "基本護理學",
       "藥理學",
+      "內外科護理學",
+      "病理學",
       "解剖學",
-      "內外科護理學"
+      "生理學"
     ],
     "weight": 1.0
   },
@@ -17316,12 +17316,12 @@ const questions_db = [
     "subject": "內外科護理學",
     "year": 112,
     "tags": [
-      "護理行政",
-      "生理學",
-      "病理學",
+      "微生物學與免疫學",
       "藥理學",
+      "病理學",
+      "護理行政",
       "解剖學",
-      "微生物學與免疫學"
+      "生理學"
     ],
     "weight": 1.0
   },
@@ -17361,7 +17361,7 @@ const questions_db = [
   },
   {
     "id": "moex-112-obs-ped-01",
-    "question": "有關分娩期的支持性照護措施，下列何者較不適當？",
+    "question": "1 2年 第 一 次 專 門 職 業 及 技 術 人 員 高 等 考 試 營 養 師 、 護 理 師 、 社 會 工 作 師 考 試 試 題 禁止使用電子計算器。 1 有關分娩期的支持性照護措施，下列何者較不適當？",
     "options": {
       "A": "提供待產婦女一致性常規醫療照護",
       "B": "教導待產婦女及伴侶生產的相關知識",
@@ -17440,8 +17440,8 @@ const questions_db = [
     "subject": "產兒科護理學",
     "year": 112,
     "tags": [
-      "產兒科護理學",
-      "解剖學"
+      "解剖學",
+      "產兒科護理學"
     ],
     "weight": 1.0
   },
@@ -17616,8 +17616,8 @@ const questions_db = [
     "weight": 1.0
   },
   {
-    "id": "moex-112-obs-ped-90",
-    "question": "bpm，下列何項護理措施較適當？",
+    "id": "moex-112-obs-ped-16",
+    "question": "第一產程活動期的待產婦，每 3 分鐘宮縮 1 次，每次持續 45 秒，個案在宮縮的休息期，胎心率為 90 bpm，下列何項護理措施較適當？",
     "options": {
       "A": "立即通知醫師",
       "B": "正常，可繼續監測胎心率",
@@ -17680,8 +17680,8 @@ const questions_db = [
     "subject": "產兒科護理學",
     "year": 112,
     "tags": [
-      "產兒科護理學",
-      "解剖學"
+      "解剖學",
+      "產兒科護理學"
     ],
     "weight": 1.0
   },
@@ -17885,9 +17885,9 @@ const questions_db = [
     "subject": "產兒科護理學",
     "year": 112,
     "tags": [
+      "內外科護理學",
       "藥理學",
-      "產兒科護理學",
-      "內外科護理學"
+      "產兒科護理學"
     ],
     "weight": 1.0
   },
@@ -18449,9 +18449,9 @@ const questions_db = [
     "subject": "產兒科護理學",
     "year": 112,
     "tags": [
-      "產兒科護理學",
+      "微生物學與免疫學",
       "解剖學",
-      "微生物學與免疫學"
+      "產兒科護理學"
     ],
     "weight": 1.0
   },
@@ -18587,9 +18587,9 @@ const questions_db = [
     "subject": "產兒科護理學",
     "year": 112,
     "tags": [
-      "藥理學",
       "微生物學與免疫學",
-      "內外科護理學"
+      "內外科護理學",
+      "藥理學"
     ],
     "weight": 1.0
   },
@@ -18731,7 +18731,7 @@ const questions_db = [
   },
   {
     "id": "moex-112-psych-community-01",
-    "question": "中華民國精神衛生護理學會致力於推展下列那些專業認證或甄審？①精神衛生護理師 ②社區精神 衛生護理能力鑑定 ③精神衛生臨床護理專家 ④精神科專科護理師",
+    "question": "1 2年 第 一 次 專 門 職 業 及 技 術 人 員 高 等 考 試 營 養 師 、 護 理 師 、 社 會 工 作 師 考 試 試 題 禁止使用電子計算器。 1 中華民國精神衛生護理學會致力於推展下列那些專業認證或甄審？①精神衛生護理師 ②社區精神 衛生護理能力鑑定 ③精神衛生臨床護理專家 ④精神科專科護理師",
     "options": {
       "A": "僅①②③",
       "B": "僅②③④",
@@ -19100,8 +19100,8 @@ const questions_db = [
     "subject": "精神科與社區衛生護理學",
     "year": 112,
     "tags": [
-      "生理學",
-      "基本護理學"
+      "基本護理學",
+      "生理學"
     ],
     "weight": 1.0
   },
@@ -19373,8 +19373,8 @@ const questions_db = [
     "subject": "精神科與社區衛生護理學",
     "year": 112,
     "tags": [
-      "精神科與社區衛生護理學",
-      "生理學"
+      "生理學",
+      "精神科與社區衛生護理學"
     ],
     "weight": 1.0
   },
@@ -19476,8 +19476,8 @@ const questions_db = [
     "subject": "精神科與社區衛生護理學",
     "year": 112,
     "tags": [
-      "產兒科護理學",
-      "微生物學與免疫學"
+      "微生物學與免疫學",
+      "產兒科護理學"
     ],
     "weight": 1.0
   },
@@ -19733,9 +19733,9 @@ const questions_db = [
     "subject": "精神科與社區衛生護理學",
     "year": 112,
     "tags": [
-      "精神科與社區衛生護理學",
       "基本護理學",
-      "內外科護理學"
+      "內外科護理學",
+      "精神科與社區衛生護理學"
     ],
     "weight": 1.0
   },
@@ -19871,8 +19871,8 @@ const questions_db = [
     "subject": "精神科與社區衛生護理學",
     "year": 112,
     "tags": [
-      "產兒科護理學",
       "微生物學與免疫學",
+      "產兒科護理學",
       "精神科與社區衛生護理學"
     ],
     "weight": 1.0
@@ -20043,8 +20043,8 @@ const questions_db = [
     "subject": "精神科與社區衛生護理學",
     "year": 112,
     "tags": [
-      "生理學",
-      "基本護理學"
+      "基本護理學",
+      "生理學"
     ],
     "weight": 1.0
   },
@@ -20061,8 +20061,8 @@ const questions_db = [
     "subject": "精神科與社區衛生護理學",
     "year": 112,
     "tags": [
-      "護理行政",
-      "內外科護理學"
+      "內外科護理學",
+      "護理行政"
     ],
     "weight": 1.0
   },
@@ -20097,6 +20097,8613 @@ const questions_db = [
     "year": 112,
     "tags": [
       "精神科與社區衛生護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-basic-med-01",
+    "question": "下列胞器，何者是由兩層膜組成？",
+    "options": {
+      "A": "粒線體",
+      "B": "溶酶體",
+      "C": "過氧化體",
+      "D": "核糖體"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基礎醫學",
+    "year": 113,
+    "tags": [
+      "基礎醫學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-basic-med-02",
+    "question": "單一肌節（sarcomere）的範圍，下列定義何者最正確？",
+    "options": {
+      "A": "相鄰粗肌絲的長度總和",
+      "B": "相鄰細肌絲的長度總和",
+      "C": "相鄰粗肌絲加上細肌絲的長度總和",
+      "D": "相鄰Z線間的距離"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基礎醫學",
+    "year": 113,
+    "tags": [
+      "基礎醫學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-basic-med-03",
+    "question": "下列何者為控制反射動作的反射弧（reflex arc）之最終端構造？",
+    "options": {
+      "A": "感覺神經元（sensory neuron）",
+      "B": "運動神經元（motor neuron）",
+      "C": "受器（receptor）",
+      "D": "動器（effector）"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基礎醫學",
+    "year": 113,
+    "tags": [
+      "護理行政",
+      "生理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-basic-med-04",
+    "question": "帕金森氏症（Parkinson's disease）的顫抖症狀肇因為何？",
+    "options": {
+      "A": "腦內缺乏多巴胺（dopamine deficiency）",
+      "B": "腦內多巴胺過高（dopamine excess）",
+      "C": "腦內缺乏血清素（serotonin deficiency）",
+      "D": "腦內血清素過高（serotonin excess）"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基礎醫學",
+    "year": 113,
+    "tags": [
+      "基礎醫學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-basic-med-05",
+    "question": "下列何者最可能促進生長激素（growth hormone）分泌？",
+    "options": {
+      "A": "高血糖（hyperglycemia）",
+      "B": "高強度運動（high intensity exercise）",
+      "C": "體抑素（somatostatin）分泌增加",
+      "D": "類胰島素生長因子1（IGF-1）分泌增加"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基礎醫學",
+    "year": 113,
+    "tags": [
+      "生理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-basic-med-06",
+    "question": "科林菲特氏症（Klinefelter's syndrome）患者的白血球細胞核旁，最多可以看到幾個巴氏體（barr body）？",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "2",
+      "D": "3"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基礎醫學",
+    "year": 113,
+    "tags": [
+      "基礎醫學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-basic-med-07",
+    "question": "下列何者最可能同時降低動脈血壓波振幅（arterial pulse wave）與動脈血壓波速度（pulse wave velocity）？",
+    "options": {
+      "A": "粥狀動脈硬化",
+      "B": "動脈老化",
+      "C": "高血壓",
+      "D": "低血壓"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基礎醫學",
+    "year": 113,
+    "tags": [
+      "解剖學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-basic-med-08",
+    "question": "在沒有抗利尿激素（antidiuretic hormone）介入的情況下，下列何處對鈉離子的再吸收（reabsorption） 最多？",
+    "options": {
+      "A": "近曲小管（proximal convoluted tubule）",
+      "B": "遠曲小管（distal convoluted tubule）",
+      "C": "亨利氏管上行枝（ascending limb of loop of Henle）",
+      "D": "亨利氏管下行枝（descending limb of loop of Henle）"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基礎醫學",
+    "year": 113,
+    "tags": [
+      "生理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-basic-med-09",
+    "question": "正常吸氣的過程中，不會出現下列何種情況？",
+    "options": {
+      "A": "橫膈肌（diaphragm）收縮下移",
+      "B": "肺泡壓（alveolar pressure）增加",
+      "C": "胸膜內壓（intrapleural pressure）降低",
+      "D": "肺間壓（transpulmonary pressure）增加"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基礎醫學",
+    "year": 113,
+    "tags": [
+      "基礎醫學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-basic-med-10",
+    "question": "調節消化道平滑肌收縮，最主要的離子為下列何者？",
+    "options": {
+      "A": "鈣離子",
+      "B": "鈉離子",
+      "C": "鉀離子",
+      "D": "氯離子"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基礎醫學",
+    "year": 113,
+    "tags": [
+      "生理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-basic-med-11",
+    "question": "下列那一種細胞分泌激素的主要功能，與副甲狀腺素（parathyroid hormone）的作用相反？",
+    "options": {
+      "A": "甲狀腺的濾泡細胞（follicular cell of thyroid gland）",
+      "B": "甲狀腺的濾泡旁細胞（parafollicular cell of thyroid gland）",
+      "C": "腎上腺的束狀區細胞（zona fasciculata of adrenal gland）",
+      "D": "腎上腺的網狀區細胞（zona reticularis of adrenal gland）"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基礎醫學",
+    "year": 113,
+    "tags": [
+      "生理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-basic-med-12",
+    "question": "組成踝關節（ankle joint）的骨骼，除脛骨、腓骨之外還包括：",
+    "options": {
+      "A": "跟骨（calcaneus）",
+      "B": "蹠骨（metatarsal bone）",
+      "C": "骰骨（cuboid）",
+      "D": "距骨（talus）"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基礎醫學",
+    "year": 113,
+    "tags": [
+      "解剖學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-basic-med-13",
+    "question": "下列何者兼具屈曲和伸展肩關節的功能？",
+    "options": {
+      "A": "胸大肌",
+      "B": "三角肌",
+      "C": "斜方肌",
+      "D": "棘上肌"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基礎醫學",
+    "year": 113,
+    "tags": [
+      "解剖學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-basic-med-14",
+    "question": "右心室的腱索（chordae tendineae）固著在下列何處？",
+    "options": {
+      "A": "肺動脈瓣",
+      "B": "主動脈瓣",
+      "C": "二尖瓣",
+      "D": "三尖瓣"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基礎醫學",
+    "year": 113,
+    "tags": [
+      "基礎醫學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-basic-med-15",
+    "question": "下列何者是負責供應肝臟充氧血的血管？",
+    "options": {
+      "A": "腸繫膜上動脈",
+      "B": "腹腔動脈幹",
+      "C": "肝門靜脈",
+      "D": "肝靜脈"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基礎醫學",
+    "year": 113,
+    "tags": [
+      "解剖學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-basic-med-16",
+    "question": "下列腎臟構造中，何者最靠近腎門（renal hilum）？",
+    "options": {
+      "A": "腎柱（renal column）",
+      "B": "腎盂（renal pelvis）",
+      "C": "腎盞（renal calyx）",
+      "D": "腎錐體（renal pyramid）"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基礎醫學",
+    "year": 113,
+    "tags": [
+      "解剖學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-basic-med-17",
+    "question": "下列有關卵巢內成熟濾泡（mature follicle）的敘述，何者錯誤？",
+    "options": {
+      "A": "濾泡外圍的內鞘膜（theca interna）細胞可合成雄性素（androgen）",
+      "B": "濾泡內部的顆粒細胞（granulosa cells）參與雌激素（estrogen）的合成",
+      "C": "濾泡內含23條染色體的卵子（ovum）",
+      "D": "濾泡內含單一大濾泡腔（antrum）"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基礎醫學",
+    "year": 113,
+    "tags": [
+      "基礎醫學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-basic-med-18",
+    "question": "下列何者調控並可加速肝臟分泌膽汁？",
+    "options": {
+      "A": "交感神經（sympathetic nerve）",
+      "B": "迷走神經（vagus nerves）",
+      "C": "胸腰段脊神經（spinal nerves）",
+      "D": "舌咽神經（glossopharyngeal nerve）"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基礎醫學",
+    "year": 113,
+    "tags": [
+      "基礎醫學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-basic-med-19",
+    "question": "肝胰壺腹是由下列那兩者會合而形成？",
+    "options": {
+      "A": "肝管與主胰管",
+      "B": "肝管與副胰管",
+      "C": "總膽管與主胰管",
+      "D": "總膽管與副胰管"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基礎醫學",
+    "year": 113,
+    "tags": [
+      "基礎醫學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-basic-med-20",
+    "question": "下列那一個內臟的位移痛（referred pain）出現在左手臂內側皮膚？",
+    "options": {
+      "A": "心臟（heart）",
+      "B": "肺臟（lung）",
+      "C": "肝臟（liver）",
+      "D": "腎臟（kidney）"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基礎醫學",
+    "year": 113,
+    "tags": [
+      "基礎醫學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-basic-med-21",
+    "question": "有關組織傷口癒合的敘述，下列何者最不適當？",
+    "options": {
+      "A": "傷口感染是造成癒合延遲的重要因素",
+      "B": "組織癒合過程易出現肉芽組織（granulation tissue）",
+      "C": "使用類固醇抗發炎藥能有效抑制發炎並增進傷口癒合強度",
+      "D": "糖尿病患因血液灌注不良引起傷口癒合異常"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基礎醫學",
+    "year": 113,
+    "tags": [
+      "基礎醫學",
+      "護理行政"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-basic-med-22",
+    "question": "下列何者不是心因性休克病患常見的臨床表現？",
+    "options": {
+      "A": "低血壓",
+      "B": "快而弱的脈搏",
+      "C": "呼吸急促",
+      "D": "尿量增加"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基礎醫學",
+    "year": 113,
+    "tags": [
+      "基礎醫學",
+      "內外科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-basic-med-23",
+    "question": "下列那種遺傳性疾病的遺傳模式和其他選項不一樣？",
+    "options": {
+      "A": "第一型神經纖維瘤症（neurofibromatosis type 1）",
+      "B": "地中海型貧血（thalassemia）",
+      "C": "馬凡氏症（Marfan syndrome）",
+      "D": "結節性硬化症（tuberous sclerosis）"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基礎醫學",
+    "year": 113,
+    "tags": [
+      "基礎醫學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-basic-med-24",
+    "question": "壞血病（scurvy）是那一種維生素缺乏所造成？",
+    "options": {
+      "A": "維生素C",
+      "B": "維生素A",
+      "C": "維生素D",
+      "D": "維生素B12"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基礎醫學",
+    "year": 113,
+    "tags": [
+      "基礎醫學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-basic-med-25",
+    "question": "社區性肺炎（community-acquired pneumonia）指的是患者在日常生活環境中所得到的感染，而非在醫院中 的感染。引起典型社區性肺炎最常見的致病菌為何？",
+    "options": {
+      "A": "金黃色葡萄球菌（Staphylococcus aureus）",
+      "B": "肺炎鏈球菌（Streptococcus pneumoniae）",
+      "C": "流行感冒嗜血桿菌（Haemophilus influenzae）",
+      "D": "黴漿菌（Mycoplasma pneumoniae）"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基礎醫學",
+    "year": 113,
+    "tags": [
+      "微生物學與免疫學",
+      "內外科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-basic-med-26",
+    "question": "缺鐵性貧血（iron deficiency anemia）的紅血球，其形態有何特徵？",
+    "options": {
+      "A": "體積小且顏色深",
+      "B": "體積小且顏色淺",
+      "C": "體積大且顏色深",
+      "D": "體積大且顏色淺"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基礎醫學",
+    "year": 113,
+    "tags": [
+      "基礎醫學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-basic-med-27",
+    "question": "下列何種病毒必須有B型肝炎病毒（hepatitis B virus）存在才能感染人體？",
+    "options": {
+      "A": "A型肝炎病毒（hepatitis A virus）",
+      "B": "C型肝炎病毒（hepatitis C virus）",
+      "C": "D型肝炎病毒（hepatitis D virus）",
+      "D": "E型肝炎病毒（hepatitis E virus）"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基礎醫學",
+    "year": 113,
+    "tags": [
+      "微生物學與免疫學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-basic-med-28",
+    "question": "三陰性（triple negative）乳癌的定義不包含下列何者？",
+    "options": {
+      "A": "雌激素受體（estrogen receptor）陰性",
+      "B": "孕激素受體（progesterone receptor）陰性",
+      "C": "第二型人類表皮生長因子接受體（human epidermal growth factor receptor 2）陰性",
+      "D": "細胞角蛋白（cytokeratin）陰性"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基礎醫學",
+    "year": 113,
+    "tags": [
+      "基礎醫學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-basic-med-29",
+    "question": "進行性多灶性白質腦病（progressive multifocal leukoencephalopathy, PML）是一種髓鞘脫失 （demyelination）的病變，臨床上常與免疫抑制有關。此病主要由何種病毒引起？",
+    "options": {
+      "A": "HSV-1（herpes simplex virus-1）",
+      "B": "VZV（varicella-zoster virus）",
+      "C": "EBV（Epstein-Barr virus）",
+      "D": "JC virus"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基礎醫學",
+    "year": 113,
+    "tags": [
+      "微生物學與免疫學",
+      "病理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-basic-med-30",
+    "question": "侏儒症中最常見的原因是軟骨發育不全（achondroplasia），而軟骨發育不全為體染色體顯性遺傳疾病。約 90%的病人與下列那一個基因突變有關？",
+    "options": {
+      "A": "Fibroblast growth factor receptor 3基因",
+      "B": "Fibrillin-1基因",
+      "C": "NF-1基因",
+      "D": "TCIRG1基因"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基礎醫學",
+    "year": 113,
+    "tags": [
+      "解剖學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-basic-med-31",
+    "question": "在治療慢性阻塞性肺病（COPD）的藥物中，下列何者可抑制乙醯膽鹼（ACh）受體，以減少黏液之分泌？",
+    "options": {
+      "A": "cromolyn",
+      "B": "ipratropium",
+      "C": "beclomethasone",
+      "D": "terbutaline"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基礎醫學",
+    "year": 113,
+    "tags": [
+      "藥理學",
+      "生理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-basic-med-32",
+    "question": "下列何者最常用於緊急治療過敏性休克（anaphylactic shock）？",
+    "options": {
+      "A": "terbutaline",
+      "B": "isoproterenol",
+      "C": "ephedrine",
+      "D": "epinephrine"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基礎醫學",
+    "year": 113,
+    "tags": [
+      "微生物學與免疫學",
+      "內外科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-basic-med-33",
+    "question": "下列對於毒品搖頭丸之敘述，何者最不適當？",
+    "options": {
+      "A": "可抑制血清素之再回收",
+      "B": "結構類似安非他命",
+      "C": "可能引起高熱症",
+      "D": "英文簡稱NMDA"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基礎醫學",
+    "year": 113,
+    "tags": [
+      "基礎醫學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-basic-med-34",
+    "question": "下列何者不屬於類鴉片藥物戒斷症候群？",
+    "options": {
+      "A": "體溫過低",
+      "B": "噁心、嘔吐",
+      "C": "顫抖",
+      "D": "流鼻涕"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基礎醫學",
+    "year": 113,
+    "tags": [
+      "藥理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-basic-med-35",
+    "question": "Fexofenadine較不具鎮靜安眠作用，原因為何？",
+    "options": {
+      "A": "較難通過血腦障壁",
+      "B": "對H1受體的選擇性增加",
+      "C": "抑制中樞GABA受體",
+      "D": "體內半衰期短"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基礎醫學",
+    "year": 113,
+    "tags": [
+      "基礎醫學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-basic-med-36",
+    "question": "口服抗凝血劑warfarin中毒出血時，應如何救治最好？",
+    "options": {
+      "A": "給予肌肉注射或靜脈注射維生素K",
+      "B": "給予皮下注射或靜脈注射維生素B12",
+      "C": "給予口服、皮下注射或靜脈注射methylprednisolone",
+      "D": "給予口服、皮下注射或靜脈注射tranexamic acid"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基礎醫學",
+    "year": 113,
+    "tags": [
+      "基礎醫學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-basic-med-37",
+    "question": "Milrinone具有強心及擴張血管之功能，長期使用會引發心律不整，此藥物的藥理作用機制為何？",
+    "options": {
+      "A": "第一型磷酸雙酯酶（phosphodiesterase 1）抑制劑",
+      "B": "第二型磷酸雙酯酶（phosphodiesterase 2）抑制劑",
+      "C": "第三型磷酸雙酯酶（phosphodiesterase 3）抑制劑",
+      "D": "第五型磷酸雙酯酶（phosphodiesterase 5）抑制劑"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基礎醫學",
+    "year": 113,
+    "tags": [
+      "解剖學",
+      "藥理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-basic-med-38",
+    "question": "治療糖尿病的用藥canagliflozin，其主要作用機制為何？",
+    "options": {
+      "A": "刺激insulin的釋放",
+      "B": "減少肝臟生成葡萄糖",
+      "C": "減少腸胃道對葡萄糖的吸收",
+      "D": "增加葡萄糖從尿液排除"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基礎醫學",
+    "year": 113,
+    "tags": [
+      "基礎醫學",
+      "內外科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-basic-med-39",
+    "question": "下列抗結核桿菌的藥物中，何者會降低以protease inhibitors治療愛滋病（AIDS）的效果？",
+    "options": {
+      "A": "ethambutol",
+      "B": "isoniazid",
+      "C": "pyrazinamide",
+      "D": "rifampin"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基礎醫學",
+    "year": 113,
+    "tags": [
+      "藥理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-basic-med-40",
+    "question": "下列藥物均能治療新生兒感染，但在考量副作用的前提下，何者是最好的選擇？",
+    "options": {
+      "A": "chloramphenicol",
+      "B": "penicillin G",
+      "C": "sulfamethoxazole",
+      "D": "tetracycline"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基礎醫學",
+    "year": 113,
+    "tags": [
+      "微生物學與免疫學",
+      "藥理學",
+      "產兒科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-basic-med-41",
+    "question": "下列何種構造通常是由多醣組成，對於幫助細菌抵抗免疫細胞的吞噬作用（phagocytosis）極為重要？",
+    "options": {
+      "A": "莢膜（capsule）",
+      "B": "鞭毛（flagellum）",
+      "C": "線毛（pilus）",
+      "D": "芽孢（spore）"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基礎醫學",
+    "year": 113,
+    "tags": [
+      "微生物學與免疫學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-basic-med-42",
+    "question": "下列那個酵素主要負責B細胞的體細胞超突變（somatic hypermutation）？",
+    "options": {
+      "A": "RAG1（recombination-activating gene 1）",
+      "B": "RAG2（recombination-activating gene 2）",
+      "C": "TdT（terminal deoxynucleotidyl transferase）",
+      "D": "AID（activation-induced cytidine deaminase）"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基礎醫學",
+    "year": 113,
+    "tags": [
+      "基礎醫學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-basic-med-43",
+    "question": "有關抗體的敘述，下列何者錯誤？",
+    "options": {
+      "A": "IgG包含兩個輕鏈及兩個重鏈，由雙硫鍵連結",
+      "B": "IgA以雙體（dimer）的結構，透過黏膜上皮細胞基底部位之poly-Ig receptor運送至管腔部位",
+      "C": "大部分血清中的IgG半衰期大約三週",
+      "D": "血清中濃度最高的是IgE"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基礎醫學",
+    "year": 113,
+    "tags": [
+      "微生物學與免疫學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-basic-med-44",
+    "question": "下列何者屬於第二型過敏反應？",
+    "options": {
+      "A": "阿圖斯氏反應（Arthus reaction）",
+      "B": "全身性過敏反應（systemic anaphylaxis）",
+      "C": "結核菌素反應",
+      "D": "ABO血型不合造成的溶血與輸血反應"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基礎醫學",
+    "year": 113,
+    "tags": [
+      "微生物學與免疫學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-basic-med-45",
+    "question": "治療金黃色葡萄球菌造成的院內感染，下列何種抗生素最可能有效？",
+    "options": {
+      "A": "紅黴素（Erythromycin）",
+      "B": "萬古黴素（Vancomycin）",
+      "C": "氯黴素（Chloramphenicol）",
+      "D": "青黴素（Penicillin）"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基礎醫學",
+    "year": 113,
+    "tags": [
+      "微生物學與免疫學",
+      "藥理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-basic-med-46",
+    "question": "下列何種細菌感染，常與食用受污染的帶殼海鮮所發生的食物中毒相關？",
+    "options": {
+      "A": "腸炎弧菌（Vibrio parahaemolyticus）",
+      "B": "傷寒沙門氏菌（Salmonella Typhi）",
+      "C": "鼠疫耶氏桿菌（Yersinia pestis）",
+      "D": "痢疾志賀氏菌（Shigella dysenteriae）"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基礎醫學",
+    "year": 113,
+    "tags": [
+      "微生物學與免疫學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-basic-med-47",
+    "question": "下列何種細菌感染所造成的腸炎，最可能引發周邊神經病變（Guillain-Barré症候群）？",
+    "options": {
+      "A": "大腸桿菌（Escherichia coli）",
+      "B": "幽門螺旋桿菌（Helicobacter pylori）",
+      "C": "霍亂弧菌（Vibrio cholerae）",
+      "D": "空腸彎曲桿菌（Campylobacter jejuni）"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基礎醫學",
+    "year": 113,
+    "tags": [
+      "微生物學與免疫學",
+      "解剖學",
+      "病理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-basic-med-48",
+    "question": "下列何者不屬於皮癬菌（dermatophytes）？",
+    "options": {
+      "A": "表皮癬菌（Epidermophyton）",
+      "B": "毛髮癬菌（Trichophyton）",
+      "C": "絲孢酵母菌（Trichosporon）",
+      "D": "小芽孢菌（Microsporum）"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基礎醫學",
+    "year": 113,
+    "tags": [
+      "基礎醫學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-basic-med-49",
+    "question": "有關第16型人類乳突病毒（HPV-16）的敘述，下列何者錯誤？",
+    "options": {
+      "A": "感染提高婦女得到子宮頸癌的機率",
+      "B": "感染提高口咽癌罹患機率",
+      "C": "感染造成傳染性濕疣（molluscum contagiosum）",
+      "D": "HPV-16 E6為致癌基因（oncogene）"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基礎醫學",
+    "year": 113,
+    "tags": [
+      "微生物學與免疫學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-basic-med-50",
+    "question": "下列何種人體器官，最常受到腸外阿米巴病（extraintestinal amebiasis）原蟲的滋養體（trophozoite） 入侵？",
+    "options": {
+      "A": "肺",
+      "B": "心臟",
+      "C": "肝",
+      "D": "腎臟"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基礎醫學",
+    "year": 113,
+    "tags": [
+      "基礎醫學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-basic-nursing-01",
+    "question": "急診湧入大量病人，病房護理人員被派至急診支援時，聽從急診行政領導人員的指令，依據不同的工作性 質，到固定地點拿取不同的護理設備與工具，固定分工協助急診病人照顧。此為那一類護理工作模式？",
+    "options": {
+      "A": "功能性護理（functional nursing）",
+      "B": "成組護理（team nursing）",
+      "C": "全責護理（primary nursing）",
+      "D": "綜合性護理（modular nursing）"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基本護理學與護理行政",
+    "year": 113,
+    "tags": [
+      "護理行政"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-basic-nursing-02",
+    "question": "王先生因登革熱入院，下列敘述何者正確？",
+    "options": {
+      "A": "此疾病傳染途徑為共通媒介物傳播",
+      "B": "使用蚊帳，是為阻斷傳染途徑",
+      "C": "處理居家環境積水，是為阻斷進入宿主的入口",
+      "D": "照護病人採用外科無菌技術，是為阻斷傳染窩"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基本護理學與護理行政",
+    "year": 113,
+    "tags": [
+      "基本護理學與護理行政"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-basic-nursing-03",
+    "question": "護理人員在執行任何護理活動時，應以病人安全為首要考量，下列敘述何者正確？",
+    "options": {
+      "A": "給藥錯誤屬於物理性傷害",
+      "B": "跌倒屬於化學性傷害",
+      "C": "照護老年人或使用鎮定劑的病人應給與約束",
+      "D": "感覺功能障礙者須注意用熱導致的溫度傷害"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基本護理學與護理行政",
+    "year": 113,
+    "tags": [
+      "基本護理學與護理行政"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-basic-nursing-04",
+    "question": "依據109年修訂之護理人員法，護理人員因停業、歇業、復業或變更執業處所時，應於自事實發生之日起於規 定時間內，報請原發執業執照機關備查，若違反其規定者得處新臺幣多少罰鍰？",
+    "options": {
+      "A": "1,000元以上～10,000元以下",
+      "B": "2,000元以上～20,000元以下",
+      "C": "3,000元以上～30,000元以下",
+      "D": "4,000元以上～40,000元以下"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基本護理學與護理行政",
+    "year": 113,
+    "tags": [
+      "基本護理學與護理行政"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-basic-nursing-05",
+    "question": ".3天前接受清創術病人即將出院，但向醫師要求能夠繼續住院接受專業照顧，有關護理人員的回應，下列何者 最適當？",
+    "options": {
+      "A": "主動向病人提供回診相關諮詢",
+      "B": "和病人共同擬定護理計畫",
+      "C": "與病人溝通並了解其感受與想法",
+      "D": "清楚說明出院的流程讓病人安心"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基本護理學與護理行政",
+    "year": 113,
+    "tags": [
+      "基本護理學與護理行政"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-basic-nursing-06",
+    "question": "護理師發現病人的主訴與病歷紀載的家庭樹資料不相符，向主要照顧者進行再次確認，此為護理過程的那個 步驟？",
+    "options": {
+      "A": "護理評值",
+      "B": "護理診斷",
+      "C": "護理評估",
+      "D": "護理計畫"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基本護理學與護理行政",
+    "year": 113,
+    "tags": [
+      "基本護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-basic-nursing-07",
+    "question": "手術後第2天，病人於8：30 AM下床活動後主訴傷口痛且臉色蒼白、盜冷汗，醫師評估後於9 AM給予止痛藥。 下列何者為最適當的評值？",
+    "options": {
+      "A": "8：45 AM採半坐臥後，蒼白改善",
+      "B": "9 AM依醫囑給與止痛藥",
+      "C": "10 AM病人主訴疼痛指數3分",
+      "D": "10 PM家屬表示病人睡不著"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基本護理學與護理行政",
+    "year": 113,
+    "tags": [
+      "基本護理學",
+      "內外科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-basic-nursing-08",
+    "question": "下列護理人員的答話，何者能增進護病關係？",
+    "options": {
+      "A": "「你看起來一點進步也沒有，你有沒有認真做復健？」",
+      "B": "「有什麼事讓妳心情不好，要試著說說看嗎？」",
+      "C": "「不要一天到晚想要死，你一家大小可都是你的責任，要靠你養！」",
+      "D": "「不要怕痛、怕麻煩，妳就按照我教妳的這樣做就對了！」"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基本護理學與護理行政",
+    "year": 113,
+    "tags": [
+      "基本護理學與護理行政"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-basic-nursing-09",
+    "question": "護理目標如下：「病人能解釋血糖控制與預防糖尿病合併症之關係」，此屬於何種類型的目標？",
+    "options": {
+      "A": "情意目標",
+      "B": "技能目標",
+      "C": "認知目標",
+      "D": "互動目標"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基本護理學與護理行政",
+    "year": 113,
+    "tags": [
+      "內外科護理學",
+      "護理行政"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-basic-nursing-10",
+    "question": "吳小弟，體重9公斤，醫囑開立「Amoxicillin® I.V. drip Q6H」，此藥物單次成人劑量為500 mg。依克拉 克氏法則（Clark’s rule），吳小弟單次用藥劑量為多少mg？",
+    "options": {
+      "A": "46",
+      "B": "56",
+      "C": "66",
+      "D": "76"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基本護理學與護理行政",
+    "year": 113,
+    "tags": [
+      "藥理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-basic-nursing-11",
+    "question": "下列藥物劑型，何者的吸收速度最慢？",
+    "options": {
+      "A": "懸浮劑",
+      "B": "發泡錠",
+      "C": "軟膠囊",
+      "D": "粉劑"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基本護理學與護理行政",
+    "year": 113,
+    "tags": [
+      "藥理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-basic-nursing-12",
+    "question": "病人血壓180/120 mmHg，醫囑「nifedipine（Adalat®）10 mg /cap 1# S.L. STAT」， 下列給藥方式何者正 確？",
+    "options": {
+      "A": "請病人咬碎後吞服",
+      "B": "請病人舌下含服",
+      "C": "請病人直接吞服",
+      "D": "將藥物塞入直腸"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基本護理學與護理行政",
+    "year": 113,
+    "tags": [
+      "基本護理學",
+      "藥理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-basic-nursing-13",
+    "question": "病人罹患急性結膜炎，醫囑開立Emadine® oph. solution. 1gtt. O.U. QID及Devirus® oph. oint. O.U. QID，給眼藥過程下列措施何者錯誤？",
+    "options": {
+      "A": "點藥時，請病人眼睛往上看",
+      "B": "將藥物滴在下結膜囊內",
+      "C": "先給Devirus® oph oint. 再給Emadine® oph. solution",
+      "D": "給藥後，請病人閉上眼睛並轉動眼球"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基本護理學與護理行政",
+    "year": 113,
+    "tags": [
+      "基本護理學與護理行政"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-basic-nursing-14",
+    "question": "熱敷時間超過45分鐘，會引起血管收縮屬於下列何種狀況？",
+    "options": {
+      "A": "適應現象（adaptation phenomenon）",
+      "B": "反彈現象（rebound phenomenon）",
+      "C": "交感反應（consensual response）",
+      "D": "保護性反應（protective response）"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基本護理學與護理行政",
+    "year": 113,
+    "tags": [
+      "解剖學",
+      "生理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-basic-nursing-15",
+    "question": "關於冷熱療法效果與目的，下列敘述何者錯誤？",
+    "options": {
+      "A": "使用熱敷處理疼痛，主要作用是促進血液循環，減少充血腫脹",
+      "B": "冷敷用於靜脈炎的作用是減緩血流，降低白血球活性阻止炎症進展",
+      "C": "所有冷熱敷的設備均要直接與皮膚接觸，才能達到最大治療效果",
+      "D": "進行濕熱敷時為預防燙傷，可於皮膚塗上凡士林以達到保護目的"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基本護理學與護理行政",
+    "year": 113,
+    "tags": [
+      "基本護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-basic-nursing-16",
+    "question": "病人因高燒使用低溫毯，護理師在使用低溫毯期間，下列照護事項何者正確？ ①為達到降溫效益，低溫毯 應直接與病人皮膚接觸 ②剛使用時應每5分鐘測量病人的生命徵象，待穩定後則可以每15分鐘監測一次 ③使用過程中若病人出現發抖現象，為正常現象，可持續使用，但需每15分鐘監測體溫一次 ④應每30～60 分鐘協助病人翻身，以免造成壓力性損傷",
+    "options": {
+      "A": "①②",
+      "B": "③④",
+      "C": "①③",
+      "D": "②④"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基本護理學與護理行政",
+    "year": 113,
+    "tags": [
+      "基本護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-basic-nursing-17",
+    "question": "在冷敷過程中，患處出現下列何種症狀，可持續使用？",
+    "options": {
+      "A": "患處有涼的感覺",
+      "B": "麻木感",
+      "C": "藍斑",
+      "D": "疼痛"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基本護理學與護理行政",
+    "year": 113,
+    "tags": [
+      "基本護理學與護理行政"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-basic-nursing-18",
+    "question": "在輸血過程中，病人出現皮膚癢、紅疹、鼻塞及呼吸困難等症狀，可能是發生下列何種輸血反應？",
+    "options": {
+      "A": "熱原反應",
+      "B": "過敏反應",
+      "C": "溶血反應",
+      "D": "肺栓塞反應"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基本護理學與護理行政",
+    "year": 113,
+    "tags": [
+      "生理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-basic-nursing-19",
+    "question": "脊髓損傷的病人，無法自行排空膀胱，下列護理措施何者最適當？",
+    "options": {
+      "A": "限制液體攝入量1,000 mL/天",
+      "B": "教導凱格爾氏（Kegel’s exercise）",
+      "C": "教導以手向下壓迫膀胱部位",
+      "D": "協助置入留置導尿管"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基本護理學與護理行政",
+    "year": 113,
+    "tags": [
+      "基本護理學與護理行政"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-basic-nursing-20",
+    "question": "有關結腸灌洗（colon irrigation）目的之相關敘述，下列何者錯誤？",
+    "options": {
+      "A": "提供術前準備",
+      "B": "減輕嚴重痔瘡疼痛",
+      "C": "清除腸道內之糞便",
+      "D": "降低體內氨之濃度"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基本護理學與護理行政",
+    "year": 113,
+    "tags": [
+      "基本護理學與護理行政"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-basic-nursing-21",
+    "question": "有關導尿管的選擇原則，下列何者錯誤？",
+    "options": {
+      "A": "塑膠材質的導尿管使用期限可長達1個月",
+      "B": "泌尿道手術的病人可使用18 Fr.以上的導尿管",
+      "C": "當病人需要進行膀胱灌洗時應選擇三路導尿管",
+      "D": "小孩大多選擇使用8～10 Fr.導尿管"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基本護理學與護理行政",
+    "year": 113,
+    "tags": [
+      "基本護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-basic-nursing-22",
+    "question": "病人配戴橡膠製成的活動假牙，有關假牙的清潔與使用，下列敘述何者正確？",
+    "options": {
+      "A": "假牙不用時需泡在蘇打水中保存",
+      "B": "使用50℃熱水清潔假牙，加強消毒效果",
+      "C": "假牙置於口腔前，應先以水濕潤之",
+      "D": "假牙需整日持續配戴，維持臉頰外觀"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基本護理學與護理行政",
+    "year": 113,
+    "tags": [
+      "基本護理學與護理行政"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-basic-nursing-23",
+    "question": "約束病人的注意事項，下列何者錯誤？",
+    "options": {
+      "A": "手腕先以棉墊保護再綁上約束帶",
+      "B": "屬護理的獨立性功能",
+      "C": "約束帶以平結固定在床架上",
+      "D": "每15～30分鐘觀察病人末梢循環"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基本護理學與護理行政",
+    "year": 113,
+    "tags": [
+      "基本護理學與護理行政"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-basic-nursing-24",
+    "question": "關於脈搏測量的敘述，下列何者錯誤？",
+    "options": {
+      "A": "以觸診法測量脈博時，應用食、中及無名指測量，不可用拇指",
+      "B": "心房撲動病人可由二位護理師同時一位測心尖脈、一位測橈動脈",
+      "C": "測量時間皆以30秒×2來計算",
+      "D": "年老或肥胖病人脈搏不顯著，可使用聽診取代觸診"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基本護理學與護理行政",
+    "year": 113,
+    "tags": [
+      "基本護理學與護理行政"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-basic-nursing-25",
+    "question": "關於測量血壓的注意事項，下列敘述何者正確？",
+    "options": {
+      "A": "將欲測量之手臂支托，使手臂與心臟同高",
+      "B": "為確認數值正確性，無須間隔可重複充氣",
+      "C": "正常情況下，慣用手血壓較非慣用手低",
+      "D": "一般上肢血壓比下肢血壓高"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基本護理學與護理行政",
+    "year": 113,
+    "tags": [
+      "基本護理學與護理行政"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-basic-nursing-26",
+    "question": "調節呼吸的重要化學物質，不包括下列那一項？",
+    "options": {
+      "A": "二氧化碳",
+      "B": "碳酸根離子",
+      "C": "氫離子",
+      "D": "一氧化氮"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基本護理學與護理行政",
+    "year": 113,
+    "tags": [
+      "生理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-basic-nursing-27",
+    "question": "下列何種徵象顯示成人鼻胃管插入的位置錯誤？",
+    "options": {
+      "A": "鼻胃管固定的標記顯示為70公分",
+      "B": "鼻胃管反抽，抽出100 c.c.未消化的食物",
+      "C": "灌食空針打入30 c.c.空氣，胃部聽診時有空氣進入胃的咕嚕聲音",
+      "D": "將鼻胃管末端放入水中，無連續性氣泡"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基本護理學與護理行政",
+    "year": 113,
+    "tags": [
+      "基本護理學與護理行政"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-basic-nursing-28",
+    "question": "有關營養素的敘述，下列何者正確？",
+    "options": {
+      "A": "非水溶性纖維可以延緩糖分的吸收",
+      "B": "多醣類膳食纖維會抑制腸道蠕動",
+      "C": "非必需胺基酸是指人體無法自行合成",
+      "D": "必需胺基酸必須由食物攝取"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基本護理學與護理行政",
+    "year": 113,
+    "tags": [
+      "基本護理學與護理行政"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-basic-nursing-29",
+    "question": "病人接受靜脈營養，預備轉換為腸道營養的第一階段飲食，下列何者最適當？",
+    "options": {
+      "A": "軟質飲食（soft diet）",
+      "B": "高纖飲食（high fiber diet）",
+      "C": "清流質飲食（clear liquid diet）",
+      "D": "低油飲食（low oil diet）"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基本護理學與護理行政",
+    "year": 113,
+    "tags": [
+      "解剖學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-basic-nursing-30",
+    "question": "病人走路滑倒導致右手臂骨折，護理師使用三角巾為病人執行托懸臂包紮法，下列何者為正確的方式？ ① 協助病人右手肘關節彎曲小於90度，手掌朝上，手腕高於肘部 ②協助病人右手肘關節彎曲大於90度，手腕 不可下垂 ③協助病人右手肘關節彎曲維持90度，手腕自然下垂 ④三角巾底角最後於病人右側肩上打上平 結 ⑤三角巾底角最後於病人左側肩上打上平結",
+    "options": {
+      "A": "①④",
+      "B": "②④",
+      "C": "③⑤",
+      "D": "②⑤"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基本護理學與護理行政",
+    "year": 113,
+    "tags": [
+      "解剖學",
+      "內外科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-basic-nursing-31",
+    "question": "病人因車禍骨折，目前右手上石膏固定，為了避免病人的右手肌肉萎縮，應教導病人的患肢做何種運動？",
+    "options": {
+      "A": "被動全關節運動",
+      "B": "等長運動",
+      "C": "漸進式加阻力運動",
+      "D": "等張運動"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基本護理學與護理行政",
+    "year": 113,
+    "tags": [
+      "解剖學",
+      "病理學",
+      "內外科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-basic-nursing-32",
+    "question": "有關遺體護理的敘述，下列何者最不適當？",
+    "options": {
+      "A": "需協助鼻胃管留置病人反抽胃內容物後，再移除管路",
+      "B": "協助遺體口腔護理後，並幫助閉合",
+      "C": "拔除留置導尿管前，宜先抽出水囊內蒸餾水再移除",
+      "D": "協助採仰臥並移除頭部枕頭，避免頭頸屈曲"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基本護理學與護理行政",
+    "year": 113,
+    "tags": [
+      "基本護理學與護理行政"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-basic-nursing-33",
+    "question": "護理師衛教病人收集24小時尿液檢體，下列敘述何者正確？",
+    "options": {
+      "A": "於7 AM請病人解尿，此次尿液不要，之後開始收集每次解的尿液到次日7 AM",
+      "B": "收集尿液期間如果有遺漏收集，則需持續收集到遺漏之時間點",
+      "C": "隔日7 AM請病人解最後一次尿液，丟棄不收集",
+      "D": "將24小時收集到尿液，栓緊容器瓶蓋，連同檢驗單儘速送檢"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基本護理學與護理行政",
+    "year": 113,
+    "tags": [
+      "基本護理學與護理行政"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-basic-nursing-34",
+    "question": "有關衛生福利部2012年公告的「腦死判定準則」，下列先決條件的敘述何者正確？",
+    "options": {
+      "A": "病人昏迷指數為5或小於5之深度昏迷",
+      "B": "體溫低於攝氏35度所致之可逆性昏迷",
+      "C": "具有無法復原的肺葉結構損傷",
+      "D": "必須依賴氣切管路維持呼吸"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基本護理學與護理行政",
+    "year": 113,
+    "tags": [
+      "基本護理學與護理行政"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-basic-nursing-35",
+    "question": "下列何者為臨終病人的瀕死症狀？①脈搏出現奇異脈（paradoxical pulse） ②張口呼吸 ③肛門括約肌 收縮 ④吞嚥困難",
+    "options": {
+      "A": "①②",
+      "B": "①④",
+      "C": "②③",
+      "D": "②④"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基本護理學與護理行政",
+    "year": 113,
+    "tags": [
+      "生理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-basic-nursing-36",
+    "question": "有關目標管理，下列敘述何者正確？",
+    "options": {
+      "A": "個人目標與組織目標之設定應各自獨立及達成",
+      "B": "主管僅做決策，其餘則授權由員工獨立去完成",
+      "C": "設定目標時，對達成時間的限制應該保持彈性",
+      "D": "主管須定期評值目標進度，並將結果回饋員工"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基本護理學與護理行政",
+    "year": 113,
+    "tags": [
+      "基本護理學與護理行政"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-basic-nursing-37",
+    "question": "住宿型長照機構，每位住民每月收費3萬2千元，毛利率六成，每月固定支出70萬元，為達損益平衡點，平均 每月至少應收幾位住民？",
+    "options": {
+      "A": "30人",
+      "B": "32人",
+      "C": "35人",
+      "D": "37人"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基本護理學與護理行政",
+    "year": 113,
+    "tags": [
+      "基本護理學與護理行政"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-basic-nursing-38",
+    "question": "顧力克（Luther Gulick）以POSDCoRB七個縮寫字說明行政的內涵，請問下列敘述何者正確？",
+    "options": {
+      "A": "R代表Reporting",
+      "B": "P代表Process",
+      "C": "O代表Output",
+      "D": "D代表Development"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基本護理學與護理行政",
+    "year": 113,
+    "tags": [
+      "護理行政"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-basic-nursing-39",
+    "question": "護理長舉辦護理師最佳服務票選活動，獲最高票者的名字與相片會張貼於佈告欄以資鼓勵。依馬斯洛需要層 級理論，此活動最可以滿足下列何種需求？",
+    "options": {
+      "A": "生理",
+      "B": "愛與歸屬",
+      "C": "安全感",
+      "D": "自尊"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基本護理學與護理行政",
+    "year": 113,
+    "tags": [
+      "基本護理學與護理行政"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-basic-nursing-40",
+    "question": "醫院擬新建醫療大樓，現有病房需進行科別變更或縮減床位，護理主任為因應改變，下列何者應優先執行？",
+    "options": {
+      "A": "擬定護理師轉換科別後所需的教育訓練",
+      "B": "收集資料、分析及確立可能出現的問題",
+      "C": "依現有人員數，調整護理人員配置計畫",
+      "D": "建立各病房轉換科別後之單位管理目標"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基本護理學與護理行政",
+    "year": 113,
+    "tags": [
+      "基本護理學與護理行政"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-basic-nursing-41",
+    "question": "績效考評時，將所有人員的考評成績進行分數排列比較，屬於下列何種考核標準？",
+    "options": {
+      "A": "相對標準",
+      "B": "客觀標準",
+      "C": "絕對標準",
+      "D": "主觀標準"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基本護理學與護理行政",
+    "year": 113,
+    "tags": [
+      "基本護理學與護理行政"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-basic-nursing-42",
+    "question": "下列那些臨床專業能力訓練課程，屬於N2進階N3層級的訓練重點？①重症病人護理 ②危機處理 ③教學原 理與方法 ④護理與法律",
+    "options": {
+      "A": "①②",
+      "B": "②③",
+      "C": "③④",
+      "D": "①④"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基本護理學與護理行政",
+    "year": 113,
+    "tags": [
+      "基本護理學與護理行政"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-basic-nursing-43",
+    "question": "下列何種組織結構最適合規模小且複雜性低的護理之家？",
+    "options": {
+      "A": "專案式結構",
+      "B": "矩陣式結構",
+      "C": "簡單式結構",
+      "D": "科層式結構"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基本護理學與護理行政",
+    "year": 113,
+    "tags": [
+      "護理行政"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-basic-nursing-44",
+    "question": "能提供病人連續性、協調性、整體性及個別性的照護，亦能增加護理人員的責任感及自主性。屬於下列何種 護理照護模式？",
+    "options": {
+      "A": "技術混合照護模式（skill-mixed nursing care model）",
+      "B": "功能性護理模式（functional nursing care model）",
+      "C": "全責護理模式（primary nursing care model）",
+      "D": "成組護理模式（team nursing care model）"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基本護理學與護理行政",
+    "year": 113,
+    "tags": [
+      "基本護理學與護理行政"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-basic-nursing-45",
+    "question": "某內科病房有40床，占床率為70%，共有12名護理人員，採三班制，該年度實際上班天數為261天，該病房該 年度每位病人每天的護理時數為多少？",
+    "options": {
+      "A": "3.86",
+      "B": "2.54",
+      "C": "2.45",
+      "D": "1.96"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基本護理學與護理行政",
+    "year": 113,
+    "tags": [
+      "基本護理學與護理行政"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-basic-nursing-46",
+    "question": "依據我國傳染病防治法第3條規定之傳染病分類，結核病屬於第幾類傳染病？",
+    "options": {
+      "A": "第一類傳染病",
+      "B": "第二類傳染病",
+      "C": "第三類傳染病",
+      "D": "第四類傳染病"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基本護理學與護理行政",
+    "year": 113,
+    "tags": [
+      "精神科與社區衛生護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-basic-nursing-47",
+    "question": "根據 Donabedian（1966）醫療品質評估之概念架構，下列何者是醫院「過程面」的評估指標？①護理紀錄 完整性 ②手術前預防性給與抗生素比率 ③可執行細胞治療之醫師比率 ④病人死亡率",
+    "options": {
+      "A": "①②",
+      "B": "②③",
+      "C": "①④",
+      "D": "③④"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基本護理學與護理行政",
+    "year": 113,
+    "tags": [
+      "基本護理學",
+      "內外科護理學",
+      "藥理學",
+      "精神科與社區衛生護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-basic-nursing-48",
+    "question": "林護理師於病房工作1.5年，對病人整體性照護在指導下可完成，剛晉升為N1層級。護理長對於林護理師的 領導，適合採用赫爾賽（Hersey） 與布朗查德（Blanchard）之情境領導理論（situational leadership theory）中的何種領導型態？",
+    "options": {
+      "A": "告知型（telling）",
+      "B": "推銷型（selling）",
+      "C": "參與型（participating）",
+      "D": "授權型（delegating）"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基本護理學與護理行政",
+    "year": 113,
+    "tags": [
+      "護理行政"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-basic-nursing-49",
+    "question": "有關發生護理業務糾紛時的處置，下列敘述何者最適當？",
+    "options": {
+      "A": "請當事人誠懇冷靜面對病人及家屬",
+      "B": "理智處理、分析及了解事件的始末",
+      "C": "尋求法律途徑，釐清業務糾紛責任",
+      "D": "安排諮商輔導人員舉辦員工教育訓練"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基本護理學與護理行政",
+    "year": 113,
+    "tags": [
+      "基本護理學與護理行政"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-basic-nursing-50",
+    "question": "有關護理成本控制的方法，下列敘述何者錯誤？",
+    "options": {
+      "A": "護理作業資訊化",
+      "B": "減少護理人員數",
+      "C": "降低衛材庫存量",
+      "D": "正確計價防漏帳"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基本護理學與護理行政",
+    "year": 113,
+    "tags": [
+      "護理行政"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-med-surg-01",
+    "question": "有關多發性硬化症之診斷檢查，下列何者錯誤？",
+    "options": {
+      "A": "腦脊髓液分析可發現IgG抗體上升",
+      "B": "視覺誘發電位可觀察到受損的神經在傳導過程出現延遲和中斷",
+      "C": "超音波檢查可發現中樞神經系統髓鞘脫失",
+      "D": "核磁共振影像可用來確認多發性硬化症之斑塊"
+    },
+    "category": "考選部護理師高考",
+    "subject": "內外科護理學",
+    "year": 113,
+    "tags": [
+      "內外科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-med-surg-02",
+    "question": "下列何者不是腦幹中風的常見之表徵？",
+    "options": {
+      "A": "眼球活動不協調",
+      "B": "運動功能障礙",
+      "C": "手顫抖",
+      "D": "嘔吐反射減弱"
+    },
+    "category": "考選部護理師高考",
+    "subject": "內外科護理學",
+    "year": 113,
+    "tags": [
+      "內外科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-med-surg-03",
+    "question": "有關頭部外傷病人顱內壓升高的處置，下列何者錯誤？",
+    "options": {
+      "A": "急性期可裝置顱內壓監測器，依醫囑引流腦脊髓液降低顱內壓",
+      "B": "病人的格拉斯哥昏迷量表（GCS）總分為5分，表示病人處於昏迷狀態",
+      "C": "使用Mannitol 降腦壓時，使用前後要注意血糖的變化",
+      "D": "若病人的瞳孔突然放大、對光沒有反應或是固定、肌力及意識下降，有可能是顱內壓升高"
+    },
+    "category": "考選部護理師高考",
+    "subject": "內外科護理學",
+    "year": 113,
+    "tags": [
+      "內外科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-med-surg-04",
+    "question": "有關阿茲海默氏症之敘述，下列何者錯誤？",
+    "options": {
+      "A": "是一慢性、進展性、退化性腦部疾病",
+      "B": "可能病因為年紀、基因遺傳",
+      "C": "典型的症狀為長期記憶喪失",
+      "D": "腦部典型變化為神經纖維糾結與老年性斑塊"
+    },
+    "category": "考選部護理師高考",
+    "subject": "內外科護理學",
+    "year": 113,
+    "tags": [
+      "內外科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-med-surg-05",
+    "question": "有關癲癇藥物Dilantin的敘述，下列何者正確？",
+    "options": {
+      "A": "靜脈輸注時須採用5%葡萄糖稀釋",
+      "B": "口服常見的副作用為血液惡病質、心律不整等",
+      "C": "指導病人須維持良好的口腔衛生，使用軟毛牙刷按摩牙齦",
+      "D": "應維持血清治療濃度於80～100 mcg/dL"
+    },
+    "category": "考選部護理師高考",
+    "subject": "內外科護理學",
+    "year": 113,
+    "tags": [
+      "藥理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-med-surg-06",
+    "question": "陳先生因肝硬化、嚴重腹水，出現呼吸急促、意識混亂的情形，由家人送往醫院接受治療，於實驗室檢查 中，可能出現下列何種結果？①ALT：80 U/L、AST：55 U/L ②albumin 4.0 gm/dL ③prothrombin time 5 sec ④ammonia 120 mg/dL",
+    "options": {
+      "A": "①②",
+      "B": "①④",
+      "C": "②③",
+      "D": "③④"
+    },
+    "category": "考選部護理師高考",
+    "subject": "內外科護理學",
+    "year": 113,
+    "tags": [
+      "內外科護理學",
+      "生理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-med-surg-07",
+    "question": "承上題，關於陳先生的護理措施，下列何者正確？①限制水分與蛋白質的攝取 ②每天測量體重與腹圍，記 錄輸出入量 ③給與利尿劑後，儘快補充Albumin ④使用Lactulose以減少細菌分解蛋白質所產生大量氨",
+    "options": {
+      "A": "①②",
+      "B": "①④",
+      "C": "②③",
+      "D": "③④"
+    },
+    "category": "考選部護理師高考",
+    "subject": "內外科護理學",
+    "year": 113,
+    "tags": [
+      "微生物學與免疫學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-med-surg-08",
+    "question": "有關不同部位腸造瘻特性之敘述，下列何者正確？",
+    "options": {
+      "A": "升結腸造瘻的排便沒有規則性",
+      "B": "迴腸造瘻的大便性狀是半成形狀",
+      "C": "乙狀結腸造瘻的液體需要量需增加",
+      "D": "橫結腸造瘻不需要使用人工造口袋"
+    },
+    "category": "考選部護理師高考",
+    "subject": "內外科護理學",
+    "year": 113,
+    "tags": [
+      "內外科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-med-surg-09",
+    "question": "有關膽道疾病的敘述，下列何者錯誤？",
+    "options": {
+      "A": "膽囊炎大部分是結石造成",
+      "B": "膽道結石男性比女性發生機率高",
+      "C": "可用meperidine HCL（Demerol®）肌肉注射止痛",
+      "D": "急性膽囊炎病人會出現右上腹部疼痛"
+    },
+    "category": "考選部護理師高考",
+    "subject": "內外科護理學",
+    "year": 113,
+    "tags": [
+      "內外科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-med-surg-10",
+    "question": "有關預防傾倒症候群（dumping syndrome）的飲食建議，下列何者不適宜？",
+    "options": {
+      "A": "高醣食物",
+      "B": "適量脂肪",
+      "C": "高蛋白飲食",
+      "D": "乾性食物"
+    },
+    "category": "考選部護理師高考",
+    "subject": "內外科護理學",
+    "year": 113,
+    "tags": [
+      "內外科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-med-surg-11",
+    "question": "有關骨折癒合階段照護之敘述，下列何者正確？",
+    "options": {
+      "A": "血腫形成期，應鼓勵病人進行患肢等張運動",
+      "B": "細胞增生期，應鼓勵病人進行患肢等張運動",
+      "C": "骨痂形成期，應鼓勵病人補充足夠的營養",
+      "D": "鞏固化與再塑造期，告知病人骨折癒合不需再運動"
+    },
+    "category": "考選部護理師高考",
+    "subject": "內外科護理學",
+    "year": 113,
+    "tags": [
+      "內外科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-med-surg-12",
+    "question": "有關關節炎的敘述，下列何者正確？",
+    "options": {
+      "A": "骨性關節炎典型的疼痛在活動後加劇，休息後緩減",
+      "B": "類風濕性關節炎晨間關節僵硬會在不活動後又出現",
+      "C": "骨性關節炎是慢性、全身性、炎症性關節病變",
+      "D": "骨性關節炎最先侵犯周邊小關節，包括指、腕、肘、踝、趾"
+    },
+    "category": "考選部護理師高考",
+    "subject": "內外科護理學",
+    "year": 113,
+    "tags": [
+      "解剖學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-med-surg-13",
+    "question": "有關下背痛病人使用骨盆牽引治療之敘述，下列何者正確？",
+    "options": {
+      "A": "骨盆牽引是一種骨骼牽引，有助於緩解疼痛",
+      "B": "牽引時床尾抬高可增加牽引的效果",
+      "C": "保持臥於床之正中位置，膝、第二腳趾與滑輪在一直線位置",
+      "D": "牽引使用之拉力可達體重的1/2"
+    },
+    "category": "考選部護理師高考",
+    "subject": "內外科護理學",
+    "year": 113,
+    "tags": [
+      "內外科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-med-surg-14",
+    "question": "下列何者為白內障最有效的治療方式？",
+    "options": {
+      "A": "手術置換水晶體",
+      "B": "點散瞳劑",
+      "C": "眼睛熱敷",
+      "D": "配戴老花眼鏡"
+    },
+    "category": "考選部護理師高考",
+    "subject": "內外科護理學",
+    "year": 113,
+    "tags": [
+      "內外科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-med-surg-15",
+    "question": "有關鼻竇炎病人的護理指導，下列何者錯誤？",
+    "options": {
+      "A": "鼻竇炎是因鼻竇內黏膜發炎所造成",
+      "B": "慢性鼻竇炎症狀消退後，即可停用抗生素",
+      "C": "使用鼻滴劑時，可採用坐姿，頭向後仰",
+      "D": "使用鼻滴劑時，避免過量，以防引起反彈效果"
+    },
+    "category": "考選部護理師高考",
+    "subject": "內外科護理學",
+    "year": 113,
+    "tags": [
+      "內外科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-med-surg-16",
+    "question": "有關心肌炎病人的護理指導，下列何者不適宜？",
+    "options": {
+      "A": "教導阻力運動，提升活動耐力",
+      "B": "教導服用類固醇藥物，需觀察大便顏色",
+      "C": "教導減少水分攝取，減少心臟前負荷",
+      "D": "教導服用毛地黃，需監測脈搏"
+    },
+    "category": "考選部護理師高考",
+    "subject": "內外科護理學",
+    "year": 113,
+    "tags": [
+      "內外科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-med-surg-17",
+    "question": "有關心肌梗塞後性生活的建議事項，下列敘述何者正確？①應該儘量避免以免再次發作 ②能量消耗大約與 上下兩層樓相當 ③飽餐後或酒後比較適合性行為 ④性行為事後應預防性服用NTG ⑤應在熟悉的環境與 伴侶進行以避免過度緊張與刺激 ⑥環境的室溫勿太冷或太熱",
+    "options": {
+      "A": "①②③",
+      "B": "①④⑥",
+      "C": "②⑤⑥",
+      "D": "③④⑤"
+    },
+    "category": "考選部護理師高考",
+    "subject": "內外科護理學",
+    "year": 113,
+    "tags": [
+      "病理學",
+      "內外科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-med-surg-18",
+    "question": "下列何者為冠狀動脈性心臟病人服用Aspirin之主要目的？",
+    "options": {
+      "A": "緩解發作時胸痛",
+      "B": "鬆弛血管平滑肌",
+      "C": "抑制血小板凝集",
+      "D": "減緩心跳速率"
+    },
+    "category": "考選部護理師高考",
+    "subject": "內外科護理學",
+    "year": 113,
+    "tags": [
+      "解剖學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-med-surg-19",
+    "question": "有關心臟節律器之敘述，下列何者正確？",
+    "options": {
+      "A": "裝設心臟節律器術後，出現持續打嗝是正常現象",
+      "B": "永久性心臟節律器的激搏器在體外，可方便更換電池",
+      "C": "裝設暫時性心臟節律器，心電圖上不會出現激搏波（pace spike）",
+      "D": "裝設永久性心律調節器後，4～6週內應避免提重物"
+    },
+    "category": "考選部護理師高考",
+    "subject": "內外科護理學",
+    "year": 113,
+    "tags": [
+      "解剖學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-med-surg-20",
+    "question": "有關下肢深部靜脈栓塞服用Warfarin病人之護理指導，下列何者正確？",
+    "options": {
+      "A": "需監測活化部分凝血酶原時間（APTT）",
+      "B": "可以自行停用藥物",
+      "C": "避免大量食用深綠色蔬菜",
+      "D": "建議補充維生素K"
+    },
+    "category": "考選部護理師高考",
+    "subject": "內外科護理學",
+    "year": 113,
+    "tags": [
+      "解剖學",
+      "病理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-med-surg-21",
+    "question": "針對接受trastuzumab（Herceptin®）治療的癌症病人之護理，下列何者正確？①靜脈滴注給藥 ②空腹口 服給藥 ③監測丘疹、手足症候群 ④監測心臟功能",
+    "options": {
+      "A": "①③",
+      "B": "①④",
+      "C": "②③",
+      "D": "②④"
+    },
+    "category": "考選部護理師高考",
+    "subject": "內外科護理學",
+    "year": 113,
+    "tags": [
+      "基本護理學",
+      "解剖學",
+      "病理學",
+      "藥理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-med-surg-22",
+    "question": "有關癌細胞轉移之敘述，下列何者錯誤？",
+    "options": {
+      "A": "轉移是指癌細胞從原發部位擴散至身體其他組織器官",
+      "B": "惡性肉瘤（sarcoma）常以淋巴轉移方式轉移到其他部位",
+      "C": "常見轉移方式為淋巴轉移、血流轉移及體腔內播種式生長",
+      "D": "肺、肝及骨骼為原發性癌症常見轉移部位"
+    },
+    "category": "考選部護理師高考",
+    "subject": "內外科護理學",
+    "year": 113,
+    "tags": [
+      "病理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-med-surg-23",
+    "question": "李先生45歲，日前因頸部右側不對稱腫塊到醫院求診，經淋巴切片檢查診斷為何杰金氏症，下列何者不是此 病常見的症狀？",
+    "options": {
+      "A": "淋巴系統發現有腫大、但無壓痛情形",
+      "B": "皮膚系統發現有搔癢情形",
+      "C": "腸胃系統有嘔吐、排便習慣改變的情形",
+      "D": "呼吸系統發現有呼吸困難、咳嗽咳血或胸悶"
+    },
+    "category": "考選部護理師高考",
+    "subject": "內外科護理學",
+    "year": 113,
+    "tags": [
+      "內外科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-med-surg-24",
+    "question": "病人接受doxorubicin（Adriamycin®）注射時，發現點滴不順、針頭附近有微發紅及刺痛情形，下列處置何 者不適當？",
+    "options": {
+      "A": "可能為熱反應，注射後給予0.9% N/S及dexamethasone",
+      "B": "懷疑是藥物外滲時，停止注射以原針頭回抽藥物",
+      "C": "墊高注射部位且局部避免加壓",
+      "D": "評估為藥物外滲則可給予溫熱敷"
+    },
+    "category": "考選部護理師高考",
+    "subject": "內外科護理學",
+    "year": 113,
+    "tags": [
+      "基本護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-med-surg-25",
+    "question": "王小明，體重50公斤，接受組織配對成功為供髓者，下列護理措施何者正確？",
+    "options": {
+      "A": "骨髓抽取時採半身麻醉",
+      "B": "骨髓抽取量約100 c.c.",
+      "C": "骨髓抽取後不需平躺",
+      "D": "骨髓抽出過濾後可立即輸注至受髓者體內"
+    },
+    "category": "考選部護理師高考",
+    "subject": "內外科護理學",
+    "year": 113,
+    "tags": [
+      "護理行政"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-med-surg-26",
+    "question": "有關紅血球增多症病人之護理措施，下列何者錯誤？",
+    "options": {
+      "A": "教導病人深呼吸及有效咳嗽，促進肺部擴張及通氣",
+      "B": "告知病人儘量臥床休息，避免活動造成出血",
+      "C": "鼓勵病人增加飲水量，每日至少3,000～4,000 mL",
+      "D": "評估跌倒的危險因子並維護病人安全"
+    },
+    "category": "考選部護理師高考",
+    "subject": "內外科護理學",
+    "year": 113,
+    "tags": [
+      "內外科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-med-surg-27",
+    "question": "葉女士手部遭魚刺刺傷，出現局部發紅、化膿的炎症反應，診斷為蜂窩性組織炎，下列護理措施何者正確？",
+    "options": {
+      "A": "給予周邊靜脈輸液及全身性抗生素連續7～10天",
+      "B": "依照內科無菌原則施行冷水浸泡以減輕炎症反應",
+      "C": "教導減少攝取液體以避免患處水腫",
+      "D": "患肢低於胸部以降低病菌回流至軀幹"
+    },
+    "category": "考選部護理師高考",
+    "subject": "內外科護理學",
+    "year": 113,
+    "tags": [
+      "護理行政"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-med-surg-28",
+    "question": "有關氣爆引發四度熱燒傷的健康問題，下列何者較不常發生？",
+    "options": {
+      "A": "體溫過低",
+      "B": "體液容積缺失",
+      "C": "急性疼痛",
+      "D": "潛在危險性感染"
+    },
+    "category": "考選部護理師高考",
+    "subject": "內外科護理學",
+    "year": 113,
+    "tags": [
+      "內外科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-med-surg-29",
+    "question": "有關疥瘡的治療，下列敘述何者正確？",
+    "options": {
+      "A": "為避免因接觸而傳染給他人，抗疥蟲藥物最好於白天使用",
+      "B": "成人病人使用crotamiton（Eurax®）滅疥乳膏時，可一日數次塗抹於頭、臉、全身，尤其皮膚皺褶處",
+      "C": "Benzyl Benzoate（B. B.）塗抹後，待藥液乾後再塗一次，24小時後沖掉，每晚或隔晚使用，共3次",
+      "D": "γ-benzene hexachloride（Lindane）具有神經毒性，塗抹後8～12小時沖掉，每天使用一次"
+    },
+    "category": "考選部護理師高考",
+    "subject": "內外科護理學",
+    "year": 113,
+    "tags": [
+      "內外科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-med-surg-30",
+    "question": "有關鞏皮症臨床表徵之敘述，下列何者錯誤？",
+    "options": {
+      "A": "易有上腹飽脹、上腹或胸骨後的灼痛",
+      "B": "雷諾氏現象",
+      "C": "面部表情缺失",
+      "D": "後續會發展成肝衰竭"
+    },
+    "category": "考選部護理師高考",
+    "subject": "內外科護理學",
+    "year": 113,
+    "tags": [
+      "內外科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-med-surg-31",
+    "question": "有關全身性紅斑性狼瘡（SLE）臨床表徵之敘述，下列何者錯誤？",
+    "options": {
+      "A": "皮膚症狀：蝴蝶斑為主要典型症狀",
+      "B": "心肺症狀：肺部受侵犯以肺炎最為常見",
+      "C": "泌尿系統：可能出現蛋白尿、血尿",
+      "D": "神經系統：出現人格改變或精神疾病"
+    },
+    "category": "考選部護理師高考",
+    "subject": "內外科護理學",
+    "year": 113,
+    "tags": [
+      "內外科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-med-surg-32",
+    "question": "下列何者是持續換氣不足病人之動脈血液氣體分析最可能出現的結果？",
+    "options": {
+      "A": "呼吸性酸中毒",
+      "B": "呼吸性鹼中毒",
+      "C": "代謝性酸中毒",
+      "D": "代謝性鹼中毒"
+    },
+    "category": "考選部護理師高考",
+    "subject": "內外科護理學",
+    "year": 113,
+    "tags": [
+      "解剖學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-med-surg-33",
+    "question": "周先生為氣喘病人，使用藥物後，出現「心悸、心律不整」的反應，最可能導致此反應的藥物為下列何者？",
+    "options": {
+      "A": "fenoterol（Berotec®）",
+      "B": "ipratropium bromide（Atrovent®）",
+      "C": "budesonide（Duasma®）",
+      "D": "montelukast（Singular®）"
+    },
+    "category": "考選部護理師高考",
+    "subject": "內外科護理學",
+    "year": 113,
+    "tags": [
+      "內外科護理學",
+      "藥理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-med-surg-34",
+    "question": "王先生診斷左側肋膜積水準備接受胸腔放液穿刺術，下列何者為其最適當的姿勢體位？",
+    "options": {
+      "A": "床頭搖高30度仰臥",
+      "B": "坐於床緣，頭和手趴在床旁桌上",
+      "C": "躺向左側，左手臂上舉過頭",
+      "D": "左手上舉採俯臥"
+    },
+    "category": "考選部護理師高考",
+    "subject": "內外科護理學",
+    "year": 113,
+    "tags": [
+      "基本護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-med-surg-35",
+    "question": "有關肺炎鏈球菌肺炎病人之臨床表徵，下列敘述何者最不適當？",
+    "options": {
+      "A": "痰液量增加",
+      "B": "胸部X光出現肺浸潤",
+      "C": "白血球上升",
+      "D": "呼吸離軌度增加"
+    },
+    "category": "考選部護理師高考",
+    "subject": "內外科護理學",
+    "year": 113,
+    "tags": [
+      "內外科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-med-surg-36",
+    "question": "有關慢性阻塞性肺疾病（COPD）病人飲食指導之敘述，下列何者較適當？①進食時可將氧氣面罩更換為氧氣 套管 ②選擇易咀嚼食物 ③增加碳水化合物 ④減少水分的攝取",
+    "options": {
+      "A": "①②",
+      "B": "①③",
+      "C": "②④",
+      "D": "③④"
+    },
+    "category": "考選部護理師高考",
+    "subject": "內外科護理學",
+    "year": 113,
+    "tags": [
+      "內外科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-med-surg-37",
+    "question": "有關腎臟移植過程之敘述，下列何者錯誤？",
+    "options": {
+      "A": "病人術前需再進行血液透析移除體液與毒素",
+      "B": "交叉試驗陰性才可以進行腎臟移植",
+      "C": "移植腎多是植入於下腹部腔膜外的腸骨窩處",
+      "D": "必須先移除原來腎臟再將新的腎臟做尿道接合"
+    },
+    "category": "考選部護理師高考",
+    "subject": "內外科護理學",
+    "year": 113,
+    "tags": [
+      "解剖學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-med-surg-38",
+    "question": "下列那些檢查前需要確認病人腎功能？①腎動脈攝影術 ②腎臟、輸尿管、膀胱X光檢查 ③腎臟超音波 ④逆行性腎盂攝影術 ⑤靜脈注射腎盂攝影術",
+    "options": {
+      "A": "①②",
+      "B": "①⑤",
+      "C": "②③",
+      "D": "④⑤"
+    },
+    "category": "考選部護理師高考",
+    "subject": "內外科護理學",
+    "year": 113,
+    "tags": [
+      "基本護理學",
+      "解剖學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-med-surg-39",
+    "question": "有關透析治療比較之敘述，下列何者正確？",
+    "options": {
+      "A": "血液透析的飲食限制，較腹膜透析嚴格",
+      "B": "血液透析的蛋白質流失量，較腹膜透析多",
+      "C": "血液透析發生高血脂比例，較腹膜透析高",
+      "D": "血液透析對於心血管負荷，較腹膜透析少"
+    },
+    "category": "考選部護理師高考",
+    "subject": "內外科護理學",
+    "year": 113,
+    "tags": [
+      "內外科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-med-surg-40",
+    "question": "韓小姐的動脈血液氣體分析結果為pH 7.44、PaCO2 30 mmHg、HCO3- 20 mmHg、PaO2 82 mmHg，根據以上數 值，判讀結果下列何者正確？",
+    "options": {
+      "A": "部分代償性呼吸性酸中毒",
+      "B": "未代償性代謝性酸中毒",
+      "C": "未代償性代謝性鹼中毒",
+      "D": "完全代償性呼吸性鹼中毒"
+    },
+    "category": "考選部護理師高考",
+    "subject": "內外科護理學",
+    "year": 113,
+    "tags": [
+      "解剖學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-med-surg-41",
+    "question": "有關良性前列腺肥大（BPH）之敘述，下列何者錯誤？",
+    "options": {
+      "A": "是男性常見的老年疾病，是前列腺體的細胞本身肥大所致",
+      "B": "尿路動力學檢查時發現病人的最大尿流速會減低",
+      "C": "病人常主訴頻尿或餘尿感（解不乾淨）",
+      "D": "肛門觸診可以評估前列腺肥大的程度"
+    },
+    "category": "考選部護理師高考",
+    "subject": "內外科護理學",
+    "year": 113,
+    "tags": [
+      "內外科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-med-surg-42",
+    "question": "有關原發性醛固酮過多症之護理措施，下列何者錯誤？",
+    "options": {
+      "A": "需觀察病人有無肌肉軟弱無力、疲倦、麻痹、心律不整等臨床表徵",
+      "B": "需觀察病人有無強直性痙攣和呼吸抑制情形",
+      "C": "教導病人飲食中應多補充高鈉食物，例如火腿、香腸、起司等",
+      "D": "需注意病人血壓的變化，有無血壓過高情形"
+    },
+    "category": "考選部護理師高考",
+    "subject": "內外科護理學",
+    "year": 113,
+    "tags": [
+      "內外科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-med-surg-43",
+    "question": "有關抗利尿激素分泌不當症候群（SIADH）病人的臨床照護，下列何者錯誤？",
+    "options": {
+      "A": "依醫囑補充3%生理食鹽水的靜脈輸液及注射furosemide（Lasix®）",
+      "B": "鼓勵病人多攝取低纖食物",
+      "C": "監測有無出現肌肉抽搐與昏迷的徵象",
+      "D": "依醫囑限制水分攝取每日在1,000 c.c.以下"
+    },
+    "category": "考選部護理師高考",
+    "subject": "內外科護理學",
+    "year": 113,
+    "tags": [
+      "生理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-med-surg-44",
+    "question": "有關雙胍類降血糖藥物metformin（Glucophage®）之敘述，下列何者錯誤？",
+    "options": {
+      "A": "減少肝臟葡萄糖的輸出，以降低空腹血糖",
+      "B": "最好與食物一起服用，或飯後馬上服用",
+      "C": "易出現胃腸道刺激及引發維生素B6缺乏",
+      "D": "腎功能不良的病人需要小心使用"
+    },
+    "category": "考選部護理師高考",
+    "subject": "內外科護理學",
+    "year": 113,
+    "tags": [
+      "藥理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-med-surg-45",
+    "question": "張太太，罹患糖尿病2年，平日使用口服抗血糖藥物控制血糖，今日在家昏倒被送至急診，醫師初步診斷為 高滲透壓高血糖狀態（HHS），病人會呈現的徵象，下列何者正確？①呼吸速率26次／分 ②血壓166/84 mmHg ③尿酮呈陽性反應，明顯升高 ④血糖為750 mg/dL。",
+    "options": {
+      "A": "①②",
+      "B": "①④",
+      "C": "②③",
+      "D": "③④"
+    },
+    "category": "考選部護理師高考",
+    "subject": "內外科護理學",
+    "year": 113,
+    "tags": [
+      "內外科護理學",
+      "護理行政",
+      "藥理學",
+      "生理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-med-surg-46",
+    "question": "有關甲狀腺機能亢進病人服用飽和碘化鉀溶液之敘述，下列何者正確？",
+    "options": {
+      "A": "絕不可與牛奶一起服用",
+      "B": "主要功能是抑制T4轉變為T3",
+      "C": "可以降低甲狀腺素的釋放及合成",
+      "D": "要長期服用超過一個月才能評估臨床效果"
+    },
+    "category": "考選部護理師高考",
+    "subject": "內外科護理學",
+    "year": 113,
+    "tags": [
+      "內外科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-med-surg-47",
+    "question": "有關休克病人體溫下降之護理措施，下列何者正確？",
+    "options": {
+      "A": "當身體顫抖產熱及代謝增加，應調低室溫以減少發燒程度",
+      "B": "靜脈注射的液體或血液，應加溫至接近正常體溫",
+      "C": "使用熱水袋或電毯包裹四肢",
+      "D": "給予熱水浴，以增加病人舒適感"
+    },
+    "category": "考選部護理師高考",
+    "subject": "內外科護理學",
+    "year": 113,
+    "tags": [
+      "內外科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-med-surg-48",
+    "question": "有關食物中毒之敘述，下列何者正確？",
+    "options": {
+      "A": "河豚中毒主要是處理河豚過程被細菌污染造成",
+      "B": "金黃色葡萄球菌中毒症狀主要是視力模糊、吞嚥困難",
+      "C": "沙門氏桿菌中毒症狀主要是腹瀉、噁心、嘔吐及發燒",
+      "D": "食物中毒之嚴重度與食入污染物的量與內毒素含量呈負相關"
+    },
+    "category": "考選部護理師高考",
+    "subject": "內外科護理學",
+    "year": 113,
+    "tags": [
+      "內外科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-med-surg-49",
+    "question": "有關自動體外電擊去顫器（AED）操作，下列敘述何者錯誤？",
+    "options": {
+      "A": "可由非醫護人員操作使用",
+      "B": "若病人體內裝有人工心臟節律器就不能使用AED",
+      "C": "操作步驟口訣：開、貼、插、按",
+      "D": "按電擊鈕前先清場，確認無人接觸病人"
+    },
+    "category": "考選部護理師高考",
+    "subject": "內外科護理學",
+    "year": 113,
+    "tags": [
+      "內外科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-med-surg-50",
+    "question": "有關漢生病（Hansen’s disease）俗稱痲瘋（leprosy）的照護措施，下列何者正確？",
+    "options": {
+      "A": "最常侵犯腸胃系統，應加強評估消化功能與營養狀態",
+      "B": "照護時採接觸及呼吸道隔離",
+      "C": "目前無治療藥物，採支持療法",
+      "D": "皮膚病變僅出現在臉部"
+    },
+    "category": "考選部護理師高考",
+    "subject": "內外科護理學",
+    "year": 113,
+    "tags": [
+      "內外科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-obs-ped-01",
+    "question": "有關孕產婦死亡率之敘述，下列何者正確？",
+    "options": {
+      "A": "係指一年內每十萬名活產中，於懷孕期間或懷孕終止42天內之婦女死亡數",
+      "B": "係指一年內每十萬名活產中，於第三妊娠期或懷孕終止7天內之婦女死亡數",
+      "C": "係指一年內每十萬名活產中，於第三妊娠期或懷孕終止30天內之婦女死亡數",
+      "D": "係指一年內每十萬名活產中，於懷孕期間或懷孕終止24小時內之婦女死亡數"
+    },
+    "category": "考選部護理師高考",
+    "subject": "產兒科護理學",
+    "year": 113,
+    "tags": [
+      "精神科與社區衛生護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-obs-ped-02",
+    "question": "有關妊娠期血液檢查之敘述，下列何者正確？",
+    "options": {
+      "A": "首次產檢需要篩檢人類免疫缺乏病毒",
+      "B": "第一妊娠期進行母體血液葡萄糖耐受篩檢",
+      "C": "第二妊娠期進行B群鏈球菌篩檢",
+      "D": "第三妊娠期進行德國麻疹抗體濃度價數篩檢"
+    },
+    "category": "考選部護理師高考",
+    "subject": "產兒科護理學",
+    "year": 113,
+    "tags": [
+      "產兒科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-obs-ped-03",
+    "question": "王先生將成為準父親，有關王先生於配偶孕期之心理變化，下列何者最適當？",
+    "options": {
+      "A": "第一孕期最常出現害怕生產的壓力",
+      "B": "第二孕期最擔憂是否能勝任成為父親的角色",
+      "C": "第一孕期常因胎動而感覺與胎兒連成一體",
+      "D": "第二孕期常會想像胎兒模樣及身為父親的形象"
+    },
+    "category": "考選部護理師高考",
+    "subject": "產兒科護理學",
+    "year": 113,
+    "tags": [
+      "產兒科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-obs-ped-04",
+    "question": "王女士，32歲，妊娠8週，前一胎因21對染色體異常引產，詢問此次有關唐氏症篩檢之敘述，下列何者最合 適？",
+    "options": {
+      "A": "建議妊娠16～18週之間，可以接受絨毛膜穿刺，確定胎兒染色體是否正常",
+      "B": "建議妊娠11～12週之間，可以接受羊膜腔穿刺，確定胎兒染色體是否正常",
+      "C": "建議妊娠21～24週之間，可以進行母血唐氏症篩檢，確定胎兒染色體是否正常",
+      "D": "建議妊娠15～20週之間，可以接受頸部透明帶的檢測，確定胎兒染色體是否正常"
+    },
+    "category": "考選部護理師高考",
+    "subject": "產兒科護理學",
+    "year": 113,
+    "tags": [
+      "產兒科護理學",
+      "精神科與社區衛生護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-obs-ped-05",
+    "question": "有關妊娠期的心臟血管系統生理變化，下列敘述何者錯誤？",
+    "options": {
+      "A": "出現生理性白血球增多症，白血球數量可增加到15,000/mm3",
+      "B": "妊娠生理性貧血是因紅血球攜鐵蛋白的能力降低所致",
+      "C": "心輸出量增加30～50%，以供應子宮、胎盤需要血流",
+      "D": "血漿中白蛋白降低，使得水分易滯留在血管間隙形成水腫"
+    },
+    "category": "考選部護理師高考",
+    "subject": "產兒科護理學",
+    "year": 113,
+    "tags": [
+      "解剖學",
+      "生理學",
+      "產兒科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-obs-ped-06",
+    "question": "有關孕期的營養需求，下列敘述何者錯誤？",
+    "options": {
+      "A": "於第三孕期多補充鐵劑",
+      "B": "整個孕期應多補充碘",
+      "C": "磷可參與早期的細胞分裂過程",
+      "D": "鈣質提供胎兒骨骼和牙齒的生長發育"
+    },
+    "category": "考選部護理師高考",
+    "subject": "產兒科護理學",
+    "year": 113,
+    "tags": [
+      "產兒科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-obs-ped-07",
+    "question": "葉女士，28歲，G1P0，待產過程中突然自然破水，內診發現子宮頸口開8公分、變薄程度80%、先露部位+1。下 列何者為最優先之護理處置？",
+    "options": {
+      "A": "提供灌腸",
+      "B": "監測胎心率變化",
+      "C": "提供氧氣",
+      "D": "採平躺增加子宮血流"
+    },
+    "category": "考選部護理師高考",
+    "subject": "產兒科護理學",
+    "year": 113,
+    "tags": [
+      "產兒科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-obs-ped-08",
+    "question": "陰道生產過程，下列何種情形表示先露部位胎頭已發生著冠（crowning）？",
+    "options": {
+      "A": "當子宮收縮時，胎頭顱頂上出現一圈可見的壓痕",
+      "B": "當子宮收縮時，胎頭出現於陰道口，宮縮間歇時，胎頭縮回陰道內",
+      "C": "當子宮收縮時，陰道口膨出可見胎頭，大小呈卵圓形",
+      "D": "當宮縮間歇時，胎頭出現於陰道口且不會縮回陰道內"
+    },
+    "category": "考選部護理師高考",
+    "subject": "產兒科護理學",
+    "year": 113,
+    "tags": [
+      "產兒科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-obs-ped-09",
+    "question": "有關分娩期預防產後出血的措施，下列何者不適當？",
+    "options": {
+      "A": "待產婦在進入第二產程前，開始持續靜脈注射methylergometrine（Methergin）",
+      "B": "胎盤娩出後，檢查胎盤以確認胎盤完整娩出",
+      "C": "在新生兒及產婦狀況穩定下，協助親子立即肌膚接觸",
+      "D": "產後於恢復室觀察，每15分鐘監測產婦的血壓及出血量"
+    },
+    "category": "考選部護理師高考",
+    "subject": "產兒科護理學",
+    "year": 113,
+    "tags": [
+      "產兒科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-obs-ped-10",
+    "question": "胎兒為頭產式，胎頭呈部分屈曲，其最可能以下列那條徑線通過產道？",
+    "options": {
+      "A": "枕下前囟徑（SOB）",
+      "B": "枕額徑（OF）",
+      "C": "枕頦徑（OM）",
+      "D": "頦下前囟徑（SMB）"
+    },
+    "category": "考選部護理師高考",
+    "subject": "產兒科護理學",
+    "year": 113,
+    "tags": [
+      "產兒科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-obs-ped-11",
+    "question": "劉女士，G1P0，子宮頸開4公分，每3分鐘宮縮一次，無胎頭骨盆不對稱（CPD），使用硬脊膜外麻醉，持續2 小時都未見胎頭下降，此時最優先之處置為何？",
+    "options": {
+      "A": "評估膀胱的情形",
+      "B": "評估胎頭大小",
+      "C": "給與ritodrine點滴注射，促進子宮收縮",
+      "D": "評估羊水量"
+    },
+    "category": "考選部護理師高考",
+    "subject": "產兒科護理學",
+    "year": 113,
+    "tags": [
+      "產兒科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-obs-ped-12",
+    "question": "王女士，初產婦，陰道生產，採純母乳哺育，產後6週重返職場的一週後，主訴發燒38℃，右側乳房情況如 圖所示，觸診溫熱且有痛感。最可能的診斷是？",
+    "options": {
+      "A": "因為剛剛返回工作狀態，所以最可能是壓力性乳腺管阻塞（blocked ducts）",
+      "B": "因為幾乎整個乳房大面積發紅，所以最可能是乳房腫脹（engorgement）",
+      "C": "因為乳頭可見傷口，所以最可能是乳腺炎（mastitis）",
+      "D": "因為乳房3、4點鐘方向有水囊狀感，所以最可能是乳房膿瘍（breast abscess）"
+    },
+    "category": "考選部護理師高考",
+    "subject": "產兒科護理學",
+    "year": 113,
+    "tags": [
+      "產兒科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-obs-ped-13",
+    "question": "蔡女士，初產婦，因產程遲滯而行剖腹生產，新生兒出生體重3,800公克。產婦計畫要完全哺餵母乳，擔心 自己奶水不足，因為從生產至今已兩天，都沒有脹奶的感覺，而且新生兒幾乎是含著乳房入睡，放下來就 哭。有關蔡女士對奶量的擔心，下列措施何者不適當？",
+    "options": {
+      "A": "評估新生兒兩天的排尿及排便情況",
+      "B": "告訴產婦產程過長及剖腹生產都會延後脹奶出現的時間，這是正常的",
+      "C": "肯定產婦完全母乳哺育的決定，了解這兩天新生兒吃奶及含乳的情況",
+      "D": "了解產婦執行手擠乳的情況，討論增加手擠奶頻率的可行性"
+    },
+    "category": "考選部護理師高考",
+    "subject": "產兒科護理學",
+    "year": 113,
+    "tags": [
+      "產兒科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-obs-ped-14",
+    "question": "何女士，G1P1，採陰道分娩，無任何產後合併症，產後4小時，觸診子宮底時發現位於臍上一指且偏右，下列 何者為首要的護理措施？",
+    "options": {
+      "A": "子宮按摩",
+      "B": "下床活動",
+      "C": "多喝開水",
+      "D": "如廁解尿"
+    },
+    "category": "考選部護理師高考",
+    "subject": "產兒科護理學",
+    "year": 113,
+    "tags": [
+      "產兒科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-obs-ped-15",
+    "question": "有關產後婦女之情緒照顧，下列護理指導何者不適當？",
+    "options": {
+      "A": "初產婦出現哭泣不安及缺乏育兒信心為產後憂鬱症，應儘速就醫",
+      "B": "在接受期（taking-in phase），鼓勵產婦陳述生產經驗，接受其感受，必要時可澄清其疑慮",
+      "C": "在緊執期（taking-hold phase），鼓勵參與及學習新生兒照護",
+      "D": "產婦即使進入放手期（letting-go phase），仍可能有不自覺的哀傷情緒"
+    },
+    "category": "考選部護理師高考",
+    "subject": "產兒科護理學",
+    "year": 113,
+    "tags": [
+      "產兒科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-obs-ped-16",
+    "question": "婦女產後痛（after pain）主要是評估下列那一個器官或組織之健康問題？",
+    "options": {
+      "A": "乳房、乳頭疼痛",
+      "B": "會陰、會陰傷口疼痛",
+      "C": "子宮、子宮間歇性收縮不適感",
+      "D": "肛門、痔瘡痛"
+    },
+    "category": "考選部護理師高考",
+    "subject": "產兒科護理學",
+    "year": 113,
+    "tags": [
+      "基本護理學",
+      "護理行政",
+      "產兒科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-obs-ped-17",
+    "question": "抱起新生兒放入磅秤測量體重，新生兒四肢出現對稱性的外展和伸直，大拇指與食指呈C字形，是下列那種 反射表現？",
+    "options": {
+      "A": "擁抱反射（moro reflex）",
+      "B": "驚嚇反射（startle reflex）",
+      "C": "手掌抓握反射（palmer grasp reflex）",
+      "D": "退縮反射（withdrawal reflex）"
+    },
+    "category": "考選部護理師高考",
+    "subject": "產兒科護理學",
+    "year": 113,
+    "tags": [
+      "生理學",
+      "產兒科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-obs-ped-18",
+    "question": "方小妹，39週頭產式出生，下列何者新生兒身體評估結果為異常發現？",
+    "options": {
+      "A": "胎頭變形（molding）",
+      "B": "結膜下點狀出血",
+      "C": "硬腭小白點（艾柏斯坦小珠Epstein's pearls）",
+      "D": "耳朵上緣位於內外眼眥連線以下"
+    },
+    "category": "考選部護理師高考",
+    "subject": "產兒科護理學",
+    "year": 113,
+    "tags": [
+      "基本護理學",
+      "產兒科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-obs-ped-19",
+    "question": "下列何者為評估男性新生兒皮膚飽和度的最佳部位？",
+    "options": {
+      "A": "陰囊",
+      "B": "四肢末端",
+      "C": "眼瞼",
+      "D": "腹部"
+    },
+    "category": "考選部護理師高考",
+    "subject": "產兒科護理學",
+    "year": 113,
+    "tags": [
+      "基本護理學",
+      "產兒科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-obs-ped-20",
+    "question": "王女士，G1P0，妊娠38週，因早期破水入院待產，待產時宮縮頻率及強度均不好，破水30小時後新生兒才娩 出。產後第2天出現下列症狀：體溫38.5～39.5℃、惡露呈紅色有惡臭味、子宮底高度臍平、子宮軟、有頭 痛及失眠、下腹部壓痛但無反彈性壓痛。上述王女士的身體狀況，其臨床症狀敘述下列何者正確？",
+    "options": {
+      "A": "會陰傷口感染",
+      "B": "子宮內膜炎",
+      "C": "腹膜炎",
+      "D": "泌尿道感染"
+    },
+    "category": "考選部護理師高考",
+    "subject": "產兒科護理學",
+    "year": 113,
+    "tags": [
+      "產兒科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-obs-ped-21",
+    "question": "接受子宮頸環紮術（cervical cerclage）之孕婦狀況，下列何者最適合？",
+    "options": {
+      "A": "上一胎足月產但此胎妊娠16週，子宮頸口擴張4公分",
+      "B": "前兩次均在妊娠21週時無痛性流產，此胎在16週子宮頸長度3.3公分",
+      "C": "妊娠18週有破水且有規則宮縮痛，內診發現子宮頸口擴張2公分",
+      "D": "前胎31週早產，此胎在28週例行性超音波發現子宮頸長度1公分"
+    },
+    "category": "考選部護理師高考",
+    "subject": "產兒科護理學",
+    "year": 113,
+    "tags": [
+      "產兒科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-obs-ped-22",
+    "question": "有關妊娠糖尿病之敘述，下列何者正確？",
+    "options": {
+      "A": "妊娠初期胎盤分泌人類胎盤泌乳激素（hPL）增加，產生胰島素拮抗",
+      "B": "容易導致流產及羊水過多",
+      "C": "與糖尿病遺傳史無關",
+      "D": "口服降血糖藥為主要治療方式"
+    },
+    "category": "考選部護理師高考",
+    "subject": "產兒科護理學",
+    "year": 113,
+    "tags": [
+      "內外科護理學",
+      "產兒科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-obs-ped-23",
+    "question": "李女士以oxytocin 進行引產，胎心音出現變異性減速，下列處置何者最適當？",
+    "options": {
+      "A": "提高oxytocin滴速",
+      "B": "降低oxytocin滴速",
+      "C": "維持原來oxytocin滴速",
+      "D": "停止oxytocin的滴注"
+    },
+    "category": "考選部護理師高考",
+    "subject": "產兒科護理學",
+    "year": 113,
+    "tags": [
+      "產兒科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-obs-ped-24",
+    "question": "有關逆行性射精之敘述，下列何者錯誤？",
+    "options": {
+      "A": "常見於脊髓損傷或糖尿病合併神經病變之患者",
+      "B": "可能為腹腔或骨盆腔手術後之併發症",
+      "C": "流至尿道的精液逆流至膀胱",
+      "D": "接受精子捐贈進行人工授精為唯一的治療方式"
+    },
+    "category": "考選部護理師高考",
+    "subject": "產兒科護理學",
+    "year": 113,
+    "tags": [
+      "產兒科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-obs-ped-25",
+    "question": "王女士罹患梅毒，王女士表示先生如果知道了，他會失去先生，不停掩面哭泣，下列護理措施何者最適當？",
+    "options": {
+      "A": "告知王女士切勿隱瞞，因先生可能已感染，請他立即連絡先生到院檢查",
+      "B": "衛教將以抗生素進行治療，立即協助施打cefazolin",
+      "C": "告知王女士哭泣無法解決問題，請王女士堅強面對",
+      "D": "傾聽王女士的不安與擔憂，鼓勵其與先生共同面對，接受治療"
+    },
+    "category": "考選部護理師高考",
+    "subject": "產兒科護理學",
+    "year": 113,
+    "tags": [
+      "產兒科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-obs-ped-26",
+    "question": "小花因誤食鐵劑而送醫治療，指導小花媽媽之護理措施，下列敘述何者最適當？",
+    "options": {
+      "A": "鐵劑通常不會沉積在肝臟或造成肝損傷",
+      "B": "一週後應注意腸胃不適或出血的症狀",
+      "C": "使用活性碳可以幫助鐵劑的吸附",
+      "D": "注射去鐵質劑，尿液會呈深褐／紅橙色"
+    },
+    "category": "考選部護理師高考",
+    "subject": "產兒科護理學",
+    "year": 113,
+    "tags": [
+      "產兒科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-obs-ped-27",
+    "question": "小明，16歲，高中一年級，在校成績低落、情緒不穩、易怒、缺課，曾表明想從世界消失。就醫後診斷為青 少年憂鬱症。媽媽詢問護理師如何幫助小明時，下列敘述何者錯誤？",
+    "options": {
+      "A": "讓小明知道自己生病了，需要治療",
+      "B": "多安排小明的戶外運動",
+      "C": "告知小明不要胡思亂想，應致力於課業成就",
+      "D": "多陪伴小明，避免小明獨處"
+    },
+    "category": "考選部護理師高考",
+    "subject": "產兒科護理學",
+    "year": 113,
+    "tags": [
+      "精神科與社區衛生護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-obs-ped-28",
+    "question": "有關滿15個月大幼兒之動作發展，下列敘述何者正確？",
+    "options": {
+      "A": "能正確指出身體的一部分",
+      "B": "能重疊6塊積木",
+      "C": "不需扶持可獨自行走",
+      "D": "會自己洗手並擦乾"
+    },
+    "category": "考選部護理師高考",
+    "subject": "產兒科護理學",
+    "year": 113,
+    "tags": [
+      "產兒科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-obs-ped-29",
+    "question": "君君，4歲，入院接受靜脈注射和腹部手術，住院期間護理師和君君說話的內容，下列敘述何者最不適當？",
+    "options": {
+      "A": "跟你的玩偶說你覺得害怕的事",
+      "B": "打針時跟護理師一起慢慢吸氣吐氣",
+      "C": "切開你的肚子才能把蟲拿出來",
+      "D": "你按著拔針的地方才不會流血"
+    },
+    "category": "考選部護理師高考",
+    "subject": "產兒科護理學",
+    "year": 113,
+    "tags": [
+      "基本護理學",
+      "解剖學",
+      "內外科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-obs-ped-30",
+    "question": "護理師給與2歲小廷耳滴藥的照護措施，下列敘述何者錯誤？",
+    "options": {
+      "A": "協助病童躺向健側半側臥",
+      "B": "將耳朵往下往後輕拉，使耳道變直",
+      "C": "將耳藥直接滴於鼓膜上",
+      "D": "滴藥後以手指按摩耳部促進藥物吸收"
+    },
+    "category": "考選部護理師高考",
+    "subject": "產兒科護理學",
+    "year": 113,
+    "tags": [
+      "產兒科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-obs-ped-31",
+    "question": "當嬰幼兒初次接觸陌生人或新環境，會表現出接受或退縮的態度。此為氣質評估內容中那一個項目？",
+    "options": {
+      "A": "反應閾",
+      "B": "適應度",
+      "C": "趨避性",
+      "D": "堅持度"
+    },
+    "category": "考選部護理師高考",
+    "subject": "產兒科護理學",
+    "year": 113,
+    "tags": [
+      "基本護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-obs-ped-32",
+    "question": "小亮，出生後診斷為腭裂（cleft palate），1歲時入院行腭裂修補術，有關術後約束之護理措施，下列敘 述何者正確？",
+    "options": {
+      "A": "木乃伊約束法",
+      "B": "手臂約束法",
+      "C": "手肘約束法",
+      "D": "背心式約束法"
+    },
+    "category": "考選部護理師高考",
+    "subject": "產兒科護理學",
+    "year": 113,
+    "tags": [
+      "產兒科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-obs-ped-33",
+    "question": "有關早產兒發展性照護的敘述，下列何者正確？",
+    "options": {
+      "A": "提供父母與早產兒皮膚對皮膚的袋鼠式護理",
+      "B": "執行治療時，固定早產兒雙臂與腿呈伸展姿勢的寧握護理",
+      "C": "採分散護理，以避免早產兒生命徵象不穩定",
+      "D": "保持環境明亮，早產兒戴上遮光眼罩以促進視覺發展"
+    },
+    "category": "考選部護理師高考",
+    "subject": "產兒科護理學",
+    "year": 113,
+    "tags": [
+      "產兒科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-obs-ped-34",
+    "question": "小紅，12歲，罹患急性骨髓性白血病，治療後復發，目前處於疾病末期，她向父母發脾氣說：「為什麼生病 的人是我，都是你們沒有把我照顧好！」，下列照護措施何者最適合？",
+    "options": {
+      "A": "仔細傾聽其話語，鼓勵小紅表達內心的需要",
+      "B": "鼓勵接受目前的治療措施，降低治療造成的疼痛",
+      "C": "鼓勵與同儕聯繫，讓其有歸屬感，並轉移焦點",
+      "D": "說明父母與醫療團隊已經盡最大努力協助治療"
+    },
+    "category": "考選部護理師高考",
+    "subject": "產兒科護理學",
+    "year": 113,
+    "tags": [
+      "產兒科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-obs-ped-35",
+    "question": "小敏妊娠週數26週出生，醫師診斷為壞死性腸炎（necrotizing enterocolitis, NEC），有關其護理照護及 處置之敘述，下列何者最不適當？",
+    "options": {
+      "A": "為防止腸道受損，應避免測量肛溫",
+      "B": "初期觀察小敏是否會出現活動力下降、體溫不穩及呼吸窘迫等症狀",
+      "C": "立即禁食，給與全靜脈營養",
+      "D": "護理評估發現腸蠕動減慢，嘔吐物不含膽汁"
+    },
+    "category": "考選部護理師高考",
+    "subject": "產兒科護理學",
+    "year": 113,
+    "tags": [
+      "病理學",
+      "產兒科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-obs-ped-36",
+    "question": "有關預防造成新生兒猝死之睡眠環境的護理指導，下列敘述何者正確？",
+    "options": {
+      "A": "母親與嬰兒同床以方便母乳哺餵",
+      "B": "嬰兒應該仰睡且以枕頭抬高頭部",
+      "C": "嬰兒的枕頭旁擺放絨毛玩具以增加安全感",
+      "D": "嬰兒應該避免穿過多衣服或用衣物包覆頭部"
+    },
+    "category": "考選部護理師高考",
+    "subject": "產兒科護理學",
+    "year": 113,
+    "tags": [
+      "產兒科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-obs-ped-37",
+    "question": "有關腮腺炎（mumps）最常見的合併症，下列敘述何者正確？",
+    "options": {
+      "A": "無菌性腦膜炎",
+      "B": "肺炎",
+      "C": "熱性痙攣",
+      "D": "續發性皮膚感染"
+    },
+    "category": "考選部護理師高考",
+    "subject": "產兒科護理學",
+    "year": 113,
+    "tags": [
+      "產兒科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-obs-ped-38",
+    "question": "陳小弟，5歲，罹患扁桃腺炎（tonsillitis），接受扁桃腺切除手術（tonsillectomy），下列術後護理何 者正確？",
+    "options": {
+      "A": "預防肺擴張不全，鼓勵深呼吸、用力咳嗽",
+      "B": "注意觀察是否有吞嚥或清喉嚨次數增加",
+      "C": "局部熱敷或提供熱食，促進傷口血液循環",
+      "D": "提供含維生素C飲料（如檸檬汁），促進傷口癒合"
+    },
+    "category": "考選部護理師高考",
+    "subject": "產兒科護理學",
+    "year": 113,
+    "tags": [
+      "內外科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-obs-ped-39",
+    "question": "有關嬰幼兒呼吸道特性的敘述，下列何者錯誤?",
+    "options": {
+      "A": "耳咽管較短且水平，較易受感染",
+      "B": "舌頭在口腔的比例較大，感染後易出現阻塞",
+      "C": "嬰兒喉頭在頸部較高處，較易出現吸入性肺炎",
+      "D": "嬰幼兒胸腔順應性較成人低"
+    },
+    "category": "考選部護理師高考",
+    "subject": "產兒科護理學",
+    "year": 113,
+    "tags": [
+      "生理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-obs-ped-40",
+    "question": "有關川崎氏症病童的治療及其目的，下列敘述何者正確？",
+    "options": {
+      "A": "給與阿斯匹靈（aspirin），以促進血小板凝集",
+      "B": "給與免疫球蛋白（IVIG）可有效降低冠狀動脈瘤發生",
+      "C": "給與苯巴比特魯錠（phenobarbital）治療舞蹈症",
+      "D": "給與盤尼西林（penicillin）以預防發炎"
+    },
+    "category": "考選部護理師高考",
+    "subject": "產兒科護理學",
+    "year": 113,
+    "tags": [
+      "產兒科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-obs-ped-41",
+    "question": "有關嬰幼兒缺鐵性貧血（iron deficiency anemia）之敘述，下列何者正確？",
+    "options": {
+      "A": "屬體染色體隱性遺傳疾病",
+      "B": "常發生於6～24個月大的足月兒",
+      "C": "紅血球體積比正常紅血球大",
+      "D": "長期貧血可能導致心跳過慢之代償反應"
+    },
+    "category": "考選部護理師高考",
+    "subject": "產兒科護理學",
+    "year": 113,
+    "tags": [
+      "產兒科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-obs-ped-42",
+    "question": "小華，6個月，罹患兒童癌症，目前接受化學治療且須治療半年以上，則小華可以接種下列何種疫苗？",
+    "options": {
+      "A": "四合一疫苗（Tdap-IPV）",
+      "B": "水痘疫苗",
+      "C": "輪狀病毒疫苗",
+      "D": "麻疹腮腺炎德國麻疹混合疫苗"
+    },
+    "category": "考選部護理師高考",
+    "subject": "產兒科護理學",
+    "year": 113,
+    "tags": [
+      "微生物學與免疫學",
+      "病理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-obs-ped-43",
+    "question": "小萍診斷為先天性甲狀腺功能低下症，有關血液檢驗值之敘述，下列何者正確？",
+    "options": {
+      "A": "甲狀腺素T4高於正常值、甲狀腺刺激素TSH高於正常值",
+      "B": "甲狀腺素T4高於正常值、甲狀腺刺激素TSH低於正常值",
+      "C": "甲狀腺素T4低於正常值、甲狀腺刺激素TSH低於正常值",
+      "D": "甲狀腺素T4低於正常值、甲狀腺刺激素TSH高於正常值"
+    },
+    "category": "考選部護理師高考",
+    "subject": "產兒科護理學",
+    "year": 113,
+    "tags": [
+      "產兒科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-obs-ped-44",
+    "question": "有關性早熟（precocious puberty）的敘述，下列何者正確？",
+    "options": {
+      "A": "男孩在12歲以前、女孩在11歲以前出現第二性徵，即為性早熟",
+      "B": "血清中的LH、FSH、estrogen、testosterone皆正常",
+      "C": "中樞性性早熟可給與leuprolide acetate，以抑制促性腺激素釋放荷爾蒙（GnRH）的分泌",
+      "D": "可以腹部斷層掃描確認是否有中樞性性早熟"
+    },
+    "category": "考選部護理師高考",
+    "subject": "產兒科護理學",
+    "year": 113,
+    "tags": [
+      "產兒科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-obs-ped-45",
+    "question": "膽道閉鎖（biliary atresia）是嬰兒先天性疾病之一，下列敘述何者錯誤？",
+    "options": {
+      "A": "常出現灰白色的大便、暗茶色的尿液",
+      "B": "容易影響脂肪的消化吸收，導致水溶性維生素缺乏",
+      "C": "膽管炎是手術後常見的合併症之一",
+      "D": "提供不需要膽汁消化的中鏈脂肪酸配方奶、高蛋白牛奶為主"
+    },
+    "category": "考選部護理師高考",
+    "subject": "產兒科護理學",
+    "year": 113,
+    "tags": [
+      "產兒科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-obs-ped-46",
+    "question": "小強罹患先天性巨結腸症（congential megacolon），有關照護和手術之護理指導敘述，下列何者正確？",
+    "options": {
+      "A": "保守療法應採低渣、高熱量、高蛋白飲食",
+      "B": "手術前需採肥皂水進行腸道清潔灌腸",
+      "C": "術後若有造瘻口腫脹情形，則是異常現象，須立即通報醫師",
+      "D": "結腸造口的黏膜並無神經，且會比周圍皮膚低"
+    },
+    "category": "考選部護理師高考",
+    "subject": "產兒科護理學",
+    "year": 113,
+    "tags": [
+      "內外科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-obs-ped-47",
+    "question": "有關兒童急性腹瀉時，下列護理處置何者最適當？",
+    "options": {
+      "A": "給與腸道吸附劑（kaolin-pectin），與食物一起服用",
+      "B": "以雞湯取代配方奶",
+      "C": "水分的補充可給與口服葡萄糖電解質水",
+      "D": "配方奶泡濃一些，減少水瀉的次數"
+    },
+    "category": "考選部護理師高考",
+    "subject": "產兒科護理學",
+    "year": 113,
+    "tags": [
+      "產兒科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-obs-ped-48",
+    "question": "有關兒童腦神經疾病導致的顱內壓升高（IICP），若無適切介入措施，常會造成兒童生命危險，下列護理措 施何者正確？",
+    "options": {
+      "A": "可過度換氣讓動脈血中氧氣濃度（PaO2）維持在27～30 mmHg",
+      "B": "應維持病童房間光線明亮，避免病童因頭昏跌倒",
+      "C": "協助抬高床頭約30度，維持頭頸部自然平直",
+      "D": "若有痰液，教導常做深呼吸咳嗽，避免積痰而缺氧"
+    },
+    "category": "考選部護理師高考",
+    "subject": "產兒科護理學",
+    "year": 113,
+    "tags": [
+      "解剖學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-obs-ped-49",
+    "question": "小英，6歲，罹患重症肌無力（myasthenia gravis），下列護理措施何者不適當？",
+    "options": {
+      "A": "鼓勵加強費力的活動，有助改善肌肉力量",
+      "B": "若出現複視情形，需預防跌倒",
+      "C": "觀察是否有呼吸困難或痰液不易咳出情形",
+      "D": "眼瞼下垂是最早出現的症狀"
+    },
+    "category": "考選部護理師高考",
+    "subject": "產兒科護理學",
+    "year": 113,
+    "tags": [
+      "產兒科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-obs-ped-50",
+    "question": "有關熱性痙攣（febrile convulsion）的敘述，下列何者最不適當？",
+    "options": {
+      "A": "發燒介於37～38℃之間，且出現單側性的全身性僵直",
+      "B": "為引起幼兒抽筋或痙攣最常見的原因之一",
+      "C": "發燒是誘發因素，其基礎疾病為感染性病原，如上呼吸道感染",
+      "D": "發作時，若出現牙關緊閉，不可強行將兒童嘴巴打開"
+    },
+    "category": "考選部護理師高考",
+    "subject": "產兒科護理學",
+    "year": 113,
+    "tags": [
+      "產兒科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-psych-community-01",
+    "question": "有關情感轉移（transference）的敘述，下列何者正確？",
+    "options": {
+      "A": "是指病人將過去經驗的人物情感轉移到護理師",
+      "B": "是指護理師將過去經驗的人物情感轉移到病人",
+      "C": "對護病關係的建立絕對有不好的影響",
+      "D": "是指護理師對病人有性幻想"
+    },
+    "category": "考選部護理師高考",
+    "subject": "精神科與社區衛生護理學",
+    "year": 113,
+    "tags": [
+      "病理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-psych-community-02",
+    "question": "有關多巴胺（dopamine）傳導路徑理論與思覺失調症的關係，下列敘述何者最適切？",
+    "options": {
+      "A": "興趣動機缺乏的症狀主要與結節—漏斗部多巴胺路徑有關",
+      "B": "妄想幻覺的症狀主要與中腦—邊緣多巴胺路徑有關",
+      "C": "類巴金森氏症狀主要與中腦—皮質多巴胺路徑有關",
+      "D": "泌乳素上升的副作用主要與黑質—紋狀體多巴胺路徑有關"
+    },
+    "category": "考選部護理師高考",
+    "subject": "精神科與社區衛生護理學",
+    "year": 113,
+    "tags": [
+      "生理學",
+      "精神科與社區衛生護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-psych-community-03",
+    "question": "有關家庭治療之敘述，下列何者最適切？",
+    "options": {
+      "A": "鮑恩（Bowen）家庭治療理論中三角關係（triangles），僅存於夫妻或手足間",
+      "B": "鮑恩（Bowen）家庭治療之目標是降低家庭成員分化程度",
+      "C": "策略性（strategic）家庭治療以解決家庭溝通問題為導向",
+      "D": "家庭治療並不處理家庭危機，僅提供諮商與行為修正"
+    },
+    "category": "考選部護理師高考",
+    "subject": "精神科與社區衛生護理學",
+    "year": 113,
+    "tags": [
+      "精神科與社區衛生護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-psych-community-04",
+    "question": "李先生為憂鬱症病人，因工作不順遂，與同事發生嚴重爭執，由案妻陪同到醫院接受治療，下列何項溝通技 巧最不適宜？",
+    "options": {
+      "A": "主動傾聽",
+      "B": "澄清",
+      "C": "拓寬話題",
+      "D": "批判"
+    },
+    "category": "考選部護理師高考",
+    "subject": "精神科與社區衛生護理學",
+    "year": 113,
+    "tags": [
+      "精神科與社區衛生護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-psych-community-05",
+    "question": "有關認知行為治療的敘述，下列何者最適切？",
+    "options": {
+      "A": "不處理壓力的生理反應",
+      "B": "引導個案調整想法和行為",
+      "C": "強調個案早期發展階段的問題",
+      "D": "了解個案潛意識對人際關係的影響"
+    },
+    "category": "考選部護理師高考",
+    "subject": "精神科與社區衛生護理學",
+    "year": 113,
+    "tags": [
+      "精神科與社區衛生護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-psych-community-06",
+    "question": "汪小姐剛入住急性精神科病房，覺得門把骯髒，都使用紙張包覆才願意轉動把手，下列何項護理措施最適 宜？",
+    "options": {
+      "A": "不給與紙張，強迫他適應觸摸門把",
+      "B": "向他解說，拿紙張是不必要的",
+      "C": "要他負責清洗病房的門把",
+      "D": "提供他紙張，直到他的焦慮減輕"
+    },
+    "category": "考選部護理師高考",
+    "subject": "精神科與社區衛生護理學",
+    "year": 113,
+    "tags": [
+      "精神科與社區衛生護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-psych-community-07",
+    "question": "有關日落症候群（sundown syndrome）較常見於何種疾患？",
+    "options": {
+      "A": "失智症",
+      "B": "恐慌症",
+      "C": "雙相情緒障礙症",
+      "D": "譫妄患者"
+    },
+    "category": "考選部護理師高考",
+    "subject": "精神科與社區衛生護理學",
+    "year": 113,
+    "tags": [
+      "精神科與社區衛生護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-psych-community-08",
+    "question": "葉同學剛滿18歲，診斷為雙相情緒障礙症（bipolar disorder），媽媽非常不解的詢問護理師為什麼會這 樣。關於疾病的生物病因，下列何項回答最為適切？",
+    "options": {
+      "A": "受到 近日持續高溫的影響，待天氣轉涼即可改善",
+      "B": "跟內分泌系統或神經傳導物質有關，需要藥物治療",
+      "C": "跟家族遺傳無直接相關，媽媽不用太自責",
+      "D": "鉛中毒是最常見的生物病因"
+    },
+    "category": "考選部護理師高考",
+    "subject": "精神科與社區衛生護理學",
+    "year": 113,
+    "tags": [
+      "精神科與社區衛生護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-psych-community-09",
+    "question": "下列何項描述符合鬱症發作（major depressive episode）的診斷？",
+    "options": {
+      "A": "主觀感受想法洶湧不止",
+      "B": "憂鬱症狀須持續二週才能診斷",
+      "C": "與是否造成社交、職業或其他功能缺損無關",
+      "D": "可能失眠，不會嗜睡"
+    },
+    "category": "考選部護理師高考",
+    "subject": "精神科與社區衛生護理學",
+    "year": 113,
+    "tags": [
+      "精神科與社區衛生護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-psych-community-10",
+    "question": "有關思覺失調症病人出現生活懶散、缺乏動機，下列何項護理措施最不適切？",
+    "options": {
+      "A": "鼓勵建立每日作息表",
+      "B": "對參與團體治療給予讚賞",
+      "C": "與病人的互動保持真誠與公開",
+      "D": "向病人保證藥物治療只是短暫的"
+    },
+    "category": "考選部護理師高考",
+    "subject": "精神科與社區衛生護理學",
+    "year": 113,
+    "tags": [
+      "精神科與社區衛生護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-psych-community-11",
+    "question": "王小姐有被害妄想，一直擔心家人在食物中下毒，入院後仍不肯進食。下列何者是最優先的護理措施？",
+    "options": {
+      "A": "請醫師立即插鼻胃管給予灌食",
+      "B": "告知病人再不進食，要進保護室",
+      "C": "請病人家屬準備伙食",
+      "D": "協助病人自行採購包裝完整的食物"
+    },
+    "category": "考選部護理師高考",
+    "subject": "精神科與社區衛生護理學",
+    "year": 113,
+    "tags": [
+      "精神科與社區衛生護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-psych-community-12",
+    "question": "有關思覺失調症病人常不規則服藥，下列何項出院藥物護理最不適切？",
+    "options": {
+      "A": "評估家庭主要照顧者是誰",
+      "B": "了解不服藥的原因",
+      "C": "提供藥物相關資訊",
+      "D": "返家後的藥物，可供家人自行選擇"
+    },
+    "category": "考選部護理師高考",
+    "subject": "精神科與社區衛生護理學",
+    "year": 113,
+    "tags": [
+      "藥理學",
+      "精神科與社區衛生護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-psych-community-13",
+    "question": "根據佛洛伊德學說，人格障礙病人在肛門期受到過度的管教約束，影響心性發展。以下何者為其日後的行為 模式？",
+    "options": {
+      "A": "對不同性別的父母產生性吸引",
+      "B": "強烈地傾向追求愉悅、避免痛苦",
+      "C": "行為傾向一板一眼、缺乏彈性",
+      "D": "生活的大小事都要他人為其承擔責任"
+    },
+    "category": "考選部護理師高考",
+    "subject": "精神科與社區衛生護理學",
+    "year": 113,
+    "tags": [
+      "精神科與社區衛生護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-psych-community-14",
+    "question": "有關恐慌症的敘述，下列何者最不適切？",
+    "options": {
+      "A": "預期中的反覆發作",
+      "B": "突發的恐懼會於幾分鐘內達最高峰",
+      "C": "常見心悸、喘不過氣、胸痛等症狀",
+      "D": "可能出現失真感、失自我感"
+    },
+    "category": "考選部護理師高考",
+    "subject": "精神科與社區衛生護理學",
+    "year": 113,
+    "tags": [
+      "精神科與社區衛生護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-psych-community-15",
+    "question": "有關美沙冬（methadone）的敘述，下列何者正確？",
+    "options": {
+      "A": "不會有呼吸抑制、欣快感和戒斷症狀",
+      "B": "成癮性比海洛因低，戒斷症狀也比海洛因輕微",
+      "C": "是一種替代療法，其治療主要是心理安撫作用",
+      "D": "病人需終身服用"
+    },
+    "category": "考選部護理師高考",
+    "subject": "精神科與社區衛生護理學",
+    "year": 113,
+    "tags": [
+      "精神科與社區衛生護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-psych-community-16",
+    "question": "李同學，12歲，對無法停止洗手行為，感到情緒低落並無自信，導致每次不停的洗手，即使手已經破皮仍繼 續洗手。護理師建議李同學藉由玩自己最喜歡的小小兵玩具轉移注意力並練習不繼續洗手。此種照護處置是 應用下列何種治療技巧？",
+    "options": {
+      "A": "沙箱療法（sand body therapy）",
+      "B": "非指引性治療（non-directive play）",
+      "C": "暴露與反應阻止法（exposure and response prevention）",
+      "D": "生理回饋（bio-feedback）"
+    },
+    "category": "考選部護理師高考",
+    "subject": "精神科與社區衛生護理學",
+    "year": 113,
+    "tags": [
+      "基本護理學",
+      "病理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-psych-community-17",
+    "question": "有關物質使用障礙症成因之敘述，下列何者錯誤？",
+    "options": {
+      "A": "成癮物質會直接活化酬償系統，產生愉悅感",
+      "B": "同儕互相影響是使用成癮物質的因素之一",
+      "C": "家庭功能失調是使用成癮物質的因素之一",
+      "D": "與對成癮物質的認知無關，不會想戒除"
+    },
+    "category": "考選部護理師高考",
+    "subject": "精神科與社區衛生護理學",
+    "year": 113,
+    "tags": [
+      "精神科與社區衛生護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-psych-community-18",
+    "question": "廖奶奶，84歲，獨居，三個月前經歷結縭60年的老伴過世，面帶愁容、不與人打招呼。廖奶奶向女兒表示自 己不想再吃藥了，活著沒有意思。評估廖奶奶的精神健康狀況後，下列何者應為最優先的護理處置？",
+    "options": {
+      "A": "了解廖奶奶對於伴侶離世的內心感受，協助抒發與轉移注意",
+      "B": "進一步評估廖奶奶的自殺意念與計畫，防範自殺危險",
+      "C": "陪伴廖奶奶透過緬懷過往記憶，重新找到價值與存活意義",
+      "D": "儘快安排廖奶奶入住護理之家，提供緊急密切的生理照護"
+    },
+    "category": "考選部護理師高考",
+    "subject": "精神科與社區衛生護理學",
+    "year": 113,
+    "tags": [
+      "基本護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-psych-community-19",
+    "question": "承上題，廖奶奶經醫師建議入院治療，有關各項治療的敘述，下列何者最適當？",
+    "options": {
+      "A": "透過哀傷輔導，可協助廖奶奶表達內心的感受",
+      "B": "為改善廖奶奶憂鬱情緒，必須服用rivastigmine（Exelon®）",
+      "C": "為防範廖奶奶自殺，護理師應密切觀察，每5分鐘提供探視",
+      "D": "儘量要求廖奶奶參加所有治療活動，轉移其負面情緒"
+    },
+    "category": "考選部護理師高考",
+    "subject": "精神科與社區衛生護理學",
+    "year": 113,
+    "tags": [
+      "精神科與社區衛生護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-psych-community-20",
+    "question": "下列何者不屬於神經發展障礙症（neurodevelopmental disorders）的疾病？",
+    "options": {
+      "A": "智能不足",
+      "B": "自閉症類群障礙症",
+      "C": "注意力不足／過動症",
+      "D": "遺尿症"
+    },
+    "category": "考選部護理師高考",
+    "subject": "精神科與社區衛生護理學",
+    "year": 113,
+    "tags": [
+      "解剖學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-psych-community-21",
+    "question": "孫先生於精神科病房出院後，規則服藥，病情穩定，但面臨經濟困境及就業需求。護理師為協助其發展經濟 及就業，必須具有下列何項實務能力？",
+    "options": {
+      "A": "建構自我",
+      "B": "疾病管理",
+      "C": "精神衛生需求評估",
+      "D": "資源連結"
+    },
+    "category": "考選部護理師高考",
+    "subject": "精神科與社區衛生護理學",
+    "year": 113,
+    "tags": [
+      "精神科與社區衛生護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-psych-community-22",
+    "question": "有關社區心理衛生工作之敘述，下列何者屬於第三級預防工作？",
+    "options": {
+      "A": "加強門診治療功能",
+      "B": "在里民中心辦理心理衛生講座",
+      "C": "對社區中有高度自傷危險者給予危機處置",
+      "D": "協助精神病人重返社區生活"
+    },
+    "category": "考選部護理師高考",
+    "subject": "精神科與社區衛生護理學",
+    "year": 113,
+    "tags": [
+      "精神科與社區衛生護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-psych-community-23",
+    "question": "災難急性期運用安心團體（debriefing），下列敘述何者最適切？",
+    "options": {
+      "A": "於創傷後三個月開始實施最適宜",
+      "B": "治療者協助個案回顧、經歷並整合創傷之過程",
+      "C": "是屬於精神分析類的支持性治療團體",
+      "D": "進行結構式之駁斥、澄清、面質、結束等步驟"
+    },
+    "category": "考選部護理師高考",
+    "subject": "精神科與社區衛生護理學",
+    "year": 113,
+    "tags": [
+      "精神科與社區衛生護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-psych-community-24",
+    "question": "有關精神護理之家的服務對象其收置條件，可包含下列何者？①精神症狀穩定且慢性化者 ②不需急性住院 治療但需生活照顧者 ③需急性住院治療之年邁者、失智者 ④無家可歸的慢性精神病人",
+    "options": {
+      "A": "僅③④",
+      "B": "僅①②③",
+      "C": "僅①②④",
+      "D": "①②③④"
+    },
+    "category": "考選部護理師高考",
+    "subject": "精神科與社區衛生護理學",
+    "year": 113,
+    "tags": [
+      "精神科與社區衛生護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-psych-community-25",
+    "question": "吳先生，因住院期間多次企圖割腕自殺，必須採取保護約束之措施。有關約束處置之敘述，下列何者最不適 當？",
+    "options": {
+      "A": "需有醫師開立醫囑，才能給予約束",
+      "B": "至少每15分鐘探視病人一次",
+      "C": "每2小時評估病人是否可以解除保護約束",
+      "D": "應持續約束病人，直到自殺意念消失"
+    },
+    "category": "考選部護理師高考",
+    "subject": "精神科與社區衛生護理學",
+    "year": 113,
+    "tags": [
+      "精神科與社區衛生護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-psych-community-26",
+    "question": "有關基層醫療保健之社區與醫療服務原則，下列何者最不適當？",
+    "options": {
+      "A": "可近性（accessibility）",
+      "B": "可接受性（acceptability）",
+      "C": "可用性（availability）",
+      "D": "穩定性（stability）"
+    },
+    "category": "考選部護理師高考",
+    "subject": "精神科與社區衛生護理學",
+    "year": 113,
+    "tags": [
+      "精神科與社區衛生護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-psych-community-27",
+    "question": "衛生福利部國民健康署成立青少年好漾館與WHO之SDGs中，那一個議題最為相關？",
+    "options": {
+      "A": "消弭貧窮（No poverty）",
+      "B": "良好健康與福祉（Good health and well-being）",
+      "C": "優質教育（Quality education）",
+      "D": "永續城市與社區（Sustainable cities and communities）"
+    },
+    "category": "考選部護理師高考",
+    "subject": "精神科與社區衛生護理學",
+    "year": 113,
+    "tags": [
+      "精神科與社區衛生護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-psych-community-28",
+    "question": "有關疾病發生率的敘述，下列何者最適當？",
+    "options": {
+      "A": "通常以比例（ratio）方式呈現",
+      "B": "指某一時間內，族群中現存的病例數",
+      "C": "可推算罹病的可能性或致病因子",
+      "D": "最適合用來規劃長期醫療設備、人力配置的參考"
+    },
+    "category": "考選部護理師高考",
+    "subject": "精神科與社區衛生護理學",
+    "year": 113,
+    "tags": [
+      "精神科與社區衛生護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-psych-community-29",
+    "question": "欲探討婦女懷孕期間使用藥物和胎兒畸型的因果關係，下列何種研究方法最合適？",
+    "options": {
+      "A": "臨床試驗 (clinical trial)",
+      "B": "描述性調查法(descriptive survey)",
+      "C": "橫斷式研究法(cross-sectional study)",
+      "D": "世代追蹤研究法(cohort study)"
+    },
+    "category": "考選部護理師高考",
+    "subject": "精神科與社區衛生護理學",
+    "year": 113,
+    "tags": [
+      "藥理學",
+      "產兒科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-psych-community-30",
+    "question": "若病人出現發燒、出疹、咳嗽等疑似麻疹症狀，應收集「TOCC」，TOCC包括下列何者？①抽菸史 （cessation） ②旅遊史（travel） ③接觸史（contact） ④職業史（occupation） ⑤手術史 （operation） ⑥發病時間（time） ⑦群聚史（cluster）",
+    "options": {
+      "A": "①②③⑤",
+      "B": "①②④⑥",
+      "C": "②③④⑦",
+      "D": "③⑤⑥⑦"
+    },
+    "category": "考選部護理師高考",
+    "subject": "精神科與社區衛生護理學",
+    "year": 113,
+    "tags": [
+      "內外科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-psych-community-31",
+    "question": "有關華倫（Warren）社區功能理論的敘述，下列何者正確？①社會控制－社區巡守隊 ②社會參與－學校導 護志工 ③相互支援－慈善團體愛心捐贈 ④生產分配消費－社區讀書會",
+    "options": {
+      "A": "①②③",
+      "B": "①②④",
+      "C": "①③④",
+      "D": "②③④"
+    },
+    "category": "考選部護理師高考",
+    "subject": "精神科與社區衛生護理學",
+    "year": 113,
+    "tags": [
+      "護理行政"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-psych-community-32",
+    "question": "社區護理師完成社區健康診斷之後，想瞭解社區對問題的瞭解與解決問題的動機，下列何種方式最適合？",
+    "options": {
+      "A": "德菲研究法（Delphi method）",
+      "B": "文獻考察（literature review）",
+      "C": "擋風玻璃式調查（windshield survey）",
+      "D": "民意團體過程（nominal group process）"
+    },
+    "category": "考選部護理師高考",
+    "subject": "精神科與社區衛生護理學",
+    "year": 113,
+    "tags": [
+      "精神科與社區衛生護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-psych-community-33",
+    "question": "有關社區夥伴關係（community partnership）強調的原則，下列何者最不適當？",
+    "options": {
+      "A": "促進社區參與健康活動",
+      "B": "由下而上匯集社區民眾意見與需求",
+      "C": "依照衛生所目標辦理活動",
+      "D": "專業人員與社區民眾共同討論決定社區活動"
+    },
+    "category": "考選部護理師高考",
+    "subject": "精神科與社區衛生護理學",
+    "year": 113,
+    "tags": [
+      "精神科與社區衛生護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-psych-community-34",
+    "question": "有關健康促進與疾病預防概念之敘述，下列那些正確？①健康促進對象為全體民眾 ②疾病預防的對象為疾 病高危險群 ③健康促進是要避免某行為發生 ④疾病預防是積極拓展健康潛能 ⑤健康促進能使個人潛能 發揮至最佳狀態",
+    "options": {
+      "A": "①②③",
+      "B": "①②④",
+      "C": "①②⑤",
+      "D": "②③⑤"
+    },
+    "category": "考選部護理師高考",
+    "subject": "精神科與社區衛生護理學",
+    "year": 113,
+    "tags": [
+      "精神科與社區衛生護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-psych-community-35",
+    "question": "有關高血壓護理指導後的衝擊評價指標，下列何者最適當？①時間的安排 ②計畫的經費 ③控制高血壓的 態度 ④高血壓的就醫行為 ⑤高血壓的罹病率",
+    "options": {
+      "A": "①②",
+      "B": "①③",
+      "C": "③④",
+      "D": "④⑤"
+    },
+    "category": "考選部護理師高考",
+    "subject": "精神科與社區衛生護理學",
+    "year": 113,
+    "tags": [
+      "內外科護理學",
+      "護理行政"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-psych-community-36",
+    "question": "平安社區老年人口逐年增加，里長規劃安全的健走步道，並在公園內增設運動器材且定期維護確保安全性。 根據社會生態模式，是屬於何項因素之介入措施？",
+    "options": {
+      "A": "人際因素",
+      "B": "組織因素",
+      "C": "社區因素",
+      "D": "個人因素"
+    },
+    "category": "考選部護理師高考",
+    "subject": "精神科與社區衛生護理學",
+    "year": 113,
+    "tags": [
+      "護理行政"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-psych-community-37",
+    "question": "有關細懸浮微粒（PM2.5）的敘述，下列何者最適當？",
+    "options": {
+      "A": "會影響呼吸道造成疾病，但不易進入肺泡",
+      "B": "濃度達第三級一般民眾要減少戶外活動",
+      "C": "第十級是指日平均值或24小時值濃度≧ 71μg/m3",
+      "D": "環境部現行安全標準年平均值訂為35μg/m3"
+    },
+    "category": "考選部護理師高考",
+    "subject": "精神科與社區衛生護理學",
+    "year": 113,
+    "tags": [
+      "精神科與社區衛生護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-psych-community-38",
+    "question": "有關醫療廢棄物的處理原則，下列何者最適當？",
+    "options": {
+      "A": "於5℃以上貯存以7日為限",
+      "B": "於0～5℃貯存以7日為限",
+      "C": "於0℃以下貯存以2個月為限",
+      "D": "於0℃以下貯存以18個月為限"
+    },
+    "category": "考選部護理師高考",
+    "subject": "精神科與社區衛生護理學",
+    "year": 113,
+    "tags": [
+      "精神科與社區衛生護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-psych-community-39",
+    "question": "有關酸雨的敘述，下列何者最正確？",
+    "options": {
+      "A": "是大氣中的CO2溶解於雨水中所致",
+      "B": "能使岩石中有毒金屬元素溶解",
+      "C": "只影響水中的動物，對植物沒有影響",
+      "D": "是指酸鹼值小於6的雨水"
+    },
+    "category": "考選部護理師高考",
+    "subject": "精神科與社區衛生護理學",
+    "year": 113,
+    "tags": [
+      "精神科與社區衛生護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-psych-community-40",
+    "question": "顧先生原為一家之主，因病辭職在家休養，現由妻子支撐全家開銷並成為家中主要經濟決策者，下列何者最 符合其家庭權力類型？",
+    "options": {
+      "A": "傳統權威型",
+      "B": "情況權威型",
+      "C": "分享權威型",
+      "D": "讓步妥協型"
+    },
+    "category": "考選部護理師高考",
+    "subject": "精神科與社區衛生護理學",
+    "year": 113,
+    "tags": [
+      "精神科與社區衛生護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-psych-community-41",
+    "question": "承上題，顧太太因身兼數種角色，自覺難以扮演好各個角色，此現象顯示顧太太出現下列何種角色情況？",
+    "options": {
+      "A": "角色相稱",
+      "B": "角色力竭",
+      "C": "角色不一致",
+      "D": "角色不互補"
+    },
+    "category": "考選部護理師高考",
+    "subject": "精神科與社區衛生護理學",
+    "year": 113,
+    "tags": [
+      "精神科與社區衛生護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-psych-community-42",
+    "question": "有關兒童口腔保健之護理指導，下列何者最不適當？",
+    "options": {
+      "A": "氟化物是安全、有效的齲齒防治方式",
+      "B": "出生後就應該做口腔清潔工作",
+      "C": "避免含奶瓶睡覺",
+      "D": "乳牙長滿6顆後才適合做餐後刷牙"
+    },
+    "category": "考選部護理師高考",
+    "subject": "精神科與社區衛生護理學",
+    "year": 113,
+    "tags": [
+      "精神科與社區衛生護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-psych-community-43",
+    "question": "社區護理師製作「遊民的一日」影片於媒體播放，以提升大眾對弱勢群體健康的認知，是屬於何種角色的展 現？",
+    "options": {
+      "A": "組織動員者",
+      "B": "代言者",
+      "C": "需求評估者",
+      "D": "協調者"
+    },
+    "category": "考選部護理師高考",
+    "subject": "精神科與社區衛生護理學",
+    "year": 113,
+    "tags": [
+      "精神科與社區衛生護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-psych-community-44",
+    "question": "某校推動營養午餐計畫，期望減少全校體重過重學生人數，下列何者最適合做為評值計畫成果的指標？",
+    "options": {
+      "A": "學生對營養午餐的滿意度",
+      "B": "推動營養午餐所耗費的成本",
+      "C": "推動營養午餐面臨的困難",
+      "D": "學生體重過重的盛行率"
+    },
+    "category": "考選部護理師高考",
+    "subject": "精神科與社區衛生護理學",
+    "year": 113,
+    "tags": [
+      "精神科與社區衛生護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-psych-community-45",
+    "question": "在紅外線工作環境中最易引起的健康危害，下列何者正確？",
+    "options": {
+      "A": "惡性貧血",
+      "B": "白指症",
+      "C": "靜脈瘤",
+      "D": "白內障"
+    },
+    "category": "考選部護理師高考",
+    "subject": "精神科與社區衛生護理學",
+    "year": 113,
+    "tags": [
+      "精神科與社區衛生護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-psych-community-46",
+    "question": "有關出院準備服務之敘述，下列何者最不適當？",
+    "options": {
+      "A": "服務對象為需要持續性照護之個案",
+      "B": "針對每位出院病人均需提供出院準備服務",
+      "C": "可連結居家護理及護理之家",
+      "D": "追蹤評值項目包含用藥、經濟問題、意外等"
+    },
+    "category": "考選部護理師高考",
+    "subject": "精神科與社區衛生護理學",
+    "year": 113,
+    "tags": [
+      "基本護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-psych-community-47",
+    "question": "陳女士，喪偶，罹患中度失智症，與兒女同住但平日兒女需上班。下列何項長照服務應優先建議？",
+    "options": {
+      "A": "社區關懷據點",
+      "B": "喘息服務",
+      "C": "老人公寓",
+      "D": "日間照顧"
+    },
+    "category": "考選部護理師高考",
+    "subject": "精神科與社區衛生護理學",
+    "year": 113,
+    "tags": [
+      "精神科與社區衛生護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-psych-community-48",
+    "question": "陳女士中風後，可使用助行器在家中行走，但上下樓梯與洗澡需要有人部分協助。根據長期照顧十年計畫 2.0，其符合申請下列那些補助？①居家復能 ②居家服務 ③交通接送 ④居家護理",
+    "options": {
+      "A": "①②",
+      "B": "①③",
+      "C": "①④",
+      "D": "②④"
+    },
+    "category": "考選部護理師高考",
+    "subject": "精神科與社區衛生護理學",
+    "year": 113,
+    "tags": [
+      "內外科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-psych-community-49",
+    "question": "影響長者營養狀況的常見因素，下列何者最不適當？",
+    "options": {
+      "A": "共餐據點的餐點供應有限",
+      "B": "因服用藥物引起味覺的問題或喪失食慾",
+      "C": "唾液腺無法分泌足夠的唾液潤滑消化食物",
+      "D": "進食時假牙摩擦使得牙床疼痛無法咬碎食物"
+    },
+    "category": "考選部護理師高考",
+    "subject": "精神科與社區衛生護理學",
+    "year": 113,
+    "tags": [
+      "精神科與社區衛生護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-113-psych-community-50",
+    "question": "邱先生60歲，已戒菸20年，未曾接受過健康檢查，邱先生可接受全民健保那些免費篩檢？①口腔癌篩檢 ② 大腸癌篩檢 ③攝護腺癌篩檢 ④低劑量電腦斷層檢查",
+    "options": {
+      "A": "①②",
+      "B": "①③",
+      "C": "②④",
+      "D": "③④"
+    },
+    "category": "考選部護理師高考",
+    "subject": "精神科與社區衛生護理學",
+    "year": 113,
+    "tags": [
+      "藥理學",
+      "精神科與社區衛生護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-basic-med-01",
+    "question": "心肌的肌內質網主要受何者刺激而釋放鈣離子？",
+    "options": {
+      "A": "細胞外流入的鈉離子",
+      "B": "肌醇三磷酸",
+      "C": "細胞外流入的鈣離子",
+      "D": "細胞膜電位的改變"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基礎醫學",
+    "year": 114,
+    "tags": [
+      "基礎醫學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-basic-med-02",
+    "question": "下列何種疾病與耳朵功能異常最無關？",
+    "options": {
+      "A": "黃斑退化症（macular degeneration）",
+      "B": "梅尼爾氏症（Meniere's disease）",
+      "C": "良性陣發性姿勢型暈眩（benign paroxysmal positional vertigo）",
+      "D": "動暈症（motion sickness）"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基礎醫學",
+    "year": 114,
+    "tags": [
+      "基礎醫學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-basic-med-03",
+    "question": "下列何者會導致電位過極化（hyperpolarizing），進而誘發抑制性突觸後電位（inhibitory postsynaptic potential, IPSP）的表現？",
+    "options": {
+      "A": "Cl– channel open；K＋ channel open",
+      "B": "Na＋ channel open；K＋ channel open",
+      "C": "Ca２＋ channel open；K＋ channel open",
+      "D": "Na＋ channel open；Cl– channel open"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基礎醫學",
+    "year": 114,
+    "tags": [
+      "基礎醫學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-basic-med-04",
+    "question": "下列有關褪黑激素（melatonin）的敘述，何者錯誤？",
+    "options": {
+      "A": "可由松果腺（pineal gland）分泌",
+      "B": "血清素（serotonin）為其前驅物",
+      "C": "夜晚睡眠時體內之濃度最低",
+      "D": "可治療時差所造成的不適"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基礎醫學",
+    "year": 114,
+    "tags": [
+      "生理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-basic-med-05",
+    "question": "在人類胚胎期，下列何種激素最可能直接刺激外生殖構造發育為男性？",
+    "options": {
+      "A": "睪固酮（testosterone）",
+      "B": "雙氫睪固酮（DHT）",
+      "C": "雌激素（estrogen）",
+      "D": "去氫雄脂酮（DHEA）"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基礎醫學",
+    "year": 114,
+    "tags": [
+      "生理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-basic-med-06",
+    "question": "特定微血管區段之微血管靜水壓（capillary hydrostatic pressure）為24 mmHg、組織間隙靜水壓 （interstitial hydrostatic pressure）為0 mmHg、微血管滲透壓（capillary colloid osmotic pressure）為12 mmHg、組織間隙滲透壓（interstitial colloid osmotic pressure）為2 mmHg， 則該處微血管液流動形式及總驅動力（net filtration pressure）分別為何？",
+    "options": {
+      "A": "再吸收（absorption）流入微血管：7 mmHg",
+      "B": "再吸收（absorption）流入微血管：14 mmHg",
+      "C": "過濾（filtration）流出微血管：7 mmHg",
+      "D": "過濾（filtration）流出微血管：14 mmHg"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基礎醫學",
+    "year": 114,
+    "tags": [
+      "解剖學",
+      "護理行政"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-basic-med-07",
+    "question": "在胎兒時期，下列那個構造可與右心房直接相通？",
+    "options": {
+      "A": "動脈導管",
+      "B": "肺動脈幹",
+      "C": "左心房",
+      "D": "左心室"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基礎醫學",
+    "year": 114,
+    "tags": [
+      "基礎醫學",
+      "產兒科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-basic-med-08",
+    "question": "正常情況下，下列何種物質在腎臟再吸收（reabsorption）的比例最高？",
+    "options": {
+      "A": "水",
+      "B": "鈉離子",
+      "C": "葡萄糖",
+      "D": "尿素"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基礎醫學",
+    "year": 114,
+    "tags": [
+      "解剖學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-basic-med-09",
+    "question": "肺氣腫（emphysema）患者因肺泡壁遭到破壞而容易出現下列那一種變化？",
+    "options": {
+      "A": "肺泡氣體擴散的總面積增加",
+      "B": "肺臟回彈力增加",
+      "C": "肺臟順應性增加",
+      "D": "呼吸道阻力降低"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基礎醫學",
+    "year": 114,
+    "tags": [
+      "基礎醫學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-basic-med-10",
+    "question": "有關輔脂解酶（colipase）的敘述，下列何者正確？",
+    "options": {
+      "A": "由胰臟分泌",
+      "B": "由肝臟分泌",
+      "C": "僅具脂溶性",
+      "D": "具脂解的作用"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基礎醫學",
+    "year": 114,
+    "tags": [
+      "基礎醫學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-basic-med-11",
+    "question": "下列那兩個體內空腔之間沒有實質構造區隔，其中一個空腔內如果產生積水，會在兩個空腔內互相 流通？",
+    "options": {
+      "A": "縱膈腔（mediastinum）與胸膜腔（pleural cavity）",
+      "B": "胸膜腔（pleural cavity）與心包腔（pericardial cavity）",
+      "C": "心包腔（pericardial cavity）與腹腔（abdominal cavity）",
+      "D": "腹腔（abdominal cavity）與骨盆腔（pelvic cavity）"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基礎醫學",
+    "year": 114,
+    "tags": [
+      "基礎醫學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-basic-med-12",
+    "question": "關於腦下垂體（pituitary gland）的描述，下列何者錯誤？",
+    "options": {
+      "A": "與下視丘（hypothalamus）相連",
+      "B": "位於蝶鞍的腦下垂體窩",
+      "C": "腦下垂體中間部分泌黑色素細胞刺激素（melanocyte-stimulating hormone）",
+      "D": "腦下垂體中間部分泌褪黑素（melatonin）"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基礎醫學",
+    "year": 114,
+    "tags": [
+      "基礎醫學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-basic-med-13",
+    "question": "下列有關成人腰椎（lumbar vertebrae）的敘述，何者正確？",
+    "options": {
+      "A": "典型腰椎棘突（spinous process）細長，朝下延伸",
+      "B": "典型腰椎橫突（transverse process）具孔洞，供神經穿行",
+      "C": "腰椎曲（lumbar curvature）是往前拱起的彎曲",
+      "D": "腰椎穿刺（lumbar puncture）一般是在第一、二腰椎之間進行"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基礎醫學",
+    "year": 114,
+    "tags": [
+      "基礎醫學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-basic-med-14",
+    "question": "下列何者屬於彈性動脈？",
+    "options": {
+      "A": "腎動脈（renal artery）",
+      "B": "脾動脈（splenic artery）",
+      "C": "股動脈（femoral artery）",
+      "D": "主動脈（aorta）"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基礎醫學",
+    "year": 114,
+    "tags": [
+      "解剖學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-basic-med-15",
+    "question": "下列何者不是輸尿管（ureter）管腔較為狹窄的位置？",
+    "options": {
+      "A": "腎盂（renal pelvis）與輸尿管交接處",
+      "B": "腰大肌（psoas major）表面",
+      "C": "髂總動脈（common iliac artery）分叉為髂內及髂外動脈處",
+      "D": "穿進膀胱（urinary bladder）處"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基礎醫學",
+    "year": 114,
+    "tags": [
+      "基礎醫學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-basic-med-16",
+    "question": "下列何者不具支撐子宮（uterus）的功能？",
+    "options": {
+      "A": "主韌帶（cardinal ligament）",
+      "B": "懸韌帶（suspensory ligament）",
+      "C": "骨盆膈（pelvic diaphragm）",
+      "D": "泌尿生殖膈（urogenital diaphragm）"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基礎醫學",
+    "year": 114,
+    "tags": [
+      "基礎醫學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-basic-med-17",
+    "question": "下列何者為負責分泌胃酸的細胞？",
+    "options": {
+      "A": "主細胞（chief cell）",
+      "B": "壁細胞（parietal cell）",
+      "C": "黏液頸細胞（mucous neck cell）",
+      "D": "腸內分泌細胞（enteroendocrine cell）"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基礎醫學",
+    "year": 114,
+    "tags": [
+      "基礎醫學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-basic-med-18",
+    "question": "耳下腺導管（parotid duct）開口於口腔何處的黏膜？",
+    "options": {
+      "A": "上列第一臼齒",
+      "B": "上列第二臼齒",
+      "C": "上列第三臼齒",
+      "D": "下列第二臼齒"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基礎醫學",
+    "year": 114,
+    "tags": [
+      "基礎醫學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-basic-med-19",
+    "question": "當肱骨（humerus）的骨幹發生骨折，最可能直接傷及那一條手臂的神經？",
+    "options": {
+      "A": "肌皮神經（musculocutaneous nerve）",
+      "B": "正中神經（median nerve）",
+      "C": "尺神經（ulnar nerve）",
+      "D": "橈神經（radial nerve）"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基礎醫學",
+    "year": 114,
+    "tags": [
+      "解剖學",
+      "內外科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-basic-med-20",
+    "question": "下列何者源自骨髓細胞，而後遷移至中樞神經系統內成熟？",
+    "options": {
+      "A": "星狀細胞（astrocytes）",
+      "B": "寡樹突膠細胞（oligodendrocytes）",
+      "C": "微膠細胞（microglia）",
+      "D": "室管膜細胞（ependymal cells）"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基礎醫學",
+    "year": 114,
+    "tags": [
+      "解剖學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-basic-med-21",
+    "question": "有關急性發炎反應（acute inflammation）的敘述，下列何者正確？",
+    "options": {
+      "A": "參與的白血球主要是嗜酸性白血球（eosinophils）",
+      "B": "組織間隙常因血管通透性增加所以有漏出液（transudate）的蓄積",
+      "C": "受損組織細胞分泌的緩激肽（bradykinin）與痛覺產生有關",
+      "D": "介白素-1（interleukin-1）是造成血管舒張主要的媒介物"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基礎醫學",
+    "year": 114,
+    "tags": [
+      "病理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-basic-med-22",
+    "question": "下列何者與血液的高凝血狀態易形成血栓的關聯性最小？",
+    "options": {
+      "A": "長期臥床",
+      "B": "口服避孕藥之使用",
+      "C": "抗磷脂質症候群",
+      "D": "von Willebrand疾病"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基礎醫學",
+    "year": 114,
+    "tags": [
+      "基礎醫學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-basic-med-23",
+    "question": "KIT基因突變是下列那種腫瘤最常見的分子變化？",
+    "options": {
+      "A": "肺腺癌",
+      "B": "胃腸道基質瘤",
+      "C": "肝癌",
+      "D": "膀胱癌"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基礎醫學",
+    "year": 114,
+    "tags": [
+      "病理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-basic-med-24",
+    "question": "下列何者並非鉛中毒的常見表現？",
+    "options": {
+      "A": "肝硬化",
+      "B": "兒童智力發展障礙",
+      "C": "周邊神經病變",
+      "D": "貧血"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基礎醫學",
+    "year": 114,
+    "tags": [
+      "基礎醫學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-basic-med-25",
+    "question": "下列何種血管炎會造成主動脈（aorta）及其主要分支的發炎狹窄，可能導致上肢摸不到脈搏，因 而又稱為無脈症（pulseless disease）？",
+    "options": {
+      "A": "高安氏動脈炎（Takayasu arteritis）",
+      "B": "川崎氏病（Kawasaki disease）",
+      "C": "韋格納氏肉芽腫（Wegener granulomatosis）",
+      "D": "伯格氏病（Buerger disease）"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基礎醫學",
+    "year": 114,
+    "tags": [
+      "解剖學",
+      "病理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-basic-med-26",
+    "question": "下列何者是何杰金氏淋巴瘤（Hodgkin lymphoma）的腫瘤細胞？",
+    "options": {
+      "A": "淋巴母細胞（lymphoblast）",
+      "B": "副免疫母細胞（paraimmunoblast）",
+      "C": "瑞德－史登堡氏細胞（Reed-Sternberg cell）",
+      "D": "卡哈爾－瑞齊烏斯氏細胞（Cajal-Retzius cell）"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基礎醫學",
+    "year": 114,
+    "tags": [
+      "病理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-basic-med-27",
+    "question": "有關家族性腺瘤性息肉症（familial adenomatous polyposis），下列敘述何者錯誤？",
+    "options": {
+      "A": "是體染色體隱性（autosomal recessive）遺傳",
+      "B": "病人的大腸會有超過100個腺瘤性息肉",
+      "C": "未治療的病人幾乎都會發生大腸癌",
+      "D": "可以用預防性大腸切除術來治療"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基礎醫學",
+    "year": 114,
+    "tags": [
+      "基礎醫學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-basic-med-28",
+    "question": "下列何者為快速進行性腎絲球腎炎（rapidly progressive glomerulonephritis）最主要的病理變 化？",
+    "options": {
+      "A": "新月體（crescent）",
+      "B": "乾酪性壞死（caseous necrosis）",
+      "C": "羅素小體（Russell body）",
+      "D": "類纖維素性壞死（fibrinoid necrosis）"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基礎醫學",
+    "year": 114,
+    "tags": [
+      "病理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-basic-med-29",
+    "question": "乳癌病患出現橘皮（peau d'orange）現象，與下列何者最有關？",
+    "options": {
+      "A": "不典型乳管增生（atypical ductal hyperplasia）",
+      "B": "發炎性癌 （inflammatory carcinoma）",
+      "C": "BRCA1基因突變",
+      "D": "乳管擴張"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基礎醫學",
+    "year": 114,
+    "tags": [
+      "基礎醫學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-basic-med-30",
+    "question": "庫賈氏病（Creutzfeldt-Jakob disease）最典型的病理變化為下列何者？",
+    "options": {
+      "A": "脫髓鞘斑塊",
+      "B": "腦膿瘍",
+      "C": "中腦黑質退化",
+      "D": "大腦海綿狀轉化"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基礎醫學",
+    "year": 114,
+    "tags": [
+      "病理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-basic-med-31",
+    "question": "下列何種藥物不能抑制乙醯膽鹼酯酶（acetylcholinesterase）？",
+    "options": {
+      "A": "physostigmine",
+      "B": "sarin",
+      "C": "edrophonium",
+      "D": "bethanechol"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基礎醫學",
+    "year": 114,
+    "tags": [
+      "藥理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-basic-med-32",
+    "question": "下列藥物中，何者對於改善酒精成癮治療沒有幫助？",
+    "options": {
+      "A": "naltrexone",
+      "B": "acamprosate",
+      "C": "acetaminophen",
+      "D": "disulfiram"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基礎醫學",
+    "year": 114,
+    "tags": [
+      "藥理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-basic-med-33",
+    "question": "使用局部麻醉劑時常與腎上腺素合用，其目的為何？",
+    "options": {
+      "A": "使局部血管收縮",
+      "B": "增加局部麻醉劑的吸收",
+      "C": "增強中樞正腎上腺素系統之止痛作用",
+      "D": "減少局部過敏"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基礎醫學",
+    "year": 114,
+    "tags": [
+      "基礎醫學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-basic-med-34",
+    "question": "下列何種藥物可調節血清素（serotonin）神經傳遞系統，達到抗憂鬱效果？",
+    "options": {
+      "A": "ergonovine",
+      "B": "fluoxetine",
+      "C": "ondansetron",
+      "D": "sumatriptan"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基礎醫學",
+    "year": 114,
+    "tags": [
+      "解剖學",
+      "藥理學",
+      "精神科與社區衛生護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-basic-med-35",
+    "question": "毛地黃中毒時，因心跳過慢導致心律不整，下列何者為正確且安全的治療策略?",
+    "options": {
+      "A": "直接給與高劑量鎂與毛地黃競爭Na+-K+ pump 的結合位",
+      "B": "血鉀過低時宜補充鉀，並以atropine治療房室阻斷",
+      "C": "可以抗心律不整藥物amiodarone來治療",
+      "D": "不宜給與毛地黃抗體，以免加重傳導阻斷"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基礎醫學",
+    "year": 114,
+    "tags": [
+      "基礎醫學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-basic-med-36",
+    "question": "Abciximab治療不穩定型心絞痛（unstable angina）的藥理機制為何？",
+    "options": {
+      "A": "cyclic nucleotide phosphodiesterase抑制劑",
+      "B": "GP IIb/IIIa 抑制劑",
+      "C": "cyclooxygenase I 抑制劑",
+      "D": "P2Y12 ADP receptor 拮抗劑"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基礎醫學",
+    "year": 114,
+    "tags": [
+      "藥理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-basic-med-37",
+    "question": "下列何種藥物最適合以吸入方式用於緩解急性氣喘（asthma）發作？",
+    "options": {
+      "A": "albuterol",
+      "B": "salmeterol",
+      "C": "beclomethasone",
+      "D": "mometasone"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基礎醫學",
+    "year": 114,
+    "tags": [
+      "內外科護理學",
+      "藥理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-basic-med-38",
+    "question": "下列那一個藥物最適合用來治療變形性骨炎（Paget disease）？",
+    "options": {
+      "A": "zoledronic acid",
+      "B": "denosumab",
+      "C": "teriparatide",
+      "D": "romosozumab"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基礎醫學",
+    "year": 114,
+    "tags": [
+      "藥理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-basic-med-39",
+    "question": "下列有關doxorubicin的描述，何者錯誤？",
+    "options": {
+      "A": "可治療急性淋巴球性白血病",
+      "B": "可治療肉瘤",
+      "C": "具有劑量依賴性的心臟毒性",
+      "D": "可抑制topoisomerase I 活性"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基礎醫學",
+    "year": 114,
+    "tags": [
+      "基礎醫學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-basic-med-40",
+    "question": "使用化學治療藥於癌症病患，有時會給與amifostine，試問amifostine有何藥理作用？",
+    "options": {
+      "A": "保護正常細胞組織，避免細胞損傷",
+      "B": "增強抗癌藥穿透血腦障壁，進入中樞神經系統",
+      "C": "減少腫瘤組織周邊血液的asparagine含量",
+      "D": "增強病人的免疫系統功能"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基礎醫學",
+    "year": 114,
+    "tags": [
+      "病理學",
+      "藥理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-basic-med-41",
+    "question": "細菌間遺傳物質移轉有不同方式，其中噬菌體（phage）是藉由下列何種方式進行？",
+    "options": {
+      "A": "接合作用（conjugation）",
+      "B": "轉化作用（transformation）",
+      "C": "導入作用（transduction）",
+      "D": "分泌作用（secretion）"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基礎醫學",
+    "year": 114,
+    "tags": [
+      "微生物學與免疫學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-basic-med-42",
+    "question": "有關嗜中性白血球的敘述，下列何者錯誤？",
+    "options": {
+      "A": "屬於後天性免疫細胞",
+      "B": "產生氧化活性物質能殺死病菌",
+      "C": "具有吞噬微生物的能力",
+      "D": "可藉由特殊的死亡方式釋放網狀結構捕捉微生物"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基礎醫學",
+    "year": 114,
+    "tags": [
+      "基礎醫學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-basic-med-43",
+    "question": "下列何者為T細胞最初發育的器官？",
+    "options": {
+      "A": "淋巴結",
+      "B": "脾臟",
+      "C": "胸腺",
+      "D": "肝臟"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基礎醫學",
+    "year": 114,
+    "tags": [
+      "基礎醫學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-basic-med-44",
+    "question": "下列何者屬於減毒之活病毒疫苗？",
+    "options": {
+      "A": "B型肝炎疫苗",
+      "B": "狂犬病疫苗",
+      "C": "破傷風疫苗",
+      "D": "小兒麻痺沙賓疫苗"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基礎醫學",
+    "year": 114,
+    "tags": [
+      "微生物學與免疫學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-basic-med-45",
+    "question": "有關金黃色葡萄球菌（Staphylococcus aureus）感染所造成的臨床表徵，下列何者症狀通常不是 由其分泌的毒素所導致？",
+    "options": {
+      "A": "猛爆性紫斑病（purpura fulminans）",
+      "B": "葡萄球菌食物中毒（food poisoning）",
+      "C": "心內膜炎（endocarditis）",
+      "D": "葡萄球菌燙傷狀皮膚症候群（staphylococcal scalded skin syndrome）"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基礎醫學",
+    "year": 114,
+    "tags": [
+      "微生物學與免疫學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-basic-med-46",
+    "question": "病人最近得到泌尿道感染，醫師利用革蘭氏染色法檢驗尿液中的細菌，染到與番紅（safranin）呈 現相同顏色的一株細菌，下列針對這株細菌的敘述，何者錯誤？",
+    "options": {
+      "A": "可能是大腸桿菌（E. coli）",
+      "B": "可能會產生內孢子（endospore）",
+      "C": "應該具有內毒素（endotoxin）",
+      "D": "可能缺少壁脂酸（lipoteichoic acid）的結構"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基礎醫學",
+    "year": 114,
+    "tags": [
+      "微生物學與免疫學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-basic-med-47",
+    "question": "有關花斑癬（Pityriasis versicolor）之敘述，下列何者正確？",
+    "options": {
+      "A": "其病原菌馬拉色氏菌（Malassezia）平常不會在健康人皮膚上",
+      "B": "是一種嗜脂性黴菌",
+      "C": "不會形成菌絲",
+      "D": "為造成血液感染主要的病原真菌"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基礎醫學",
+    "year": 114,
+    "tags": [
+      "基礎醫學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-basic-med-48",
+    "question": "有關腺病毒（adenovirus）的敘述，下列何者錯誤？",
+    "options": {
+      "A": "腺病毒感染會造成結膜炎、呼吸道感染或腸胃炎",
+      "B": "腺病毒的感染以大人居多，小孩感染的病例較少",
+      "C": "腺病毒的基因體是DNA",
+      "D": "腺病毒目前並無特定抗病毒藥物可以治療"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基礎醫學",
+    "year": 114,
+    "tags": [
+      "微生物學與免疫學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-basic-med-49",
+    "question": "下列何種RNA病毒沒有上市的疫苗可預防其感染？",
+    "options": {
+      "A": "輪狀病毒",
+      "B": "小兒麻痺病毒",
+      "C": "麻疹病毒",
+      "D": "C型肝炎病毒"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基礎醫學",
+    "year": 114,
+    "tags": [
+      "微生物學與免疫學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-basic-med-50",
+    "question": "下列何種症狀最常出現於非洲錐蟲病（African trypanosomiasis）病人的急性期臨床表現？",
+    "options": {
+      "A": "昏迷和抽搐",
+      "B": "高燒和昏睡",
+      "C": "無法集中注意力和失去平衡",
+      "D": "發熱、肌肉疼痛、關節疼痛和淋巴結腫大"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基礎醫學",
+    "year": 114,
+    "tags": [
+      "基礎醫學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-basic-nursing-01",
+    "question": "依據疾病自然史發展，在疾病的易感染期欲將危險因子去除或減至最低，可提供何種預防方法？",
+    "options": {
+      "A": "早期診斷早期治療",
+      "B": "促進健康",
+      "C": "限制殘障",
+      "D": "復健"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基本護理學與護理行政",
+    "year": 114,
+    "tags": [
+      "微生物學與免疫學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-basic-nursing-02",
+    "question": "有關內科無菌技術的敘述，下列何者正確？",
+    "options": {
+      "A": "為避免交互感染，可以戴手套來取代洗手",
+      "B": "高於肘部的刷手為一種內科無菌技術",
+      "C": "綁帶式外科口罩上下兩條帶子均需繫上，須同時蓋住口、鼻部",
+      "D": "指執行侵入性治療時，保持滅菌物品或無菌區域無菌狀態的技術"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基本護理學與護理行政",
+    "year": 114,
+    "tags": [
+      "基本護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-basic-nursing-03",
+    "question": "手術縫合針使用後以容器收集，應使用下列何種醫療廢棄物處置方式處理？",
+    "options": {
+      "A": "福馬林消毒",
+      "B": "冰凍處理後掩埋",
+      "C": "滅菌後粉碎",
+      "D": "紫外線消毒"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基本護理學與護理行政",
+    "year": 114,
+    "tags": [
+      "內外科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-basic-nursing-04",
+    "question": "病房中設有護理師專門負責所有病人的傷口換藥工作，屬於下列何種工作模式？",
+    "options": {
+      "A": "全責護理",
+      "B": "成組護理",
+      "C": "功能性護理",
+      "D": "個案護理"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基本護理學與護理行政",
+    "year": 114,
+    "tags": [
+      "基本護理學與護理行政"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-basic-nursing-05",
+    "question": "護理計畫的健康問題優先順序的排列原則，下列何者錯誤？",
+    "options": {
+      "A": "威脅病人生命的須優先解決",
+      "B": "護理人員覺得最重要的優先解決",
+      "C": "依馬斯洛（Maslow）的需要層次理論排列",
+      "D": "相關的護理問題儘量排在一起"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基本護理學與護理行政",
+    "year": 114,
+    "tags": [
+      "基本護理學與護理行政"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-basic-nursing-06",
+    "question": "下列何者是護理評估的客觀資料（objective data, O）？",
+    "options": {
+      "A": "家屬：「我媽媽血壓偏低」",
+      "B": "病人：「清晨2～3點才入睡」",
+      "C": "護理師：「白血球10, 000 /mm3」",
+      "D": "看護：「病人一直在叫痛」"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基本護理學與護理行政",
+    "year": 114,
+    "tags": [
+      "基本護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-basic-nursing-07",
+    "question": "下列何者是相依性護理活動？",
+    "options": {
+      "A": "執行每日疼痛評估",
+      "B": "靜脈輸注PRBC 2U STAT",
+      "C": "肌肉注射PRN止痛藥物",
+      "D": "教導病人胰島素注射方法"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基本護理學與護理行政",
+    "year": 114,
+    "tags": [
+      "基本護理學與護理行政"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-basic-nursing-08",
+    "question": "有關完全電子病歷優點的敘述，下列何者錯誤？",
+    "options": {
+      "A": "資料可供同體系共享，維持資料一致性",
+      "B": "醫療流程管制與修改方便，且不會留有紀錄",
+      "C": "資料完善，具結構化，可促進醫學研究",
+      "D": "不必有紙本病歷，可以減少醫院的成本"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基本護理學與護理行政",
+    "year": 114,
+    "tags": [
+      "基本護理學與護理行政"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-basic-nursing-09",
+    "question": "病人抱怨：「你們醫院的高血壓藥品質不好，吃了好像都沒有效果！」護理人員回覆：「不會吧！ 我們醫院的藥物都是用最好的。」護理人員的回覆為下列何種非治療溝通技巧？",
+    "options": {
+      "A": "過度負荷",
+      "B": "批判的態度",
+      "C": "防衛性態度",
+      "D": "改變話題"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基本護理學與護理行政",
+    "year": 114,
+    "tags": [
+      "內外科護理學",
+      "藥理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-basic-nursing-10",
+    "question": "下列何者為執行一次就自動失效的醫囑？①Dulcolax 1# supp. HS ②Ketoprofen 1 amp. I.M. STAT ③Valium 1# P.O. HS SOS ④Demerol 40 mg I.M. Q6H PRN",
+    "options": {
+      "A": "①③",
+      "B": "①④",
+      "C": "②③",
+      "D": "②④"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基本護理學與護理行政",
+    "year": 114,
+    "tags": [
+      "基本護理學與護理行政"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-basic-nursing-11",
+    "question": "小樂3歲，持續發燒不適，拒絕服藥，醫師開立Voren® 12.5 mg/supp 1# supp. STAT，護理師衛教 小樂媽媽肛門栓劑的使用，下列敘述何者錯誤？",
+    "options": {
+      "A": "肛門栓劑應保存在冰箱中冷藏",
+      "B": "可在栓劑前端塗抹少量潤滑劑",
+      "C": "栓劑插入肛門內約2吋深",
+      "D": "塞入後維持原姿勢或右側臥15分鐘"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基本護理學與護理行政",
+    "year": 114,
+    "tags": [
+      "基本護理學與護理行政"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-basic-nursing-12",
+    "question": "就藥物劑型而言，下列口服藥物何種吸收最快？",
+    "options": {
+      "A": "acetylcysteine powders",
+      "B": "acetaminophen tablet",
+      "C": "brown mixture syrup",
+      "D": "ampicillin capsule"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基本護理學與護理行政",
+    "year": 114,
+    "tags": [
+      "藥理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-basic-nursing-13",
+    "question": "醫囑開立oxacillin 1 gm Q6H I.V. drip，oxacillin藥瓶標示為250 mg/vial，每次給藥時應抽幾 瓶（vial）？",
+    "options": {
+      "A": "1",
+      "B": "2.5",
+      "C": "4",
+      "D": "6"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基本護理學與護理行政",
+    "year": 114,
+    "tags": [
+      "基本護理學",
+      "藥理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-basic-nursing-14",
+    "question": "下列靜脈輸液何者不是低張溶液？",
+    "options": {
+      "A": "0.33% NaCl",
+      "B": "Lactated Ringer's solution",
+      "C": "Half Saline",
+      "D": "2.5% Glucose Water"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基本護理學與護理行政",
+    "year": 114,
+    "tags": [
+      "解剖學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-basic-nursing-15",
+    "question": "有關「靜脈採血」的執行步驟，下列何者正確？",
+    "options": {
+      "A": "成人可使用27號針頭抽血",
+      "B": "避免從正接受靜脈輸液治療的部位抽血",
+      "C": "以酒精棉球消毒後，以手搧風加速酒精揮發",
+      "D": "將抽得的血液沿著試管壁快速注入，並充分搖晃試管"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基本護理學與護理行政",
+    "year": 114,
+    "tags": [
+      "解剖學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-basic-nursing-16",
+    "question": "病人因泌尿道感染，醫囑：Gentamycin® 10 mg in N/S 30 mL drip 30 min，有關使用精密輸液套 管加藥的步驟，下列敘述何者錯誤？",
+    "options": {
+      "A": "打開輸液瓶與精密輸液袋（bag）間之阻斷夾，以手擠壓精密輸液袋（bag）到所需之量，關閉阻斷 夾",
+      "B": "精密輸液袋（bag）內之溶液到所需之輸液量後，關閉輸液瓶與精密輸液袋（bag）間之阻斷夾",
+      "C": "以酒精棉片消毒精密輸液袋（bag）加藥口，將藥物注入精密輸液袋（bag）",
+      "D": "藥物滴完後，打開輸液瓶與精密輸液袋（bag）間之阻斷夾，使精密輸液袋（bag）內流入適量溶 液，沖洗輸液管路"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基本護理學與護理行政",
+    "year": 114,
+    "tags": [
+      "微生物學與免疫學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-basic-nursing-17",
+    "question": "有關溫水坐浴（Warm Sitz Bath）常用溶液及其使用目的之敘述，下列何者錯誤？",
+    "options": {
+      "A": "1：8水溶性優碘（Beta-iodine），用於產後會陰部傷口之消毒",
+      "B": "1：4,000高錳酸鉀（P.P. solution），用於肛門、會陰部傷口的消腫與抑菌",
+      "C": "10～50%硫酸鎂（MgSO4），用於痔瘡切除術後傷口，具有收斂作用",
+      "D": "38～40℃之溫水，用於清潔及促進傷口癒合"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基本護理學與護理行政",
+    "year": 114,
+    "tags": [
+      "基本護理學與護理行政"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-basic-nursing-18",
+    "question": "有關冷療的應用，下列何者正確？ ①濕冷敷較乾冷的穿透力佳，對組織的傷害亦較小 ②冰袋及 冰枕，不能直接用於皮膚 ③冰領適用於甲狀腺術後的止痛與止血 ④臨床上低溫毯用於心臟手術 病人的目的是促進新陳代謝率",
+    "options": {
+      "A": "①②",
+      "B": "①③",
+      "C": "②③",
+      "D": "③④"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基本護理學與護理行政",
+    "year": 114,
+    "tags": [
+      "基本護理學",
+      "內外科護理學",
+      "護理行政",
+      "解剖學",
+      "生理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-basic-nursing-19",
+    "question": "有關臥姿與其目的之敘述，下列何者正確？",
+    "options": {
+      "A": "採俯臥式可預防髖部關節攣縮",
+      "B": "採屈膝仰臥式可改善子宮後傾引起的經痛",
+      "C": "仰臥姿可用於接受痔瘡切除術病人",
+      "D": "採膝胸臥姿可促使下腹部感染局部化"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基本護理學與護理行政",
+    "year": 114,
+    "tags": [
+      "基本護理學與護理行政"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-basic-nursing-20",
+    "question": "有關灌腸的相關敘述，下列何者正確？",
+    "options": {
+      "A": "保留灌腸溶液需在腸道內保留5〜10分鐘",
+      "B": "保留灌腸常用於協助病人解除便秘",
+      "C": "麻醉劑可使用保留灌腸方式給與",
+      "D": "清潔灌腸是最常見的保留灌腸"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基本護理學與護理行政",
+    "year": 114,
+    "tags": [
+      "基本護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-basic-nursing-21",
+    "question": "有關尿液性質的敘述，下列何者錯誤？",
+    "options": {
+      "A": "泌尿道感染病人尿液中的白血球可能高於正常值",
+      "B": "糖尿病病人的尿液中可能出現葡萄糖",
+      "C": "長期嘔吐者的尿液中可能出現酮體",
+      "D": "肝臟疾病者的尿液中可能出現圓柱體"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基本護理學與護理行政",
+    "year": 114,
+    "tags": [
+      "基本護理學與護理行政"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-basic-nursing-22",
+    "question": "下列何種設備，能有效協助呼吸困難的病人維持舒適姿勢？",
+    "options": {
+      "A": "床上護架",
+      "B": "床上桌",
+      "C": "氣墊床",
+      "D": "蛋型床墊"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基本護理學與護理行政",
+    "year": 114,
+    "tags": [
+      "基本護理學",
+      "生理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-basic-nursing-23",
+    "question": "肺癌合併胸椎、肋骨等多處骨頭轉移的病人，皮膚乾燥，因長期臥床導致足部靜脈栓塞。護理師協 助病人沐浴與身體按摩，下列照護何者適當？",
+    "options": {
+      "A": "以41～43℃溫水擦澡後，再塗擦乳液",
+      "B": "清潔四肢時，由近心端往遠心端擦拭",
+      "C": "沐浴後，協助背部叩擊增進舒適",
+      "D": "協助熱水足浴後，進行足部按摩"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基本護理學與護理行政",
+    "year": 114,
+    "tags": [
+      "基本護理學",
+      "解剖學",
+      "病理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-basic-nursing-24",
+    "question": "病人發燒時的護理措施，下列何者最不適當？",
+    "options": {
+      "A": "每4小時或更密切的監測體溫",
+      "B": "協助調節室溫27～28℃",
+      "C": "增加水分攝取，至少3,000 mL/day",
+      "D": "給與口腔護理"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基本護理學與護理行政",
+    "year": 114,
+    "tags": [
+      "基本護理學與護理行政"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-basic-nursing-25",
+    "question": "關於影響呼吸頻率的因素，下列敘述何者錯誤？",
+    "options": {
+      "A": "年齡越小，呼吸越快",
+      "B": "體溫下降，呼吸減慢",
+      "C": "血壓下降，呼吸減慢",
+      "D": "高海拔地區，呼吸越快"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基本護理學與護理行政",
+    "year": 114,
+    "tags": [
+      "生理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-basic-nursing-26",
+    "question": "使用水銀血壓計測量成人血壓時，於數值140 mmHg時開始聽到輕敲聲，至130 mmHg時開始聽到更清 脆更強的敲聲，至70 mmHg時轉為較低沉聲音，至56 mmHg時聲音消失，其血壓值紀錄，下列何者正 確？",
+    "options": {
+      "A": "140/70 mmHg",
+      "B": "130/70 mmHg",
+      "C": "140/56 mmHg",
+      "D": "130/56 mmHg"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基本護理學與護理行政",
+    "year": 114,
+    "tags": [
+      "基本護理學與護理行政"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-basic-nursing-27",
+    "question": "下咽癌病人行全咽喉切除術，併放射線療法後食道狹窄，下列何種方式最適合病人的長期腸道營養 支持？",
+    "options": {
+      "A": "由口進食",
+      "B": "鼻胃管灌食",
+      "C": "胃造口灌食",
+      "D": "腸造口灌食"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基本護理學與護理行政",
+    "year": 114,
+    "tags": [
+      "基本護理學與護理行政"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-basic-nursing-28",
+    "question": "病人因車禍接受右側膝關節上方的截肢手術，下列何者最適用於術後殘肢包紮？",
+    "options": {
+      "A": "使用環形包紮法，再以8字形包紮法定帶",
+      "B": "使用8字形包紮法，再以人字形包紮法定帶",
+      "C": "使用緩螺旋包紮法，再以回反摺形包紮法定帶",
+      "D": "使用回反摺形包紮法，再以環形包紮法定帶"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基本護理學與護理行政",
+    "year": 114,
+    "tags": [
+      "解剖學",
+      "內外科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-basic-nursing-29",
+    "question": "病人左側肢體無力，有關協助病人坐入輪椅的敘述，下列何者正確？①下床前，需測量病人脈搏、 呼吸，並視需要量血壓 ②將輪椅放在病人左側床尾，輪椅置於與床尾之間呈90度角處 ③護理師 協助病人移動時，身體重心離病人越遠會越省力 ④教導病人要準備坐下輪椅前，先將身體微前 傾，再緩慢彎曲膝關節，使重心下降",
+    "options": {
+      "A": "②③",
+      "B": "②④",
+      "C": "①②",
+      "D": "①④"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基本護理學與護理行政",
+    "year": 114,
+    "tags": [
+      "解剖學",
+      "生理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-basic-nursing-30",
+    "question": "有關壓力性損傷（壓瘡）形成因素的敘述，下列何者錯誤？",
+    "options": {
+      "A": "當壓力高於組織中血管的壓力時將阻礙血流供應，造成組織缺氧",
+      "B": "相同的刺激，受壓面積越大對組織的傷害越大",
+      "C": "長時間承受小的壓力比短時間承受大的壓力傷害還大",
+      "D": "剪力是造成深層組織壓力性損傷（壓瘡）的重要因素"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基本護理學與護理行政",
+    "year": 114,
+    "tags": [
+      "基本護理學與護理行政"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-basic-nursing-31",
+    "question": "構成牙齒及骨骼的礦物質，除了鈣之外，主要成分還包括以下何者？①鋅 ②鉀 ③鎂 ④磷",
+    "options": {
+      "A": "①②",
+      "B": "③④",
+      "C": "①④",
+      "D": "②③"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基本護理學與護理行政",
+    "year": 114,
+    "tags": [
+      "解剖學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-basic-nursing-32",
+    "question": "臺灣立法保障尊重自然死，下列有關「安寧緩和醫療條例」的敘述何者正確？",
+    "options": {
+      "A": "末期病人才可以簽署「預立安寧緩和醫療暨維生醫療抉擇意願書」",
+      "B": "意識昏迷「無最近親屬者」（如單身無親者），轉介社工由轄區里長填具「不施行心肺復甦術同意 書」",
+      "C": "意願人得預立醫療委任代理人，並以書面載明，於其無法表達意願時，由代理人代為簽署意願書",
+      "D": "意識昏迷者，有最近親屬代理簽署「不施行心肺復甦術同意書」，父母排序優先於配偶"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基本護理學與護理行政",
+    "year": 114,
+    "tags": [
+      "基本護理學與護理行政"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-basic-nursing-33",
+    "question": "有關臨終病人的護理措施，下列何者正確？①協助個案減少不適 ②病房環境應昏暗，以減少對眼 睛的刺激 ③與個案說話要清楚、緩慢，以免增加其焦慮 ④避免個案使用止痛劑，預防成癮",
+    "options": {
+      "A": "①③",
+      "B": "②④",
+      "C": "②③",
+      "D": "①④"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基本護理學與護理行政",
+    "year": 114,
+    "tags": [
+      "基本護理學與護理行政"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-basic-nursing-34",
+    "question": "護理人員執行遺體護理時，下列措施何者正確？",
+    "options": {
+      "A": "有鼻胃管者須先引流後再移除管路",
+      "B": "如有假牙者，需在屍僵發生後再裝上",
+      "C": "將病人遺體側臥以利口腔分泌液引流",
+      "D": "用30℃的溫水擦拭病人遺體"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基本護理學與護理行政",
+    "year": 114,
+    "tags": [
+      "基本護理學與護理行政"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-basic-nursing-35",
+    "question": "以普通針具收集血液標本，進行常規檢查，下列敘述何者正確？①通常採動脈血進行血球計數的標 本 ②若檢測血糖、膽固醇等病人須先禁食 ③針筒血液需沿著試管壁以45度角注入 ④血液注入 試管內需快速用力搖動以能與抗凝劑相融合",
+    "options": {
+      "A": "①②",
+      "B": "②③",
+      "C": "③④",
+      "D": "①④"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基本護理學與護理行政",
+    "year": 114,
+    "tags": [
+      "解剖學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-basic-nursing-36",
+    "question": "有關使命或任務之敘述，下列何者正確？",
+    "options": {
+      "A": "是做策略性規劃的最後步驟",
+      "B": "應以顧客的需要為主要依據",
+      "C": "應依據評鑑標準之要求訂定",
+      "D": "為指引員工行為的基本準則"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基本護理學與護理行政",
+    "year": 114,
+    "tags": [
+      "基本護理學與護理行政"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-basic-nursing-37",
+    "question": "彼得杜拉克（Peter F. Drucker）提出的目標管理，屬於下列何種管理模式？",
+    "options": {
+      "A": "參與式管理",
+      "B": "權威式管理",
+      "C": "放任式管理",
+      "D": "民主式管理"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基本護理學與護理行政",
+    "year": 114,
+    "tags": [
+      "基本護理學與護理行政"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-basic-nursing-38",
+    "question": "有關管理理論之敘述，下列何者正確？",
+    "options": {
+      "A": "修正管理理論和傳統管理理論主要差異在參與式決策和團體價值觀",
+      "B": "行為科學學派著重人性化管理，以日本企業管理的Z理論最具代表性",
+      "C": "管理程序學派重視全盤性經營管理，以戴明（Deming）為代表性人物",
+      "D": "管理科學學派主張運用數學計量處理問題，所有效益都用數字來表示"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基本護理學與護理行政",
+    "year": 114,
+    "tags": [
+      "基本護理學與護理行政"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-basic-nursing-39",
+    "question": "某地區醫院一年的總營業收入為1,000萬元，變動成本為600萬元，固定成本為400萬元，其損益平 衡點為多少萬元？",
+    "options": {
+      "A": "200",
+      "B": "400",
+      "C": "600",
+      "D": "1,000"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基本護理學與護理行政",
+    "year": 114,
+    "tags": [
+      "基本護理學與護理行政"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-basic-nursing-40",
+    "question": "護理長於年度考核前一週，與平時工作表現良好且深獲肯定的護理師起爭執，故給予該名護理師較 低的考評分數。此行為屬於下列何種績效考核問題？",
+    "options": {
+      "A": "寬厚錯誤",
+      "B": "向日葵效應",
+      "C": "膨脹壓力",
+      "D": "觸角效應"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基本護理學與護理行政",
+    "year": 114,
+    "tags": [
+      "基本護理學與護理行政"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-basic-nursing-41",
+    "question": "有關病人分類系統的實施原則，下列敘述何者最適當？",
+    "options": {
+      "A": "要確保資料的完整性，不宜設置稽核機制",
+      "B": "考量臨床實務，不宜太重視分類量表的信效度",
+      "C": "方便易操作，不可影響臨床護理照護時數",
+      "D": "為強化效益，分類系統應採單一功能發展"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基本護理學與護理行政",
+    "year": 114,
+    "tags": [
+      "基本護理學與護理行政"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-basic-nursing-42",
+    "question": "某護理之家員工共計100人，去年每位員工工作240天，有25人請假，共計請假60天，則該機構去年 缺勤率為何？",
+    "options": {
+      "A": "0.10%",
+      "B": "0.25%",
+      "C": "1.00%",
+      "D": "2.50%"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基本護理學與護理行政",
+    "year": 114,
+    "tags": [
+      "基本護理學與護理行政"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-basic-nursing-43",
+    "question": "有關集權式組織的優點，下列敘述何者正確？",
+    "options": {
+      "A": "減少工作重複及成本",
+      "B": "員工覺得自由受尊重",
+      "C": "職權和職責階層完整",
+      "D": "部門間容易相互溝通"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基本護理學與護理行政",
+    "year": 114,
+    "tags": [
+      "護理行政"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-basic-nursing-44",
+    "question": "某病房以病人照護技術需求為工作分配原則，屬於下列何種護理照護模式？",
+    "options": {
+      "A": "成組護理",
+      "B": "功能護理",
+      "C": "綜合護理",
+      "D": "個案護理"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基本護理學與護理行政",
+    "year": 114,
+    "tags": [
+      "基本護理學與護理行政"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-basic-nursing-45",
+    "question": "有關護理師常見的人因性職業傷害，下列何者錯誤？",
+    "options": {
+      "A": "下肢血管靜脈曲張",
+      "B": "背部扭拉傷",
+      "C": "自律神經失調",
+      "D": "椎間盤凸出"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基本護理學與護理行政",
+    "year": 114,
+    "tags": [
+      "基本護理學與護理行政"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-basic-nursing-46",
+    "question": "對於工作意願低，工作能力也低的員工，下列何種管理策略最為適當？",
+    "options": {
+      "A": "移轉策略",
+      "B": "激發策略",
+      "C": "增強策略",
+      "D": "發展策略"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基本護理學與護理行政",
+    "year": 114,
+    "tags": [
+      "基本護理學與護理行政"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-basic-nursing-47",
+    "question": "有關資訊系統能提升護理效能的敘述，下列何者正確？①使用條碼辨識病人，可減少給藥三讀五 對流程 ②減少護理紀錄重複抄寫時間 ③增進護理管理效率 ④衛教資料資訊化，不用花費時間 衛教",
+    "options": {
+      "A": "①②",
+      "B": "②③",
+      "C": "③④",
+      "D": "①④"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基本護理學與護理行政",
+    "year": 114,
+    "tags": [
+      "基本護理學",
+      "藥理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-basic-nursing-48",
+    "question": "應用PDCA（Plan-Do-Check-Act）於老人跌倒品質改善，下列何者正確？",
+    "options": {
+      "A": "Plan：依照事先想好的計畫執行老人跌倒預防措施",
+      "B": "Do：擬定改善老人跌倒計畫及執行預防措施",
+      "C": "Check：查核跌倒評估的落實度及浴廁扶手使用率",
+      "D": "Act：依照跌倒原因採取可行的行動方案"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基本護理學與護理行政",
+    "year": 114,
+    "tags": [
+      "基本護理學與護理行政"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-basic-nursing-49",
+    "question": "有關問題解決的原則，下列敘述何者正確？",
+    "options": {
+      "A": "主管親自解決問題以縮短處理時間",
+      "B": "避免透過外部專家協助處理以免影響聲譽",
+      "C": "優先處理影響組織利益最大的問題",
+      "D": "主管須注意小細節以免問題再發生"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基本護理學與護理行政",
+    "year": 114,
+    "tags": [
+      "基本護理學與護理行政"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-basic-nursing-50",
+    "question": "因醫療處置結果不如預期而產生之醫療糾紛的處理原則，下列何者應優先？",
+    "options": {
+      "A": "請醫院院長應立即出面道歉",
+      "B": "收集發生醫療不良結果之前例",
+      "C": "勇敢出來誠實面對病人或家屬",
+      "D": "說明任何醫療行為均可能有風險"
+    },
+    "category": "考選部護理師高考",
+    "subject": "基本護理學與護理行政",
+    "year": 114,
+    "tags": [
+      "基本護理學與護理行政"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-med-surg-01",
+    "question": "有關巴金森氏症病人服用抗膽鹼激性製劑trihexyphenudyl（Artane®）之敘述，下列何者正確？",
+    "options": {
+      "A": "長期服用會出現姿位型低血壓",
+      "B": "副作用少見，偶有情緒改變和頭痛情形",
+      "C": "常與抗病毒製劑合併使用，可有效控制失眠和頭痛",
+      "D": "需要監測眼壓變化，預防青光眼"
+    },
+    "category": "考選部護理師高考",
+    "subject": "內外科護理學",
+    "year": 114,
+    "tags": [
+      "內外科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-med-surg-02",
+    "question": "多發性硬化症病人之日常活動護理指導，下列敘述何者正確？",
+    "options": {
+      "A": "運動前給予溫熱敷會增加肌肉強直和關節攣縮",
+      "B": "避免在運動後洗熱水澡以免疾病惡化",
+      "C": "可以增加多次且密集的運動，防止肌肉無力和強直",
+      "D": "若疾病加重導致長期臥床，應避免執行全關節運動"
+    },
+    "category": "考選部護理師高考",
+    "subject": "內外科護理學",
+    "year": 114,
+    "tags": [
+      "內外科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-med-surg-03",
+    "question": "有關頭部外傷相關合併症的敘述，下列何者正確？",
+    "options": {
+      "A": "封閉性比開放性頭部外傷更易產生癲癇後遺症",
+      "B": "創傷後症候群症狀可持續數個月到數年",
+      "C": "腦脊髓液瘻管是因腦脊髓液循環路徑阻塞或吸收有問題",
+      "D": "當頭部外傷損及視丘時，會引起抗利尿激素（ADH）分泌失調"
+    },
+    "category": "考選部護理師高考",
+    "subject": "內外科護理學",
+    "year": 114,
+    "tags": [
+      "內外科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-med-surg-04",
+    "question": "有關癲癇（epilepsy）發作處置，下列敘述何者錯誤？",
+    "options": {
+      "A": "電腦斷層檢查可確定異常放電位置",
+      "B": "發作時，可將頭偏向一側以利唾液流出",
+      "C": "發作時，若病人意識不清，不須試圖喚醒病人",
+      "D": "驟然停藥為重積性癲癇常見的原因"
+    },
+    "category": "考選部護理師高考",
+    "subject": "內外科護理學",
+    "year": 114,
+    "tags": [
+      "內外科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-med-surg-05",
+    "question": "有關左側大腦損傷可能引起的功能缺失症狀，下列敘述何者正確？①計算能力降低 ②空間缺損 ③半側忽略 ④語言障礙",
+    "options": {
+      "A": "①②",
+      "B": "①④",
+      "C": "②③",
+      "D": "③④"
+    },
+    "category": "考選部護理師高考",
+    "subject": "內外科護理學",
+    "year": 114,
+    "tags": [
+      "解剖學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-med-surg-06",
+    "question": "有關胃食道逆流症的護理指導，下列敘述何者錯誤？",
+    "options": {
+      "A": "進食後應立即平躺",
+      "B": "避免在睡前2～3小時進食",
+      "C": "少量多餐細嚼慢嚥",
+      "D": "肥胖的病人應減重"
+    },
+    "category": "考選部護理師高考",
+    "subject": "內外科護理學",
+    "year": 114,
+    "tags": [
+      "內外科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-med-surg-07",
+    "question": "有關大腸癌的高危險因子，下列敘述何者正確？",
+    "options": {
+      "A": "常攝取蔬菜及高纖維質",
+      "B": "幽門螺旋桿菌感染",
+      "C": "有家族型腺瘤性息肉症病史",
+      "D": "胃酸分泌過多症"
+    },
+    "category": "考選部護理師高考",
+    "subject": "內外科護理學",
+    "year": 114,
+    "tags": [
+      "內外科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-med-surg-08",
+    "question": "肝性腦病變的病人給與Lactulose的目的，下列何者正確？",
+    "options": {
+      "A": "酸化糞便以減少氨在腸道吸收",
+      "B": "抑制腸內細菌以減少氨的分解",
+      "C": "預防發生肝腎症候群",
+      "D": "減輕腹水的產生"
+    },
+    "category": "考選部護理師高考",
+    "subject": "內外科護理學",
+    "year": 114,
+    "tags": [
+      "病理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-med-surg-09",
+    "question": "有關胰臟炎急性發作及其治療的敘述，下列何者錯誤？",
+    "options": {
+      "A": "上腹部中央疼痛或輻射到背部，疼痛為突發、持續且劇烈",
+      "B": "血清澱粉酶（amylase）升高、脂肪酶（lipase）上升、血鈣下降",
+      "C": "放置鼻胃管的目的為抽出胰澱粉酶，以避免發炎加劇",
+      "D": "當病情穩定可開始進食時，應採低脂肪、低蛋白、高醣飲食"
+    },
+    "category": "考選部護理師高考",
+    "subject": "內外科護理學",
+    "year": 114,
+    "tags": [
+      "內外科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-med-surg-10",
+    "question": "有關食道憩室的敘述，下列何者正確？",
+    "options": {
+      "A": "常見胸口灼熱感症狀",
+      "B": "可做鋇劑食道攝影確定位置",
+      "C": "餐後平躺可減緩不適",
+      "D": "一旦發生須儘速以手術治療"
+    },
+    "category": "考選部護理師高考",
+    "subject": "內外科護理學",
+    "year": 114,
+    "tags": [
+      "內外科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-med-surg-11",
+    "question": "有關痛風性關節炎護理指導之敘述，下列何者正確？",
+    "options": {
+      "A": "避免服用Aspirin，以預防血中尿酸升高",
+      "B": "採取高脂飲食，以促進尿酸鹽排出",
+      "C": "多喝小紅莓汁，以預防尿酸結石產生",
+      "D": "多攝取肉汁、海鮮，以促進嘌呤代謝"
+    },
+    "category": "考選部護理師高考",
+    "subject": "內外科護理學",
+    "year": 114,
+    "tags": [
+      "解剖學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-med-surg-12",
+    "question": "有關肌肉骨骼系統身體檢查評估結果之敘述，下列何者正確？",
+    "options": {
+      "A": "湯瑪斯試驗（Thomas test）陽性反應表示病人對側髖關節攣縮",
+      "B": "浮動試驗（Ballottement test）陽性表示病人膝半月板有損傷",
+      "C": "抽拉試驗（Drawer test）若能將小腿向後牽引6mm表示副韌帶鬆弛",
+      "D": "廷內爾氏徵象（Tinel’s sign）陽性反應表示後十字韌帶鬆弛"
+    },
+    "category": "考選部護理師高考",
+    "subject": "內外科護理學",
+    "year": 114,
+    "tags": [
+      "基本護理學",
+      "解剖學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-med-surg-13",
+    "question": "有關骨質疏鬆症處置之敘述，下列何者正確？",
+    "options": {
+      "A": "每日飯前服用碳酸鈣（calcium carbonate），以增加鈣吸收",
+      "B": "鼓勵日曬及攝取維生素D，以促進鈣吸收",
+      "C": "每日飯後服用雙磷酸鹽類（bisphosphonates），以減少骨流失",
+      "D": "每天使用副甲狀腺素（teriparatide）鼻噴劑，以增加骨質量"
+    },
+    "category": "考選部護理師高考",
+    "subject": "內外科護理學",
+    "year": 114,
+    "tags": [
+      "內外科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-med-surg-14",
+    "question": "下列何者為充滿血管可以供應眼球及視網膜血液及營養的構造？",
+    "options": {
+      "A": "鞏膜",
+      "B": "角膜",
+      "C": "脈絡膜",
+      "D": "睫狀體"
+    },
+    "category": "考選部護理師高考",
+    "subject": "內外科護理學",
+    "year": 114,
+    "tags": [
+      "解剖學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-med-surg-15",
+    "question": "有關扁桃腺炎（tonsilitis）病人接受扁桃腺切除術之敘述，下列何者錯誤？",
+    "options": {
+      "A": "急性發炎期時應儘快安排手術",
+      "B": "術前可用溫食鹽水漱口，減輕咽喉不適",
+      "C": "疑似扁桃腺腫瘤是手術適應症",
+      "D": "術後有持續吞嚥動作時，可能為傷口出血的現象"
+    },
+    "category": "考選部護理師高考",
+    "subject": "內外科護理學",
+    "year": 114,
+    "tags": [
+      "內外科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-med-surg-16",
+    "question": "進行心臟復健時如出現活動耐力不足時應停止，下列何者不是其判斷依據？",
+    "options": {
+      "A": "心律不整或心跳上升或下降超過20次／分鐘以上",
+      "B": "血壓上升或下降超過20 mmHg以上",
+      "C": "體溫大於37℃",
+      "D": "出現胸悶、胸痛、眩暈、盜汗、虛弱、疲倦"
+    },
+    "category": "考選部護理師高考",
+    "subject": "內外科護理學",
+    "year": 114,
+    "tags": [
+      "解剖學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-med-surg-17",
+    "question": "有關裝置永久性心臟節律器病人居家護理指導之敘述，下列何者錯誤？",
+    "options": {
+      "A": "每天需測量橈動脈1分鐘",
+      "B": "住家頂樓避免裝設手機基地台",
+      "C": "可使用微波爐，但應保持安全距離",
+      "D": "持續打嗝時，可做伐式操作法（Valsalva）緩解"
+    },
+    "category": "考選部護理師高考",
+    "subject": "內外科護理學",
+    "year": 114,
+    "tags": [
+      "解剖學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-med-surg-18",
+    "question": "有關心衰竭之敘述，下列何者正確？",
+    "options": {
+      "A": "右心衰竭會出現心搏過速、心室肥大、第三心音",
+      "B": "右心衰竭常出現乾咳或帶有泡沫及血絲痰",
+      "C": "左心衰竭早期徵象是下肢水腫、頸靜脈怒張、腹水",
+      "D": "左心衰竭常見症狀為呼吸困難、端坐呼吸"
+    },
+    "category": "考選部護理師高考",
+    "subject": "內外科護理學",
+    "year": 114,
+    "tags": [
+      "內外科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-med-surg-19",
+    "question": "有關急性心肌梗塞引起的心因性休克給予的藥物處置，下列敘述何者錯誤？",
+    "options": {
+      "A": "Dobutamine滴注可以增加心肌收縮力及心輸出量",
+      "B": "利尿劑主要目的為降低心臟前負荷",
+      "C": "嗎啡主要是緩解疼痛，對心臟前、後負荷沒有影響",
+      "D": "血管擴張劑nitroglycerin（NTG）滴注可以擴張周邊血管而減輕心臟負荷"
+    },
+    "category": "考選部護理師高考",
+    "subject": "內外科護理學",
+    "year": 114,
+    "tags": [
+      "內外科護理學",
+      "病理學",
+      "藥理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-med-surg-20",
+    "question": "有關靜脈剝除結紮手術（stripping and ligation）術後照護之敘述，下列何者錯誤？",
+    "options": {
+      "A": "術後臥床期間避免於床上進行全範圍關節運動",
+      "B": "抬高床尾15度，膝部不彎曲",
+      "C": "術後下床時均應穿彈性襪",
+      "D": "應監測末梢血循變化及是否有感覺異常"
+    },
+    "category": "考選部護理師高考",
+    "subject": "內外科護理學",
+    "year": 114,
+    "tags": [
+      "解剖學",
+      "內外科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-med-surg-21",
+    "question": "正在接受體外放射線治療的癌症病人表示：「臉和頸部的皮膚發紅刺痛、脫屑，甚至有些部位會濕 濕的，很不舒服」，下列處置何者正確？",
+    "options": {
+      "A": "清水洗淨後塗擦凡士林保濕",
+      "B": "可局部溫濕敷以緩解不適症狀",
+      "C": "0.9% N/S沖洗後以親水敷料（DuoDerm）覆蓋",
+      "D": "刮鬍子時用刮鬍膏潤滑刮鬍刀以免刮傷"
+    },
+    "category": "考選部護理師高考",
+    "subject": "內外科護理學",
+    "year": 114,
+    "tags": [
+      "病理學",
+      "生理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-med-surg-22",
+    "question": "顆粒性白血球低下的癌症病人之食物選擇，下列何者最適切？",
+    "options": {
+      "A": "溏心蛋：補充單白質",
+      "B": "泡菜：補充纖維質防便秘",
+      "C": "柑橘：補充維生素C",
+      "D": "優格：補充鈣質、維生素"
+    },
+    "category": "考選部護理師高考",
+    "subject": "內外科護理學",
+    "year": 114,
+    "tags": [
+      "病理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-med-surg-23",
+    "question": "中樞神經系統癌症病人，若選用難以通過血腦障壁之化學治療時，下列何者為最適切之給藥途徑？ ①Port-A ②Ommaya reservoir ③Hickman catheter ④intrathecal injection",
+    "options": {
+      "A": "①③",
+      "B": "①④",
+      "C": "②③",
+      "D": "②④"
+    },
+    "category": "考選部護理師高考",
+    "subject": "內外科護理學",
+    "year": 114,
+    "tags": [
+      "基本護理學",
+      "解剖學",
+      "病理學",
+      "藥理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-med-surg-24",
+    "question": "為一位乳癌骨轉移合併脊髓壓迫的病人進行身體評估時，下列症狀或徵象何者最不常出現？",
+    "options": {
+      "A": "背部疼痛指數7分（滿分10分）",
+      "B": "布魯辛斯基氏徵象（Brudzinski's sign）陽性",
+      "C": "大小便失禁情形",
+      "D": "巴賓斯基氏徵象（Babinski's sign）陽性"
+    },
+    "category": "考選部護理師高考",
+    "subject": "內外科護理學",
+    "year": 114,
+    "tags": [
+      "基本護理學",
+      "病理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-med-surg-25",
+    "question": "下列何者接受自體移植治療後的5年存活率最高？",
+    "options": {
+      "A": "急性骨髓性白血病第一次完全緩解後接受自體骨髓移植",
+      "B": "急性骨髓性白血病第一次完全緩解後接受自體周邊血液幹細胞移植",
+      "C": "急性淋巴性白血病第一次完全緩解後接受自體骨髓移植",
+      "D": "急性淋巴性白血病第一次完全緩解後接受自體周邊血液幹細胞移植"
+    },
+    "category": "考選部護理師高考",
+    "subject": "內外科護理學",
+    "year": 114,
+    "tags": [
+      "內外科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-med-surg-26",
+    "question": "有關致癌因子及其相關癌症的敘述，下列何者需進一步提供護理指導以澄清誤解？",
+    "options": {
+      "A": "「我看你還是少吃點檳榔吧，不然口腔癌可能會找上你喔」",
+      "B": "「平時喝酒適量即可，過量可能會導致肝癌、乳癌、食道癌的發生」",
+      "C": "「我老公平時是油漆工，聽說長時間接觸那些苯胺染料，可能和膀胱癌的發生有關」",
+      "D": "「上次我去看醫師，他跟我說我有幽門螺旋桿菌，可能和食道癌的發生有關」"
+    },
+    "category": "考選部護理師高考",
+    "subject": "內外科護理學",
+    "year": 114,
+    "tags": [
+      "病理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-med-surg-27",
+    "question": "有關帶狀疱疹臨床症狀之敘述，下列何者正確？",
+    "options": {
+      "A": "帶狀小水疱群聚常會環繞軀幹一圈",
+      "B": "最常發生在頭頸部",
+      "C": "口腔有乳白色的斑塊",
+      "D": "淋巴腺腫與水疱同時發生、同時消失"
+    },
+    "category": "考選部護理師高考",
+    "subject": "內外科護理學",
+    "year": 114,
+    "tags": [
+      "內外科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-med-surg-28",
+    "question": "有關皮膚腫瘤之敘述，下列何者正確？",
+    "options": {
+      "A": "表皮囊腫（epidermal cysts）是一種惡性腫瘤，通常包裹著乳白色的粉狀物質",
+      "B": "脂漏性角化症（seborrheic keratoses）是一種良性的表皮角質過度增生",
+      "C": "纖維瘤（fibroma）是一種脂肪細胞常見的腫瘤",
+      "D": "蜘蛛狀血管瘤（spider hemangioma）與血液中黃體激素升高有關"
+    },
+    "category": "考選部護理師高考",
+    "subject": "內外科護理學",
+    "year": 114,
+    "tags": [
+      "病理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-med-surg-29",
+    "question": "林先生因熱燒傷接受植皮手術，有關術後注意事項之敘述，下列何者正確？",
+    "options": {
+      "A": "供皮區應使用石膏夾板固定至少3～7天",
+      "B": "術後應鼓勵病人移植部位多接受日照",
+      "C": "肩部燒傷應使病人採俯臥，手臂位置遠離身體",
+      "D": "膝蓋受傷部位應採屈曲姿位，膝下墊一枕頭"
+    },
+    "category": "考選部護理師高考",
+    "subject": "內外科護理學",
+    "year": 114,
+    "tags": [
+      "內外科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-med-surg-30",
+    "question": "有關後天免疫缺乏症候群（AIDS）臨床表徵之敘述，下列何者錯誤？",
+    "options": {
+      "A": "急性HIV感染可能出現類感冒症狀如淋巴腺腫大、發燒、肌肉關節疼痛",
+      "B": "臨床潛伏期可能持續10年或更長時間",
+      "C": "卡波西氏肉瘤是愛滋病人最常見的惡性腫瘤",
+      "D": "愛滋病人可能出現口腔紅斑症"
+    },
+    "category": "考選部護理師高考",
+    "subject": "內外科護理學",
+    "year": 114,
+    "tags": [
+      "微生物學與免疫學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-med-surg-31",
+    "question": "為降低排斥反應，下列何者為器官移植前進行組織配對的常見檢驗？①C型肝炎檢驗 ②人類白血 球抗原（HLA） ③混和性淋巴細胞反應 ④交叉配對試驗 ⑤人類免疫缺乏病毒（HIV）篩檢",
+    "options": {
+      "A": "①②③",
+      "B": "①④⑤",
+      "C": "②③④",
+      "D": "③④⑤"
+    },
+    "category": "考選部護理師高考",
+    "subject": "內外科護理學",
+    "year": 114,
+    "tags": [
+      "微生物學與免疫學",
+      "護理行政",
+      "精神科與社區衛生護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-med-surg-32",
+    "question": "病人因車禍送到急診，身體評估出現下列何者時，應懷疑可能有氣胸？",
+    "options": {
+      "A": "一側聽不到呼吸音或呼吸音減弱",
+      "B": "二側肺葉有喘鳴音",
+      "C": "二側肺葉於吸氣時聽到囉音",
+      "D": "一側肺葉叩診出現濁音"
+    },
+    "category": "考選部護理師高考",
+    "subject": "內外科護理學",
+    "year": 114,
+    "tags": [
+      "基本護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-med-surg-33",
+    "question": "有關急性呼吸窘迫症候群（ARDS）之敘述，下列何者正確？",
+    "options": {
+      "A": "因為外分泌腺分泌異常，而導致黏液聚集在肺泡中",
+      "B": "因為肺部疾病，而引起右心肥大與肥厚",
+      "C": "因為肋膜腔內積聚空氣，而導致肺部塌陷",
+      "D": "因為肺泡微血管膜的通透性受損，而產生肺水腫"
+    },
+    "category": "考選部護理師高考",
+    "subject": "內外科護理學",
+    "year": 114,
+    "tags": [
+      "生理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-med-surg-34",
+    "question": "下列何者不屬於動脈血液氣體分析（arterial blood gas analysis）可以直接偵測之項目？",
+    "options": {
+      "A": "呼吸困難",
+      "B": "酸鹼度",
+      "C": "重碳酸鹽含量",
+      "D": "血氧飽和度"
+    },
+    "category": "考選部護理師高考",
+    "subject": "內外科護理學",
+    "year": 114,
+    "tags": [
+      "解剖學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-med-surg-35",
+    "question": "下列何種給氧方式能提供最高的氧氣吸入濃度（FiO2）？",
+    "options": {
+      "A": "卞德里面罩",
+      "B": "單純型面罩",
+      "C": "氧氣鼻套管",
+      "D": "非再吸入面罩"
+    },
+    "category": "考選部護理師高考",
+    "subject": "內外科護理學",
+    "year": 114,
+    "tags": [
+      "內外科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-med-surg-36",
+    "question": "有關肺膿瘍病人的護理評估，下列何者最可能出現？",
+    "options": {
+      "A": "呼吸音減弱有時會出現肋膜摩擦音",
+      "B": "叩診出現鼓音",
+      "C": "上肺葉吸氣期出現喘鳴音",
+      "D": "叩診出現過度反響音"
+    },
+    "category": "考選部護理師高考",
+    "subject": "內外科護理學",
+    "year": 114,
+    "tags": [
+      "基本護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-med-surg-37",
+    "question": "有關高血鉀導因之敘述，下列何者正確？①使用血管收縮素轉換酶抑制劑 ②使用醛固酮拮抗劑 ③使用噻嗪類利尿劑（thiazide diuretics） ④代謝性鹼中毒",
+    "options": {
+      "A": "①②",
+      "B": "①④",
+      "C": "②③",
+      "D": "③④"
+    },
+    "category": "考選部護理師高考",
+    "subject": "內外科護理學",
+    "year": 114,
+    "tags": [
+      "解剖學",
+      "藥理學",
+      "生理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-med-surg-38",
+    "question": "尿液分析中出現紅血球的病因，下列何者錯誤？",
+    "options": {
+      "A": "輸尿管結石",
+      "B": "前列腺肥大",
+      "C": "子癲前症",
+      "D": "尿路感染"
+    },
+    "category": "考選部護理師高考",
+    "subject": "內外科護理學",
+    "year": 114,
+    "tags": [
+      "內外科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-med-surg-39",
+    "question": "陳先生，88歲，因全身水腫，呼吸喘至急診求治，診斷為急性腎衰竭，下列敘述何者正確？",
+    "options": {
+      "A": "血鉀7.5 mg/dL，心電圖T波低而寬長",
+      "B": "可能因前列腺肥大，導致腎性急性腎衰竭",
+      "C": "24小時尿量約300 c.c.，正處於腎衰竭少尿期",
+      "D": "腎臟超音波檢查，顯示雙側腎臟大小為7.5 cm"
+    },
+    "category": "考選部護理師高考",
+    "subject": "內外科護理學",
+    "year": 114,
+    "tags": [
+      "病理學",
+      "生理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-med-surg-40",
+    "question": "有關腎臟功能檢測血清肌酸酐（creatinine）之敘述，下列何者錯誤？",
+    "options": {
+      "A": "易受飲食影響可用以估算排泄能力",
+      "B": "是用來估算腎臟功能最佳指標",
+      "C": "升高時代表腎功能已損傷50%以上",
+      "D": "升高時代表腎絲球過濾率功能已降低"
+    },
+    "category": "考選部護理師高考",
+    "subject": "內外科護理學",
+    "year": 114,
+    "tags": [
+      "解剖學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-med-surg-41",
+    "question": "有關預防泌尿道感染復發的護理指導，下列何者錯誤？",
+    "options": {
+      "A": "減少不必要的導尿管留置",
+      "B": "排便後，應由前往後擦拭",
+      "C": "洗澡避免盆浴，儘量採淋浴",
+      "D": "症狀減輕沒發燒就可以停藥"
+    },
+    "category": "考選部護理師高考",
+    "subject": "內外科護理學",
+    "year": 114,
+    "tags": [
+      "微生物學與免疫學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-med-surg-42",
+    "question": "有關糖尿病酮酸中毒（DKA）之處置，下列何者正確？①建立靜脈輸液，由低劑量胰島素開始給與 ②最初2小時，給與0.45％生理食鹽水維持電解質平衡 ③等尿液排出量恢復正常，應補充鉀離子 ④血液pH值>7.1時，則與以重碳酸鈉（NaHCO3）",
+    "options": {
+      "A": "①②",
+      "B": "①③",
+      "C": "②④",
+      "D": "③④"
+    },
+    "category": "考選部護理師高考",
+    "subject": "內外科護理學",
+    "year": 114,
+    "tags": [
+      "內外科護理學",
+      "解剖學",
+      "藥理學",
+      "生理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-med-surg-43",
+    "question": "有關服用治療甲狀腺機能亢進之放射性碘（131I）的敘述，下列何者正確？",
+    "options": {
+      "A": "食物會延遲放射性碘（131I）吸收，服用前一天午夜後及服用後2小時應禁食，以利吸收",
+      "B": "服用治療劑量於8～30 μ Ci 的病人應限制訪客，第一週最好單獨睡，避免接觸孕婦",
+      "C": "服用一個星期後會經由尿液、糞便排出，這段時間在使用馬桶後，宜沖水2～3次",
+      "D": "服用高劑量者10年後易出現甲狀腺功能亢進，故需定期追蹤血清T3是否上升"
+    },
+    "category": "考選部護理師高考",
+    "subject": "內外科護理學",
+    "year": 114,
+    "tags": [
+      "內外科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-med-surg-44",
+    "question": "有關肢端肥大症之症狀，下列何者錯誤？",
+    "options": {
+      "A": "泌尿系統：低血鈣症、腎結石",
+      "B": "骨骼系統：關節痛、肌肉無力",
+      "C": "神經系統：腕隧道症候群、嗜睡",
+      "D": "皮膚系統：皮膚增厚、油脂增多"
+    },
+    "category": "考選部護理師高考",
+    "subject": "內外科護理學",
+    "year": 114,
+    "tags": [
+      "內外科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-med-surg-45",
+    "question": "有關尿崩症病人之護理處置，下列何者錯誤？",
+    "options": {
+      "A": "應鼓勵病人多喝開水，以維持水分和體液電解質的平衡",
+      "B": "噴灑鼻噴劑型desmopressin時，教導病人應吸氣以增加藥效",
+      "C": "腎因性尿崩症應給與Thiazide利尿劑及限鹽攝取，以緩解症狀",
+      "D": "Vassopressin Tannate是油性懸浮液，抽藥前需先溫熱與搖勻"
+    },
+    "category": "考選部護理師高考",
+    "subject": "內外科護理學",
+    "year": 114,
+    "tags": [
+      "內外科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-med-surg-46",
+    "question": "有關糖尿病足病人運動時鞋襪選擇之建議，下列何者錯誤？",
+    "options": {
+      "A": "楦頭要寬，可讓腳趾自由伸展",
+      "B": "穿鞋前要先檢查鞋內有無異物",
+      "C": "襪子選擇棉質易吸汗為佳",
+      "D": "運動時需穿鞋保護雙足，偶爾不穿襪沒關係"
+    },
+    "category": "考選部護理師高考",
+    "subject": "內外科護理學",
+    "year": 114,
+    "tags": [
+      "內外科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-med-surg-47",
+    "question": "有關2020年美國心臟醫學會（American Heart Association, AHA）公告準則，啟動院內心臟停止 （IHCA）生命之鏈（chain of survival）的次序，下列何者正確？①提供高品質心肺復甦 ②去 顫 ③早期監測與預防 ④心臟驟停後照護 ⑤復原 ⑥啟動緊急應變系統",
+    "options": {
+      "A": "①→②→③→⑥→⑤→④",
+      "B": "③→⑥→①→②→④→⑤",
+      "C": "⑥→①→③→②→④→⑤",
+      "D": "⑥→②→③→①→⑤→④"
+    },
+    "category": "考選部護理師高考",
+    "subject": "內外科護理學",
+    "year": 114,
+    "tags": [
+      "解剖學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-med-surg-48",
+    "question": ".72歲男性，有心臟病病史，夏天逛露天賣場時不明原因昏倒，臉色潮紅，皮膚乾熱，呼吸24次／ 分，脈搏強而快，體溫41.5℃，下列何者為其最可能診斷？",
+    "options": {
+      "A": "熱中暑（heat stroke）",
+      "B": "熱性痙攣（heat cramp）",
+      "C": "熱衰竭（heat exhaustion）",
+      "D": "熱暈厥（heat syncope）"
+    },
+    "category": "考選部護理師高考",
+    "subject": "內外科護理學",
+    "year": 114,
+    "tags": [
+      "解剖學",
+      "生理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-med-surg-49",
+    "question": "有關輸血品項與適應症之敘述，下列何者錯誤？",
+    "options": {
+      "A": "血小板濃厚液適用於治療血小板減少症",
+      "B": "2單位紅血球濃厚液適用於提高成年人血色素約1～1.2 gm/dL",
+      "C": "全血適用於過敏性休克病人",
+      "D": "新鮮冷凍血漿適用於發生瀰漫性血管內凝血之病人"
+    },
+    "category": "考選部護理師高考",
+    "subject": "內外科護理學",
+    "year": 114,
+    "tags": [
+      "藥理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-med-surg-50",
+    "question": "有關登革熱的敘述，下列何者正確？",
+    "options": {
+      "A": "臉部出現不痛不癢的紅斑",
+      "B": "病毒從呼吸道檢體分離是確診的主要依據",
+      "C": "為第三類法定傳染病",
+      "D": "馬鞍狀發燒，發燒3天後體溫下降1～2天後，又再度發燒"
+    },
+    "category": "考選部護理師高考",
+    "subject": "內外科護理學",
+    "year": 114,
+    "tags": [
+      "內外科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-obs-ped-01",
+    "question": "有關婦嬰生命統計資料的敘述，下列何者錯誤？",
+    "options": {
+      "A": "粗出生率係指一年內每千位人口的平均活產數",
+      "B": "總生育率係指每年每千位育齡婦女合計生育的子女數",
+      "C": "台灣使用總生育率作為衡量人口生育水準的標準",
+      "D": "開發中的國家，其粗出生率往往較低"
+    },
+    "category": "考選部護理師高考",
+    "subject": "產兒科護理學",
+    "year": 114,
+    "tags": [
+      "產兒科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-obs-ped-02",
+    "question": "護理師為妊娠32週的趙女士進行腹部四段式觸診，下列敘述何者最適當？",
+    "options": {
+      "A": "檢查前請趙女士喝很多水以漲滿膀胱",
+      "B": "第四段觸診時應面向趙女士以評估胎兒背部",
+      "C": "觸診子宮底型態感覺硬、圓、光滑則為胎兒臀部",
+      "D": "觸診腹部兩側感覺較硬及平滑面為胎兒背部"
+    },
+    "category": "考選部護理師高考",
+    "subject": "產兒科護理學",
+    "year": 114,
+    "tags": [
+      "產兒科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-obs-ped-03",
+    "question": "陳女士月經週期規律，偶睡前服用鎮靜劑，因月經過期10天，自行購買驗孕棒進行妊娠試驗，下列 敘述何者正確？",
+    "options": {
+      "A": "太早進行驗孕，驗孕棒結果不準確",
+      "B": "驗孕棒原理是以聯酶法（ELISA）檢測尿液中hCG濃度",
+      "C": "以睡前中段尿液檢測，可得較準確的結果",
+      "D": "服用鎮靜劑可能導致假陰性反應"
+    },
+    "category": "考選部護理師高考",
+    "subject": "產兒科護理學",
+    "year": 114,
+    "tags": [
+      "產兒科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-obs-ped-04",
+    "question": "懷孕32週婦女，當有人經過其身旁時，會不由自主用雙手護住肚子，下列何者最能形容其孕期的母 性任務行為？",
+    "options": {
+      "A": "確保與他人的社會互動之距離",
+      "B": "確認自己身體外觀的變化",
+      "C": "關注自己身體功能的運作",
+      "D": "關注自己身體界限的完整"
+    },
+    "category": "考選部護理師高考",
+    "subject": "產兒科護理學",
+    "year": 114,
+    "tags": [
+      "產兒科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-obs-ped-05",
+    "question": "懷孕28週婦女，詢問有關懷孕期自我會陰按摩方法，下列護理指導何者不適當？",
+    "options": {
+      "A": "可於預產期前6週開始執行",
+      "B": "採一腳跨踩於椅子上進行會陰按摩",
+      "C": "將手指塗抹潤滑油，放入陰道約5公分",
+      "D": "以拇指按壓陰道，向上按壓，並往兩側推"
+    },
+    "category": "考選部護理師高考",
+    "subject": "產兒科護理學",
+    "year": 114,
+    "tags": [
+      "產兒科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-obs-ped-06",
+    "question": "下列何項血液檢驗值，可以用來篩檢孕婦是否為海洋性貧血帶因者？",
+    "options": {
+      "A": "血色素（Hb）",
+      "B": "平均紅血球體積（MCV）",
+      "C": "鐵離子（Fe++）",
+      "D": "α-胎兒蛋白（α-AFP）"
+    },
+    "category": "考選部護理師高考",
+    "subject": "產兒科護理學",
+    "year": 114,
+    "tags": [
+      "產兒科護理學",
+      "精神科與社區衛生護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-obs-ped-07",
+    "question": "有關待產婦因過度產痛所引起的不良生理變化，下列敘述何者錯誤？",
+    "options": {
+      "A": "伴隨產痛的過度換氣，將造成待產婦出現定向感障礙、感覺異常及四肢痙攣",
+      "B": "產痛將增加待產婦自主神經活性，減少胎盤血液灌流，增加胎兒呼吸性酸中毒的危險",
+      "C": "產程過程中激烈產痛，易產生壓力反應，增加抗利尿激素分泌",
+      "D": "待產過程出現過度換氣，增加待產婦呼吸性酸中毒的發生"
+    },
+    "category": "考選部護理師高考",
+    "subject": "產兒科護理學",
+    "year": 114,
+    "tags": [
+      "生理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-obs-ped-08",
+    "question": "有關吸入性麻醉藥（inhalation anesthesia），下列敘述何者錯誤？",
+    "options": {
+      "A": "屬於全身麻醉劑，其中一氧化二氮（N2O），為無色無味氣體，俗稱笑氣",
+      "B": "易影響子宮收縮，造成產程延長及產後大出血，增加生產過程的危險",
+      "C": "為水溶性麻醉劑，容易過胎盤進入胎兒體內，抑制新生兒的神經反射",
+      "D": "需注意麻醉劑量濃度及避免吸入後引起待產婦嘔吐"
+    },
+    "category": "考選部護理師高考",
+    "subject": "產兒科護理學",
+    "year": 114,
+    "tags": [
+      "產兒科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-obs-ped-09",
+    "question": "汪女士，生產過程未行會陰切開。胎盤娩出後，檢查發現會陰皮膚及陰道黏膜有撕裂，但未裂至肌 肉層。此情況應記錄為會陰部撕裂傷幾度？",
+    "options": {
+      "A": "第一度",
+      "B": "第二度",
+      "C": "第三度",
+      "D": "第四度"
+    },
+    "category": "考選部護理師高考",
+    "subject": "產兒科護理學",
+    "year": 114,
+    "tags": [
+      "產兒科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-obs-ped-10",
+    "question": "林女士，G1P0，懷孕41週，因自然破水及規則陣痛到院檢查，陰道內診子宮頸已擴張2公分，宮縮時 疼痛分數為2分（0-10分量表）故協助辦理住院待產。林女士此時最可能出現下列何種行為反應？",
+    "options": {
+      "A": "興奮話多，樂意分享產兆發生過程",
+      "B": "顯得疲累且擔心自己的身體失去控制",
+      "C": "大多閉眼休息，宮縮不適時，儘量維持身體不動",
+      "D": "身心能量都集中在應付宮縮上，常以單字回應問題"
+    },
+    "category": "考選部護理師高考",
+    "subject": "產兒科護理學",
+    "year": 114,
+    "tags": [
+      "產兒科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-obs-ped-11",
+    "question": "有關生產疼痛理論與緩解措施之敘述，下列何者正確？",
+    "options": {
+      "A": "按撫法（effleurage）對強度疼痛的減痛效果明顯",
+      "B": "骶骨重壓法可減輕下背部疼痛",
+      "C": "生產球適合高危險妊娠婦女使用",
+      "D": "按撫法的原理是依據制約理論"
+    },
+    "category": "考選部護理師高考",
+    "subject": "產兒科護理學",
+    "year": 114,
+    "tags": [
+      "產兒科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-obs-ped-12",
+    "question": "有關鼓勵孕產家庭與家中新成員－新生兒的依附關係的建立，下列敘述何者錯誤？",
+    "options": {
+      "A": "除了兩歲以下的小孩外，鼓勵所有家人共同參與新生兒照護",
+      "B": "產後婦女的身體與心理調適，都可能會影響依附關係之建立",
+      "C": "親子同室有助於家人參與育兒照護工作，也提供新生兒適應日後的生活環境",
+      "D": "鼓勵父親及家人一起參與親子同室，可以儘早接觸及認識新生兒"
+    },
+    "category": "考選部護理師高考",
+    "subject": "產兒科護理學",
+    "year": 114,
+    "tags": [
+      "產兒科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-obs-ped-13",
+    "question": "林女士，G1P1，剖腹生產後一週，主訴全身發熱不舒服，身體檢查沒有明顯身體其他部位疼痛情 況。若是此發熱不適與子宮復舊有關，下列何者為最可能的子宮復舊評估結果？",
+    "options": {
+      "A": "腹部觸診時，約在下腹部，接近恥骨聯合處觸摸到子宮底",
+      "B": "按摩後子宮硬度及大小有如棒球",
+      "C": "觸診子宮時，會有壓迫感，但不會明顯疼痛不適",
+      "D": "子宮底位於肚臍下五橫指，惡露呈暗咖啡色帶有臭味"
+    },
+    "category": "考選部護理師高考",
+    "subject": "產兒科護理學",
+    "year": 114,
+    "tags": [
+      "基本護理學",
+      "產兒科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-obs-ped-14",
+    "question": "下列何者最適合採用泌乳期無月經法（LAM）作為避孕方法？",
+    "options": {
+      "A": "純母乳哺育，嬰兒3個月大，產後第一次月經剛剛結束",
+      "B": "純母乳哺育，嬰兒4個月大，產後月經尚未恢復",
+      "C": "主要以母乳哺育，夜裡偶而添加1～2次配方奶，嬰兒3個月大，產後月經尚未恢復",
+      "D": "混合哺餵，嬰兒3個月大，產後月經尚未恢復"
+    },
+    "category": "考選部護理師高考",
+    "subject": "產兒科護理學",
+    "year": 114,
+    "tags": [
+      "產兒科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-obs-ped-15",
+    "question": "有關產後惡露評估，下列敘述何者為正常生理現象？",
+    "options": {
+      "A": "產後第2天，惡露呈鮮紅色且無血塊，有惡臭味",
+      "B": "產後第3天，惡露呈深紅色微量血塊，有血腥味",
+      "C": "產後第5天，惡露呈淡乳黃色無血塊，有血腥味",
+      "D": "產後第12天，惡露呈暗棕色無血塊，無血腥味"
+    },
+    "category": "考選部護理師高考",
+    "subject": "產兒科護理學",
+    "year": 114,
+    "tags": [
+      "基本護理學",
+      "生理學",
+      "產兒科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-obs-ped-16",
+    "question": "有關哺餵母乳的好處，下列敘述何者正確？",
+    "options": {
+      "A": "哺乳可刺激腦下垂體前葉釋放泌乳激素（prolactin）促使子宮收縮",
+      "B": "白天餵奶可以抑制濾泡刺激素（follicle stimulating hormone, FSH）的分泌而避孕",
+      "C": "哺乳期間母親需要增加熱量及其他營養素的攝取，因此體重增加比餵配方奶者多",
+      "D": "哺乳的母親在停經前罹患乳癌或卵巢癌的機率較低"
+    },
+    "category": "考選部護理師高考",
+    "subject": "產兒科護理學",
+    "year": 114,
+    "tags": [
+      "產兒科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-obs-ped-17",
+    "question": "有關預防尿布疹的措施，下列何者最適當？",
+    "options": {
+      "A": "包裹新的尿布前需使用痱子粉保持皮膚乾爽",
+      "B": "溫水清潔後使用酒精消毒皮膚降低細菌孳生",
+      "C": "大小便後以溫水清洗再用清潔的布拭乾",
+      "D": "改餵配方奶以減少排便次數"
+    },
+    "category": "考選部護理師高考",
+    "subject": "產兒科護理學",
+    "year": 114,
+    "tags": [
+      "產兒科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-obs-ped-18",
+    "question": "沐浴前將新生兒置於有磅秤紙的體重計進行體重量測，沐浴後以乾毛巾迅速擦乾其身體，此乃運用 下列那些預防體熱喪失的機制？",
+    "options": {
+      "A": "對流及蒸發",
+      "B": "傳導及蒸發",
+      "C": "傳導及輻射",
+      "D": "對流及輻射"
+    },
+    "category": "考選部護理師高考",
+    "subject": "產兒科護理學",
+    "year": 114,
+    "tags": [
+      "基本護理學",
+      "產兒科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-obs-ped-19",
+    "question": "採純母乳哺餵之健康新生兒出生體重為3,900公克，出生第三天體重降為3,700公克，父母非常擔憂 該新生兒體重降低的狀況，此時最適合的護理指導為何？",
+    "options": {
+      "A": "三天內體重減輕200公克可能與新生兒腸胃道吸收功能不佳有關，需要請醫師檢查",
+      "B": "出生前幾日的體重減輕可能與生理性黃疸有關，應該要立即抽血檢查",
+      "C": "三天內體重減輕200公克與母乳分泌不足有關，教導母親應多喝水與多食用高蛋白食物",
+      "D": "此為正常新生兒生理性體重流失現象，增加哺餵次數體重會慢慢恢復，不必太過擔憂"
+    },
+    "category": "考選部護理師高考",
+    "subject": "產兒科護理學",
+    "year": 114,
+    "tags": [
+      "產兒科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-obs-ped-20",
+    "question": "王女士使用催產素引產，胎兒監測器呈現宮縮頻率及持續時間為 60\" /1'30\" -2'，宮縮時壓力100 mmHg，子宮頸口一直停留在4公分，胎心音為135～150 bpm，下列何者為最優先處置？",
+    "options": {
+      "A": "鼓勵待產婦下床走動",
+      "B": "停止催產素注射",
+      "C": "採右側臥姿勢",
+      "D": "準備緊急剖腹產"
+    },
+    "category": "考選部護理師高考",
+    "subject": "產兒科護理學",
+    "year": 114,
+    "tags": [
+      "產兒科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-obs-ped-21",
+    "question": "林女士待產時突然主訴腹部呈撕裂性疼痛，護理師評估腹部有一明顯凹陷，無法測到宮縮和胎心 音，此情境最可能為？",
+    "options": {
+      "A": "低張性子宮收縮",
+      "B": "早期破水",
+      "C": "子宮破裂",
+      "D": "羊水栓塞"
+    },
+    "category": "考選部護理師高考",
+    "subject": "產兒科護理學",
+    "year": 114,
+    "tags": [
+      "基本護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-obs-ped-22",
+    "question": "有關產後血栓性靜脈炎之敘述，下列何者正確？",
+    "options": {
+      "A": "產後血小板及凝血因子數量增加是其主因",
+      "B": "長期服用口服避孕藥婦女較不易發生",
+      "C": "待產期出汗脫水而造成血液濃稠是其主因",
+      "D": "孕期水腫婦女較易發生"
+    },
+    "category": "考選部護理師高考",
+    "subject": "產兒科護理學",
+    "year": 114,
+    "tags": [
+      "解剖學",
+      "產兒科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-obs-ped-23",
+    "question": "王女士，30歲，G1P1，有妊娠期糖尿病，有關產後的避孕護理指導，下列何者較為合適？",
+    "options": {
+      "A": "子宮內避孕器",
+      "B": "口服避孕藥",
+      "C": "輸卵管結紮",
+      "D": "保險套"
+    },
+    "category": "考選部護理師高考",
+    "subject": "產兒科護理學",
+    "year": 114,
+    "tags": [
+      "內外科護理學",
+      "產兒科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-obs-ped-24",
+    "question": "在已開發國家中會以那些措施預防愛滋病的母子垂直感染？①妊娠期接受完整的抗愛滋病毒藥物治 療 ②採剖腹生產 ③新生兒給與預防性口服抗愛滋病毒藥物 ④分娩前母親血中病毒量＜400 copies/mL者方可哺餵母乳",
+    "options": {
+      "A": "僅①②",
+      "B": "僅③④",
+      "C": "①②③",
+      "D": "①②④"
+    },
+    "category": "考選部護理師高考",
+    "subject": "產兒科護理學",
+    "year": 114,
+    "tags": [
+      "微生物學與免疫學",
+      "藥理學",
+      "產兒科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-obs-ped-25",
+    "question": "吳女士，25歲，罹患淋病（gonorrhea），下列產後護理措施何者適當？",
+    "options": {
+      "A": "指導其性生活可以繼續，但頻率要減少",
+      "B": "教導執行自我陰道灌洗技術",
+      "C": "收集子宮頸口分泌物進行細菌培養",
+      "D": "使用2% tetracycline藥膏預防新生兒眼疾發生"
+    },
+    "category": "考選部護理師高考",
+    "subject": "產兒科護理學",
+    "year": 114,
+    "tags": [
+      "產兒科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-obs-ped-26",
+    "question": "兒童急救的生命之鏈（pediatric chain of survival）有五個環環相扣的重要程序，第一步驟為 何？",
+    "options": {
+      "A": "預防傷害發生",
+      "B": "儘早心肺復甦術",
+      "C": "儘早高級醫療照護",
+      "D": "啟動緊急救護系統"
+    },
+    "category": "考選部護理師高考",
+    "subject": "產兒科護理學",
+    "year": 114,
+    "tags": [
+      "產兒科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-obs-ped-27",
+    "question": "有關兒童遭受虐待的護理處置，下列敘述何者錯誤？",
+    "options": {
+      "A": "儘速將受虐者與施虐者隔離，避免兒童繼續遭受虐待",
+      "B": "受虐者須與父母一起接受問診確認事情發生過程，不能分開會談",
+      "C": "執行醫療照護時，需注意受虐兒童隱私問題",
+      "D": "得知父母親缺乏支持系統，加上經濟壓力，應儘快提供社會資源"
+    },
+    "category": "考選部護理師高考",
+    "subject": "產兒科護理學",
+    "year": 114,
+    "tags": [
+      "產兒科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-obs-ped-28",
+    "question": "護理師提供父母親對自閉症兒童的照護指導，下列敘述何者不適當？",
+    "options": {
+      "A": "可增加居家環境的改變，刺激其認知學習",
+      "B": "行為症狀會持續至成人期",
+      "C": "使用抗思慮障礙劑或中樞神經活化劑等藥物，以減輕症狀",
+      "D": "多於幼兒期即被發現，宜即早安排接受早期療育"
+    },
+    "category": "考選部護理師高考",
+    "subject": "產兒科護理學",
+    "year": 114,
+    "tags": [
+      "產兒科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-obs-ped-29",
+    "question": ".10個月大新生兒進行身體檢查仍會有的反射項目，下列何者最為正確？",
+    "options": {
+      "A": "驚嚇反射（startle reflex）",
+      "B": "手掌抓握反射（palmar grasp reflex）",
+      "C": "踏步反射（stepping reflex）",
+      "D": "巴賓斯基氏反射（Babinski’s reflex）"
+    },
+    "category": "考選部護理師高考",
+    "subject": "產兒科護理學",
+    "year": 114,
+    "tags": [
+      "生理學",
+      "產兒科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-obs-ped-30",
+    "question": "有關兒童使用眼藥的注意事項，下列敘述何者正確？",
+    "options": {
+      "A": "將眼藥膏塗抹於下眼瞼結膜上",
+      "B": "將眼藥水滴於下眼瞼結膜外側",
+      "C": "給藥時請兒童頭後仰且往下看",
+      "D": "醫囑O.D.是指雙眼給藥"
+    },
+    "category": "考選部護理師高考",
+    "subject": "產兒科護理學",
+    "year": 114,
+    "tags": [
+      "產兒科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-obs-ped-31",
+    "question": "小婷，14歲，因罹患全身性紅斑性狼瘡（systemic lupus erythematosus, SLE）住院進行脈衝治 療（pulse therapy），護理師提供的照護措施，下列何者不適當？",
+    "options": {
+      "A": "住院期間，鼓勵其與同儕保持聯繫",
+      "B": "告知疾病和治療對身體外觀影響不大，以減輕其不安",
+      "C": "評估疼痛的程度，避免因隱瞞而疏忽對其疼痛的處理",
+      "D": "注意傾聽並提供支持，避免評論"
+    },
+    "category": "考選部護理師高考",
+    "subject": "產兒科護理學",
+    "year": 114,
+    "tags": [
+      "產兒科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-obs-ped-32",
+    "question": "下列何者不屬於FLACC行為疼痛評估量表的向度？",
+    "options": {
+      "A": "臉部表情",
+      "B": "活動力",
+      "C": "安撫",
+      "D": "呼吸型態"
+    },
+    "category": "考選部護理師高考",
+    "subject": "產兒科護理學",
+    "year": 114,
+    "tags": [
+      "基本護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-obs-ped-33",
+    "question": "罹患第一型糖尿病兒童的照護趨勢，專業人員運用賦權（empowerment）在以家庭為中心照護的目 的，下列何者較適當？",
+    "options": {
+      "A": "父母參與孩子的每一項治療與檢查的過程",
+      "B": "父母減少孩子與社區的互動，避免被污名化",
+      "C": "避免談論慢性疾病的存在，促使生活正常化",
+      "D": "專業人員提供諮商輔導，增進父母對治癒有信心"
+    },
+    "category": "考選部護理師高考",
+    "subject": "產兒科護理學",
+    "year": 114,
+    "tags": [
+      "內外科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-obs-ped-34",
+    "question": "吳小妹，妊娠31週又2天出生，出生體重1,698公克，吳太太至新生兒加護中心探視吳小妹，下列護 理處置何者錯誤？",
+    "options": {
+      "A": "說明早產兒特性及身上的使用設備",
+      "B": "安排及示範吳太太學習早產兒照護技巧",
+      "C": "鼓勵吳太太執行袋鼠護理",
+      "D": "告知吳太太減少觸摸吳小妹，以避免過多刺激及感染"
+    },
+    "category": "考選部護理師高考",
+    "subject": "產兒科護理學",
+    "year": 114,
+    "tags": [
+      "產兒科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-obs-ped-35",
+    "question": "依據皮亞傑（Piaget）的認知發展理論，有關3〜5歲學齡前期兒童的死亡概念，下列敘述何者正 確？",
+    "options": {
+      "A": "不了解死亡，缺乏死亡概念",
+      "B": "死亡如同睡覺，會醒過來",
+      "C": "人死無法復活，唯獨壞人才會死亡",
+      "D": "人死不能復生，人人都會面臨死亡"
+    },
+    "category": "考選部護理師高考",
+    "subject": "產兒科護理學",
+    "year": 114,
+    "tags": [
+      "產兒科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-obs-ped-36",
+    "question": "簡小妹為35週出生的早產兒，體重2,400公克，被診斷有高膽紅素血症（hyperbilirubinemia）， 今抽血所得總膽紅素值（total bilirubin）為26 mg/dL，有關換血治療的護理，下列敘述何者正 確？",
+    "options": {
+      "A": "換血後2小時由靜脈滴注 25% albumin（1 gm/kg），預防核黃疸",
+      "B": "協助醫師放置導管插入臍動脈，或橈動脈、股動脈",
+      "C": "每換200 mL的血液，需注射10％葡萄糖溶液2 mL",
+      "D": "換血後需追蹤總膽紅素值，觀察期間繼續照光治療"
+    },
+    "category": "考選部護理師高考",
+    "subject": "產兒科護理學",
+    "year": 114,
+    "tags": [
+      "產兒科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-obs-ped-37",
+    "question": "小英，6個月，出現輕微發燒、食慾不振、喉嚨痛、耳後及後頸部淋巴結腫大等症狀。他先在臉部 出現粉紅色斑丘疹，再漫延至頸部、手臂、軀幹，而後逐漸往下肢發展，但疹子出現3天即消除。 小英最可能感染下列何種疾病？",
+    "options": {
+      "A": "麻疹（measles）",
+      "B": "德國麻疹（rubella）",
+      "C": "嬰兒玫瑰疹（roseola infantum）",
+      "D": "感染型紅斑（erythema infectiosum）"
+    },
+    "category": "考選部護理師高考",
+    "subject": "產兒科護理學",
+    "year": 114,
+    "tags": [
+      "微生物學與免疫學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-obs-ped-38",
+    "question": "使用氧氣頭罩（O2 hood）之照護措施，下列敘述何者最不適當？",
+    "options": {
+      "A": "氧氣流速大於5～6 L/min，可防CO2滯留",
+      "B": "潮濕瓶與蛇行管宜每週更換一次",
+      "C": "避免直接吹到病童臉上以減少體熱喪失",
+      "D": "以生理食鹽水作為噴霧來源效果更好"
+    },
+    "category": "考選部護理師高考",
+    "subject": "產兒科護理學",
+    "year": 114,
+    "tags": [
+      "產兒科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-obs-ped-39",
+    "question": "有關黴漿菌性肺炎（mycoplasma pneumonia）之敘述，下列何者正確？",
+    "options": {
+      "A": "常見的呼吸音為肋膜摩擦音",
+      "B": "主要由肺炎雙球菌引起，導致黏膜水腫",
+      "C": "咳嗽明顯常伴有痰音，痰液黏稠、黃綠色且量多",
+      "D": "使用藥物為erythromycin或azithromycin"
+    },
+    "category": "考選部護理師高考",
+    "subject": "產兒科護理學",
+    "year": 114,
+    "tags": [
+      "內外科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-obs-ped-40",
+    "question": "小強，5歲，長期服用毛地黃（digoxin）之護理指導，下列敘述何者最適當？",
+    "options": {
+      "A": "若服藥前測量一分鐘心跳低於90次則暫停服藥一次",
+      "B": "建議與其他食物混合餵食，以利藥物吸收",
+      "C": "若使用利尿劑（Lasix），避免香蕉、深綠色蔬菜等含鉀高之食物",
+      "D": "於服藥時間後4小時發現忘記服藥應補服"
+    },
+    "category": "考選部護理師高考",
+    "subject": "產兒科護理學",
+    "year": 114,
+    "tags": [
+      "產兒科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-obs-ped-41",
+    "question": "有關海洋性貧血兒童使用排鐵劑（deferoxamine）治療，下列敘述何者錯誤？",
+    "options": {
+      "A": "排鐵過程尿液會呈現紅色或橘紅色",
+      "B": "適應的年齡為5～7歲，因遵從性會更好",
+      "C": "排鐵過程需補充維他命C",
+      "D": "可以皮下注射，宜在晚間執行"
+    },
+    "category": "考選部護理師高考",
+    "subject": "產兒科護理學",
+    "year": 114,
+    "tags": [
+      "產兒科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-obs-ped-42",
+    "question": "有關苯酮尿症（phenylketonuria）之護理指導，下列何者錯誤？",
+    "options": {
+      "A": "為體染色體隱性遺傳的疾病，會遺傳給下一代",
+      "B": "禁餵母奶，須餵食低苯胺基丙酸（如：lofenalac）或不含苯丙胺酸（如：phenyl-free）之配方奶",
+      "C": "飲食須富含蛋白質食物，避免產生神經系統後遺症",
+      "D": "不治療會有髮色淡黃、霉臭味尿液、智力不足症狀"
+    },
+    "category": "考選部護理師高考",
+    "subject": "產兒科護理學",
+    "year": 114,
+    "tags": [
+      "產兒科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-obs-ped-43",
+    "question": "有關初診斷白血病的臨床表徵，下列敘述何者最適當？",
+    "options": {
+      "A": "血壓下降、心律不整",
+      "B": "呼吸困難、臉潮紅",
+      "C": "發燒、疲憊",
+      "D": "腹痛、少尿"
+    },
+    "category": "考選部護理師高考",
+    "subject": "產兒科護理學",
+    "year": 114,
+    "tags": [
+      "產兒科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-obs-ped-44",
+    "question": "小雄，3歲，罹患威爾姆氏腫瘤（Wilms tumor）第三期，有關護理照護，下列敘述何者錯誤？",
+    "options": {
+      "A": "提醒父母、家人和相關醫療人員，應避免觸診小雄的腹部",
+      "B": "主要治療方式包含腎臟切除術、化學治療以及放射線治療",
+      "C": "小雄白血球低於1,000 /mm3，採取保護性隔離避免感染",
+      "D": "放射線治療主要採全身性治療，避免腫瘤擴散"
+    },
+    "category": "考選部護理師高考",
+    "subject": "產兒科護理學",
+    "year": 114,
+    "tags": [
+      "病理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-obs-ped-45",
+    "question": "有關急性腎絲球腎炎（acute glomerulonephritis）病童的照護措施，下列敘述何者最適當？",
+    "options": {
+      "A": "牛奶及香蕉在少尿期，不需特別限制",
+      "B": "急性期鼓勵多下床活動，減輕水腫",
+      "C": "血尿素氮（BUN）達100 mg/dL ，須採高蛋白飲食",
+      "D": "維持正常體液，兒童排尿量須達1～2 mL/kg/hr"
+    },
+    "category": "考選部護理師高考",
+    "subject": "產兒科護理學",
+    "year": 114,
+    "tags": [
+      "產兒科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-obs-ped-46",
+    "question": "莉莉，4個月，此次因唇裂（cleft lip）住院，醫師安排進行唇裂修補術，在手術後的照護，下列 敘述何者較適當？",
+    "options": {
+      "A": "鼓勵採俯臥，以預防呼吸道阻塞",
+      "B": "向家屬解釋病童手術後出現不斷吞嚥動作是術後正常的現象",
+      "C": "術後疼痛哭鬧，給與安撫奶嘴使用以降低疼痛",
+      "D": "須給與適時約束手肘，以避免摩擦臉部影響傷口癒合"
+    },
+    "category": "考選部護理師高考",
+    "subject": "產兒科護理學",
+    "year": 114,
+    "tags": [
+      "內外科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-obs-ped-47",
+    "question": "小敏，8歲，因為長期嚴重便秘而入院檢查，檢查後發現大量大便堆積腸道，欲執行大量灌腸。有 關大量灌腸的護理指導，下列敘述何者最不適當？",
+    "options": {
+      "A": "大量灌腸溶液的溫度，以30～36oC左右較合適",
+      "B": "可以利用遊戲、故事或娃娃模型示範解釋灌腸的目的與步驟",
+      "C": "灌腸中如出現臉色蒼白、冒冷汗、心跳加快應停止，並通知醫師",
+      "D": "協助病童採左側臥，右膝屈曲的姿勢"
+    },
+    "category": "考選部護理師高考",
+    "subject": "產兒科護理學",
+    "year": 114,
+    "tags": [
+      "基本護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-obs-ped-48",
+    "question": "芷妹，9歲，因頭痛、發燒就醫，診斷為病毒性腦膜炎（virus meningitis）入院治療，有關此疾 病相關症狀和治療，下列敘述何者錯誤？",
+    "options": {
+      "A": "最主要的治療是儘早給與抗生素",
+      "B": "大部分由腸病毒及腮腺炎病毒引起",
+      "C": "腦脊髓液外觀通常清澈",
+      "D": "少有神經功能障礙後遺症"
+    },
+    "category": "考選部護理師高考",
+    "subject": "產兒科護理學",
+    "year": 114,
+    "tags": [
+      "微生物學與免疫學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-obs-ped-49",
+    "question": "張小弟，10歲，診斷為裘馨氏肌失養症（Duchenne muscular dystrophy），有關病因和臨床表 徵，下列敘述何者錯誤？",
+    "options": {
+      "A": "體染色體隱性遺傳疾病",
+      "B": "蹲下拿東西，無力獨自站起來",
+      "C": "直立時明顯腰椎前彎",
+      "D": "小腿肚（腓腸肌）假性肥大"
+    },
+    "category": "考選部護理師高考",
+    "subject": "產兒科護理學",
+    "year": 114,
+    "tags": [
+      "產兒科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-obs-ped-50",
+    "question": "小美，15個月大，從樓梯跌落導致頭部受傷，急診護理師依據兒童適用之葛氏昏迷量表（Glasgow coma scale, GCS）評估其意識程度，結果顯示叫他時會睜眼，雖會哭泣但可安撫，輕觸其手臂會 收縮反應，請問小美的昏迷指數為幾分？",
+    "options": {
+      "A": "7分",
+      "B": "9分",
+      "C": "12分",
+      "D": "15分"
+    },
+    "category": "考選部護理師高考",
+    "subject": "產兒科護理學",
+    "year": 114,
+    "tags": [
+      "基本護理學",
+      "生理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-psych-community-01",
+    "question": "林小姐常責怪自己，認為凡事過錯都是自己造成的。下列何項心理防衛機轉最適合說明林小姐的行 為？",
+    "options": {
+      "A": "合理化（rationalization）",
+      "B": "潛抑（repression）",
+      "C": "內射（introjection）",
+      "D": "退化（regression）"
+    },
+    "category": "考選部護理師高考",
+    "subject": "精神科與社區衛生護理學",
+    "year": 114,
+    "tags": [
+      "藥理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-psych-community-02",
+    "question": "精神醫學史上，主張不以鐵鍊限制病人行動，奠定人道主義精神照護的代表性人物，下列何者正 確？",
+    "options": {
+      "A": "克雷佩林（Emil Kraepelin）",
+      "B": "畢乃爾（Phillipe Pinel）",
+      "C": "佛洛伊德（Sigmund Freud）",
+      "D": "瓊斯（Maxwell Jones）"
+    },
+    "category": "考選部護理師高考",
+    "subject": "精神科與社區衛生護理學",
+    "year": 114,
+    "tags": [
+      "精神科與社區衛生護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-psych-community-03",
+    "question": "根據DSM-5診斷準則，有關精神疾病的診斷及臨床表徵，下列敘述何者正確？",
+    "options": {
+      "A": "妄想症（delusional disorder）病人經常會出現明顯奇特怪異的行為",
+      "B": "重鬱症（major depressive disorder）病人最常出現思緒飛躍的症狀",
+      "C": "思覺失調症（schizophrenia）病人最常出現罪惡妄想的症狀",
+      "D": "強迫症（obessive-compulsive disorder）病人會出現強迫思考、強迫行為的症狀"
+    },
+    "category": "考選部護理師高考",
+    "subject": "精神科與社區衛生護理學",
+    "year": 114,
+    "tags": [
+      "精神科與社區衛生護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-psych-community-04",
+    "question": "有關抗精神病藥物的敘述，下列何者正確？",
+    "options": {
+      "A": "躁症急性發作期，若已使用情緒穩定劑，則不建議併用抗精神病藥物",
+      "B": "clozapine（Clozaril®）和fluvoxamine（Luvox®）產生交互作用，會誘發非預期癲癇痙攣",
+      "C": "長效針劑risperidone（Risperdal Consta®）本質水性，多採淺層肌肉注射",
+      "D": "鋰鹽為治療譫妄症的首選藥物"
+    },
+    "category": "考選部護理師高考",
+    "subject": "精神科與社區衛生護理學",
+    "year": 114,
+    "tags": [
+      "藥理學",
+      "精神科與社區衛生護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-psych-community-05",
+    "question": "護理師詢問病人「您幾歲？」，病人回答「38歲」，再繼續問病人「之前的工作服務多久？」，病 人仍回答「38歲」，病人對之後的問題皆回答「38歲」。此現象屬於下列何種症狀？",
+    "options": {
+      "A": "音韻連結（clang association）",
+      "B": "言語持續（perseveration）",
+      "C": "重複言語（verbigeration）",
+      "D": "回音性言語（echolalia）"
+    },
+    "category": "考選部護理師高考",
+    "subject": "精神科與社區衛生護理學",
+    "year": 114,
+    "tags": [
+      "精神科與社區衛生護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-psych-community-06",
+    "question": "有關「以整個事件中的單一細節下結論，而沒有考慮整個事件中還有其他相關的訊息」，是屬於下 列何項「負向認知思考模式」？",
+    "options": {
+      "A": "二極化的思考",
+      "B": "完美主義",
+      "C": "選擇性的偏差推論",
+      "D": "武斷推論"
+    },
+    "category": "考選部護理師高考",
+    "subject": "精神科與社區衛生護理學",
+    "year": 114,
+    "tags": [
+      "精神科與社區衛生護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-psych-community-07",
+    "question": "下列何者不是動機式晤談法（motivational interview）的基本原則？",
+    "options": {
+      "A": "創造不一致的想法",
+      "B": "應用夢的解析分析問題",
+      "C": "支持自我效能感",
+      "D": "避免發生爭辯"
+    },
+    "category": "考選部護理師高考",
+    "subject": "精神科與社區衛生護理學",
+    "year": 114,
+    "tags": [
+      "精神科與社區衛生護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-psych-community-08",
+    "question": "有關代幣制度的敘述，下列何項不適宜？",
+    "options": {
+      "A": "是行為治療中的一項技術",
+      "B": "最適合在病人精神症狀混亂時使用",
+      "C": "以具有交換價值的象徵物代替金錢",
+      "D": "屬於操作制約作用的學習原理"
+    },
+    "category": "考選部護理師高考",
+    "subject": "精神科與社區衛生護理學",
+    "year": 114,
+    "tags": [
+      "精神科與社區衛生護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-psych-community-09",
+    "question": "胡先生，診斷為思覺失調症，因不停將家中東西丟到大街上，哥哥予以制止，胡先生即要攻擊哥 哥。剛入住急性病房治療，下列何者為最優先的護理處置？",
+    "options": {
+      "A": "確認胡先生身邊環境與物品的安全性，進行暴力行為之評估與預防發生",
+      "B": "直接先至保護室並給予預防性約束，以免發生自傷傷人行為",
+      "C": "警告胡先生在醫院裡面不容許有攻擊行為發生，否則就無法出院",
+      "D": "為表達護理師的關懷與建立信任，可先單獨與病人會談了解他為何要攻擊哥哥"
+    },
+    "category": "考選部護理師高考",
+    "subject": "精神科與社區衛生護理學",
+    "year": 114,
+    "tags": [
+      "精神科與社區衛生護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-psych-community-10",
+    "question": "根據DSM-5診斷準則，有關情感思覺失調症（schizoaffective disorder）的敘述，下列何者正 確？",
+    "options": {
+      "A": "臨床症狀以情感障礙為主",
+      "B": "在無情緒障礙症發作時，有二週以上的妄想或幻覺",
+      "C": "思考障礙和情緒障礙不會同時發作",
+      "D": "不會出現妄想、幻覺"
+    },
+    "category": "考選部護理師高考",
+    "subject": "精神科與社區衛生護理學",
+    "year": 114,
+    "tags": [
+      "精神科與社區衛生護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-psych-community-11",
+    "question": "宋小姐因情緒低落且有自殺行為，入院治療已兩週，常一個人臥床獨處，少與其他病友互動。下列 何項護理措施最適宜？",
+    "options": {
+      "A": "配合病人低落心情，環境宜減少光線刺激",
+      "B": "提供安靜的單人房，減少打擾病人",
+      "C": "播放低沉的音樂，避免刺激病人",
+      "D": "設計簡單的活動，增加病人活動"
+    },
+    "category": "考選部護理師高考",
+    "subject": "精神科與社區衛生護理學",
+    "year": 114,
+    "tags": [
+      "精神科與社區衛生護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-psych-community-12",
+    "question": "陳同學19歲，出現怪異行為，診斷為思覺失調症。因為干擾鄰居被送至精神科急性病房住院。入院 時，說自己沒有生病，吵著要出院回家。以下何項護理措施最適切？",
+    "options": {
+      "A": "請他保證不再干擾鄰居就可以回家",
+      "B": "跟他說必須住滿三個月才可考慮出院",
+      "C": "引導他表達自己會住院的過程",
+      "D": "跟他說只要配合吃藥就可以出院"
+    },
+    "category": "考選部護理師高考",
+    "subject": "精神科與社區衛生護理學",
+    "year": 114,
+    "tags": [
+      "精神科與社區衛生護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-psych-community-13",
+    "question": "承上題，住院第二天，陳同學表示我的父母一定是假的，否則不會將自己的小孩抓來住院。下列護 理師的回答何者最適當？",
+    "options": {
+      "A": "「你的父母是不得已的」",
+      "B": "「你的父母是為你好」",
+      "C": "「父母的想法很難瞭解」",
+      "D": "「這個想法很困擾你」"
+    },
+    "category": "考選部護理師高考",
+    "subject": "精神科與社區衛生護理學",
+    "year": 114,
+    "tags": [
+      "精神科與社區衛生護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-psych-community-14",
+    "question": "林先生總是表現出自己很優越，看不起醫護人員，認為自己是群體中最重要的人，且擁有特權。護 理師針對此自戀行為（narcissistic）之應對方式，下列何者最適切？",
+    "options": {
+      "A": "持續的讚美病人，滿足其自誇的需求",
+      "B": "利用幽默，與病人開玩笑，營造輕鬆的氣氛",
+      "C": "為維持病人的自尊，接受病人對醫護人員的貶低",
+      "D": "了解病人的自誇行為並持續提供包容，但避免過度讚美"
+    },
+    "category": "考選部護理師高考",
+    "subject": "精神科與社區衛生護理學",
+    "year": 114,
+    "tags": [
+      "精神科與社區衛生護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-psych-community-15",
+    "question": "有關創傷後壓力症（posttraumatic stress disorder）的敘述，下列何者最適切？",
+    "options": {
+      "A": "會出現解離反應，感到創傷事件重演",
+      "B": "不包含目擊創傷發生於他人身上的經驗",
+      "C": "創傷事件不會產生明顯生理反應",
+      "D": "負面情緒不包含易怒或無預兆的發怒"
+    },
+    "category": "考選部護理師高考",
+    "subject": "精神科與社區衛生護理學",
+    "year": 114,
+    "tags": [
+      "精神科與社區衛生護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-psych-community-16",
+    "question": "辛小姐診斷為強迫症，會反覆出現希望妹妹死掉的念頭，且對此感到非常焦慮。所以每當看到妹妹 時，就開始在心中默念圓周率的數字以減輕焦慮。下列何項敘述最能說明辛小姐的行為？",
+    "options": {
+      "A": "以抵消對妹妹的負面想法",
+      "B": "以投射的作用逃避念頭",
+      "C": "自我肯定，證明自己的數學好",
+      "D": "一種解離性的狀態"
+    },
+    "category": "考選部護理師高考",
+    "subject": "精神科與社區衛生護理學",
+    "year": 114,
+    "tags": [
+      "精神科與社區衛生護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-psych-community-17",
+    "question": "有關使用嗎啡之敘述，下列何者正確？",
+    "options": {
+      "A": "嗎啡能有效止痛且提神",
+      "B": "嗎啡使用後會產生欣快感",
+      "C": "嗎啡只能口服使用",
+      "D": "護理師可自行斟酌使用"
+    },
+    "category": "考選部護理師高考",
+    "subject": "精神科與社區衛生護理學",
+    "year": 114,
+    "tags": [
+      "精神科與社區衛生護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-psych-community-18",
+    "question": "根據DSM-5診斷準則，有關智能不足適應功能的評估，下列何者最不適切？",
+    "options": {
+      "A": "適應功能評估包含概念、社會以及實務三個領域",
+      "B": "個人在獨立與擔當社會責任方面無法達到適齡的發展及文化準則，稱為適應功能缺損",
+      "C": "評估個人的閱讀、書寫、問題解決能力以及對陌生情境的判斷力等，是屬實務領域",
+      "D": "適應功能缺損會使個人在多重環境中的一項或多項日常活動功能受限"
+    },
+    "category": "考選部護理師高考",
+    "subject": "精神科與社區衛生護理學",
+    "year": 114,
+    "tags": [
+      "基本護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-psych-community-19",
+    "question": "陳小弟，上課時容易分心、坐不住、喜歡往外跑，不受控制的行為讓老師很困擾。陳小弟最可能出 現以下何項問題？",
+    "options": {
+      "A": "智能不足（intellectural disabilities）",
+      "B": "雙相情緒障礙症（bipolar disorder）",
+      "C": "妥瑞氏症（Tourette's disorder）",
+      "D": "注意力不足／過動症（ADHD）"
+    },
+    "category": "考選部護理師高考",
+    "subject": "精神科與社區衛生護理學",
+    "year": 114,
+    "tags": [
+      "護理行政"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-psych-community-20",
+    "question": "有關老年憂鬱症的敘述，下列何者最不適切？",
+    "options": {
+      "A": "以身體症狀反應情緒",
+      "B": "常談論自殺想法",
+      "C": "記憶力變差",
+      "D": "合併日落症候群"
+    },
+    "category": "考選部護理師高考",
+    "subject": "精神科與社區衛生護理學",
+    "year": 114,
+    "tags": [
+      "精神科與社區衛生護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-psych-community-21",
+    "question": "有關社區精神衛生護理評估的敘述，下列何者正確？",
+    "options": {
+      "A": "不需了解個案的生活習慣及社交狀態，以免涉及病人私領域",
+      "B": "不需評估照顧者對病人疾病的瞭解，以免涉及照顧者私領域",
+      "C": "不需評估社區的資源，因與精神衛生護理無關",
+      "D": "需評估個案、家屬及社區三方面的狀況，以提供多元的社區照護"
+    },
+    "category": "考選部護理師高考",
+    "subject": "精神科與社區衛生護理學",
+    "year": 114,
+    "tags": [
+      "基本護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-psych-community-22",
+    "question": "對於安置在精神護理之家的病人，下列服務內容何者最適宜？",
+    "options": {
+      "A": "病人的精神症狀呈現慢性化，宜提供生活的照顧",
+      "B": "照顧目標應優先讓病人能返回家庭",
+      "C": "病人的精神症狀屬活躍期，宜嚴格監控行動",
+      "D": "需積極安排病人就業規劃"
+    },
+    "category": "考選部護理師高考",
+    "subject": "精神科與社區衛生護理學",
+    "year": 114,
+    "tags": [
+      "精神科與社區衛生護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-psych-community-23",
+    "question": "楊太太擔心自己罹患大腸癌，經多次檢查皆正常，但她仍深信自己不久人世，變得無食慾、失眠， 有輕生念頭。下列何項為最優先的護理措施？",
+    "options": {
+      "A": "教導紓解壓力的方法",
+      "B": "再做詳盡健康檢查，降低憂鬱",
+      "C": "評估自殺的風險程度",
+      "D": "鼓勵寫遺囑，降低焦慮"
+    },
+    "category": "考選部護理師高考",
+    "subject": "精神科與社區衛生護理學",
+    "year": 114,
+    "tags": [
+      "精神科與社區衛生護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-psych-community-24",
+    "question": "有關社區精神衛生護理的角色功能，下列何者最適切？",
+    "options": {
+      "A": "不提供直接照護服務",
+      "B": "個案管理者是唯一的角色功能",
+      "C": "發現心理困擾個案是疾病預防者的角色",
+      "D": "不須進行研究工作"
+    },
+    "category": "考選部護理師高考",
+    "subject": "精神科與社區衛生護理學",
+    "year": 114,
+    "tags": [
+      "精神科與社區衛生護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-psych-community-25",
+    "question": "有關解除肢體的約束，下列何者最不適宜？",
+    "options": {
+      "A": "避免提及約束之事，以免激怒病人",
+      "B": "瞭解病人在約束中的感受及需要",
+      "C": "與其他工作人員共同解除病人的約束",
+      "D": "觀察約束部位的膚色狀況"
+    },
+    "category": "考選部護理師高考",
+    "subject": "精神科與社區衛生護理學",
+    "year": 114,
+    "tags": [
+      "精神科與社區衛生護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-psych-community-26",
+    "question": "根據衛生福利部國民健康署的政策，有關增進社區民眾健康識能的敘述，下列何者最不適當？",
+    "options": {
+      "A": "推動持續性與整合性的照護及增進社區民眾的健康識能",
+      "B": "提供具實證基礎、非商業目的且攸關社區健康議題的健康資訊",
+      "C": "對於需要複雜照護的病人，應有清楚且容易執行的出院照護計畫",
+      "D": "社經弱勢等群體暫緩列入提升健康識能的對象"
+    },
+    "category": "考選部護理師高考",
+    "subject": "精神科與社區衛生護理學",
+    "year": 114,
+    "tags": [
+      "精神科與社區衛生護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-psych-community-27",
+    "question": "有關全民健康保險的敘述，下列何者最不適當？",
+    "options": {
+      "A": "全民納保率已達95％以上",
+      "B": "保險費由保險對象、雇主及政府共同分擔",
+      "C": "屬於可自由參加的商業保險",
+      "D": "財務來源包含菸品健康福利捐"
+    },
+    "category": "考選部護理師高考",
+    "subject": "精神科與社區衛生護理學",
+    "year": 114,
+    "tags": [
+      "精神科與社區衛生護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-psych-community-28",
+    "question": "有關流行病學的敘述，下列何者最不適當？",
+    "options": {
+      "A": "專為探討傳染病的流行概況",
+      "B": "流行病指一個疾病的發生超過正常期望值",
+      "C": "疾病的探討不限於地點或時間",
+      "D": "可探討暴露源和疾病的因果關係"
+    },
+    "category": "考選部護理師高考",
+    "subject": "精神科與社區衛生護理學",
+    "year": 114,
+    "tags": [
+      "精神科與社區衛生護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-psych-community-29",
+    "question": "提供工廠作業員安全防護器具以減少傷害發生，是屬於三段五級預防工作的那一級？",
+    "options": {
+      "A": "第一級",
+      "B": "第二級",
+      "C": "第三級",
+      "D": "第四級"
+    },
+    "category": "考選部護理師高考",
+    "subject": "精神科與社區衛生護理學",
+    "year": 114,
+    "tags": [
+      "精神科與社區衛生護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-psych-community-30",
+    "question": "在疫情期間維持適當社交距離，是針對三角致病模式（epidemiological triangle）中那一因素的 處理策略？",
+    "options": {
+      "A": "壓力",
+      "B": "環境",
+      "C": "病原體",
+      "D": "宿主"
+    },
+    "category": "考選部護理師高考",
+    "subject": "精神科與社區衛生護理學",
+    "year": 114,
+    "tags": [
+      "精神科與社區衛生護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-psych-community-31",
+    "question": "某社區為降低老人跌倒率，增設無障礙設施，此屬渥太華健康促進憲章行動綱領的那一項？",
+    "options": {
+      "A": "建立健康公共政策",
+      "B": "創造支持性環境",
+      "C": "強化社區活動",
+      "D": "發展個人技巧"
+    },
+    "category": "考選部護理師高考",
+    "subject": "精神科與社區衛生護理學",
+    "year": 114,
+    "tags": [
+      "精神科與社區衛生護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-psych-community-32",
+    "question": "有關社區健康評估之敘述，下列何者最不適當？",
+    "options": {
+      "A": "使照護計畫能真正反應社區的需求",
+      "B": "提升社區健康照護計畫之品質",
+      "C": "隨機抽樣最常用來選擇重要人物進行訪談",
+      "D": "民意團體過程法可以用來形成排定社區健康問題優先順序的共識"
+    },
+    "category": "考選部護理師高考",
+    "subject": "精神科與社區衛生護理學",
+    "year": 114,
+    "tags": [
+      "基本護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-psych-community-33",
+    "question": "根據Anderson及McFarlane以社區為夥伴的架構中，有關人口群體特性評估之內容，下列何者最不 適當？",
+    "options": {
+      "A": "男女的性比",
+      "B": "婚姻狀況",
+      "C": "對村／里長的滿意度",
+      "D": "社會增加率"
+    },
+    "category": "考選部護理師高考",
+    "subject": "精神科與社區衛生護理學",
+    "year": 114,
+    "tags": [
+      "基本護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-psych-community-34",
+    "question": "有關自我效能（self-efficacy）之敘述，下列何者最不適當？",
+    "options": {
+      "A": "是指個人評估在特定環境下，能完成特定行為的能力",
+      "B": "自我效能低者容易因為失敗經驗而導致自我效能再度降低",
+      "C": "外在資源越多者，自我效能越高",
+      "D": "包括程度、類化和強度等三個層面"
+    },
+    "category": "考選部護理師高考",
+    "subject": "精神科與社區衛生護理學",
+    "year": 114,
+    "tags": [
+      "精神科與社區衛生護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-psych-community-35",
+    "question": "依據加拿大衛生福利部於1974年提出的影響健康的四大要素，下列那一項對健康的影響最大？",
+    "options": {
+      "A": "提供基因檢測",
+      "B": "控制環境中PM2.5濃度",
+      "C": "廣推在宅醫療",
+      "D": "鼓勵民眾實踐健康生活"
+    },
+    "category": "考選部護理師高考",
+    "subject": "精神科與社區衛生護理學",
+    "year": 114,
+    "tags": [
+      "精神科與社區衛生護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-psych-community-36",
+    "question": "王先生參加口腔癌篩檢，表示嘴破未癒合長達一個月，且最近有位同事因口腔癌治療飽受身心之 苦，很害怕自己也得了口腔癌，妻子鼓勵他參與篩檢。依據健康信念模式，下列何者是影響王先生 採取預防行為的因素？①罹患性認知 ②嚴重性認知 ③行動線索 ④利益性認知 ⑤自我效能",
+    "options": {
+      "A": "①②③",
+      "B": "①②⑤",
+      "C": "②③④",
+      "D": "③④⑤"
+    },
+    "category": "考選部護理師高考",
+    "subject": "精神科與社區衛生護理學",
+    "year": 114,
+    "tags": [
+      "精神科與社區衛生護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-psych-community-37",
+    "question": "有關水媒疾病之敘述，下列何者最不適當？",
+    "options": {
+      "A": "志賀氏桿菌是細菌性痢疾的致病原之一",
+      "B": "阿米巴原蟲是副傷寒的致病原之一",
+      "C": "小兒麻痺病毒是小兒麻痺症的致病原",
+      "D": "鞭毛蟲是寄生蟲病的致病原之一"
+    },
+    "category": "考選部護理師高考",
+    "subject": "精神科與社區衛生護理學",
+    "year": 114,
+    "tags": [
+      "精神科與社區衛生護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-psych-community-38",
+    "question": "臺灣淨水廠的供水系統目前廣泛使用何種消毒法？",
+    "options": {
+      "A": "氯氣消毒法",
+      "B": "臭氧消毒法",
+      "C": "紫外線照射消毒法",
+      "D": "銀離子消毒法"
+    },
+    "category": "考選部護理師高考",
+    "subject": "精神科與社區衛生護理學",
+    "year": 114,
+    "tags": [
+      "精神科與社區衛生護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-psych-community-39",
+    "question": "有關紫外線防護之護理指導，下列何者最不適當？",
+    "options": {
+      "A": "高山、雪地更易受紫外線傷害",
+      "B": "紫外線傷害可能會造成白內障",
+      "C": "紫外線指數6以上代表紫外線指數過高",
+      "D": "太陽眼鏡鏡片顏色越深，防紫外線效果越佳"
+    },
+    "category": "考選部護理師高考",
+    "subject": "精神科與社區衛生護理學",
+    "year": 114,
+    "tags": [
+      "精神科與社區衛生護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-psych-community-40",
+    "question": "護理師進行家訪時發現，李奶奶因患有退化性骨關節炎而行動不便，李爺爺則患有高血壓和糖尿 病，已定期回診並規律服藥控制。下列何者為此家庭最優先的個案管理目標？",
+    "options": {
+      "A": "鼓勵李奶奶進行關節置換術，提高自主生活能力",
+      "B": "監測並管理李爺爺的服藥遵從性",
+      "C": "提供居家安全評估，減少跌倒和其他意外事件的發生",
+      "D": "安排社交活動，促進心理健康和社交互動"
+    },
+    "category": "考選部護理師高考",
+    "subject": "精神科與社區衛生護理學",
+    "year": 114,
+    "tags": [
+      "解剖學",
+      "內外科護理學",
+      "護理行政",
+      "精神科與社區衛生護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-psych-community-41",
+    "question": "下列何者不屬於衛生福利部107年度原鄉健康不平等之改善策略行動計畫？",
+    "options": {
+      "A": "骨骼肌肉傷害",
+      "B": "結核病",
+      "C": "消化系癌症",
+      "D": "三高防治"
+    },
+    "category": "考選部護理師高考",
+    "subject": "精神科與社區衛生護理學",
+    "year": 114,
+    "tags": [
+      "精神科與社區衛生護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-psych-community-42",
+    "question": ".42歲王太太的姐姐被診斷乳癌，為此王太太感到煩惱和擔憂。下列護理指導何者最適當？①乳癌的 危險因子，包括初經較晚、停經較早、高脂肪飲食等 ②40歲以上至未滿45歲具有乳癌家族史的女 性每年一次免費乳房X光攝影檢查 ③建議王太太多運動、少進食高脂肪食物、心情放鬆和減低壓 力等",
+    "options": {
+      "A": "僅③",
+      "B": "①②③",
+      "C": "僅①③",
+      "D": "僅②③"
+    },
+    "category": "考選部護理師高考",
+    "subject": "精神科與社區衛生護理學",
+    "year": 114,
+    "tags": [
+      "精神科與社區衛生護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-psych-community-43",
+    "question": "下列那些是骨質疏鬆的危險因子？①體重過重 ②飲食含鹽量過少 ③缺乏運動 ④飲酒過量 ⑤ 甲狀腺機能亢進",
+    "options": {
+      "A": "①④⑤",
+      "B": "②③④",
+      "C": "②③⑤",
+      "D": "③④⑤"
+    },
+    "category": "考選部護理師高考",
+    "subject": "精神科與社區衛生護理學",
+    "year": 114,
+    "tags": [
+      "精神科與社區衛生護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-psych-community-44",
+    "question": "有關校園霸凌之敘述，下列何者最適當？①個人或集體持續以語言、肢體動作或網路等直接對他人 故意欺負或戲弄之行為 ②成績優秀者最不容易成為被霸凌的對象 ③長期遭受霸凌者可能出現反 擊行為再去霸凌比自己弱勢的人 ④網路霸凌須有重複性，至少要有二次才算",
+    "options": {
+      "A": "①②③",
+      "B": "僅①③",
+      "C": "①③④",
+      "D": "僅③④"
+    },
+    "category": "考選部護理師高考",
+    "subject": "精神科與社區衛生護理學",
+    "year": 114,
+    "tags": [
+      "精神科與社區衛生護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-psych-community-45",
+    "question": "健康促進醫院為提升醫護人員的身體活動量而推動院內運動計畫，護理人員反應：「下班太累，無 法參加」，此反應為潘德（Pender）健康促進模式中的何項行為認知？",
+    "options": {
+      "A": "自覺自我效能",
+      "B": "個人因素",
+      "C": "自覺行動障礙",
+      "D": "情境的影響"
+    },
+    "category": "考選部護理師高考",
+    "subject": "精神科與社區衛生護理學",
+    "year": 114,
+    "tags": [
+      "精神科與社區衛生護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-psych-community-46",
+    "question": "根據全民健康保險規定，可接受安寧緩和醫療照護之末期病人的主要支付診斷條件，下列何者最不 適當？",
+    "options": {
+      "A": "老年期及初老期器質性精神病態",
+      "B": "慢性肝病及肝硬化",
+      "C": "急性腎衰竭，未明示者",
+      "D": "思覺失調症"
+    },
+    "category": "考選部護理師高考",
+    "subject": "精神科與社區衛生護理學",
+    "year": 114,
+    "tags": [
+      "精神科與社區衛生護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-psych-community-47",
+    "question": ".85歲方奶奶獨居，巴氏量表評估為65分，目前無法自行洗澡和備餐，需有社區志工陪同就醫。若要 申請長期照顧服務項目，何項最合適？",
+    "options": {
+      "A": "居家護理",
+      "B": "居家服務",
+      "C": "家庭托顧",
+      "D": "居家喘息"
+    },
+    "category": "考選部護理師高考",
+    "subject": "精神科與社區衛生護理學",
+    "year": 114,
+    "tags": [
+      "基本護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-psych-community-48",
+    "question": "林女士76歲獨居，有多重慢性病史，不慎跌倒導致下肢嚴重骨折，經住院治療後病情穩定出院回家 休養。有關個案管理師的職責，下列何者最不適當？",
+    "options": {
+      "A": "與林女士共同訂定計畫，使其能恢復獨立自主的生活",
+      "B": "聯繫藥師提供藥物整合服務，指導林女士正確用藥",
+      "C": "親自到府執行復健，並提供日常生活功能服務",
+      "D": "定期電話訪視，替林女士安排就醫回診的交通接送"
+    },
+    "category": "考選部護理師高考",
+    "subject": "精神科與社區衛生護理學",
+    "year": 114,
+    "tags": [
+      "內外科護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-psych-community-49",
+    "question": "林先生56歲，身高167公分，體重82公斤，喜歡吃滷五花肉，經常便秘，初次檢查結果顯示血中總 膽固醇（total cholesterol）數值為245 mg/dL，三酸甘油酯（triglyceride）的數值為230 mg/dL。護理師提供的衛教重點下列那一項最適當？",
+    "options": {
+      "A": "建議優先服用藥物控制膽固醇及三酸甘油酯",
+      "B": "衛教烹飪以快炒或油煎方式取代滷五花肉",
+      "C": "衛教選擇高纖維飲食並減少高油脂的食物攝取",
+      "D": "身體質量指數為體重過重，建議一天至少運動30分鐘"
+    },
+    "category": "考選部護理師高考",
+    "subject": "精神科與社區衛生護理學",
+    "year": 114,
+    "tags": [
+      "精神科與社區衛生護理學"
+    ],
+    "weight": 1.0
+  },
+  {
+    "id": "moex-114-psych-community-50",
+    "question": "有關氣喘之護理指導，下列何項最不適當？",
+    "options": {
+      "A": "以百葉窗替代布窗簾",
+      "B": "避免情緒起伏太大",
+      "C": "進行高強度運動，以增加肺活量",
+      "D": "遵從醫囑按時用藥，不可自行停藥"
+    },
+    "category": "考選部護理師高考",
+    "subject": "精神科與社區衛生護理學",
+    "year": 114,
+    "tags": [
+      "內外科護理學"
     ],
     "weight": 1.0
   },
@@ -20232,8 +28839,8 @@ const questions_db = [
     "subject": "綜合護理與公共衛生",
     "year": 100,
     "tags": [
-      "精神科與社區衛生護理學",
-      "內外科護理學"
+      "內外科護理學",
+      "精神科與社區衛生護理學"
     ],
     "weight": 1.5
   },
@@ -20352,8 +28959,8 @@ const questions_db = [
     "subject": "綜合護理與公共衛生",
     "year": 100,
     "tags": [
-      "微生物學與免疫學",
-      "基本護理學"
+      "基本護理學",
+      "微生物學與免疫學"
     ],
     "weight": 1.5
   },
@@ -20421,9 +29028,9 @@ const questions_db = [
     "subject": "綜合護理與公共衛生",
     "year": 100,
     "tags": [
+      "內外科護理學",
       "護理行政",
-      "精神科與社區衛生護理學",
-      "內外科護理學"
+      "精神科與社區衛生護理學"
     ],
     "weight": 1.5
   },
@@ -20560,8 +29167,8 @@ const questions_db = [
     "subject": "綜合護理與公共衛生",
     "year": 100,
     "tags": [
-      "產兒科護理學",
-      "微生物學與免疫學"
+      "微生物學與免疫學",
+      "產兒科護理學"
     ],
     "weight": 1.5
   },
@@ -20680,8 +29287,8 @@ const questions_db = [
     "subject": "綜合護理與公共衛生",
     "year": 100,
     "tags": [
-      "精神科與社區衛生護理學",
-      "生理學"
+      "生理學",
+      "精神科與社區衛生護理學"
     ],
     "weight": 1.5
   },
@@ -20698,8 +29305,8 @@ const questions_db = [
     "subject": "綜合護理與公共衛生",
     "year": 100,
     "tags": [
-      "生理學",
-      "內外科護理學"
+      "內外科護理學",
+      "生理學"
     ],
     "weight": 1.5
   },
@@ -21091,8 +29698,8 @@ const questions_db = [
     "subject": "綜合護理與公共衛生",
     "year": 101,
     "tags": [
-      "產兒科護理學",
-      "微生物學與免疫學"
+      "微生物學與免疫學",
+      "產兒科護理學"
     ],
     "weight": 1.5
   },
@@ -21195,8 +29802,8 @@ const questions_db = [
     "subject": "綜合護理與公共衛生",
     "year": 101,
     "tags": [
-      "精神科與社區衛生護理學",
-      "內外科護理學"
+      "內外科護理學",
+      "精神科與社區衛生護理學"
     ],
     "weight": 1.5
   },
@@ -21230,8 +29837,8 @@ const questions_db = [
     "subject": "綜合護理與公共衛生",
     "year": 101,
     "tags": [
-      "精神科與社區衛生護理學",
-      "基本護理學"
+      "基本護理學",
+      "精神科與社區衛生護理學"
     ],
     "weight": 1.5
   },
@@ -21401,9 +30008,9 @@ const questions_db = [
     "subject": "綜合護理與公共衛生",
     "year": 101,
     "tags": [
-      "解剖學",
+      "基本護理學",
       "微生物學與免疫學",
-      "基本護理學"
+      "解剖學"
     ],
     "weight": 1.5
   },
@@ -21624,8 +30231,8 @@ const questions_db = [
     "subject": "綜合護理與公共衛生",
     "year": 101,
     "tags": [
-      "精神科與社區衛生護理學",
-      "基本護理學"
+      "基本護理學",
+      "精神科與社區衛生護理學"
     ],
     "weight": 1.5
   },
@@ -21642,8 +30249,8 @@ const questions_db = [
     "subject": "綜合護理與公共衛生",
     "year": 101,
     "tags": [
-      "精神科與社區衛生護理學",
-      "基本護理學"
+      "基本護理學",
+      "精神科與社區衛生護理學"
     ],
     "weight": 1.5
   },
@@ -21830,8 +30437,8 @@ const questions_db = [
     "subject": "綜合護理與公共衛生",
     "year": 102,
     "tags": [
-      "精神科與社區衛生護理學",
-      "微生物學與免疫學"
+      "微生物學與免疫學",
+      "精神科與社區衛生護理學"
     ],
     "weight": 1.5
   },
@@ -22513,9 +31120,9 @@ const questions_db = [
     "subject": "綜合護理與公共衛生",
     "year": 102,
     "tags": [
-      "產兒科護理學",
+      "精神科與社區衛生護理學",
       "生理學",
-      "精神科與社區衛生護理學"
+      "產兒科護理學"
     ],
     "weight": 1.5
   },
@@ -22669,9 +31276,9 @@ const questions_db = [
     "subject": "綜合護理與公共衛生",
     "year": 103,
     "tags": [
-      "產兒科護理學",
       "微生物學與免疫學",
-      "內外科護理學"
+      "內外科護理學",
+      "產兒科護理學"
     ],
     "weight": 1.5
   },
@@ -23420,8 +32027,8 @@ const questions_db = [
     "subject": "綜合護理與公共衛生",
     "year": 103,
     "tags": [
-      "精神科與社區衛生護理學",
-      "基本護理學"
+      "基本護理學",
+      "精神科與社區衛生護理學"
     ],
     "weight": 1.5
   },
@@ -23541,8 +32148,8 @@ const questions_db = [
     "subject": "綜合護理與公共衛生",
     "year": 104,
     "tags": [
-      "生理學",
-      "微生物學與免疫學"
+      "微生物學與免疫學",
+      "生理學"
     ],
     "weight": 1.5
   },
@@ -23661,8 +32268,8 @@ const questions_db = [
     "subject": "綜合護理與公共衛生",
     "year": 104,
     "tags": [
-      "精神科與社區衛生護理學",
-      "微生物學與免疫學"
+      "微生物學與免疫學",
+      "精神科與社區衛生護理學"
     ],
     "weight": 1.5
   },
@@ -23781,8 +32388,8 @@ const questions_db = [
     "subject": "綜合護理與公共衛生",
     "year": 104,
     "tags": [
-      "精神科與社區衛生護理學",
-      "內外科護理學"
+      "內外科護理學",
+      "精神科與社區衛生護理學"
     ],
     "weight": 1.5
   },
@@ -24106,8 +32713,8 @@ const questions_db = [
     "subject": "綜合護理與公共衛生",
     "year": 104,
     "tags": [
-      "產兒科護理學",
       "微生物學與免疫學",
+      "產兒科護理學",
       "精神科與社區衛生護理學"
     ],
     "weight": 1.5
@@ -24364,8 +32971,8 @@ const questions_db = [
     "subject": "綜合護理與公共衛生",
     "year": 105,
     "tags": [
-      "精神科與社區衛生護理學",
-      "微生物學與免疫學"
+      "微生物學與免疫學",
+      "精神科與社區衛生護理學"
     ],
     "weight": 1.5
   },
@@ -24399,8 +33006,8 @@ const questions_db = [
     "subject": "綜合護理與公共衛生",
     "year": 105,
     "tags": [
-      "生理學",
-      "微生物學與免疫學"
+      "微生物學與免疫學",
+      "生理學"
     ],
     "weight": 1.5
   },
@@ -24741,8 +33348,8 @@ const questions_db = [
     "subject": "綜合護理與公共衛生",
     "year": 105,
     "tags": [
-      "護理行政",
-      "基本護理學"
+      "基本護理學",
+      "護理行政"
     ],
     "weight": 1.5
   },
@@ -24776,9 +33383,9 @@ const questions_db = [
     "subject": "綜合護理與公共衛生",
     "year": 105,
     "tags": [
+      "基本護理學",
       "護理行政",
-      "精神科與社區衛生護理學",
-      "基本護理學"
+      "精神科與社區衛生護理學"
     ],
     "weight": 1.5
   },
@@ -25169,8 +33776,8 @@ const questions_db = [
     "subject": "綜合護理與公共衛生",
     "year": 105,
     "tags": [
-      "精神科與社區衛生護理學",
-      "內外科護理學"
+      "內外科護理學",
+      "精神科與社區衛生護理學"
     ],
     "weight": 1.5
   },
@@ -25374,9 +33981,9 @@ const questions_db = [
     "subject": "綜合護理與公共衛生",
     "year": 106,
     "tags": [
+      "基本護理學",
       "護理行政",
-      "產兒科護理學",
-      "基本護理學"
+      "產兒科護理學"
     ],
     "weight": 1.5
   },
@@ -26245,8 +34852,8 @@ const questions_db = [
     "subject": "綜合護理與公共衛生",
     "year": 107,
     "tags": [
-      "護理行政",
-      "內外科護理學"
+      "內外科護理學",
+      "護理行政"
     ],
     "weight": 1.5
   },
@@ -26263,8 +34870,8 @@ const questions_db = [
     "subject": "綜合護理與公共衛生",
     "year": 107,
     "tags": [
-      "產兒科護理學",
-      "微生物學與免疫學"
+      "微生物學與免疫學",
+      "產兒科護理學"
     ],
     "weight": 1.5
   },
@@ -26468,8 +35075,8 @@ const questions_db = [
     "subject": "綜合護理與公共衛生",
     "year": 107,
     "tags": [
-      "藥理學",
-      "微生物學與免疫學"
+      "微生物學與免疫學",
+      "藥理學"
     ],
     "weight": 1.5
   },
@@ -26759,8 +35366,8 @@ const questions_db = [
     "subject": "綜合護理與公共衛生",
     "year": 107,
     "tags": [
-      "精神科與社區衛生護理學",
-      "生理學"
+      "生理學",
+      "精神科與社區衛生護理學"
     ],
     "weight": 1.5
   },
@@ -26931,8 +35538,8 @@ const questions_db = [
     "subject": "綜合護理與公共衛生",
     "year": 108,
     "tags": [
-      "護理行政",
-      "內外科護理學"
+      "內外科護理學",
+      "護理行政"
     ],
     "weight": 1.5
   },
@@ -27255,9 +35862,9 @@ const questions_db = [
     "subject": "綜合護理與公共衛生",
     "year": 108,
     "tags": [
-      "產兒科護理學",
       "微生物學與免疫學",
-      "內外科護理學"
+      "內外科護理學",
+      "產兒科護理學"
     ],
     "weight": 1.5
   },
@@ -27649,8 +36256,8 @@ const questions_db = [
     "subject": "綜合護理與公共衛生",
     "year": 109,
     "tags": [
-      "產兒科護理學",
-      "微生物學與免疫學"
+      "微生物學與免疫學",
+      "產兒科護理學"
     ],
     "weight": 1.5
   },
@@ -27837,8 +36444,8 @@ const questions_db = [
     "subject": "綜合護理與公共衛生",
     "year": 109,
     "tags": [
-      "微生物學與免疫學",
-      "基本護理學"
+      "基本護理學",
+      "微生物學與免疫學"
     ],
     "weight": 1.5
   },
@@ -28178,9 +36785,9 @@ const questions_db = [
     "subject": "綜合護理與公共衛生",
     "year": 109,
     "tags": [
-      "解剖學",
-      "微生物學與免疫學",
       "基本護理學",
+      "微生物學與免疫學",
+      "解剖學",
       "內外科護理學"
     ],
     "weight": 1.5
@@ -28198,9 +36805,9 @@ const questions_db = [
     "subject": "綜合護理與公共衛生",
     "year": 109,
     "tags": [
-      "精神科與社區衛生護理學",
+      "微生物學與免疫學",
       "生理學",
-      "微生物學與免疫學"
+      "精神科與社區衛生護理學"
     ],
     "weight": 1.5
   },
@@ -28217,8 +36824,8 @@ const questions_db = [
     "subject": "綜合護理與公共衛生",
     "year": 109,
     "tags": [
-      "護理行政",
-      "內外科護理學"
+      "內外科護理學",
+      "護理行政"
     ],
     "weight": 1.5
   },
@@ -28252,10 +36859,10 @@ const questions_db = [
     "subject": "綜合護理與公共衛生",
     "year": 109,
     "tags": [
-      "病理學",
-      "精神科與社區衛生護理學",
+      "基本護理學",
       "微生物學與免疫學",
-      "基本護理學"
+      "病理學",
+      "精神科與社區衛生護理學"
     ],
     "weight": 1.5
   },
@@ -28306,8 +36913,8 @@ const questions_db = [
     "subject": "綜合護理與公共衛生",
     "year": 109,
     "tags": [
-      "病理學",
-      "解剖學"
+      "解剖學",
+      "病理學"
     ],
     "weight": 1.5
   },
@@ -28392,9 +36999,9 @@ const questions_db = [
     "subject": "綜合護理與公共衛生",
     "year": 109,
     "tags": [
-      "藥理學",
       "微生物學與免疫學",
-      "內外科護理學"
+      "內外科護理學",
+      "藥理學"
     ],
     "weight": 1.5
   },
@@ -28411,8 +37018,8 @@ const questions_db = [
     "subject": "綜合護理與公共衛生",
     "year": 109,
     "tags": [
-      "微生物學與免疫學",
-      "基本護理學"
+      "基本護理學",
+      "微生物學與免疫學"
     ],
     "weight": 1.5
   },
@@ -28446,8 +37053,8 @@ const questions_db = [
     "subject": "綜合護理與公共衛生",
     "year": 109,
     "tags": [
-      "精神科與社區衛生護理學",
-      "基本護理學"
+      "基本護理學",
+      "精神科與社區衛生護理學"
     ],
     "weight": 1.5
   },
@@ -28515,8 +37122,8 @@ const questions_db = [
     "subject": "綜合護理與公共衛生",
     "year": 110,
     "tags": [
-      "精神科與社區衛生護理學",
-      "基本護理學"
+      "基本護理學",
+      "精神科與社區衛生護理學"
     ],
     "weight": 1.5
   },
@@ -28824,8 +37431,8 @@ const questions_db = [
     "subject": "綜合護理與公共衛生",
     "year": 110,
     "tags": [
-      "產兒科護理學",
-      "微生物學與免疫學"
+      "微生物學與免疫學",
+      "產兒科護理學"
     ],
     "weight": 1.5
   },
@@ -29064,8 +37671,8 @@ const questions_db = [
     "subject": "綜合護理與公共衛生",
     "year": 110,
     "tags": [
-      "藥理學",
-      "微生物學與免疫學"
+      "微生物學與免疫學",
+      "藥理學"
     ],
     "weight": 1.5
   },
@@ -29729,10 +38336,10 @@ const questions_db = [
     "subject": "綜合護理與公共衛生",
     "year": 111,
     "tags": [
-      "護理行政",
-      "產兒科護理學",
       "精神科與社區衛生護理學",
-      "內外科護理學"
+      "內外科護理學",
+      "護理行政",
+      "產兒科護理學"
     ],
     "weight": 1.5
   },
@@ -29749,9 +38356,9 @@ const questions_db = [
     "subject": "綜合護理與公共衛生",
     "year": 111,
     "tags": [
+      "解剖學",
       "病理學",
-      "精神科與社區衛生護理學",
-      "解剖學"
+      "精神科與社區衛生護理學"
     ],
     "weight": 1.5
   },
@@ -29785,9 +38392,9 @@ const questions_db = [
     "subject": "綜合護理與公共衛生",
     "year": 111,
     "tags": [
+      "基本護理學",
       "護理行政",
-      "精神科與社區衛生護理學",
-      "基本護理學"
+      "精神科與社區衛生護理學"
     ],
     "weight": 1.5
   },
@@ -29804,8 +38411,8 @@ const questions_db = [
     "subject": "綜合護理與公共衛生",
     "year": 111,
     "tags": [
-      "護理行政",
-      "內外科護理學"
+      "內外科護理學",
+      "護理行政"
     ],
     "weight": 1.5
   },
@@ -29839,9 +38446,9 @@ const questions_db = [
     "subject": "綜合護理與公共衛生",
     "year": 111,
     "tags": [
-      "精神科與社區衛生護理學",
       "基本護理學",
-      "內外科護理學"
+      "內外科護理學",
+      "精神科與社區衛生護理學"
     ],
     "weight": 1.5
   },
@@ -30575,8 +39182,8 @@ const questions_db = [
     "subject": "綜合護理與公共衛生",
     "year": 112,
     "tags": [
-      "護理行政",
-      "內外科護理學"
+      "內外科護理學",
+      "護理行政"
     ],
     "weight": 1.5
   },
@@ -30832,8 +39439,8 @@ const questions_db = [
     "subject": "綜合護理與公共衛生",
     "year": 112,
     "tags": [
-      "護理行政",
-      "內外科護理學"
+      "內外科護理學",
+      "護理行政"
     ],
     "weight": 1.5
   },
@@ -30884,8 +39491,8 @@ const questions_db = [
     "subject": "綜合護理與公共衛生",
     "year": 112,
     "tags": [
-      "精神科與社區衛生護理學",
-      "解剖學"
+      "解剖學",
+      "精神科與社區衛生護理學"
     ],
     "weight": 1.5
   },
@@ -31038,9 +39645,9 @@ const questions_db = [
     "subject": "綜合護理與公共衛生",
     "year": 113,
     "tags": [
+      "微生物學與免疫學",
       "藥理學",
-      "精神科與社區衛生護理學",
-      "微生物學與免疫學"
+      "精神科與社區衛生護理學"
     ],
     "weight": 1.5
   },
@@ -31159,8 +39766,8 @@ const questions_db = [
     "subject": "綜合護理與公共衛生",
     "year": 113,
     "tags": [
-      "精神科與社區衛生護理學",
-      "基本護理學"
+      "基本護理學",
+      "精神科與社區衛生護理學"
     ],
     "weight": 1.5
   },
@@ -31313,9 +39920,9 @@ const questions_db = [
     "subject": "綜合護理與公共衛生",
     "year": 113,
     "tags": [
-      "產兒科護理學",
-      "微生物學與免疫學",
       "基本護理學",
+      "微生物學與免疫學",
+      "產兒科護理學",
       "精神科與社區衛生護理學"
     ],
     "weight": 1.5
@@ -31333,8 +39940,8 @@ const questions_db = [
     "subject": "綜合護理與公共衛生",
     "year": 113,
     "tags": [
-      "病理學",
       "解剖學",
+      "病理學",
       "內外科護理學"
     ],
     "weight": 1.5
@@ -31438,8 +40045,8 @@ const questions_db = [
     "subject": "綜合護理與公共衛生",
     "year": 113,
     "tags": [
-      "產兒科護理學",
-      "微生物學與免疫學"
+      "微生物學與免疫學",
+      "產兒科護理學"
     ],
     "weight": 1.5
   },
@@ -31473,8 +40080,8 @@ const questions_db = [
     "subject": "綜合護理與公共衛生",
     "year": 113,
     "tags": [
-      "產兒科護理學",
-      "微生物學與免疫學"
+      "微生物學與免疫學",
+      "產兒科護理學"
     ],
     "weight": 1.5
   },
@@ -31594,8 +40201,8 @@ const questions_db = [
     "subject": "綜合護理與公共衛生",
     "year": 113,
     "tags": [
-      "微生物學與免疫學",
-      "基本護理學"
+      "基本護理學",
+      "微生物學與免疫學"
     ],
     "weight": 1.5
   },
@@ -32142,8 +40749,8 @@ const questions_db = [
     "subject": "綜合護理與公共衛生",
     "year": 114,
     "tags": [
-      "產兒科護理學",
       "微生物學與免疫學",
+      "產兒科護理學",
       "精神科與社區衛生護理學"
     ],
     "weight": 1.5
@@ -32451,8 +41058,8 @@ const questions_db = [
     "subject": "綜合護理與公共衛生",
     "year": 114,
     "tags": [
-      "精神科與社區衛生護理學",
-      "內外科護理學"
+      "內外科護理學",
+      "精神科與社區衛生護理學"
     ],
     "weight": 1.5
   },
@@ -32690,8 +41297,8 @@ const questions_db = [
     "subject": "綜合護理與公共衛生",
     "year": 114,
     "tags": [
-      "精神科與社區衛生護理學",
-      "內外科護理學"
+      "內外科護理學",
+      "精神科與社區衛生護理學"
     ],
     "weight": 1.5
   },
@@ -32864,8 +41471,8 @@ const questions_db = [
     "year": 93,
     "tags": [
       "病理學",
-      "精神科與社區衛生護理學",
-      "內外科護理學"
+      "內外科護理學",
+      "精神科與社區衛生護理學"
     ],
     "weight": 1.5
   },
@@ -33325,8 +41932,8 @@ const questions_db = [
     "subject": "綜合護理與公共衛生",
     "year": 93,
     "tags": [
-      "微生物學與免疫學",
-      "基本護理學"
+      "基本護理學",
+      "微生物學與免疫學"
     ],
     "weight": 1.5
   },
@@ -33804,8 +42411,8 @@ const questions_db = [
     "subject": "綜合護理與公共衛生",
     "year": 94,
     "tags": [
-      "精神科與社區衛生護理學",
-      "生理學"
+      "生理學",
+      "精神科與社區衛生護理學"
     ],
     "weight": 1.5
   },
@@ -33839,8 +42446,8 @@ const questions_db = [
     "subject": "綜合護理與公共衛生",
     "year": 94,
     "tags": [
-      "精神科與社區衛生護理學",
-      "微生物學與免疫學"
+      "微生物學與免疫學",
+      "精神科與社區衛生護理學"
     ],
     "weight": 1.5
   },
@@ -33874,8 +42481,8 @@ const questions_db = [
     "subject": "綜合護理與公共衛生",
     "year": 94,
     "tags": [
-      "護理行政",
-      "微生物學與免疫學"
+      "微生物學與免疫學",
+      "護理行政"
     ],
     "weight": 1.5
   },
@@ -33926,8 +42533,8 @@ const questions_db = [
     "subject": "綜合護理與公共衛生",
     "year": 94,
     "tags": [
-      "精神科與社區衛生護理學",
-      "內外科護理學"
+      "內外科護理學",
+      "精神科與社區衛生護理學"
     ],
     "weight": 1.5
   },
@@ -33995,9 +42602,9 @@ const questions_db = [
     "subject": "綜合護理與公共衛生",
     "year": 94,
     "tags": [
+      "內外科護理學",
       "藥理學",
-      "護理行政",
-      "內外科護理學"
+      "護理行政"
     ],
     "weight": 1.5
   },
@@ -34049,8 +42656,8 @@ const questions_db = [
     "subject": "綜合護理與公共衛生",
     "year": 94,
     "tags": [
-      "精神科與社區衛生護理學",
-      "基本護理學"
+      "基本護理學",
+      "精神科與社區衛生護理學"
     ],
     "weight": 1.5
   },
@@ -34186,11 +42793,11 @@ const questions_db = [
     "subject": "綜合護理與公共衛生",
     "year": 94,
     "tags": [
-      "護理行政",
+      "內外科護理學",
       "病理學",
-      "精神科與社區衛生護理學",
+      "護理行政",
       "解剖學",
-      "內外科護理學"
+      "精神科與社區衛生護理學"
     ],
     "weight": 1.5
   },
@@ -34241,9 +42848,9 @@ const questions_db = [
     "subject": "綜合護理與公共衛生",
     "year": 94,
     "tags": [
-      "藥理學",
+      "基本護理學",
       "微生物學與免疫學",
-      "基本護理學"
+      "藥理學"
     ],
     "weight": 1.5
   },
@@ -34618,8 +43225,8 @@ const questions_db = [
     "year": 95,
     "tags": [
       "病理學",
-      "精神科與社區衛生護理學",
-      "內外科護理學"
+      "內外科護理學",
+      "精神科與社區衛生護理學"
     ],
     "weight": 1.5
   },
@@ -34739,8 +43346,8 @@ const questions_db = [
     "subject": "綜合護理與公共衛生",
     "year": 95,
     "tags": [
-      "精神科與社區衛生護理學",
-      "微生物學與免疫學"
+      "微生物學與免疫學",
+      "精神科與社區衛生護理學"
     ],
     "weight": 1.5
   },
@@ -34792,8 +43399,8 @@ const questions_db = [
     "year": 95,
     "tags": [
       "病理學",
-      "精神科與社區衛生護理學",
-      "護理行政"
+      "護理行政",
+      "精神科與社區衛生護理學"
     ],
     "weight": 1.5
   },
@@ -34946,9 +43553,9 @@ const questions_db = [
     "subject": "綜合護理與公共衛生",
     "year": 95,
     "tags": [
-      "精神科與社區衛生護理學",
+      "基本護理學",
       "微生物學與免疫學",
-      "基本護理學"
+      "精神科與社區衛生護理學"
     ],
     "weight": 1.5
   },
@@ -34965,10 +43572,10 @@ const questions_db = [
     "subject": "綜合護理與公共衛生",
     "year": 95,
     "tags": [
-      "精神科與社區衛生護理學",
-      "解剖學",
       "微生物學與免疫學",
-      "生理學"
+      "解剖學",
+      "生理學",
+      "精神科與社區衛生護理學"
     ],
     "weight": 1.5
   },
@@ -35104,9 +43711,9 @@ const questions_db = [
     "subject": "綜合護理與公共衛生",
     "year": 96,
     "tags": [
+      "基本護理學",
       "藥理學",
-      "精神科與社區衛生護理學",
-      "基本護理學"
+      "精神科與社區衛生護理學"
     ],
     "weight": 1.5
   },
@@ -35141,10 +43748,10 @@ const questions_db = [
     "subject": "綜合護理與公共衛生",
     "year": 96,
     "tags": [
-      "藥理學",
-      "精神科與社區衛生護理學",
+      "內外科護理學",
       "解剖學",
-      "內外科護理學"
+      "藥理學",
+      "精神科與社區衛生護理學"
     ],
     "weight": 1.5
   },
@@ -35688,8 +44295,8 @@ const questions_db = [
     "subject": "綜合護理與公共衛生",
     "year": 96,
     "tags": [
-      "藥理學",
-      "微生物學與免疫學"
+      "微生物學與免疫學",
+      "藥理學"
     ],
     "weight": 1.5
   },
@@ -35706,8 +44313,8 @@ const questions_db = [
     "subject": "綜合護理與公共衛生",
     "year": 96,
     "tags": [
-      "精神科與社區衛生護理學",
-      "微生物學與免疫學"
+      "微生物學與免疫學",
+      "精神科與社區衛生護理學"
     ],
     "weight": 1.5
   },
@@ -35843,8 +44450,8 @@ const questions_db = [
     "subject": "綜合護理與公共衛生",
     "year": 96,
     "tags": [
-      "精神科與社區衛生護理學",
-      "基本護理學"
+      "基本護理學",
+      "精神科與社區衛生護理學"
     ],
     "weight": 1.5
   },
@@ -36389,9 +44996,9 @@ const questions_db = [
     "subject": "綜合護理與公共衛生",
     "year": 97,
     "tags": [
+      "微生物學與免疫學",
       "護理行政",
-      "精神科與社區衛生護理學",
-      "微生物學與免疫學"
+      "精神科與社區衛生護理學"
     ],
     "weight": 1.5
   },
@@ -36544,8 +45151,8 @@ const questions_db = [
     "subject": "綜合護理與公共衛生",
     "year": 97,
     "tags": [
-      "病理學",
-      "微生物學與免疫學"
+      "微生物學與免疫學",
+      "病理學"
     ],
     "weight": 1.5
   },
@@ -36732,8 +45339,8 @@ const questions_db = [
     "subject": "綜合護理與公共衛生",
     "year": 97,
     "tags": [
-      "生理學",
-      "內外科護理學"
+      "內外科護理學",
+      "生理學"
     ],
     "weight": 1.5
   },
@@ -36937,8 +45544,8 @@ const questions_db = [
     "subject": "綜合護理與公共衛生",
     "year": 98,
     "tags": [
-      "藥理學",
-      "微生物學與免疫學"
+      "微生物學與免疫學",
+      "藥理學"
     ],
     "weight": 1.5
   },
@@ -36989,8 +45596,8 @@ const questions_db = [
     "subject": "綜合護理與公共衛生",
     "year": 98,
     "tags": [
-      "產兒科護理學",
-      "基本護理學"
+      "基本護理學",
+      "產兒科護理學"
     ],
     "weight": 1.5
   },
@@ -37313,8 +45920,8 @@ const questions_db = [
     "subject": "綜合護理與公共衛生",
     "year": 98,
     "tags": [
-      "精神科與社區衛生護理學",
-      "微生物學與免疫學"
+      "微生物學與免疫學",
+      "精神科與社區衛生護理學"
     ],
     "weight": 1.5
   },
@@ -37469,8 +46076,8 @@ const questions_db = [
     "subject": "綜合護理與公共衛生",
     "year": 98,
     "tags": [
-      "精神科與社區衛生護理學",
-      "微生物學與免疫學"
+      "微生物學與免疫學",
+      "精神科與社區衛生護理學"
     ],
     "weight": 1.5
   },
@@ -37521,8 +46128,8 @@ const questions_db = [
     "subject": "綜合護理與公共衛生",
     "year": 98,
     "tags": [
-      "護理行政",
-      "微生物學與免疫學"
+      "微生物學與免疫學",
+      "護理行政"
     ],
     "weight": 1.5
   },
@@ -37642,8 +46249,8 @@ const questions_db = [
     "subject": "綜合護理與公共衛生",
     "year": 98,
     "tags": [
-      "精神科與社區衛生護理學",
-      "解剖學"
+      "解剖學",
+      "精神科與社區衛生護理學"
     ],
     "weight": 1.5
   },
@@ -37694,8 +46301,8 @@ const questions_db = [
     "subject": "綜合護理與公共衛生",
     "year": 98,
     "tags": [
-      "精神科與社區衛生護理學",
-      "解剖學"
+      "解剖學",
+      "精神科與社區衛生護理學"
     ],
     "weight": 1.5
   },
@@ -37814,8 +46421,8 @@ const questions_db = [
     "subject": "綜合護理與公共衛生",
     "year": 98,
     "tags": [
-      "微生物學與免疫學",
-      "基本護理學"
+      "基本護理學",
+      "微生物學與免疫學"
     ],
     "weight": 1.5
   },
@@ -37832,8 +46439,8 @@ const questions_db = [
     "subject": "綜合護理與公共衛生",
     "year": 98,
     "tags": [
-      "微生物學與免疫學",
-      "基本護理學"
+      "基本護理學",
+      "微生物學與免疫學"
     ],
     "weight": 1.5
   },
@@ -37884,8 +46491,8 @@ const questions_db = [
     "subject": "綜合護理與公共衛生",
     "year": 98,
     "tags": [
-      "精神科與社區衛生護理學",
-      "解剖學"
+      "解剖學",
+      "精神科與社區衛生護理學"
     ],
     "weight": 1.5
   },
@@ -38055,9 +46662,9 @@ const questions_db = [
     "subject": "綜合護理與公共衛生",
     "year": 98,
     "tags": [
+      "內外科護理學",
       "病理學",
-      "藥理學",
-      "內外科護理學"
+      "藥理學"
     ],
     "weight": 1.5
   },
@@ -38244,8 +46851,8 @@ const questions_db = [
     "subject": "綜合護理與公共衛生",
     "year": 98,
     "tags": [
-      "精神科與社區衛生護理學",
-      "內外科護理學"
+      "內外科護理學",
+      "精神科與社區衛生護理學"
     ],
     "weight": 1.5
   },
@@ -39027,8 +47634,8 @@ const questions_db = [
     "subject": "綜合護理與公共衛生",
     "year": 99,
     "tags": [
-      "微生物學與免疫學",
-      "基本護理學"
+      "基本護理學",
+      "微生物學與免疫學"
     ],
     "weight": 1.5
   },
@@ -39062,8 +47669,8 @@ const questions_db = [
     "subject": "綜合護理與公共衛生",
     "year": 99,
     "tags": [
-      "精神科與社區衛生護理學",
-      "微生物學與免疫學"
+      "微生物學與免疫學",
+      "精神科與社區衛生護理學"
     ],
     "weight": 1.5
   },
@@ -39080,8 +47687,8 @@ const questions_db = [
     "subject": "綜合護理與公共衛生",
     "year": 99,
     "tags": [
-      "微生物學與免疫學",
-      "基本護理學"
+      "基本護理學",
+      "微生物學與免疫學"
     ],
     "weight": 1.5
   },
@@ -39115,9 +47722,9 @@ const questions_db = [
     "subject": "綜合護理與公共衛生",
     "year": 99,
     "tags": [
-      "護理行政",
       "基本護理學",
-      "內外科護理學"
+      "內外科護理學",
+      "護理行政"
     ],
     "weight": 1.5
   },
