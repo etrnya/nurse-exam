@@ -57,41 +57,16 @@ def parse_remarks_for_rules(text):
             
     return corrections
 
-def get_pdf_session(pdf_path):
-    """取得 PDF 考科之考試期別 (如：第一次、第二次、第三次)"""
-    try:
-        reader = pypdf.PdfReader(pdf_path)
-        if not reader.pages:
-            return None
-        text = reader.pages[0].extract_text()
-        if text:
-            match = re.search(r"第[一二三四五六七八九十]次", text)
-            if match:
-                return match.group(0)
-    except Exception as e:
-        print(f"讀取 PDF 期別出錯: {pdf_path} -> {e}")
-    return None
-
-def extract_moex_answers(year, subject_code):
-    """解析考選部答案 PDF (優先採用同考期 corrected，若無或不同期才採用 answer)"""
-    answer_file = f"moex-{year}-{subject_code}-answer.pdf"
-    corrected_file = f"moex-{year}-{subject_code}-corrected.pdf"
+def extract_moex_answers(year, session, subject_code):
+    """解析考選部答案 PDF (優先採用 corrected，若無才採用 answer)"""
+    answer_file = f"moex-{year}-{session}-{subject_code}-answer.pdf"
+    corrected_file = f"moex-{year}-{session}-{subject_code}-corrected.pdf"
     
     answer_path = os.path.join(MOEX_DIR, answer_file)
     corrected_path = os.path.join(MOEX_DIR, corrected_file)
     
-    target_path = answer_path
+    target_path = corrected_path if os.path.exists(corrected_path) else answer_path
     
-    if os.path.exists(corrected_path) and os.path.exists(answer_path):
-        ans_session = get_pdf_session(answer_path)
-        corr_session = get_pdf_session(corrected_path)
-        if ans_session and corr_session and ans_session == corr_session:
-            target_path = corrected_path
-        else:
-            target_path = answer_path
-    elif os.path.exists(corrected_path):
-        target_path = corrected_path
-        
     if not os.path.exists(target_path):
         return {}
         
@@ -227,9 +202,9 @@ def auto_tag_question(question_text, default_subject):
         tags = [default_subject]
     return tags
 
-def parse_moex_questions(year, subject_code, official_answers):
+def parse_moex_questions(year, session, subject_code, official_answers):
     """解析考選部試題 PDF"""
-    q_file = f"moex-{year}-{subject_code}-question.pdf"
+    q_file = f"moex-{year}-{session}-{subject_code}-question.pdf"
     q_path = os.path.join(MOEX_DIR, q_file)
     if not os.path.exists(q_path):
         return []
@@ -305,8 +280,9 @@ def parse_moex_questions(year, subject_code, official_answers):
                     "D": opt_match.group(4).strip()
                 }
                 
-                q_id = f"moex-{year}-{subject_code}-{q_num:02d}"
-                ans = official_answers.get(q_num, "A") # 若無答案，預設給 A 作為容錯
+                # 重構題目 ID 格式為: moex-{年份}-{期別}-{科目代碼}-{題號}
+                q_id = f"moex-{year}-{session}-{subject_code}-{q_num:02d}"
+                ans = official_answers.get(q_num, "A")
                 
                 tags = auto_tag_question(q_text, subject_name)
                 
@@ -318,6 +294,7 @@ def parse_moex_questions(year, subject_code, official_answers):
                     "category": "考選部護理師高考",
                     "subject": subject_name,
                     "year": int(year),
+                    "session": int(session),
                     "tags": tags,
                     "weight": 1.0
                 })
@@ -428,19 +405,32 @@ def main():
     
     all_questions = []
     
-    # 1. 解析考選部近 5 年 (110~114 年) 題目
-    moex_years = ["110", "111", "112", "113", "114"]
-    for year in moex_years:
-        for code in SUBJECT_NAME_MAP.keys():
-            # 先拿答案
-            ans_map = extract_moex_answers(year, code)
-            if not ans_map:
-                continue
-            # 解析題目
-            qs = parse_moex_questions(year, code, ans_map)
-            if qs:
-                all_questions.extend(qs)
-                print(f"  [考選部] 已解析 {year} 年 {SUBJECT_NAME_MAP[code]}: {len(qs)} 題")
+    # 1. 動態掃描考選部目錄下所有題目檔案，自動識別年份、期別與科目代碼
+    moex_files = os.listdir(MOEX_DIR)
+    parsed_moex_keys = set()
+    
+    for f in sorted(moex_files):
+        if f.startswith("moex-") and ("question" in f):
+            match = re.search(r"moex-(\d+)-(\d+)-([a-z-]+)-question\.pdf", f)
+            if match:
+                year = match.group(1)
+                session = match.group(2)
+                code = match.group(3)
+                
+                key = (year, session, code)
+                if key in parsed_moex_keys:
+                    continue
+                parsed_moex_keys.add(key)
+                
+                # 先拿答案
+                ans_map = extract_moex_answers(year, session, code)
+                if not ans_map:
+                    continue
+                # 解析題目
+                qs = parse_moex_questions(year, session, code, ans_map)
+                if qs:
+                    all_questions.extend(qs)
+                    print(f"  [考選部] 已解析 {year} 年第 {session} 次 {SUBJECT_NAME_MAP[code]}: {len(qs)} 題")
                 
     # 2. 解析台南市衛生局歷屆題目
     # 掃描下載目錄下所有的 tainan- 試題檔案，自動識別年份與日期

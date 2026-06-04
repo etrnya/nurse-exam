@@ -118,6 +118,7 @@ def parse_and_download(html_content):
     print(f"結果表格共包含 {len(rows)} 行，開始進行結構化解析與下載...")
     
     current_year = None
+    current_session = "1"
     current_exam_name = ""
     current_level = ""
     
@@ -134,6 +135,13 @@ def parse_and_download(html_content):
         if "考試" in row_text and parse_year(row_text) is not None:
             current_year = parse_year(row_text)
             current_exam_name = re.sub(r'本考試.*$', '', row_text).strip()
+            
+            # 識別考期 (第一次 -> 1, 第二次 -> 2, 第三次 -> 3)
+            current_session = "1"
+            if "第二次" in current_exam_name:
+                current_session = "2"
+            elif "第三次" in current_exam_name:
+                current_session = "3"
             continue
             
         # 識別類科組別
@@ -176,9 +184,9 @@ def parse_and_download(html_content):
                 file_type = "answer"
                 
             if file_type and current_year:
-                # 建立結構化檔名: moex-{year}-{subject_code}-{file_type}.pdf
-                filename = f"moex-{current_year}-{matched_subject_code}-{file_type}.pdf"
-                download_tasks.append((full_url, filename, f"{current_year}年 {subject_name} ({a_text})"))
+                # 建立結構化檔名: moex-{year}-{session}-{subject_code}-{file_type}.pdf
+                filename = f"moex-{current_year}-{current_session}-{matched_subject_code}-{file_type}.pdf"
+                download_tasks.append((full_url, filename, f"{current_year}年第{current_session}次 {subject_name} ({a_text})"))
                 
     # 進行去重
     unique_tasks = []

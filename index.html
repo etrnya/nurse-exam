@@ -1817,6 +1817,36 @@
                 transform: translateY(0);
             }
         }
+
+        .filter-select {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            color: var(--text-primary);
+            padding: 0.4rem 2rem 0.4rem 0.75rem;
+            border-radius: 0.75rem;
+            font-size: 0.82rem;
+            outline: none;
+            cursor: pointer;
+            transition: all var(--transition-speed);
+            height: 38px;
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2394a3b8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 0.75rem center;
+            background-size: 0.85rem;
+        }
+        .filter-select:hover, .filter-select:focus {
+            border-color: var(--accent-color);
+            background-color: rgba(99, 102, 241, 0.05);
+        }
+        [data-theme="light"] .filter-select {
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2347655f' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+        }
+        [data-theme="light"] .filter-select:hover, [data-theme="light"] .filter-select:focus {
+            background-color: rgba(15, 118, 110, 0.05);
+        }
     </style>
 </head>
 <body>
@@ -2086,9 +2116,20 @@
                     </div>
                 </div>
                 
-                <div class="search-container" id="search-bar-container">
-                    <i class="fa-solid fa-magnifying-glass" style="color: var(--text-secondary);"></i>
-                    <input type="text" class="search-input" id="search-input" placeholder="搜尋題目關鍵字、年份或法規條文...">
+                <div class="search-and-filters" id="search-bar-container" style="display: flex; align-items: center; gap: 0.5rem; flex: 1; max-width: 600px; justify-content: center;">
+                    <div class="search-container" style="flex: 1; max-width: 280px; margin: 0;">
+                        <i class="fa-solid fa-magnifying-glass" style="color: var(--text-secondary);"></i>
+                        <input type="text" class="search-input" id="search-input" placeholder="搜尋題目關鍵字...">
+                    </div>
+                    <select id="filter-year" class="filter-select" title="選擇年份">
+                        <option value="">全部年份</option>
+                    </select>
+                    <select id="filter-session" class="filter-select" title="選擇期別">
+                        <option value="">全部期別</option>
+                        <option value="1">第一次</option>
+                        <option value="2">第二次</option>
+                        <option value="3">第三次</option>
+                    </select>
                 </div>
                 
                 <div class="toolbar-buttons">
@@ -2241,6 +2282,8 @@
                     question: q.question,
                     options: q.options,
                     year: `${q.year}年`,
+                    yearNumber: q.year,
+                    session: q.session,
                     level: q.category,
                     number: number,
                     subject: q.subject,
@@ -2273,6 +2316,8 @@
         let viewMode = "questions"; // 'questions' or 'cards'
         let activeQuestion = null; // Currently clicked question object
         let showOnlyWrong = false; // Filter wrong questions
+        let selectedYear = "";
+        let selectedSession = "";
 
         // DOM Elements
         const sidebarEl = document.getElementById("sidebar");
@@ -2284,6 +2329,8 @@
         const searchBarContainerEl = document.getElementById("search-bar-container");
         const themeToggleEl = document.getElementById("theme-toggle");
         const wrongFilterCheckbox = document.getElementById("wrong-filter-checkbox");
+        const filterYearEl = document.getElementById("filter-year");
+        const filterSessionEl = document.getElementById("filter-session");
         
         // Mode switch elements
         const modeQuestionsBtn = document.getElementById("mode-questions-btn");
@@ -2306,12 +2353,38 @@
         const btnSaveApiEl = document.getElementById("btn-save-api");
         let activeCardTopic = ""; // Selected topic name in Cards Mode
 
+        function populateYearFilter() {
+            if (!filterYearEl) return;
+            filterYearEl.innerHTML = '<option value="">全部年份</option>';
+            const items = typeof questions_db !== 'undefined' ? questions_db : [];
+            const years = [...new Set(items.map(q => q.year))].sort((a, b) => b - a);
+            years.forEach(year => {
+                const opt = document.createElement("option");
+                opt.value = year;
+                opt.textContent = `${year}年`;
+                filterYearEl.appendChild(opt);
+            });
+        }
+
         function initApp() {
             // Populate Subjects
             populateSubjects();
             
+            // Populate Year Filter Options
+            populateYearFilter();
+            
             // Set Default Topic to first non-empty topic of selected subject
-            const activeTopics = Object.keys(window.QUESTIONS_DB[currentSubject]).filter(t => window.QUESTIONS_DB[currentSubject][t].length > 0);
+            const activeTopics = Object.keys(window.QUESTIONS_DB[currentSubject])
+                .filter(t => {
+                    let list = window.QUESTIONS_DB[currentSubject][t] || [];
+                    if (selectedYear) {
+                        list = list.filter(q => String(q.yearNumber) === selectedYear);
+                    }
+                    if (selectedSession) {
+                        list = list.filter(q => q.session !== undefined && String(q.session) === selectedSession);
+                    }
+                    return list.length > 0;
+                });
             currentTopic = activeTopics[0] || "";
             
             // Populate Topics and Questions
@@ -2323,6 +2396,32 @@
                 wrongFilterCheckbox.addEventListener("change", (e) => {
                     showOnlyWrong = e.target.checked;
                     renderQuestions();
+                });
+            }
+
+            // Year filter change listener
+            if (filterYearEl) {
+                filterYearEl.addEventListener("change", (e) => {
+                    selectedYear = e.target.value;
+                    populateSubjects();
+                    renderTopics();
+                    renderQuestions();
+                    if (viewMode === "cards") {
+                        renderCardsModeRanking();
+                    }
+                });
+            }
+
+            // Session filter change listener
+            if (filterSessionEl) {
+                filterSessionEl.addEventListener("change", (e) => {
+                    selectedSession = e.target.value;
+                    populateSubjects();
+                    renderTopics();
+                    renderQuestions();
+                    if (viewMode === "cards") {
+                        renderCardsModeRanking();
+                    }
                 });
             }
 
@@ -2425,11 +2524,17 @@
                 ...cardTopics
             ]);
 
-            // Map and count questions, filtering out empty topics
+            // Map and count questions, filtering out empty topics (applying year and session filters)
             const sortedTopics = Array.from(allTopicsSet)
                 .map(topicName => {
-                    const count = (topicsObj[topicName] || []).length;
-                    return { name: topicName, count: count };
+                    let list = topicsObj[topicName] || [];
+                    if (selectedYear) {
+                        list = list.filter(q => String(q.yearNumber) === selectedYear);
+                    }
+                    if (selectedSession) {
+                        list = list.filter(q => q.session !== undefined && String(q.session) === selectedSession);
+                    }
+                    return { name: topicName, count: list.length };
                 })
                 .filter(item => item.count > 0);
 
@@ -2504,6 +2609,12 @@
             // 1. Related Questions Stream
             relatedQuestionsList.innerHTML = "";
             let questions = (window.QUESTIONS_DB[currentSubject] && window.QUESTIONS_DB[currentSubject][topicName]) || [];
+            if (selectedYear) {
+                questions = questions.filter(q => String(q.yearNumber) === selectedYear);
+            }
+            if (selectedSession) {
+                questions = questions.filter(q => q.session !== undefined && String(q.session) === selectedSession);
+            }
             questions = [...questions].sort((a, b) => getYearNumber(b.year) - getYearNumber(a.year));
             
             if (questions.length === 0) {
@@ -2533,7 +2644,7 @@
                                 ${localNotes ? '<span class="meta-tag tag-notes" style="font-size: 0.65rem; padding: 0.1rem 0.35rem;" title="已建立個人筆記"><i class="fa-solid fa-pen"></i> 筆記</span>' : ''}
                             </div>
                             <div style="display: flex; gap: 0.3rem; align-items: center;">
-                                <span class="meta-tag tag-year" style="font-size: 0.65rem; padding: 0.1rem 0.35rem;">${q.year}</span>
+                                <span class="meta-tag tag-year" style="font-size: 0.65rem; padding: 0.1rem 0.35rem;">${q.year}${q.session ? ` 第${q.session}次` : ''}</span>
                                 <span class="meta-tag tag-level" style="font-size: 0.65rem; padding: 0.1rem 0.35rem;">${q.level}</span>
                                 <span style="font-size: 0.7rem; color: var(--text-secondary); font-weight: 500;">第 ${q.number} 題</span>
                             </div>
@@ -2788,7 +2899,11 @@
                 // Count total questions for badge (deduplicated by id)
                 const uniqueIds = new Set();
                 Object.values(window.QUESTIONS_DB[subj]).forEach(qList => {
-                    qList.forEach(q => uniqueIds.add(q.id));
+                    qList.forEach(q => {
+                        if (selectedYear && String(q.yearNumber) !== selectedYear) return;
+                        if (selectedSession && (q.session === undefined || String(q.session) !== selectedSession)) return;
+                        uniqueIds.add(q.id);
+                    });
                 });
                 const total = uniqueIds.size;
                 
@@ -2805,7 +2920,17 @@
                     currentSubject = subj;
                     
                     // Reset selected topic to first non-empty topic
-                    const activeTopics = Object.keys(window.QUESTIONS_DB[currentSubject]).filter(t => window.QUESTIONS_DB[currentSubject][t].length > 0);
+                    const activeTopics = Object.keys(window.QUESTIONS_DB[currentSubject])
+                        .filter(t => {
+                            let list = window.QUESTIONS_DB[currentSubject][t] || [];
+                            if (selectedYear) {
+                                list = list.filter(q => String(q.yearNumber) === selectedYear);
+                            }
+                            if (selectedSession) {
+                                list = list.filter(q => q.session !== undefined && String(q.session) === selectedSession);
+                            }
+                            return list.length > 0;
+                        });
                     currentTopic = activeTopics[0] || "";
                     
                     renderTopics();
@@ -2826,17 +2951,38 @@
             topicListEl.innerHTML = "";
             const topicsObj = window.QUESTIONS_DB[currentSubject];
             
-            // Filter out empty topics and re-order topics so comprehensive is last
+            // Filter out empty topics (after applying active filters)
             const topicsKeys = Object.keys(topicsObj)
-                .filter(t => topicsObj[t] && topicsObj[t].length > 0)
+                .filter(t => {
+                    let list = topicsObj[t] || [];
+                    if (selectedYear) {
+                        list = list.filter(q => String(q.yearNumber) === selectedYear);
+                    }
+                    if (selectedSession) {
+                        list = list.filter(q => q.session !== undefined && String(q.session) === selectedSession);
+                    }
+                    return list.length > 0;
+                })
                 .sort((a, b) => {
                     if (a.includes("其他")) return 1;
                     if (b.includes("其他")) return -1;
                     return a.localeCompare(b);
                 });
             
+            // Auto-correct current selection if it's no longer valid
+            if (topicsKeys.length > 0 && !topicsKeys.includes(currentTopic)) {
+                currentTopic = topicsKeys[0];
+            }
+            
             topicsKeys.forEach((topic, idx) => {
-                const qList = topicsObj[topic];
+                let qList = topicsObj[topic] || [];
+                if (selectedYear) {
+                    qList = qList.filter(q => String(q.yearNumber) === selectedYear);
+                }
+                if (selectedSession) {
+                    qList = qList.filter(q => q.session !== undefined && String(q.session) === selectedSession);
+                }
+                
                 const item = document.createElement("li");
                 item.className = `topic-item ${topic === currentTopic ? 'active' : ''}`;
                 item.setAttribute("data-index", idx + 1);
@@ -2875,15 +3021,24 @@
                 });
             });
             
-            const totalCount = questions.length;
+            // Apply active filters to dashboard stats
+            let filteredQuestions = [...questions];
+            if (selectedYear) {
+                filteredQuestions = filteredQuestions.filter(q => String(q.yearNumber) === selectedYear);
+            }
+            if (selectedSession) {
+                filteredQuestions = filteredQuestions.filter(q => q.session !== undefined && String(q.session) === selectedSession);
+            }
+            
+            const totalCount = filteredQuestions.length;
             
             // 從 localStorage 取得已作答的答對與答錯題目 id 陣列
             const wrongIds = JSON.parse(localStorage.getItem("wrong_questions") || "[]");
             const correctIds = JSON.parse(localStorage.getItem("correct_questions") || "[]");
             
             // 統計當前科目的正確與錯誤題量
-            const subjectWrongCount = questions.filter(q => wrongIds.includes(q.id)).length;
-            const subjectCorrectCount = questions.filter(q => correctIds.includes(q.id)).length;
+            const subjectWrongCount = filteredQuestions.filter(q => wrongIds.includes(q.id)).length;
+            const subjectCorrectCount = filteredQuestions.filter(q => correctIds.includes(q.id)).length;
             const answeredCount = subjectWrongCount + subjectCorrectCount;
             
             const accuracy = answeredCount > 0 ? Math.round((subjectCorrectCount / answeredCount) * 100) : 0;
@@ -2934,6 +3089,16 @@
             // Shallow copy questions to avoid DB mutation
             let questions = [...(window.QUESTIONS_DB[currentSubject][currentTopic] || [])];
             
+            // Apply year filter
+            if (selectedYear) {
+                questions = questions.filter(q => String(q.yearNumber) === selectedYear);
+            }
+            
+            // Apply session filter
+            if (selectedSession) {
+                questions = questions.filter(q => q.session !== undefined && String(q.session) === selectedSession);
+            }
+            
             // Apply search filter if present
             if (searchQuery.trim() !== "") {
                 const query = searchQuery.toLowerCase();
@@ -2943,6 +3108,10 @@
                 Object.values(window.QUESTIONS_DB[currentSubject]).forEach(qList => {
                     qList.forEach(q => {
                         if (!matchedSet.has(q.id)) {
+                            // Apply year and session filters during search
+                            if (selectedYear && String(q.yearNumber) !== selectedYear) return;
+                            if (selectedSession && (q.session === undefined || String(q.session) !== selectedSession)) return;
+                            
                             if (q.question.toLowerCase().includes(query) || q.year.toLowerCase().includes(query) || q.level.toLowerCase().includes(query)) {
                                 matchedSet.add(q.id);
                                 questions.push(q);
@@ -3014,7 +3183,7 @@
                             ${localNotes ? '<span class="meta-tag tag-notes" title="包含個人研讀筆記"><i class="fa-solid fa-pen-to-square"></i> 筆記</span>' : ''}
                         </div>
                         <div style="display: flex; gap: 0.4rem; align-items: center;">
-                            <span class="meta-tag tag-year">${q.year}</span>
+                            <span class="meta-tag tag-year">${q.year}${q.session ? ` 第${q.session}次` : ''}</span>
                             <span class="meta-tag tag-level">${q.level}</span>
                             <span class="meta-tag tag-number">第 ${q.number} 題</span>
                         </div>
@@ -3141,6 +3310,7 @@
                         <div class="section-label" style="color: #a855f7;"><i class="fa-solid fa-star"></i> 題目中繼資料</div>
                         <div style="display: flex; gap: 0.4rem; flex-wrap: wrap; margin-bottom: 1rem;">
                             <span class="meta-tag" style="background: rgba(168, 85, 247, 0.1); color: #c084fc; border: 1px solid rgba(168, 85, 247, 0.2);">年份: ${q.year}</span>
+                            ${q.session ? `<span class="meta-tag" style="background: rgba(168, 85, 247, 0.1); color: #c084fc; border: 1px solid rgba(168, 85, 247, 0.2);">期別: 第${q.session === 1 ? '一' : q.session === 2 ? '二' : '三'}次</span>` : ''}
                             <span class="meta-tag" style="background: rgba(168, 85, 247, 0.1); color: #c084fc; border: 1px solid rgba(168, 85, 247, 0.2);">科目: ${q.subject}</span>
                             <span class="meta-tag" style="background: rgba(168, 85, 247, 0.1); color: #c084fc; border: 1px solid rgba(168, 85, 247, 0.2);">題號: 第 ${q.number} 題</span>
                             ${q.tags.map(t => `<span class="meta-tag" style="background: rgba(99, 102, 241, 0.1); color: #818cf8; border: 1px solid rgba(99, 102, 241, 0.2);">${t}</span>`).join('')}
@@ -3788,6 +3958,8 @@ ${optionsText}
                         key === "gemini_model" ||
                         key === "theme" ||
                         key === "custom_questions_db" ||
+                        key === "wrong_questions" ||
+                        key === "correct_questions" ||
                         key.startsWith("notes_") ||
                         key.startsWith("ai_answer_") ||
                         key.startsWith("generated_card_")
