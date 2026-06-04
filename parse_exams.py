@@ -379,11 +379,15 @@ def parse_tainan_questions(year, date_str, official_answers):
         # 台南市題目大多屬於綜合護理
         subject_name = "綜合護理與公共衛生"
         
+        seen_q_nums = set()
         for num_str, content in matches:
             q_num = int(num_str)
             # 排除噪音題號
             if q_num > 100 or q_num <= 0:
                 continue
+            if q_num in seen_q_nums:
+                continue
+            seen_q_nums.add(q_num)
                 
             flat_content = re.sub(r"\s+", " ", content)
             opt_match = re.search(r"\(A\)(.*?)\(B\)(.*?)\(C\)(.*?)\(D\)(.*)", flat_content)
