@@ -4877,14 +4877,21 @@ ${optionsText}
             initMobileState();
         }
 
-        // 等 DOM 完整載入後執行
-        document.addEventListener('DOMContentLoaded', () => {
+        // 防止重複初始化的 guard
+        let _mobileInitDone = false;
+        function initMobileResponsiveOnce() {
+            if (_mobileInitDone) return;
+            _mobileInitDone = true;
             initMobileResponsive();
-        });
-        // 也在 load 後補執行一次（確保動態內容也完整）
-        window.addEventListener('load', () => {
-            initMobileResponsive();
-        });
+        }
+
+        // 頁面載入後執行一次即可
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initMobileResponsiveOnce);
+        } else {
+            // DOM 已就緒（script 在頁尾執行時）
+            initMobileResponsiveOnce();
+        }
 
     </script>
 </body>
