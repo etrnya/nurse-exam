@@ -2817,7 +2817,9 @@
             });
 
             // Sidebar Toggle Collapse
+            // 手機版由 initMobileResponsive 接管 drawer 開關，這裡跳過
             sidebarToggleEl.addEventListener("click", () => {
+                if (window.innerWidth <= 768) return; // 手機版不在此處理
                 sidebarEl.classList.toggle("collapsed");
             });
 
