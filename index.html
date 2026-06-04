@@ -1399,7 +1399,8 @@
         }
 
         .related-questions-panel {
-            width: 320px;
+            flex: 1;
+            min-width: 0;
             height: 100%;
             overflow-y: auto;
             padding: 1.25rem 1rem;
@@ -1407,7 +1408,6 @@
             display: flex;
             flex-direction: column;
             gap: 0.75rem;
-            flex-shrink: 0;
             border-left: 1px solid var(--card-border);
         }
 
@@ -1846,6 +1846,112 @@
         }
         [data-theme="light"] .filter-select:hover, [data-theme="light"] .filter-select:focus {
             background-color: rgba(15, 118, 110, 0.05);
+        }
+
+        /* 選擇題卡片內嵌選項與互動樣式 */
+        .card-options-container {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            margin-top: 0.75rem;
+            margin-bottom: 0.5rem;
+            width: 100%;
+        }
+        .card-option-btn {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.6rem;
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid var(--card-border);
+            border-radius: 0.4rem;
+            padding: 0.5rem 0.75rem;
+            text-align: left;
+            color: var(--text-primary);
+            cursor: pointer;
+            font-family: var(--font-family);
+            font-size: 0.82rem;
+            transition: all 0.15s ease;
+            width: 100%;
+            outline: none;
+        }
+        [data-theme="light"] .card-option-btn {
+            background: #f8fafc;
+            border-color: #cbd5e1;
+            color: #0f172a;
+        }
+        .card-option-btn:hover:not(.success):not(.error):not(.disabled) {
+            border-color: var(--accent-color);
+            background: rgba(13, 148, 136, 0.05);
+        }
+        .card-option-letter {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.08);
+            font-size: 0.75rem;
+            font-weight: 700;
+            flex-shrink: 0;
+            color: var(--text-primary);
+            transition: all 0.15s ease;
+        }
+        [data-theme="light"] .card-option-letter {
+            background: #e2e8f0;
+            color: #0f172a;
+        }
+        .card-option-btn:hover:not(.success):not(.error):not(.disabled) .card-option-letter {
+            background: var(--accent-color);
+            color: #ffffff;
+        }
+        .card-option-text {
+            line-height: 1.4;
+            flex: 1;
+        }
+        .card-option-btn.success {
+            background: rgba(16, 185, 129, 0.12) !important;
+            border-color: #10b981 !important;
+            color: #10b981 !important;
+        }
+        .card-option-btn.success .card-option-letter {
+            background: #10b981 !important;
+            color: #ffffff !important;
+        }
+        .card-option-btn.error {
+            background: rgba(239, 68, 68, 0.12) !important;
+            border-color: #ef4444 !important;
+            color: #ef4444 !important;
+        }
+        .card-option-btn.error .card-option-letter {
+            background: #ef4444 !important;
+            color: #ffffff !important;
+        }
+        .card-option-btn.disabled {
+            cursor: default;
+            opacity: 0.85;
+        }
+        .card-answer-feedback {
+            border-radius: 0.4rem;
+            padding: 0.5rem 0.75rem;
+            font-size: 0.8rem;
+            margin-top: 0.25rem;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            animation: slideIn 0.2s ease;
+        }
+        .card-answer-feedback.success {
+            background: rgba(16, 185, 129, 0.08);
+            border: 1px solid rgba(16, 185, 129, 0.2);
+            color: #10b981;
+        }
+        .card-answer-feedback.error {
+            background: rgba(239, 68, 68, 0.08);
+            border: 1px solid rgba(239, 68, 68, 0.2);
+            color: #ef4444;
         }
     </style>
 </head>
@@ -2629,19 +2735,43 @@
                 `;
             } else {
                 questions.forEach(q => {
-                    const hasAnswer = window.ANSWERS_DB && window.ANSWERS_DB[q.text];
+                    const hasAnswer = window.ANSWERS_DB && (window.ANSWERS_DB[q.id] || window.ANSWERS_DB[q.text]);
                     const hasCachedAnswer = localStorage.getItem(`ai_answer_${q.year}_${q.level}_${q.number}`);
                     const localNotes = localStorage.getItem(`notes_${q.year}_${q.level}_${q.number}`) || "";
                     const isSelected = activeQuestion && activeQuestion.text === q.text;
                     
+                    // Get answer history status for badge
+                    const wrongIds = JSON.parse(localStorage.getItem("wrong_questions") || "[]");
+                    const correctIds = JSON.parse(localStorage.getItem("correct_questions") || "[]");
+                    
+                    let answerStatusBadge = "";
+                    if (wrongIds.includes(q.id)) {
+                        answerStatusBadge = '<span class="meta-tag tag-level" style="font-size: 0.65rem; padding: 0.1rem 0.35rem; background: rgba(239, 68, 68, 0.12); color: var(--error-color); border: 1px solid rgba(239,68,68,0.25);" title="此題先前回答錯誤"><i class="fa-solid fa-triangle-exclamation"></i> 錯題</span>';
+                    } else if (correctIds.includes(q.id)) {
+                        answerStatusBadge = '<span class="meta-tag tag-has-answer" style="font-size: 0.65rem; padding: 0.1rem 0.35rem; background: rgba(16, 185, 129, 0.12); color: var(--success-color); border: 1px solid rgba(16,185,129,0.25);" title="此題先前回答正確"><i class="fa-solid fa-circle-check"></i> 答對</span>';
+                    }
+
                     const card = document.createElement("div");
                     card.className = `question-card ${isSelected ? 'active' : ''}`;
                     card.style.padding = "0.75rem 1rem";
                     
                     card.innerHTML = `
                         <div class="question-body" style="font-size: 0.85rem; -webkit-line-clamp: 3; display: -webkit-box; -webkit-box-orient: vertical; overflow: hidden;" title="${q.text.replace(/"/g, '&quot;')}">${q.text}</div>
+                        
+                        <!-- Inline Options Container -->
+                        <div class="card-options-container">
+                            ${Object.keys(q.options).map(key => `
+                                <button class="card-option-btn" data-option="${key}">
+                                    <span class="card-option-letter">${key}</span>
+                                    <span class="card-option-text">${q.options[key]}</span>
+                                </button>
+                            `).join('')}
+                        </div>
+                        <div class="card-answer-feedback" style="display: none;"></div>
+
                         <div class="question-card-right" style="border-top: 1px solid var(--card-border); padding-top: 0.5rem; margin-top: 0.2rem; width: 100%;">
-                            <div style="display: flex; gap: 0.3rem;">
+                            <div style="display: flex; gap: 0.3rem;" class="card-badges-left">
+                                ${answerStatusBadge}
                                 ${hasAnswer ? '<span class="meta-tag tag-has-answer" style="font-size: 0.65rem; padding: 0.1rem 0.35rem;" title="包含 AI 精選模擬解析"><i class="fa-solid fa-robot"></i> 預載</span>' : ''}
                                 ${hasCachedAnswer ? '<span class="meta-tag tag-has-answer" style="font-size: 0.65rem; padding: 0.1rem 0.35rem; background: rgba(16, 185, 129, 0.1); color: var(--success-color); border: 1px solid rgba(16, 185, 129, 0.2);" title="包含已保存之 AI 解題結果"><i class="fa-solid fa-robot"></i> 自訂 AI</span>' : ''}
                                 ${localNotes ? '<span class="meta-tag tag-notes" style="font-size: 0.65rem; padding: 0.1rem 0.35rem;" title="已建立個人筆記"><i class="fa-solid fa-pen"></i> 筆記</span>' : ''}
@@ -2659,6 +2789,77 @@
                         card.classList.add("active");
                         activeQuestion = q;
                         openQuestionDetails(q);
+                    });
+
+                    // Attach click listeners to options
+                    const optButtons = card.querySelectorAll(".card-option-btn");
+                    const feedbackBox = card.querySelector(".card-answer-feedback");
+                    const badgesLeftContainer = card.querySelector(".card-badges-left");
+                    const correctAnswer = (window.ANSWERS_DB && (window.ANSWERS_DB[q.id] || window.ANSWERS_DB[q.text])) || "";
+
+                    optButtons.forEach(btn => {
+                        btn.addEventListener("click", (e) => {
+                            e.stopPropagation(); // Prevent details panel
+
+                            const selectedOpt = btn.getAttribute("data-option");
+                            let isCorrect = false;
+                            const answersArray = correctAnswer.split(",").map(a => a.trim());
+                            
+                            if (correctAnswer === "*") {
+                                isCorrect = true;
+                            } else if (answersArray.includes(selectedOpt)) {
+                                isCorrect = true;
+                            }
+
+                            optButtons.forEach(b => {
+                                b.classList.add("disabled");
+                                const optVal = b.getAttribute("data-option");
+                                if (correctAnswer === "*") {
+                                    b.classList.add("success");
+                                } else if (answersArray.includes(optVal)) {
+                                    b.classList.add("success");
+                                } else if (optVal === selectedOpt && !isCorrect) {
+                                    b.classList.add("error");
+                                }
+                            });
+
+                            let wrongQuestions = JSON.parse(localStorage.getItem("wrong_questions") || "[]");
+                            let correctQuestions = JSON.parse(localStorage.getItem("correct_questions") || "[]");
+
+                            if (isCorrect) {
+                                if (!correctQuestions.includes(q.id)) correctQuestions.push(q.id);
+                                wrongQuestions = wrongQuestions.filter(id => id !== q.id);
+                                
+                                feedbackBox.className = "card-answer-feedback success";
+                                feedbackBox.innerHTML = `<i class="fa-solid fa-circle-check"></i> 答對了！答案是 ${correctAnswer === "*" ? "一律給分" : correctAnswer}`;
+                            } else {
+                                if (!wrongQuestions.includes(q.id)) wrongQuestions.push(q.id);
+                                correctQuestions = correctQuestions.filter(id => id !== q.id);
+
+                                feedbackBox.className = "card-answer-feedback error";
+                                feedbackBox.innerHTML = `<i class="fa-solid fa-circle-xmark"></i> 答錯了！答案是 ${correctAnswer}`;
+                            }
+
+                            localStorage.setItem("wrong_questions", JSON.stringify(wrongQuestions));
+                            localStorage.setItem("correct_questions", JSON.stringify(correctQuestions));
+                            feedbackBox.style.display = "flex";
+
+                            // Update current card badges locally without full list rerender
+                            let newAnswerStatusBadge = "";
+                            if (isCorrect) {
+                                newAnswerStatusBadge = '<span class="meta-tag tag-has-answer" style="font-size: 0.65rem; padding: 0.1rem 0.35rem; background: rgba(16, 185, 129, 0.12); color: var(--success-color); border: 1px solid rgba(16,185,129,0.25);" title="此題先前回答正確"><i class="fa-solid fa-circle-check"></i> 答對</span>';
+                            } else {
+                                newAnswerStatusBadge = '<span class="meta-tag tag-level" style="font-size: 0.65rem; padding: 0.1rem 0.35rem; background: rgba(239, 68, 68, 0.12); color: var(--error-color); border: 1px solid rgba(239,68,68,0.25);" title="此題先前回答錯誤"><i class="fa-solid fa-triangle-exclamation"></i> 錯題</span>';
+                            }
+                            
+                            const existingBadge = badgesLeftContainer.querySelector(".tag-level, .tag-has-answer[style*='rgba(16, 185, 129']");
+                            if (existingBadge) {
+                                existingBadge.remove();
+                            }
+                            badgesLeftContainer.insertAdjacentHTML("afterbegin", newAnswerStatusBadge);
+
+                            renderStatsDashboard();
+                        });
                     });
                     
                     relatedQuestionsList.appendChild(card);
@@ -3178,8 +3379,20 @@
                     <div class="question-card-left">
                         <div class="question-body" title="${q.question.replace(/"/g, '&quot;')}">${q.question}</div>
                     </div>
+                    
+                    <!-- Inline Options Container -->
+                    <div class="card-options-container">
+                        ${Object.keys(q.options).map(key => `
+                            <button class="card-option-btn" data-option="${key}">
+                                <span class="card-option-letter">${key}</span>
+                                <span class="card-option-text">${q.options[key]}</span>
+                            </button>
+                        `).join('')}
+                    </div>
+                    <div class="card-answer-feedback" style="display: none;"></div>
+
                     <div class="question-card-right">
-                        <div style="display: flex; gap: 0.4rem; align-items: center;">
+                        <div style="display: flex; gap: 0.4rem; align-items: center;" class="card-badges-left">
                             ${answerStatusBadge}
                             ${hasAnswer ? '<span class="meta-tag tag-has-answer" title="包含官方標準答案與解析"><i class="fa-solid fa-robot"></i> 預載</span>' : ''}
                             ${hasCachedAnswer ? '<span class="meta-tag tag-has-answer" style="background: rgba(16, 185, 129, 0.1); color: var(--success-color); border: 1px solid rgba(16, 185, 129, 0.2);" title="包含已保存之 AI 解題結果"><i class="fa-solid fa-robot"></i> 自訂 AI</span>' : ''}
@@ -3199,6 +3412,78 @@
                     
                     activeQuestion = q;
                     openQuestionDetails(q);
+                });
+
+                // Attach click listeners to options
+                const optButtons = card.querySelectorAll(".card-option-btn");
+                const feedbackBox = card.querySelector(".card-answer-feedback");
+                const badgesLeftContainer = card.querySelector(".card-badges-left");
+                const correctAnswer = (window.ANSWERS_DB && window.ANSWERS_DB[q.id]) || "";
+
+                optButtons.forEach(btn => {
+                    btn.addEventListener("click", (e) => {
+                        e.stopPropagation(); // Prevent details panel from opening
+
+                        const selectedOpt = btn.getAttribute("data-option");
+                        let isCorrect = false;
+                        const answersArray = correctAnswer.split(",").map(a => a.trim());
+                        
+                        if (correctAnswer === "*") {
+                            isCorrect = true;
+                        } else if (answersArray.includes(selectedOpt)) {
+                            isCorrect = true;
+                        }
+
+                        optButtons.forEach(b => {
+                            b.classList.add("disabled");
+                            const optVal = b.getAttribute("data-option");
+                            if (correctAnswer === "*") {
+                                b.classList.add("success");
+                            } else if (answersArray.includes(optVal)) {
+                                b.classList.add("success");
+                            } else if (optVal === selectedOpt && !isCorrect) {
+                                b.classList.add("error");
+                            }
+                        });
+
+                        let wrongQuestions = JSON.parse(localStorage.getItem("wrong_questions") || "[]");
+                        let correctQuestions = JSON.parse(localStorage.getItem("correct_questions") || "[]");
+
+                        if (isCorrect) {
+                            if (!correctQuestions.includes(q.id)) correctQuestions.push(q.id);
+                            wrongQuestions = wrongQuestions.filter(id => id !== q.id);
+                            
+                            feedbackBox.className = "card-answer-feedback success";
+                            feedbackBox.innerHTML = `<i class="fa-solid fa-circle-check"></i> 答對了！答案是 ${correctAnswer === "*" ? "一律給分" : correctAnswer}`;
+                        } else {
+                            if (!wrongQuestions.includes(q.id)) wrongQuestions.push(q.id);
+                            correctQuestions = correctQuestions.filter(id => id !== q.id);
+
+                            feedbackBox.className = "card-answer-feedback error";
+                            feedbackBox.innerHTML = `<i class="fa-solid fa-circle-xmark"></i> 答錯了！答案是 ${correctAnswer}`;
+                        }
+
+                        localStorage.setItem("wrong_questions", JSON.stringify(wrongQuestions));
+                        localStorage.setItem("correct_questions", JSON.stringify(correctQuestions));
+                        feedbackBox.style.display = "flex";
+
+                        // Update badge inline
+                        let newAnswerStatusBadge = "";
+                        if (isCorrect) {
+                            newAnswerStatusBadge = '<span class="meta-tag tag-has-answer" style="background: rgba(16, 185, 129, 0.12); color: var(--success-color); border: 1px solid rgba(16,185,129,0.25);" title="此題先前回答正確"><i class="fa-solid fa-circle-check"></i> 答對</span>';
+                        } else {
+                            newAnswerStatusBadge = '<span class="meta-tag tag-level" style="background: rgba(239, 68, 68, 0.12); color: var(--error-color); border: 1px solid rgba(239,68,68,0.25);" title="此題先前回答錯誤"><i class="fa-solid fa-triangle-exclamation"></i> 錯題</span>';
+                        }
+                        
+                        const existingBadge = badgesLeftContainer.querySelector(".tag-level, .tag-has-answer[style*='rgba(16, 185, 129']");
+                        if (existingBadge) {
+                            existingBadge.remove();
+                        }
+                        badgesLeftContainer.insertAdjacentHTML("afterbegin", newAnswerStatusBadge);
+
+                        // Update bento stats dashboard
+                        renderStatsDashboard();
+                    });
                 });
                 
                 questionStreamEl.appendChild(card);
