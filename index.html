@@ -2048,7 +2048,8 @@
             .topics-panel {
                 display: none !important;
             }
-            .topics-panel.mobile-panel-active {
+            .topics-panel.mobile-panel-active,
+            #mobile-search-panel.mobile-panel-active {
                 display: flex !important;
                 flex-direction: column;
                 position: absolute;
@@ -2057,6 +2058,7 @@
                 height: 100%;
                 z-index: 10;
                 overflow-y: auto;
+                padding: 0.85rem;
             }
             /* 手機版不顯示收折按鈕 */
             .topics-panel .btn-icon-sm {
@@ -2133,6 +2135,11 @@
             /* 搜尋列在 Questions Tab 顯示時 inline 提示 */
             .mobile-search-bar {
                 display: flex !important;
+            }
+
+            /* 手機版搜尋面板樣式 */
+            #mobile-search-panel {
+                display: none;
             }
         }
 
@@ -2527,6 +2534,36 @@
                         </ul>
                     </div>
 
+                    <!-- Column 1.5: Mobile Search Panel -->
+                    <div class="topics-panel" id="mobile-search-panel">
+                        <div class="panel-title" style="margin-bottom: 1rem;">
+                            <span class="title-text-group">
+                                <i class="fa-solid fa-magnifying-glass" style="color: var(--accent-color);"></i>
+                                <span>搜尋題目</span>
+                            </span>
+                        </div>
+                        <div class="mobile-search-controls" style="display: flex; flex-direction: column; gap: 0.75rem; margin-bottom: 1.25rem; width: 100%;">
+                            <div class="search-container" style="max-width: 100%; margin: 0; background: rgba(0, 0, 0, 0.2); border-color: var(--card-border);">
+                                <i class="fa-solid fa-magnifying-glass" style="color: var(--text-secondary);"></i>
+                                <input type="text" class="search-input" id="mobile-search-input" placeholder="搜尋題目關鍵字...">
+                            </div>
+                            <div style="display: flex; gap: 0.5rem; width: 100%;">
+                                <select id="mobile-filter-year" class="filter-select" style="flex: 1; height: 38px;" title="選擇年份">
+                                    <option value="">全部年份</option>
+                                </select>
+                                <select id="mobile-filter-session" class="filter-select" style="flex: 1; height: 38px;" title="選擇期別">
+                                    <option value="">全部期別</option>
+                                    <option value="1">第一次</option>
+                                    <option value="2">第二次</option>
+                                    <option value="3">第三次</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div id="mobile-search-results" style="display: flex; flex-direction: column; gap: 0.75rem; flex: 1; overflow-y: auto; padding-right: 2px;">
+                            <!-- Dynamic search results will render here -->
+                        </div>
+                    </div>
+
                     <!-- Column 2: Questions Stream -->
                     <div class="question-stream" id="question-stream">
                         <!-- Dynamic list of questions -->
@@ -2609,6 +2646,10 @@
                 <i class="fa-solid fa-list-check"></i>
                 <span>練習</span>
             </button>
+            <button class="mobile-tab-btn" id="mobile-tab-search" aria-label="搜尋題目">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <span>搜尋</span>
+            </button>
         </div>
         <!-- Cards Mode Tabs -->
         <div id="mobile-tabs-cards" style="display: none; flex: 1; align-items: stretch;">
@@ -2637,6 +2678,223 @@
         // Fallback for missing libraries
         window.STUDY_CARDS_DB = window.STUDY_CARDS_DB || {};
         window.ANSWERS_DB = typeof answers_db !== 'undefined' ? answers_db : {};
+
+        // 建立單個題目卡片的 HTML 元素與作答互動邏輯
+        function createQuestionCardElement(q) {
+            const hasAnswer = window.ANSWERS_DB && window.ANSWERS_DB[q.id];
+            const hasCachedAnswer = localStorage.getItem(`ai_answer_${q.id}`);
+            const localNotes = localStorage.getItem(`notes_${q.id}`) || "";
+            const isSelected = activeQuestion && activeQuestion.id === q.id;
+            
+            // 取得答題歷史狀態
+            const wrongIds = JSON.parse(localStorage.getItem("wrong_questions") || "[]");
+            const correctIds = JSON.parse(localStorage.getItem("correct_questions") || "[]");
+            
+            let answerStatusBadge = "";
+            if (wrongIds.includes(q.id)) {
+                answerStatusBadge = '<span class="meta-tag tag-level" style="background: rgba(239, 68, 68, 0.12); color: var(--error-color); border: 1px solid rgba(239,68,68,0.25);" title="此題先前回答錯誤"><i class="fa-solid fa-triangle-exclamation"></i> 錯題</span>';
+            } else if (correctIds.includes(q.id)) {
+                answerStatusBadge = '<span class="meta-tag tag-has-answer" style="background: rgba(16, 185, 129, 0.12); color: var(--success-color); border: 1px solid rgba(16,185,129,0.25);" title="此題先前回答正確"><i class="fa-solid fa-circle-check"></i> 答對</span>';
+            }
+            
+            const card = document.createElement("div");
+            card.className = `question-card ${isSelected ? 'active' : ''}`;
+            
+            card.innerHTML = `
+                <div class="question-card-left">
+                    <div class="question-body" title="${q.question.replace(/"/g, '&quot;')}">${q.question}</div>
+                </div>
+                
+                <!-- 選項容器 -->
+                <div class="card-options-container">
+                    ${Object.keys(q.options).map(key => `
+                        <button class="card-option-btn" data-option="${key}">
+                            <span class="card-option-letter">${key}</span>
+                            <span class="card-option-text">${q.options[key]}</span>
+                        </button>
+                    `).join('')}
+                </div>
+                <div class="card-answer-feedback" style="display: none;"></div>
+
+                <div class="question-card-right">
+                    <div style="display: flex; gap: 0.4rem; align-items: center;" class="card-badges-left">
+                        ${answerStatusBadge}
+                        ${hasAnswer ? '<span class="meta-tag tag-has-answer" title="包含官方標準答案與解析"><i class="fa-solid fa-robot"></i> 預載</span>' : ''}
+                        ${hasCachedAnswer ? '<span class="meta-tag tag-has-answer" style="background: rgba(16, 185, 129, 0.1); color: var(--success-color); border: 1px solid rgba(16, 185, 129, 0.2);" title="包含已保存之 AI 解題結果"><i class="fa-solid fa-robot"></i> 自訂 AI</span>' : ''}
+                        ${localNotes ? '<span class="meta-tag tag-notes" title="包含個人研讀筆記"><i class="fa-solid fa-pen-to-square"></i> 筆記</span>' : ''}
+                    </div>
+                    <div style="display: flex; gap: 0.4rem; align-items: center;">
+                        <span class="meta-tag tag-year">${q.year}${q.session ? ` 第${q.session}次` : ''}</span>
+                        <span class="meta-tag tag-level">${q.level}</span>
+                        <span class="meta-tag tag-number">第 ${q.number} 題</span>
+                    </div>
+                </div>
+            `;
+            
+            card.addEventListener("click", () => {
+                document.querySelectorAll(".question-card").forEach(c => c.classList.remove("active"));
+                card.classList.add("active");
+                
+                activeQuestion = q;
+                openQuestionDetails(q);
+            });
+
+            // 綁定選項點擊事件
+            const optButtons = card.querySelectorAll(".card-option-btn");
+            const feedbackBox = card.querySelector(".card-answer-feedback");
+            const badgesLeftContainer = card.querySelector(".card-badges-left");
+            const correctAnswer = (window.ANSWERS_DB && window.ANSWERS_DB[q.id]) || "";
+
+            optButtons.forEach(btn => {
+                btn.addEventListener("click", (e) => {
+                    e.stopPropagation(); // 阻止冒泡觸發詳情面板
+
+                    const selectedOpt = btn.getAttribute("data-option");
+                    let isCorrect = false;
+                    const answersArray = correctAnswer.split(",").map(a => a.trim());
+                    
+                    if (correctAnswer === "*") {
+                        isCorrect = true;
+                    } else if (answersArray.includes(selectedOpt)) {
+                        isCorrect = true;
+                    }
+
+                    optButtons.forEach(b => {
+                        b.classList.add("disabled");
+                        const optVal = b.getAttribute("data-option");
+                        if (correctAnswer === "*") {
+                            b.classList.add("success");
+                        } else if (answersArray.includes(optVal)) {
+                            b.classList.add("success");
+                        } else if (optVal === selectedOpt && !isCorrect) {
+                            b.classList.add("error");
+                        }
+                    });
+
+                    let wrongQuestions = JSON.parse(localStorage.getItem("wrong_questions") || "[]");
+                    let correctQuestions = JSON.parse(localStorage.getItem("correct_questions") || "[]");
+
+                    if (isCorrect) {
+                        if (!correctQuestions.includes(q.id)) correctQuestions.push(q.id);
+                        wrongQuestions = wrongQuestions.filter(id => id !== q.id);
+                        
+                        feedbackBox.className = "card-answer-feedback success";
+                        feedbackBox.innerHTML = `<i class="fa-solid fa-circle-check"></i> 答對了！答案是 ${correctAnswer === "*" ? "一律給分" : correctAnswer}`;
+                    } else {
+                        if (!wrongQuestions.includes(q.id)) wrongQuestions.push(q.id);
+                        correctQuestions = correctQuestions.filter(id => id !== q.id);
+
+                        feedbackBox.className = "card-answer-feedback error";
+                        feedbackBox.innerHTML = `<i class="fa-solid fa-circle-xmark"></i> 答錯了！答案是 ${correctAnswer}`;
+                    }
+
+                    localStorage.setItem("wrong_questions", JSON.stringify(wrongQuestions));
+                    localStorage.setItem("correct_questions", JSON.stringify(correctQuestions));
+                    feedbackBox.style.display = "flex";
+
+                    // 即時更新標籤
+                    let newAnswerStatusBadge = "";
+                    if (isCorrect) {
+                        newAnswerStatusBadge = '<span class="meta-tag tag-has-answer" style="background: rgba(16, 185, 129, 0.12); color: var(--success-color); border: 1px solid rgba(16,185,129,0.25);" title="此題先前回答正確"><i class="fa-solid fa-circle-check"></i> 答對</span>';
+                    } else {
+                        newAnswerStatusBadge = '<span class="meta-tag tag-level" style="background: rgba(239, 68, 68, 0.12); color: var(--error-color); border: 1px solid rgba(239,68,68,0.25);" title="此題先前回答錯誤"><i class="fa-solid fa-triangle-exclamation"></i> 錯題</span>';
+                    }
+                    
+                    const existingBadge = badgesLeftContainer.querySelector(".tag-level, .tag-has-answer[style*='rgba(16, 185, 129']");
+                    if (existingBadge) {
+                        existingBadge.remove();
+                    }
+                    badgesLeftContainer.insertAdjacentHTML("afterbegin", newAnswerStatusBadge);
+
+                    // 更新統計儀表板
+                    renderStatsDashboard();
+                    
+                    // 同步該題號在其他面板中已被渲染之卡片狀態
+                    document.querySelectorAll(`.question-card`).forEach(otherCard => {
+                        const otherCardBody = otherCard.querySelector(".question-body");
+                        if (otherCard !== card && otherCardBody && otherCardBody.innerText === q.question) {
+                            const otherBadgesContainer = otherCard.querySelector(".card-badges-left");
+                            if (otherBadgesContainer) {
+                                const existingOtherBadge = otherBadgesContainer.querySelector(".tag-level, .tag-has-answer[style*='rgba(16, 185, 129']");
+                                if (existingOtherBadge) {
+                                    existingOtherBadge.remove();
+                                }
+                                otherBadgesContainer.insertAdjacentHTML("afterbegin", newAnswerStatusBadge);
+                            }
+                            
+                            const otherOptButtons = otherCard.querySelectorAll(".card-option-btn");
+                            otherOptButtons.forEach(ob => {
+                                ob.classList.add("disabled");
+                                const optVal = ob.getAttribute("data-option");
+                                if (correctAnswer === "*") {
+                                    ob.classList.add("success");
+                                } else if (answersArray.includes(optVal)) {
+                                    ob.classList.add("success");
+                                } else if (optVal === selectedOpt && !isCorrect) {
+                                    ob.classList.add("error");
+                                }
+                            });
+                            
+                            const otherFeedbackBox = otherCard.querySelector(".card-answer-feedback");
+                            if (otherFeedbackBox) {
+                                if (isCorrect) {
+                                    otherFeedbackBox.className = "card-answer-feedback success";
+                                    otherFeedbackBox.innerHTML = `<i class="fa-solid fa-circle-check"></i> 答對了！答案是 ${correctAnswer === "*" ? "一律給分" : correctAnswer}`;
+                                } else {
+                                    otherFeedbackBox.className = "card-answer-feedback error";
+                                    otherFeedbackBox.innerHTML = `<i class="fa-solid fa-circle-xmark"></i> 答錯了！答案是 ${correctAnswer}`;
+                                }
+                                otherFeedbackBox.style.display = "flex";
+                            }
+                        }
+                    });
+                });
+            });
+
+            return card;
+        }
+
+        // 手機版搜尋渲染邏輯
+        function renderMobileSearchResults() {
+            const container = document.getElementById("mobile-search-results");
+            if (!container) return;
+            container.innerHTML = "";
+
+            const query = searchQuery.toLowerCase().trim();
+            const matchedSet = new Set();
+            let results = [];
+            
+            Object.values(window.QUESTIONS_DB[currentSubject]).forEach(qList => {
+                qList.forEach(q => {
+                    if (!matchedSet.has(q.id)) {
+                        if (selectedYear && String(q.yearNumber) !== selectedYear) return;
+                        if (selectedSession && (q.session === undefined || String(q.session) !== selectedSession)) return;
+                        
+                        if (query === "" || q.question.toLowerCase().includes(query) || q.year.toLowerCase().includes(query) || q.level.toLowerCase().includes(query)) {
+                            matchedSet.add(q.id);
+                            results.push(q);
+                        }
+                    }
+                });
+            });
+
+            results.sort((a, b) => getYearNumber(b.year) - getYearNumber(a.year));
+
+            if (results.length === 0) {
+                container.innerHTML = `
+                    <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 160px; color: var(--text-secondary); text-align: center;">
+                        <i class="fa-solid fa-magnifying-glass-minus" style="font-size: 1.8rem; margin-bottom: 0.75rem; opacity: 0.6;"></i>
+                        <p style="font-size: 0.82rem;">未找到符合條件的考題。</p>
+                    </div>
+                `;
+                return;
+            }
+
+            results.forEach(q => {
+                const card = createQuestionCardElement(q);
+                container.appendChild(card);
+            });
+        }
 
         // Convert flat questions_db to hierarchal window.QUESTIONS_DB
         function buildQuestionsDbHierarchy() {
@@ -2739,16 +2997,29 @@
         let activeCardTopic = ""; // Selected topic name in Cards Mode
 
         function populateYearFilter() {
-            if (!filterYearEl) return;
-            filterYearEl.innerHTML = '<option value="">全部年份</option>';
             const items = typeof questions_db !== 'undefined' ? questions_db : [];
             const years = [...new Set(items.map(q => q.year))].sort((a, b) => b - a);
-            years.forEach(year => {
-                const opt = document.createElement("option");
-                opt.value = year;
-                opt.textContent = `${year}年`;
-                filterYearEl.appendChild(opt);
-            });
+            
+            if (filterYearEl) {
+                filterYearEl.innerHTML = '<option value="">全部年份</option>';
+                years.forEach(year => {
+                    const opt = document.createElement("option");
+                    opt.value = year;
+                    opt.textContent = `${year}年`;
+                    filterYearEl.appendChild(opt);
+                });
+            }
+            
+            const mobileFilterYearEl = document.getElementById("mobile-filter-year");
+            if (mobileFilterYearEl) {
+                mobileFilterYearEl.innerHTML = '<option value="">全部年份</option>';
+                years.forEach(year => {
+                    const opt = document.createElement("option");
+                    opt.value = year;
+                    opt.textContent = `${year}年`;
+                    mobileFilterYearEl.appendChild(opt);
+                });
+            }
         }
 
         function initApp() {
@@ -2788,9 +3059,11 @@
             if (filterYearEl) {
                 filterYearEl.addEventListener("change", (e) => {
                     selectedYear = e.target.value;
+                    if (mobileFilterYearEl) mobileFilterYearEl.value = selectedYear;
                     populateSubjects();
                     renderTopics();
                     renderQuestions();
+                    renderMobileSearchResults();
                     if (viewMode === "cards") {
                         renderCardsModeRanking();
                     }
@@ -2801,9 +3074,53 @@
             if (filterSessionEl) {
                 filterSessionEl.addEventListener("change", (e) => {
                     selectedSession = e.target.value;
+                    if (mobileFilterSessionEl) mobileFilterSessionEl.value = selectedSession;
                     populateSubjects();
                     renderTopics();
                     renderQuestions();
+                    renderMobileSearchResults();
+                    if (viewMode === "cards") {
+                        renderCardsModeRanking();
+                    }
+                });
+            }
+
+            // Mobile search controls listeners
+            const mobileSearchInputEl = document.getElementById("mobile-search-input");
+            const mobileFilterYearEl = document.getElementById("mobile-filter-year");
+            const mobileFilterSessionEl = document.getElementById("mobile-filter-session");
+
+            if (mobileSearchInputEl) {
+                mobileSearchInputEl.addEventListener("input", (e) => {
+                    searchQuery = e.target.value;
+                    if (searchInputEl) searchInputEl.value = searchQuery;
+                    renderQuestions();
+                    renderMobileSearchResults();
+                });
+            }
+
+            if (mobileFilterYearEl) {
+                mobileFilterYearEl.addEventListener("change", (e) => {
+                    selectedYear = e.target.value;
+                    if (filterYearEl) filterYearEl.value = selectedYear;
+                    populateSubjects();
+                    renderTopics();
+                    renderQuestions();
+                    renderMobileSearchResults();
+                    if (viewMode === "cards") {
+                        renderCardsModeRanking();
+                    }
+                });
+            }
+
+            if (mobileFilterSessionEl) {
+                mobileFilterSessionEl.addEventListener("change", (e) => {
+                    selectedSession = e.target.value;
+                    if (filterSessionEl) filterSessionEl.value = selectedSession;
+                    populateSubjects();
+                    renderTopics();
+                    renderQuestions();
+                    renderMobileSearchResults();
                     if (viewMode === "cards") {
                         renderCardsModeRanking();
                     }
@@ -2813,7 +3130,9 @@
             // Event Listeners
             searchInputEl.addEventListener("input", (e) => {
                 searchQuery = e.target.value;
+                if (mobileSearchInputEl) mobileSearchInputEl.value = searchQuery;
                 renderQuestions();
+                renderMobileSearchResults();
             });
 
             // Sidebar Toggle Collapse
@@ -3634,136 +3953,7 @@
             }
             
             questions.forEach(q => {
-                const hasAnswer = window.ANSWERS_DB && window.ANSWERS_DB[q.id];
-                const hasCachedAnswer = localStorage.getItem(`ai_answer_${q.id}`);
-                const localNotes = localStorage.getItem(`notes_${q.id}`) || "";
-                const isSelected = activeQuestion && activeQuestion.id === q.id;
-                
-                // Get answer history status for badge
-                const wrongIds = JSON.parse(localStorage.getItem("wrong_questions") || "[]");
-                const correctIds = JSON.parse(localStorage.getItem("correct_questions") || "[]");
-                
-                let answerStatusBadge = "";
-                if (wrongIds.includes(q.id)) {
-                    answerStatusBadge = '<span class="meta-tag tag-level" style="background: rgba(239, 68, 68, 0.12); color: var(--error-color); border: 1px solid rgba(239,68,68,0.25);" title="此題先前回答錯誤"><i class="fa-solid fa-triangle-exclamation"></i> 錯題</span>';
-                } else if (correctIds.includes(q.id)) {
-                    answerStatusBadge = '<span class="meta-tag tag-has-answer" style="background: rgba(16, 185, 129, 0.12); color: var(--success-color); border: 1px solid rgba(16,185,129,0.25);" title="此題先前回答正確"><i class="fa-solid fa-circle-check"></i> 答對</span>';
-                }
-                
-                const card = document.createElement("div");
-                card.className = `question-card ${isSelected ? 'active' : ''}`;
-                
-                card.innerHTML = `
-                    <div class="question-card-left">
-                        <div class="question-body" title="${q.question.replace(/"/g, '&quot;')}">${q.question}</div>
-                    </div>
-                    
-                    <!-- Inline Options Container -->
-                    <div class="card-options-container">
-                        ${Object.keys(q.options).map(key => `
-                            <button class="card-option-btn" data-option="${key}">
-                                <span class="card-option-letter">${key}</span>
-                                <span class="card-option-text">${q.options[key]}</span>
-                            </button>
-                        `).join('')}
-                    </div>
-                    <div class="card-answer-feedback" style="display: none;"></div>
-
-                    <div class="question-card-right">
-                        <div style="display: flex; gap: 0.4rem; align-items: center;" class="card-badges-left">
-                            ${answerStatusBadge}
-                            ${hasAnswer ? '<span class="meta-tag tag-has-answer" title="包含官方標準答案與解析"><i class="fa-solid fa-robot"></i> 預載</span>' : ''}
-                            ${hasCachedAnswer ? '<span class="meta-tag tag-has-answer" style="background: rgba(16, 185, 129, 0.1); color: var(--success-color); border: 1px solid rgba(16, 185, 129, 0.2);" title="包含已保存之 AI 解題結果"><i class="fa-solid fa-robot"></i> 自訂 AI</span>' : ''}
-                            ${localNotes ? '<span class="meta-tag tag-notes" title="包含個人研讀筆記"><i class="fa-solid fa-pen-to-square"></i> 筆記</span>' : ''}
-                        </div>
-                        <div style="display: flex; gap: 0.4rem; align-items: center;">
-                            <span class="meta-tag tag-year">${q.year}${q.session ? ` 第${q.session}次` : ''}</span>
-                            <span class="meta-tag tag-level">${q.level}</span>
-                            <span class="meta-tag tag-number">第 ${q.number} 題</span>
-                        </div>
-                    </div>
-                `;
-                
-                card.addEventListener("click", () => {
-                    document.querySelectorAll(".question-card").forEach(c => c.classList.remove("active"));
-                    card.classList.add("active");
-                    
-                    activeQuestion = q;
-                    openQuestionDetails(q);
-                });
-
-                // Attach click listeners to options
-                const optButtons = card.querySelectorAll(".card-option-btn");
-                const feedbackBox = card.querySelector(".card-answer-feedback");
-                const badgesLeftContainer = card.querySelector(".card-badges-left");
-                const correctAnswer = (window.ANSWERS_DB && window.ANSWERS_DB[q.id]) || "";
-
-                optButtons.forEach(btn => {
-                    btn.addEventListener("click", (e) => {
-                        e.stopPropagation(); // Prevent details panel from opening
-
-                        const selectedOpt = btn.getAttribute("data-option");
-                        let isCorrect = false;
-                        const answersArray = correctAnswer.split(",").map(a => a.trim());
-                        
-                        if (correctAnswer === "*") {
-                            isCorrect = true;
-                        } else if (answersArray.includes(selectedOpt)) {
-                            isCorrect = true;
-                        }
-
-                        optButtons.forEach(b => {
-                            b.classList.add("disabled");
-                            const optVal = b.getAttribute("data-option");
-                            if (correctAnswer === "*") {
-                                b.classList.add("success");
-                            } else if (answersArray.includes(optVal)) {
-                                b.classList.add("success");
-                            } else if (optVal === selectedOpt && !isCorrect) {
-                                b.classList.add("error");
-                            }
-                        });
-
-                        let wrongQuestions = JSON.parse(localStorage.getItem("wrong_questions") || "[]");
-                        let correctQuestions = JSON.parse(localStorage.getItem("correct_questions") || "[]");
-
-                        if (isCorrect) {
-                            if (!correctQuestions.includes(q.id)) correctQuestions.push(q.id);
-                            wrongQuestions = wrongQuestions.filter(id => id !== q.id);
-                            
-                            feedbackBox.className = "card-answer-feedback success";
-                            feedbackBox.innerHTML = `<i class="fa-solid fa-circle-check"></i> 答對了！答案是 ${correctAnswer === "*" ? "一律給分" : correctAnswer}`;
-                        } else {
-                            if (!wrongQuestions.includes(q.id)) wrongQuestions.push(q.id);
-                            correctQuestions = correctQuestions.filter(id => id !== q.id);
-
-                            feedbackBox.className = "card-answer-feedback error";
-                            feedbackBox.innerHTML = `<i class="fa-solid fa-circle-xmark"></i> 答錯了！答案是 ${correctAnswer}`;
-                        }
-
-                        localStorage.setItem("wrong_questions", JSON.stringify(wrongQuestions));
-                        localStorage.setItem("correct_questions", JSON.stringify(correctQuestions));
-                        feedbackBox.style.display = "flex";
-
-                        // Update badge inline
-                        let newAnswerStatusBadge = "";
-                        if (isCorrect) {
-                            newAnswerStatusBadge = '<span class="meta-tag tag-has-answer" style="background: rgba(16, 185, 129, 0.12); color: var(--success-color); border: 1px solid rgba(16,185,129,0.25);" title="此題先前回答正確"><i class="fa-solid fa-circle-check"></i> 答對</span>';
-                        } else {
-                            newAnswerStatusBadge = '<span class="meta-tag tag-level" style="background: rgba(239, 68, 68, 0.12); color: var(--error-color); border: 1px solid rgba(239,68,68,0.25);" title="此題先前回答錯誤"><i class="fa-solid fa-triangle-exclamation"></i> 錯題</span>';
-                        }
-                        
-                        const existingBadge = badgesLeftContainer.querySelector(".tag-level, .tag-has-answer[style*='rgba(16, 185, 129']");
-                        if (existingBadge) {
-                            existingBadge.remove();
-                        }
-                        badgesLeftContainer.insertAdjacentHTML("afterbegin", newAnswerStatusBadge);
-
-                        // Update bento stats dashboard
-                        renderStatsDashboard();
-                    });
-                });
-                
+                const card = createQuestionCardElement(q);
                 questionStreamEl.appendChild(card);
             });
         }
@@ -4745,6 +4935,7 @@ ${optionsText}
             // Questions Mode 面板
             const topicsPanel = document.getElementById('topics-panel');
             const questionStream = document.getElementById('question-stream');
+            const mobileSearchPanel = document.getElementById('mobile-search-panel');
 
             // Cards Mode 面板
             const cardsRankingPanel = document.getElementById('cards-ranking-panel');
@@ -4754,6 +4945,7 @@ ${optionsText}
             // Tab 按鈕
             const tabTopics = document.getElementById('mobile-tab-topics');
             const tabQuestions = document.getElementById('mobile-tab-questions');
+            const tabSearch = document.getElementById('mobile-tab-search');
             const tabRanking = document.getElementById('mobile-tab-ranking');
             const tabCardContent = document.getElementById('mobile-tab-card-content');
             const tabRelated = document.getElementById('mobile-tab-related');
@@ -4765,12 +4957,16 @@ ${optionsText}
             function setQuestionsPanel(panelName) {
                 if (!isMobile()) return;
                 // 移除所有 active 樣式
-                [topicsPanel, questionStream].forEach(p => p && p.classList.remove('mobile-panel-active'));
-                [tabTopics, tabQuestions].forEach(b => b && b.classList.remove('active'));
+                [topicsPanel, questionStream, mobileSearchPanel].forEach(p => p && p.classList.remove('mobile-panel-active'));
+                [tabTopics, tabQuestions, tabSearch].forEach(b => b && b.classList.remove('active'));
 
                 if (panelName === 'topics') {
                     topicsPanel && topicsPanel.classList.add('mobile-panel-active');
                     tabTopics && tabTopics.classList.add('active');
+                } else if (panelName === 'search') {
+                    mobileSearchPanel && mobileSearchPanel.classList.add('mobile-panel-active');
+                    tabSearch && tabSearch.classList.add('active');
+                    renderMobileSearchResults();
                 } else {
                     questionStream && questionStream.classList.add('mobile-panel-active');
                     tabQuestions && tabQuestions.classList.add('active');
@@ -4798,6 +4994,7 @@ ${optionsText}
             // Tab 點擊事件 - Questions Mode
             tabTopics && tabTopics.addEventListener('click', () => setQuestionsPanel('topics'));
             tabQuestions && tabQuestions.addEventListener('click', () => setQuestionsPanel('questions'));
+            tabSearch && tabSearch.addEventListener('click', () => setQuestionsPanel('search'));
 
             // Tab 點擊事件 - Cards Mode
             tabRanking && tabRanking.addEventListener('click', () => setCardsPanel('ranking'));
@@ -4811,7 +5008,13 @@ ${optionsText}
                 if (isQuestionsMode) {
                     mobileTabsQuestions.style.display = 'flex';
                     mobileTabsCards.style.display = 'none';
-                    setQuestionsPanel('questions');
+                    if (tabTopics && tabTopics.classList.contains('active')) {
+                        setQuestionsPanel('topics');
+                    } else if (tabSearch && tabSearch.classList.contains('active')) {
+                        setQuestionsPanel('search');
+                    } else {
+                        setQuestionsPanel('questions');
+                    }
                 } else {
                     mobileTabsQuestions.style.display = 'none';
                     mobileTabsCards.style.display = 'flex';
