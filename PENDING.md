@@ -62,5 +62,4 @@
 ---
 
 ## 📋 後續待辦 (Future Backlog)
-- [ ] **Notion-tw-legal-rag 專案**（暫緩執行，待後續重新啟動後規劃技術架構）
-
+- [x] **Notion-tw-legal-rag 專案**（已移轉至專屬待辦追蹤，本專案正式結案）
